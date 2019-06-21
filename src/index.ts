@@ -1,8 +1,8 @@
 import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"
 
-import { cra } from "./cra"
-import { es6, essential, imports, node, react, variables } from "./airbnb"
+import { createReactApp } from "./cra"
+import { es2015, essential, imports, node, react, variables } from "./airbnb"
 import { quality } from "./quality"
 import { formatting } from "./formatting"
 
@@ -180,9 +180,9 @@ const config: ESLintConfig = {
 
   rules: {
     ...reactHooksRecommended,
-    ...cra,
+    ...createReactApp,
     ...essential,
-    ...es6,
+    ...es2015,
     ...imports,
     ...node,
     ...variables,

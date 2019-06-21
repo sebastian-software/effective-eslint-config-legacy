@@ -4,7 +4,7 @@ interface ESLintRules {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
 }
 
-export const cra: ESLintRules = {
+export const createReactApp: ESLintRules = {
   "array-callback-return": "error",
   "default-case": [ "error", { commentPattern: "^no default$" }],
   "dot-location": [ "error", "property" ],

@@ -167,7 +167,7 @@ export const essential: ESLintRules = {
   yoda: "error"
 }
 
-export const es6: ESLintRules = {
+export const es2015: ESLintRules = {
   "arrow-body-style": [
     "error",
     "as-needed",
