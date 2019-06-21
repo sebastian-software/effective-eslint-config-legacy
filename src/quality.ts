@@ -6,7 +6,7 @@ interface ESLintRules {
 
 export const quality: ESLintRules = {
   "id-length": [
-    "warn",
+    "error",
     {
       min: 4,
       max: 40,
@@ -52,7 +52,7 @@ export const quality: ESLintRules = {
     }
   ],
   "max-len": [
-    "warn",
+    "error",
     {
       code: 100,
       comments: 140,
