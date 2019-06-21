@@ -8,11 +8,12 @@
     "src"
   ],
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "preppy",
+    "prebuild": "npm run clean",
     "clean": "rimraf dist",
     "prepack": "npm run build",
-    "verify": "npm run lint && npm run check:prettier && npm run test",
     "prelint": "npm run build",
     "lint": "run-s \"lint:* {@}\" --",
     "lint:style": "prettier --check '**/*.{js,jsx,json,md,ts,tsx}'",
