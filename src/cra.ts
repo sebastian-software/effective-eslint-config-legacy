@@ -6,13 +6,13 @@ interface ESLintRules {
 
 export const cra: ESLintRules = {
   "array-callback-return": "error",
-  "default-case": ["error", { commentPattern: "^no default$" }],
-  "dot-location": ["error", "property"],
-  eqeqeq: ["error", "smart"],
+  "default-case": [ "error", { commentPattern: "^no default$" }],
+  "dot-location": [ "error", "property" ],
+  eqeqeq: [ "error", "smart" ],
   "new-parens": "error",
   "no-array-constructor": "error",
   "no-caller": "error",
-  "no-cond-assign": ["error", "except-parens"],
+  "no-cond-assign": [ "error", "except-parens" ],
   "no-const-assign": "error",
   "no-control-regex": "error",
   "no-delete-var": "error",
@@ -33,17 +33,17 @@ export const cra: ESLintRules = {
   "no-invalid-regexp": "error",
   "no-iterator": "error",
   "no-label-var": "error",
-  "no-labels": ["error", { allowLoop: true, allowSwitch: false }],
+  "no-labels": [ "error", { allowLoop: true, allowSwitch: false }],
   "no-lone-blocks": "error",
   "no-loop-func": "error",
   "no-mixed-operators": [
     "error",
     {
       groups: [
-        ["&", "|", "^", "~", "<<", ">>", ">>>"],
-        ["==", "!=", "===", "!==", ">", ">=", "<", "<="],
-        ["&&", "||"],
-        ["in", "instanceof"]
+        [ "&", "|", "^", "~", "<<", ">>", ">>>" ],
+        [ "==", "!=", "===", "!==", ">", ">=", "<", "<=" ],
+        [ "&&", "||" ],
+        [ "in", "instanceof" ]
       ],
       allowSamePrecedence: false
     }
@@ -58,7 +58,7 @@ export const cra: ESLintRules = {
   "no-octal-escape": "error",
   "no-redeclare": "error",
   "no-regex-spaces": "error",
-  "no-restricted-syntax": ["error", "WithStatement"],
+  "no-restricted-syntax": [ "error", "WithStatement" ],
   "no-script-url": "error",
   "no-self-assign": "error",
   "no-self-compare": "error",
@@ -95,9 +95,9 @@ export const cra: ESLintRules = {
   "no-whitespace-before-property": "error",
   "react-hooks/exhaustive-deps": "error",
   "require-yield": "error",
-  "rest-spread-spacing": ["error", "never"],
-  strict: ["error", "never"],
-  "unicode-bom": ["error", "never"],
+  "rest-spread-spacing": [ "error", "never" ],
+  strict: [ "error", "never" ],
+  "unicode-bom": [ "error", "never" ],
   "use-isnan": "error",
   "valid-typeof": "error",
   "no-restricted-properties": [
@@ -123,9 +123,9 @@ export const cra: ESLintRules = {
   "import/no-webpack-loader-syntax": "error",
 
   // https://github.com/yannickcr/eslint-plugin-react/tree/master/docs/rules
-  "react/forbid-foreign-prop-types": ["error", { allowInPropTypes: true }],
+  "react/forbid-foreign-prop-types": [ "error", { allowInPropTypes: true }],
   "react/jsx-no-comment-textnodes": "error",
-  "react/jsx-no-duplicate-props": ["error", { ignoreCase: true }],
+  "react/jsx-no-duplicate-props": [ "error", { ignoreCase: true }],
   "react/jsx-no-target-blank": "error",
   "react/jsx-no-undef": "error",
   "react/jsx-pascal-case": [
@@ -156,7 +156,7 @@ export const cra: ESLintRules = {
   "jsx-a11y/anchor-is-valid": [
     "error",
     {
-      aspects: ["noHref", "invalidHref"]
+      aspects: [ "noHref", "invalidHref" ]
     }
   ],
   "jsx-a11y/aria-activedescendant-has-tabindex": "error",

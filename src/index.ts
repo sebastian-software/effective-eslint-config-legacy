@@ -3,14 +3,21 @@ import restrictedGlobals from "confusing-browser-globals"
 
 import { cra } from "./cra"
 import { es6, essential, imports, node, react, variables } from "./airbnb"
+import { quality } from "./quality"
+import { formatting } from "./formatting"
 
 interface ESLintRules {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
 }
 
+interface ESLintEnv {
+  [name: string]: boolean
+}
+
 interface ESLintOverrides {
   files: string[]
-  rules: ESLintRules
+  rules?: ESLintRules
+  env?: ESLintEnv
 }
 
 interface ESLintConfig extends Linter.Config {
@@ -59,7 +66,7 @@ const reactHooksRecommended: ESLintRules = {
   "react-hooks/exhaustive-deps": "warn"
 }
 
-const preferFormattingPrettier = ["prettier", "prettier/@typescript-eslint", "prettier/react"]
+const preferFormattingPrettier = [ "prettier", "prettier/@typescript-eslint", "prettier/react" ]
 
 const tsInterationFixes: ESLintRules = {
   // We are fully in TypeScript. PropTypes are not useful anymore.
@@ -79,11 +86,11 @@ const customRules: ESLintRules = {
   // This is dangerous as it hides accidentally undefined variables.
   // We blacklist the globals that we deem potentially confusing.
   // To use them, explicitly reference them, e.g. `window.name` or `window.status`.
-  "no-restricted-globals": ["error", ...restrictedGlobals],
+  "no-restricted-globals": [ "error", ...restrictedGlobals ],
 
   // We are using the import plugin with its ordering capabilities
   // for sorting declarations.
-  "sort-imports": ["error", { ignoreDeclarationSort: true }],
+  "sort-imports": [ "error", { ignoreDeclarationSort: true }],
 
   // Activate our concepts of formatting imports
   "import/order": [
@@ -122,24 +129,21 @@ const config: ESLintConfig = {
   env: {
     browser: true,
     es6: true,
-    jest: true,
     node: true,
-
-    "cypress/globals": true,
-    "jest/globals": true
+    "shared-node-browser": true
   },
 
   settings: {
     "import/resolver": {
       "babel-module": {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ],
         alias: {
           "-": "./src/"
         }
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [ ".ts", ".tsx" ]
     },
     react: {
       version: "detect"
@@ -147,7 +151,7 @@ const config: ESLintConfig = {
   },
 
   parser: "@typescript-eslint/parser",
-  plugins: ["@typescript-eslint", "react-hooks", "prettier", "cypress", "jest"],
+  plugins: [ "@typescript-eslint", "react-hooks", "prettier", "cypress", "jest" ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
@@ -166,7 +170,8 @@ const config: ESLintConfig = {
     ecmaVersion: 2018,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true
+      jsx: true,
+      impliedStrict: true
     },
 
     // typescript-eslint specific options
@@ -181,6 +186,8 @@ const config: ESLintConfig = {
     ...imports,
     ...node,
     ...variables,
+    ...quality,
+    ...formatting,
     ...react,
     ...tsImprovedCRARules,
     ...tsInterationFixes,
@@ -190,7 +197,12 @@ const config: ESLintConfig = {
   overrides: [
     {
       // Relax a few rules inside tests
-      files: ["*.test.ts", "*.test.tsx"],
+      files: [ "*.test.js", "*.test.jsx", "*.test.ts", "*.test.tsx" ],
+      env: {
+        jest: true,
+        "jest/globals": true,
+        "cypress/globals": true
+      },
       rules: {
         "@typescript-eslint/explicit-function-return-type": "off",
         "react/display-name": "off",
@@ -200,7 +212,7 @@ const config: ESLintConfig = {
     {
       // Definition files are typically really TS specific and
       // do not work in the same way as normal TS files.
-      files: ["*.d.ts", "*.d.tsx"],
+      files: [ "*.d.ts", "*.d.tsx" ],
       rules: {
         "no-undef": "off",
         "@typescript-eslint/no-unused-vars": "off"

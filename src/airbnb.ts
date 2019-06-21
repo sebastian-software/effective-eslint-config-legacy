@@ -16,9 +16,9 @@ export const essential: ESLintRules = {
     }
   ],
   "block-scoped-var": "error",
-  complexity: ["warn", MAX_COMPLEXITY],
+  complexity: [ "warn", MAX_COMPLEXITY ],
   "consistent-return": "warn",
-  curly: ["error", "multi-line"],
+  curly: [ "error", "multi-line" ],
   "dot-notation": [
     "error",
     {
@@ -26,7 +26,7 @@ export const essential: ESLintRules = {
       allowPattern: ""
     }
   ],
-  eqeqeq: ["error", "smart"],
+  eqeqeq: [ "error", "smart" ],
   "getter-return": [
     "error",
     {
@@ -66,7 +66,7 @@ export const essential: ESLintRules = {
   "no-magic-numbers": [
     "warn",
     {
-      ignore: [0, 1, 2, 10],
+      ignore: [ 0, 1, 2, 10 ],
       ignoreArrayIndexes: true,
       enforceConst: true,
       detectObjects: false
@@ -132,7 +132,7 @@ export const essential: ESLintRules = {
       message: "Use the exponentiation operator (**) instead."
     }
   ],
-  "no-return-assign": ["error", "always"],
+  "no-return-assign": [ "error", "always" ],
   "no-return-await": "error",
   "no-self-assign": [
     "error",
@@ -149,7 +149,7 @@ export const essential: ESLintRules = {
     }
   ],
   radix: "error",
-  strict: ["error", "never"],
+  strict: [ "error", "never" ],
   "valid-typeof": [
     "error",
     {
@@ -251,7 +251,7 @@ export const es6: ESLintRules = {
   "prefer-template": "warn",
   "symbol-description": "error",
   "template-curly-spacing": "error",
-  "yield-star-spacing": ["error", "after"]
+  "yield-star-spacing": [ "error", "after" ]
 }
 
 export const imports: ESLintRules = {
@@ -304,7 +304,7 @@ export const variables: ESLintRules = {
 }
 
 export const react: ESLintRules = {
-  "jsx-quotes": ["error", "prefer-double"],
+  "jsx-quotes": [ "error", "prefer-double" ],
 
   "react/jsx-no-target-blank": [
     "error",
@@ -313,9 +313,9 @@ export const react: ESLintRules = {
     }
   ],
 
-  "jsx-a11y/label-has-associated-control": ["error"],
+  "jsx-a11y/label-has-associated-control": [ "error" ],
 
-  "react/jsx-closing-bracket-location": ["error", "line-aligned"],
+  "react/jsx-closing-bracket-location": [ "error", "line-aligned" ],
   "react/jsx-closing-tag-location": "error",
   "react/jsx-curly-spacing": [
     "error",
@@ -324,10 +324,10 @@ export const react: ESLintRules = {
       allowMultiline: true
     }
   ],
-  "react/jsx-equals-spacing": ["error", "never"],
-  "react/jsx-first-prop-new-line": ["error", "multiline-multiprop"],
-  "react/jsx-indent": ["error", 2],
-  "react/jsx-indent-props": ["error", 2],
+  "react/jsx-equals-spacing": [ "error", "never" ],
+  "react/jsx-first-prop-new-line": [ "error", "multiline-multiprop" ],
+  "react/jsx-indent": [ "error", 2 ],
+  "react/jsx-indent-props": [ "error", 2 ],
   "react/jsx-max-props-per-line": [
     "error",
     {
@@ -368,7 +368,7 @@ export const react: ESLintRules = {
   "react/forbid-prop-types": [
     "error",
     {
-      forbid: ["any", "array", "object"],
+      forbid: [ "any", "array", "object" ],
       checkContextTypes: true,
       checkChildContextTypes: true
     }
@@ -393,7 +393,7 @@ export const react: ESLintRules = {
   "react/no-danger": "warn",
   "react/no-did-update-set-state": "error",
   "react/no-will-update-set-state": "error",
-  "react/prefer-es6-class": ["error", "always"],
+  "react/prefer-es6-class": [ "error", "always" ],
   "react/prefer-stateless-function": [
     "warn",
     {
