@@ -21,16 +21,16 @@ JS projects:
 
 ```json
 "lint": "run-s \"lint:* {@}\" --",
-"lint:codestyle": "prettier --check '**/*.{js,json,md}'",
-"lint:ts": "eslint --ext .js,.jsx .",
+"lint:style": "prettier --check '**/*.{js,jsx,json,md}'",
+"lint:script": "eslint '**/*.{js,jsx}'",
 ```
 
 TypeScript projects:
 
 ```json
 "lint": "run-s \"lint:* {@}\" --",
-"lint:codestyle": "prettier --check '**/*.{js,json,md,ts,tsx}'",
-"lint:ts": "eslint --ext .js,.jsx,.ts,.tsx .",
+"lint:style": "prettier --check '**/*.{js,jsx,json,md,ts,tsx}'",
+"lint:script": "eslint '**/*.{js,jsx,ts,tsx}'",
 "lint:types": "tsc --noEmit",
 ```
 
