@@ -2,6 +2,18 @@
 
 Configuration for linting TS/JS files.
 
+## Reasoning
+
+The presets combines a lot of previous work into an effective configuration to work with:
+
+- Based on TypeScript ESLint parser for optional TypeScript support.
+- Recommended presets by ESLint, TypeScript, React(+Hooks), JSX-A11N, Import Plugin, Jest and Cypress.
+- Auto environment handling for Jest tests (including relaxiation to some rules).
+- Support root alias imports via `-/...`-prefix via Babel.
+
+This all is offered by just one dependency and one `extends` and allow flexible customization via `rules`.
+
+
 ## Usage
 
 [ESLint supports our scoped packages](https://eslint.org/docs/developer-guide/shareable-configs#npm-scoped-modules) by just extending from the scope like so:
