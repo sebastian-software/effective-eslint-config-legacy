@@ -16,7 +16,6 @@
     "prepack": "npm run build",
     "prelint": "npm run build",
     "lint": "run-s \"lint:* {@}\" --",
-    "lint:style": "prettier --check '**/*.{js,jsx,json,md,ts,tsx}'",
     "lint:script": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint:types": "tsc --noEmit",
     "check:conflicts": "eslint --print-config . | eslint-config-prettier-check",

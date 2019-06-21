@@ -37,6 +37,7 @@ export const quality: ESLintRules = {
         "css",
         "app",
         "api",
+        "cli",
         "App",
         "API"
       ],
