@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`load config in eslint to validate all rule syntax is correct 1`] = `
+Object {
+  "errorCount": 0,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "results": Array [
+    Object {
+      "errorCount": 0,
+      "filePath": "<text>",
+      "fixableErrorCount": 0,
+      "fixableWarningCount": 0,
+      "messages": Array [],
+      "warningCount": 0,
+    },
+  ],
+  "usedDeprecatedRules": Array [],
+  "warningCount": 0,
+}
+`;
+
+exports[`reports undeclared variable 1`] = `
+Object {
+  "errorCount": 1,
+  "fixableErrorCount": 0,
+  "fixableWarningCount": 0,
+  "results": Array [
+    Object {
+      "errorCount": 1,
+      "filePath": "<text>",
+      "fixableErrorCount": 0,
+      "fixableWarningCount": 0,
+      "messages": Array [
+        Object {
+          "column": 1,
+          "endColumn": 2,
+          "endLine": 1,
+          "line": 1,
+          "message": "'i' is not defined.",
+          "messageId": "undef",
+          "nodeType": "Identifier",
+          "ruleId": "no-undef",
+          "severity": 2,
+        },
+      ],
+      "source": "i++",
+      "warningCount": 0,
+    },
+  ],
+  "usedDeprecatedRules": Array [],
+  "warningCount": 0,
+}
+`;
