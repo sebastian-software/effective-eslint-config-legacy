@@ -1,4 +1,4 @@
-declare module 'confusing-browser-globals' {
+declare module "confusing-browser-globals" {
   const globals: string[]
   export default globals
 }

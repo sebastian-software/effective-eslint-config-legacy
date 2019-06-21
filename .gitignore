@@ -2,7 +2,6 @@
 .ts-cache.json
 .vscode/
 *.log
-build/
 coverage/
 dist/
 node_modules/
