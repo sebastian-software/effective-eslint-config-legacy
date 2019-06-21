@@ -1,6 +1,6 @@
 {
   "name": "@effective/eslint-config",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "ESLint Configuration for Effective Project",
   "author": "Sebastian Werner <s.werner@sebastian-software.de>",
   "files": [
