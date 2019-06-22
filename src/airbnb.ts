@@ -183,7 +183,6 @@ export const es2015: ESLintRules = {
       "allowParens": true
     }
   ],
-  "no-useless-constructor": "error",
   "no-var": "error",
   "object-shorthand": [
     "error",
@@ -268,14 +267,6 @@ export const variables: ESLintRules = {
 
   // disallow use of undefined when initializing variables
   "no-undef-init": "error"
-
-  // Note: Disabled as existing code is not following this convention.
-  // Is also more style related not functional in ES6/TS environments.
-  // disallow use of variables before they are defined
-  // 'no-use-before-define': [
-  //   'error',
-  //   { functions: true, classes: true, variables: true },
-  // ],
 }
 
 export const react: ESLintRules = {

@@ -46,16 +46,6 @@ const tsImprovedCRARules: ESLintRules = {
 
   "@typescript-eslint/no-array-constructor": "warn",
 
-  "@typescript-eslint/no-use-before-define": [
-    "warn",
-    {
-      functions: false,
-      classes: false,
-      variables: false,
-      typedefs: false
-    }
-  ],
-
   "@typescript-eslint/no-unused-vars": [
     "warn",
     {
@@ -117,9 +107,6 @@ const customRules: ESLintRules = {
 
   // Fails with <FormattedNumber style="currency" />
   "react/style-prop-object": "off",
-
-  // This does not help with finding bugs and causes a lot of useless re-ordering.
-  "@typescript-eslint/no-use-before-define": "off",
 
   // This detects the React global as false-positive and doesn't properly
   // understand deliberate exclusions from destructuring.
@@ -210,8 +197,8 @@ const config: ESLintConfig = {
     ...react,
     ...tsImprovedCRARules,
     ...tsInterationFixes,
-    ...customRules,
-    ...tsOverrideRules
+    ...customRules
+    // ...tsOverrideRules
   },
 
   overrides: [

@@ -90,7 +90,7 @@ export const quality: ESLintRules = {
       args: "none"
     }
   ],
-  "no-use-before-define": [
+  "@typescript-eslint/no-use-before-define": [
     "error",
     {
       functions: false,

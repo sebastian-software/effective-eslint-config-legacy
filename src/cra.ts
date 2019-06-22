@@ -10,7 +10,6 @@ export const createReactApp: ESLintRules = {
   "dot-location": [ "error", "property" ],
   eqeqeq: [ "error", "smart" ],
   "new-parens": "error",
-  "no-array-constructor": "error",
   "no-caller": "error",
   "no-cond-assign": [ "error", "except-parens" ],
   "no-const-assign": "error",
