@@ -21,35 +21,13 @@ test("load config in eslint to validate all rule syntax is correct", () => {
   expect(result).toMatchSnapshot()
 })
 
-test("configuration result matches for JS", () => {
+test("Full configuration result", () => {
   const cli = new CLIEngine({
     useEslintrc: false,
     configFile: "dist/index.js"
   })
 
   expect(extractConfig(cli, "src/index.js")).toMatchSnapshot()
-})
-
-test("configuration result matches for TS", () => {
-  const cli = new CLIEngine({
-    useEslintrc: false,
-    configFile: "dist/index.js"
-  })
-
-  expect(extractConfig(cli, "src/index.ts")).toMatchSnapshot()
-})
-
-test("configuration result for JS and TS differs", () => {
-  const cli = new CLIEngine({
-    useEslintrc: false,
-    configFile: "dist/index.js"
-  })
-
-  const jsConfig = extractConfig(cli, "src/index.js")
-  const tsConfig = extractConfig(cli, "src/index.ts")
-
-  // eslint-disable-next-line @typescript-eslint/camelcase
-  expect(diff(jsConfig, tsConfig, { n_surrounding: 0 })).toMatchSnapshot()
 })
 
 test("reports undeclared variable", () => {

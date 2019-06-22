@@ -1,7 +1,7 @@
 import { Linter } from "eslint"
 
 interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 }
 
 const MAX_COMPLEXITY = 11
@@ -409,4 +409,13 @@ export const react: ESLintRules = {
   ],
   "react/no-this-in-sfc": "error",
   "jsx-a11y/lang": "error"
+}
+
+export const airbnb = {
+  ...es2015,
+  ...essential,
+  ...imports,
+  ...node,
+  ...react,
+  ...variables
 }

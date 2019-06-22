@@ -5,7 +5,7 @@ import restrictedGlobals from "confusing-browser-globals"
 
 import allTSRulesUnfiltered from "@typescript-eslint/eslint-plugin/dist/configs/all.json"
 import { createReactApp } from "./cra"
-import { es2015, essential, imports, node, react, variables } from "./airbnb"
+import { airbnb } from "./airbnb"
 import { quality } from "./quality"
 import { formatting } from "./formatting"
 
@@ -37,24 +37,12 @@ interface ESLintConfig extends Linter.Config {
   overrides: ESLintOverrides[];
 }
 
-// Add TypeScript specific rules (and turn off ESLint equivalents)
-// Via: https://github.com/facebook/create-react-app/blob/7548281aa5a9096f09cd5c9447cb4c21fa96ed4d/packages/eslint-config-react-app/index.js#L71
-const tsImprovedCRARules: ESLintRules = {
-  "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
+const customRules: ESLintRules = {
+  "@typescript-eslint/no-angle-bracket-type-assertion": "error",
   "@typescript-eslint/no-namespace": "error",
+  "@typescript-eslint/no-array-constructor": "error",
+  "@typescript-eslint/no-useless-constructor": "error",
 
-
-  "@typescript-eslint/no-array-constructor": "warn",
-
-  "@typescript-eslint/no-useless-constructor": "warn"
-}
-
-const reactHooksRecommended: ESLintRules = {
-  "react-hooks/rules-of-hooks": "error",
-  "react-hooks/exhaustive-deps": "warn"
-}
-
-const tsInterationFixes: ESLintRules = {
   // We are fully in TypeScript. PropTypes are not useful anymore.
   "react/prop-types": "off",
 
@@ -62,10 +50,12 @@ const tsInterationFixes: ESLintRules = {
   "import/export": "off",
 
   // Conflicts with TypeScript import/export e.g. interfaces
-  "import/named": "off"
-}
+  "import/named": "off",
 
-const customRules: ESLintRules = {
+  "react-hooks/rules-of-hooks": "error",
+  "react-hooks/exhaustive-deps": "warn",
+
+
   // The ESLint browser environment defines all browser globals as valid,
   // even though most people don't know some of them exist (e.g. `name` or `status`).
   // This is dangerous as it hides accidentally undefined variables.
@@ -165,16 +155,8 @@ const config: ESLintConfig = {
   },
 
   rules: {
-    ...reactHooksRecommended,
     ...createReactApp,
-    ...essential,
-    ...es2015,
-    ...imports,
-    ...node,
-    ...variables,
-    ...react,
-    ...tsImprovedCRARules,
-    ...tsInterationFixes,
+    ...airbnb,
     ...customRules,
     ...quality,
     ...formatting,
