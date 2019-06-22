@@ -63,15 +63,7 @@ export const essential: ESLintRules = {
       allow: []
     }
   ],
-  "no-magic-numbers": [
-    "warn",
-    {
-      ignore: [ 0, 1, 2, 10 ],
-      ignoreArrayIndexes: true,
-      enforceConst: true,
-      detectObjects: false
-    }
-  ],
+
   "no-multi-spaces": [
     "error",
     {

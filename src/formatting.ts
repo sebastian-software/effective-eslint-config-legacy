@@ -5,27 +5,8 @@ interface ESLintRules {
 }
 
 export const formatting: ESLintRules = {
-  "array-bracket-spacing": [
-    "warn",
-    "always",
-    {
-      objectsInArrays: false
-    }
-  ],
-  "arrow-parens": [ "warn", "always" ],
-  camelcase: "off",
-  "@typescript-eslint/camelcase": "warn",
-  "comma-dangle": [ "warn", "never" ],
-  "comma-style": [ "warn", "last" ],
-  "func-names": [ "warn", "as-needed" ],
-  "func-style": [
-    "warn",
-    "declaration",
-    {
-      allowArrowFunctions: true
-    }
-  ],
-  indent: [
+  indent: "off",
+  "@typescript-eslint/indent": [
     "warn",
     2,
     {
@@ -42,7 +23,48 @@ export const formatting: ESLintRules = {
       }
     }
   ],
-  "@typescript-eslint/indent": [ "warn", 2 ],
+
+  camelcase: "off",
+  "@typescript-eslint/camelcase": "warn",
+
+  semi: "off",
+  "@typescript-eslint/semi": [ "warn", "never" ],
+
+  "no-magic-numbers": "off",
+  "@typescript-eslint/no-magic-numbers": [
+    "warn",
+    {
+      ignore: [ 0, 1, 2, 10 ],
+      ignoreArrayIndexes: true,
+      // ignoreEnums: true,
+      enforceConst: true,
+      detectObjects: false
+    }
+  ],
+
+  "func-call-spacing": "off",
+  "@typescript-eslint/func-call-spacing": [ "error", "never" ],
+
+  "@typescript-eslint/class-name-casing": "error",
+
+  "array-bracket-spacing": [
+    "warn",
+    "always",
+    {
+      objectsInArrays: false
+    }
+  ],
+  "arrow-parens": [ "warn", "always" ],
+  "comma-dangle": [ "warn", "never" ],
+  "comma-style": [ "warn", "last" ],
+  "func-names": [ "warn", "as-needed" ],
+  "func-style": [
+    "warn",
+    "declaration",
+    {
+      allowArrowFunctions: true
+    }
+  ],
   "no-multiple-empty-lines": [
     "warn",
     {
@@ -64,7 +86,6 @@ export const formatting: ESLintRules = {
   "one-var-declaration-per-line": [ "warn", "initializations" ],
   "operator-assignment": "warn",
   "operator-linebreak": [ "warn", "after" ],
-  semi: [ "warn", "never" ],
   "space-before-function-paren": [
     "warn",
     {

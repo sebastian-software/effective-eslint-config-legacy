@@ -32,12 +32,8 @@ interface ESLintConfig extends Linter.Config {
 // Add TypeScript specific rules (and turn off ESLint equivalents)
 // Via: https://github.com/facebook/create-react-app/blob/7548281aa5a9096f09cd5c9447cb4c21fa96ed4d/packages/eslint-config-react-app/index.js#L71
 const tsImprovedCRARules: ESLintRules = {
-  "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
-
   "no-array-constructor": "off",
   "@typescript-eslint/no-array-constructor": "warn",
-
-  "@typescript-eslint/no-namespace": "error",
 
   "no-use-before-define": "off",
   "@typescript-eslint/no-use-before-define": [
@@ -71,6 +67,10 @@ const reactHooksRecommended: ESLintRules = {
 const preferFormattingPrettier = [ "prettier", "prettier/@typescript-eslint", "prettier/react" ]
 
 const tsInterationFixes: ESLintRules = {
+  "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
+  "@typescript-eslint/no-namespace": "error",
+
+
   // We are fully in TypeScript. PropTypes are not useful anymore.
   "react/prop-types": "off",
 
