@@ -1,3 +1,5 @@
+/* eslint-disable filenames/match-exported */
+
 import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"
 
@@ -120,7 +122,20 @@ const customRules: ESLintRules = {
   "@typescript-eslint/no-unused-vars": "off",
 
   // This if often necessary in order to initialize typed objects.
-  "@typescript-eslint/no-object-literal-type-assertion": "off"
+  "@typescript-eslint/no-object-literal-type-assertion": "off",
+
+  // Don't allow dashes or underscores.
+  "filenames/match-regex": [
+    "error",
+    "^[a-zA-Z][a-zA-Z0-9.]+$"
+  ],
+
+  // Keep in sync with exported symbol name.
+  "filenames/match-exported": "error",
+
+  // Disable don't allow index.js files as this is used for exporting libs often times.
+  // Just be sure to not use them everywhere.
+  "filenames/no-index": "off"
 }
 
 const config: ESLintConfig = {
@@ -151,7 +166,7 @@ const config: ESLintConfig = {
   },
 
   parser: "@typescript-eslint/parser",
-  plugins: [ "@typescript-eslint", "react-hooks", "prettier", "cypress", "jest" ],
+  plugins: [ "@typescript-eslint", "react-hooks", "prettier", "cypress", "jest", "filenames" ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
