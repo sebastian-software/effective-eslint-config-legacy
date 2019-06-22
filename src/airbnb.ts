@@ -80,7 +80,6 @@ export const essential: ESLintRules = {
   ],
   "no-new": "error",
   "no-proto": "error",
-  "no-prototype-builtins": "error",
   "no-restricted-properties": [
     "error",
     {

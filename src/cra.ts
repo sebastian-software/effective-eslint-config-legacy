@@ -63,7 +63,6 @@ export const createReactApp: ESLintRules = {
   "no-self-assign": "error",
   "no-self-compare": "error",
   "no-sequences": "error",
-  "no-shadow-restricted-names": "error",
   "no-sparse-arrays": "error",
   "no-template-curly-in-string": "error",
   "no-this-before-super": "error",
@@ -91,7 +90,6 @@ export const createReactApp: ESLintRules = {
       ignoreExport: false
     }
   ],
-  "no-with": "error",
   "no-whitespace-before-property": "error",
   "react-hooks/exhaustive-deps": "error",
   "require-yield": "error",
