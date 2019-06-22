@@ -1160,9 +1160,6 @@ exports[`configuration result matches for JS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
-    \\"no-extra-parens\\": [
-      \\"off\\"
-    ],
     \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
       \\"warn\\"
     ],
@@ -1279,6 +1276,9 @@ exports[`configuration result matches for JS 1`] = `
       \\"error\\"
     ],
     \\"filenames/no-index\\": [
+      \\"off\\"
+    ],
+    \\"no-extra-parens\\": [
       \\"off\\"
     ],
     \\"react/jsx-child-element-spacing\\": [
@@ -2981,9 +2981,6 @@ exports[`configuration result matches for TS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
-    \\"no-extra-parens\\": [
-      \\"off\\"
-    ],
     \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
       \\"warn\\"
     ],
@@ -3100,6 +3097,9 @@ exports[`configuration result matches for TS 1`] = `
       \\"error\\"
     ],
     \\"filenames/no-index\\": [
+      \\"off\\"
+    ],
+    \\"no-extra-parens\\": [
       \\"off\\"
     ],
     \\"react/jsx-child-element-spacing\\": [
