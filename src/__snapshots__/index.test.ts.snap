@@ -520,17 +520,6 @@ exports[`configuration result matches for JS 1`] = `
     \\"no-await-in-loop\\": [
       \\"error\\"
     ],
-    \\"no-extra-parens\\": [
-      \\"off\\",
-      \\"all\\",
-      {
-        \\"conditionalAssign\\": true,
-        \\"nestedBinaryExpressions\\": false,
-        \\"returnAssign\\": false,
-        \\"ignoreJSX\\": \\"all\\",
-        \\"enforceForArrowConditionals\\": false
-      }
-    ],
     \\"no-floating-decimal\\": [
       \\"error\\"
     ],
@@ -888,6 +877,17 @@ exports[`configuration result matches for JS 1`] = `
         \\"detectObjects\\": false
       }
     ],
+    \\"@typescript-eslint/no-extra-parens\\": [
+      \\"off\\",
+      \\"all\\",
+      {
+        \\"conditionalAssign\\": true,
+        \\"nestedBinaryExpressions\\": false,
+        \\"returnAssign\\": false,
+        \\"ignoreJSX\\": \\"all\\",
+        \\"enforceForArrowConditionals\\": false
+      }
+    ],
     \\"func-call-spacing\\": [
       \\"off\\"
     ],
@@ -1160,6 +1160,15 @@ exports[`configuration result matches for JS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
+    \\"no-extra-parens\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-namespace\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-array-constructor\\": [
       \\"warn\\"
     ],
@@ -1171,12 +1180,6 @@ exports[`configuration result matches for JS 1`] = `
     ],
     \\"@typescript-eslint/no-useless-constructor\\": [
       \\"warn\\"
-    ],
-    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
-      \\"warn\\"
-    ],
-    \\"@typescript-eslint/no-namespace\\": [
-      \\"error\\"
     ],
     \\"react/prop-types\\": [
       \\"off\\"
@@ -1285,9 +1288,6 @@ exports[`configuration result matches for JS 1`] = `
       \\"off\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-extra-parens\\": [
       \\"off\\"
     ],
     \\"@typescript-eslint/type-annotation-spacing\\": [
@@ -2341,17 +2341,6 @@ exports[`configuration result matches for TS 1`] = `
     \\"no-await-in-loop\\": [
       \\"error\\"
     ],
-    \\"no-extra-parens\\": [
-      \\"off\\",
-      \\"all\\",
-      {
-        \\"conditionalAssign\\": true,
-        \\"nestedBinaryExpressions\\": false,
-        \\"returnAssign\\": false,
-        \\"ignoreJSX\\": \\"all\\",
-        \\"enforceForArrowConditionals\\": false
-      }
-    ],
     \\"no-floating-decimal\\": [
       \\"error\\"
     ],
@@ -2709,6 +2698,17 @@ exports[`configuration result matches for TS 1`] = `
         \\"detectObjects\\": false
       }
     ],
+    \\"@typescript-eslint/no-extra-parens\\": [
+      \\"off\\",
+      \\"all\\",
+      {
+        \\"conditionalAssign\\": true,
+        \\"nestedBinaryExpressions\\": false,
+        \\"returnAssign\\": false,
+        \\"ignoreJSX\\": \\"all\\",
+        \\"enforceForArrowConditionals\\": false
+      }
+    ],
     \\"func-call-spacing\\": [
       \\"off\\"
     ],
@@ -2981,6 +2981,15 @@ exports[`configuration result matches for TS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
+    \\"no-extra-parens\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-namespace\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-array-constructor\\": [
       \\"warn\\"
     ],
@@ -2992,12 +3001,6 @@ exports[`configuration result matches for TS 1`] = `
     ],
     \\"@typescript-eslint/no-useless-constructor\\": [
       \\"warn\\"
-    ],
-    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
-      \\"warn\\"
-    ],
-    \\"@typescript-eslint/no-namespace\\": [
-      \\"error\\"
     ],
     \\"react/prop-types\\": [
       \\"off\\"
@@ -3106,9 +3109,6 @@ exports[`configuration result matches for TS 1`] = `
       \\"off\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-extra-parens\\": [
       \\"off\\"
     ],
     \\"@typescript-eslint/type-annotation-spacing\\": [

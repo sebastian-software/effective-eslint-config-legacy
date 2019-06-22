@@ -36,17 +36,6 @@ export const essential: ESLintRules = {
   "guard-for-in": "error",
   "no-alert": "warn",
   "no-await-in-loop": "error",
-  "no-extra-parens": [
-    "off",
-    "all",
-    {
-      conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
-      ignoreJSX: "all",
-      enforceForArrowConditionals: false
-    }
-  ],
   "no-floating-decimal": "error",
   "no-global-assign": [
     "error",

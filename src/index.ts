@@ -3,10 +3,18 @@
 import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"
 
+import allTSRulesUnfiltered from "@typescript-eslint/eslint-plugin/dist/configs/all.json"
 import { createReactApp } from "./cra"
 import { es2015, essential, imports, node, react, variables } from "./airbnb"
 import { quality } from "./quality"
 import { formatting } from "./formatting"
+
+
+const disabledByTS = Object.keys(allTSRulesUnfiltered.rules).filter((name) => !name.startsWith("@typescript-eslint/"))
+const tsOverrideRules: any = {}
+disabledByTS.forEach((name): void => { tsOverrideRules[name] = "off" })
+
+
 
 interface ESLintRules {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
@@ -32,10 +40,12 @@ interface ESLintConfig extends Linter.Config {
 // Add TypeScript specific rules (and turn off ESLint equivalents)
 // Via: https://github.com/facebook/create-react-app/blob/7548281aa5a9096f09cd5c9447cb4c21fa96ed4d/packages/eslint-config-react-app/index.js#L71
 const tsImprovedCRARules: ESLintRules = {
-  "no-array-constructor": "off",
+  "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
+  "@typescript-eslint/no-namespace": "error",
+
+
   "@typescript-eslint/no-array-constructor": "warn",
 
-  "no-use-before-define": "off",
   "@typescript-eslint/no-use-before-define": [
     "warn",
     {
@@ -46,7 +56,6 @@ const tsImprovedCRARules: ESLintRules = {
     }
   ],
 
-  "no-unused-vars": "off",
   "@typescript-eslint/no-unused-vars": [
     "warn",
     {
@@ -55,7 +64,6 @@ const tsImprovedCRARules: ESLintRules = {
     }
   ],
 
-  "no-useless-constructor": "off",
   "@typescript-eslint/no-useless-constructor": "warn"
 }
 
@@ -67,10 +75,6 @@ const reactHooksRecommended: ESLintRules = {
 const preferFormattingPrettier = [ "prettier", "prettier/@typescript-eslint", "prettier/react" ]
 
 const tsInterationFixes: ESLintRules = {
-  "@typescript-eslint/no-angle-bracket-type-assertion": "warn",
-  "@typescript-eslint/no-namespace": "error",
-
-
   // We are fully in TypeScript. PropTypes are not useful anymore.
   "react/prop-types": "off",
 
@@ -206,7 +210,8 @@ const config: ESLintConfig = {
     ...react,
     ...tsImprovedCRARules,
     ...tsInterationFixes,
-    ...customRules
+    ...customRules,
+    ...tsOverrideRules
   },
 
   overrides: [

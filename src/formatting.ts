@@ -42,6 +42,18 @@ export const formatting: ESLintRules = {
     }
   ],
 
+  "@typescript-eslint/no-extra-parens": [
+    "off",
+    "all",
+    {
+      conditionalAssign: true,
+      nestedBinaryExpressions: false,
+      returnAssign: false,
+      ignoreJSX: "all",
+      enforceForArrowConditionals: false
+    }
+  ],
+
   "func-call-spacing": "off",
   "@typescript-eslint/func-call-spacing": [ "error", "never" ],
 
