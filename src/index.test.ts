@@ -1,5 +1,6 @@
 import { CLIEngine } from "eslint"
 import { escapeRegExp } from "lodash"
+import diff from "diff-lines"
 
 const CWD_REPL = escapeRegExp(process.cwd())
 
@@ -36,6 +37,18 @@ test("configuration result matches for TS", () => {
   })
 
   expect(extractConfig(cli, "src/index.ts")).toMatchSnapshot()
+})
+
+test("configuration result for JS and TS differs", () => {
+  const cli = new CLIEngine({
+    useEslintrc: false,
+    configFile: "dist/index.js"
+  })
+
+  const jsConfig = extractConfig(cli, "src/index.js")
+  const tsConfig = extractConfig(cli, "src/index.ts")
+
+  expect(diff(jsConfig, tsConfig, { n_surrounding: 0 })).toMatchSnapshot()
 })
 
 test("reports undeclared variable", () => {
