@@ -74,13 +74,10 @@ export const quality: ESLintRules = {
       max: 2
     }
   ],
-  "no-catch-shadow": "error",
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
   "no-extra-semi": "error",
   "no-mixed-spaces-and-tabs": "error",
-  "no-native-reassign": "error",
-  "no-negated-in-lhs": "error",
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",

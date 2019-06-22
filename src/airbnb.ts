@@ -283,10 +283,7 @@ export const node: ESLintRules = {
 }
 
 export const variables: ESLintRules = {
-  // Note: Disabled as existing code is not following this convention.
-  // Is also more style related not functional in ES6/TS environments.
-  // disallow declaration of variables already declared in the outer scope
-  // 'no-shadow': 'error',
+  'no-shadow': 'error',
 
   // disallow use of undefined when initializing variables
   "no-undef-init": "error"
