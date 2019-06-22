@@ -17,7 +17,10 @@
     "yarn": ">=1.0.0"
   },
   "license": "Apache-2.0",
-  "repository": "https://github.com/sebastian-software/effective-eslint-config.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sebastian-software/effective-eslint-config.git"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
