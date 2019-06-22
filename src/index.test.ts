@@ -1,4 +1,12 @@
 import { CLIEngine } from "eslint"
+import { escapeRegExp } from "lodash"
+
+const CWD_REPL = escapeRegExp(process.cwd())
+
+function extractConfig(cli: CLIEngine, file: string) {
+  const result = JSON.stringify(cli.getConfigForFile(file), null, "  ")
+  return result.replace(new RegExp(CWD_REPL), "[CWD]")
+}
 
 test("load config in eslint to validate all rule syntax is correct", () => {
   const cli = new CLIEngine({
@@ -10,6 +18,24 @@ test("load config in eslint to validate all rule syntax is correct", () => {
   const result = cli.executeOnText(code)
 
   expect(result).toMatchSnapshot()
+})
+
+test("configuration result matches for JS", () => {
+  const cli = new CLIEngine({
+    useEslintrc: false,
+    configFile: "dist/index.js"
+  })
+
+  expect(extractConfig(cli, "src/index.js")).toMatchSnapshot()
+})
+
+test("configuration result matches for TS", () => {
+  const cli = new CLIEngine({
+    useEslintrc: false,
+    configFile: "dist/index.js"
+  })
+
+  expect(extractConfig(cli, "src/index.ts")).toMatchSnapshot()
 })
 
 test("reports undeclared variable", () => {
