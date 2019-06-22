@@ -196,14 +196,12 @@ export const es2015: ESLintRules = {
       after: true
     }
   ],
-  // Disabled to prevent conflicts with lightweight coding currently used.
-  // Also conflicts with some prettier auto-formatting.
-  // "no-confusing-arrow": [
-  //   "error",
-  //   {
-  //     "allowParens": true
-  //   }
-  // ],
+  "no-confusing-arrow": [
+    "error",
+    {
+      "allowParens": true
+    }
+  ],
   "no-useless-constructor": "error",
   "no-var": "error",
   "object-shorthand": [

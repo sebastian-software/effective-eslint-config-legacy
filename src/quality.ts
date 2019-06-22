@@ -75,7 +75,6 @@ export const quality: ESLintRules = {
     }
   ],
   "no-catch-shadow": "error",
-  "no-confusing-arrow": "error",
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
   "no-extra-semi": "error",
