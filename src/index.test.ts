@@ -6,7 +6,7 @@ test("load config in eslint to validate all rule syntax is correct", () => {
     configFile: "dist/index.js"
   })
 
-  const code = "const foo = 1\nconst bar = function () {}\nbar(foo)\n"
+  const code = "const first = 1\nfunction second() {}\nsecond(first)\n"
   const result = cli.executeOnText(code)
 
   expect(result).toMatchSnapshot()
