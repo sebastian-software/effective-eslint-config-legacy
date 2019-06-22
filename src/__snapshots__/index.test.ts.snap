@@ -1,594 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`configuration result for JS and TS differs 1`] = `
-"-  \\"parser\\": null,
-+  \\"parser\\": \\"[CWD]/node_modules/@typescript-eslint/parser/dist/parser.js\\",
-@@
-+    \\"sourceType\\": \\"module\\",
-@@
--    \\"sourceType\\": \\"module\\",
-@@
-+    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
-+      \\"warn\\"
-+    ],
-+    \\"no-array-constructor\\": [
-+      \\"off\\"
-+    ],
-+    \\"@typescript-eslint/no-array-constructor\\": [
-+      \\"warn\\"
-+    ],
-+    \\"@typescript-eslint/no-namespace\\": [
-+      \\"error\\"
-+    ],
-+    \\"no-use-before-define\\": [
-+      \\"off\\",
-+      {
-+        \\"functions\\": false,
-+        \\"classes\\": false
-+      }
-+    ],
-+    \\"@typescript-eslint/no-use-before-define\\": [
-+      \\"off\\"
-+    ],
-+    \\"no-unused-vars\\": [
-+      \\"off\\",
-+      {
-+        \\"varsIgnorePattern\\": \\"^_\\",
-+        \\"ignoreRestSiblings\\": true,
-+        \\"args\\": \\"none\\"
-+      }
-+    ],
-+    \\"@typescript-eslint/no-unused-vars\\": [
-+      \\"off\\"
-+    ],
-+    \\"no-useless-constructor\\": [
-+      \\"off\\"
-+    ],
-+    \\"@typescript-eslint/no-useless-constructor\\": [
-+      \\"warn\\"
-+    ],
-+    \\"react/prop-types\\": [
-+      \\"off\\"
-+    ],
-+    \\"import/export\\": [
-+      \\"off\\"
-+    ],
-+    \\"no-unexpected-multiline\\": [
-+      \\"warn\\"
-+    ],
-+    \\"import/named\\": [
-+      \\"off\\"
-+    ],
-+    \\"array-bracket-spacing\\": [
-+      \\"warn\\",
-+      \\"always\\",
-+      {
-+        \\"objectsInArrays\\": false
-+      }
-+    ],
-+    \\"arrow-parens\\": [
-+      \\"warn\\",
-+      \\"always\\"
-+    ],
-+    \\"camelcase\\": [
-+      \\"warn\\"
-+    ],
-+    \\"comma-dangle\\": [
-+      \\"warn\\",
-+      \\"never\\"
-+    ],
-+    \\"comma-style\\": [
-+      \\"warn\\",
-+      \\"last\\"
-+    ],
-+    \\"func-names\\": [
-+      \\"warn\\",
-+      \\"as-needed\\"
-+    ],
-+    \\"func-style\\": [
-+      \\"warn\\",
-+      \\"declaration\\",
-+      {
-+        \\"allowArrowFunctions\\": true
-+      }
-+    ],
-+    \\"indent\\": [
-+      \\"warn\\",
-+      2,
-+      {
-+        \\"SwitchCase\\": 1,
-+        \\"VariableDeclarator\\": 1,
-+        \\"outerIIFEBody\\": 0,
-+        \\"MemberExpression\\": 1,
-+        \\"FunctionExpression\\": {
-+          \\"body\\": 1,
-+          \\"parameters\\": 1
-+        },
-+        \\"CallExpression\\": {
-+          \\"arguments\\": 1
-+        },
-+        \\"flatTernaryExpressions\\": false,
-+        \\"ignoreComments\\": false
-+      }
-+    ],
-+    \\"no-multiple-empty-lines\\": [
-+      \\"warn\\",
-+      {
-+        \\"max\\": 4,
-+        \\"maxEOF\\": 1,
-+        \\"maxBOF\\": 0
-+      }
-+    ],
-+    \\"no-trailing-spaces\\": [
-+      \\"warn\\"
-+    ],
-+    \\"no-whitespace-before-property\\": [
-+      \\"warn\\"
-+    ],
-+    \\"object-curly-spacing\\": [
-+      \\"warn\\",
-+      \\"always\\"
-+    ],
-+    \\"object-property-newline\\": [
-+      \\"warn\\",
-+      {
-+        \\"allowMultiplePropertiesPerLine\\": true,
-+        \\"allowAllPropertiesOnSameLine\\": false
-+      }
-+    ],
-+    \\"one-var-declaration-per-line\\": [
-+      \\"warn\\",
-+      \\"initializations\\"
-+    ],
-+    \\"operator-assignment\\": [
-+      \\"warn\\"
-+    ],
-+    \\"operator-linebreak\\": [
-+      \\"warn\\",
-+      \\"after\\"
-+    ],
-+    \\"semi\\": [
-+      \\"warn\\",
-+      \\"never\\"
-+    ],
-+    \\"space-before-function-paren\\": [
-+      \\"warn\\",
-+      {
-+        \\"named\\": \\"never\\",
-+        \\"anonymous\\": \\"never\\",
-+        \\"asyncArrow\\": \\"always\\"
-+      }
-+    ],
-+    \\"spaced-comment\\": [
-+      \\"warn\\",
-+      \\"always\\",
-+      {
-+        \\"exceptions\\": [
-+          \\"*\\",
-+          \\"=\\",
-+          \\"-\\"
-+        ]
-+      }
-+    ],
-+    \\"no-restricted-globals\\": [
-+      \\"error\\",
-+      \\"addEventListener\\",
-+      \\"blur\\",
-+      \\"close\\",
-+      \\"closed\\",
-+      \\"confirm\\",
-+      \\"defaultStatus\\",
-+      \\"defaultstatus\\",
-+      \\"event\\",
-+      \\"external\\",
-+      \\"find\\",
-+      \\"focus\\",
-+      \\"frameElement\\",
-+      \\"frames\\",
-+      \\"history\\",
-+      \\"innerHeight\\",
-+      \\"innerWidth\\",
-+      \\"length\\",
-+      \\"location\\",
-+      \\"locationbar\\",
-+      \\"menubar\\",
-+      \\"moveBy\\",
-+      \\"moveTo\\",
-+      \\"name\\",
-+      \\"onblur\\",
-+      \\"onerror\\",
-+      \\"onfocus\\",
-+      \\"onload\\",
-+      \\"onresize\\",
-+      \\"onunload\\",
-+      \\"open\\",
-+      \\"opener\\",
-+      \\"opera\\",
-+      \\"outerHeight\\",
-+      \\"outerWidth\\",
-+      \\"pageXOffset\\",
-+      \\"pageYOffset\\",
-+      \\"parent\\",
-+      \\"print\\",
-+      \\"removeEventListener\\",
-+      \\"resizeBy\\",
-+      \\"resizeTo\\",
-+      \\"screen\\",
-+      \\"screenLeft\\",
-+      \\"screenTop\\",
-+      \\"screenX\\",
-+      \\"screenY\\",
-+      \\"scroll\\",
-+      \\"scrollbars\\",
-+      \\"scrollBy\\",
-+      \\"scrollTo\\",
-+      \\"scrollX\\",
-+      \\"scrollY\\",
-+      \\"self\\",
-+      \\"status\\",
-+      \\"statusbar\\",
-+      \\"stop\\",
-+      \\"toolbar\\",
-+      \\"top\\"
-+    ],
-+    \\"sort-imports\\": [
-+      \\"error\\",
-+      {
-+        \\"ignoreDeclarationSort\\": true,
-+        \\"ignoreCase\\": false,
-+        \\"ignoreMemberSort\\": false
-+      }
-+    ],
-+    \\"import/order\\": [
-+      \\"error\\"
-+    ],
-+    \\"import/newline-after-import\\": [
-+      \\"error\\"
-+    ],
-+    \\"import/default\\": [
-+      \\"off\\"
-+    ],
-+    \\"react/style-prop-object\\": [
-+      \\"off\\"
-+    ],
-+    \\"@typescript-eslint/no-object-literal-type-assertion\\": [
-+      \\"off\\"
-+    ],
-+    \\"@typescript-eslint/adjacent-overload-signatures\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/array-type\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/ban-types\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/camelcase\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/class-name-casing\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/explicit-function-return-type\\": [
-+      \\"warn\\"
-+    ],
-+    \\"@typescript-eslint/explicit-member-accessibility\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/indent\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/interface-name-prefix\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/member-delimiter-style\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-empty-interface\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-explicit-any\\": [
-+      \\"warn\\"
-+    ],
-+    \\"@typescript-eslint/no-inferrable-types\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-misused-new\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-non-null-assertion\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-parameter-properties\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-triple-slash-reference\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/no-var-requires\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/prefer-interface\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/prefer-namespace-keyword\\": [
-+      \\"error\\"
-+    ],
-+    \\"@typescript-eslint/type-annotation-spacing\\": [
-+      \\"error\\"
-+    ],
-@@
--    \\"no-array-constructor\\": [
--      \\"error\\"
--    ],
-@@
--    \\"no-unexpected-multiline\\": [
--      \\"warn\\"
--    ],
-@@
--    \\"no-whitespace-before-property\\": [
--      \\"warn\\"
--    ],
-@@
--    \\"react/style-prop-object\\": [
--      \\"off\\"
--    ],
-@@
--    \\"no-useless-constructor\\": [
--      \\"error\\"
--    ],
-@@
--    \\"no-unused-vars\\": [
--      \\"error\\",
--      {
--        \\"varsIgnorePattern\\": \\"^_\\",
--        \\"ignoreRestSiblings\\": true,
--        \\"args\\": \\"none\\"
--      }
--    ],
--    \\"no-use-before-define\\": [
--      \\"error\\",
--      {
--        \\"functions\\": false,
--        \\"classes\\": false
--      }
--    ],
--    \\"array-bracket-spacing\\": [
--      \\"warn\\",
--      \\"always\\",
--      {
--        \\"objectsInArrays\\": false
--      }
--    ],
--    \\"arrow-parens\\": [
--      \\"warn\\",
--      \\"always\\"
--    ],
--    \\"camelcase\\": [
--      \\"warn\\"
--    ],
--    \\"comma-dangle\\": [
--      \\"warn\\",
--      \\"never\\"
--    ],
--    \\"comma-style\\": [
--      \\"warn\\",
--      \\"last\\"
--    ],
--    \\"func-names\\": [
--      \\"warn\\",
--      \\"as-needed\\"
--    ],
--    \\"func-style\\": [
--      \\"warn\\",
--      \\"declaration\\",
--      {
--        \\"allowArrowFunctions\\": true
--      }
--    ],
--    \\"indent\\": [
--      \\"warn\\",
--      2,
--      {
--        \\"SwitchCase\\": 1,
--        \\"VariableDeclarator\\": 1,
--        \\"outerIIFEBody\\": 0,
--        \\"MemberExpression\\": 1,
--        \\"FunctionExpression\\": {
--          \\"body\\": 1,
--          \\"parameters\\": 1
--        },
--        \\"CallExpression\\": {
--          \\"arguments\\": 1
--        },
--        \\"flatTernaryExpressions\\": false,
--        \\"ignoreComments\\": false
--      }
--    ],
--    \\"no-multiple-empty-lines\\": [
--      \\"warn\\",
--      {
--        \\"max\\": 4,
--        \\"maxEOF\\": 1,
--        \\"maxBOF\\": 0
--      }
--    ],
--    \\"no-trailing-spaces\\": [
--      \\"warn\\"
--    ],
--    \\"object-curly-spacing\\": [
--      \\"warn\\",
--      \\"always\\"
--    ],
--    \\"object-property-newline\\": [
--      \\"warn\\",
--      {
--        \\"allowMultiplePropertiesPerLine\\": true,
--        \\"allowAllPropertiesOnSameLine\\": false
--      }
--    ],
--    \\"one-var-declaration-per-line\\": [
--      \\"warn\\",
--      \\"initializations\\"
--    ],
--    \\"operator-assignment\\": [
--      \\"warn\\"
--    ],
--    \\"operator-linebreak\\": [
--      \\"warn\\",
--      \\"after\\"
--    ],
--    \\"semi\\": [
--      \\"warn\\",
--      \\"never\\"
--    ],
--    \\"space-before-function-paren\\": [
--      \\"warn\\",
--      {
--        \\"named\\": \\"never\\",
--        \\"anonymous\\": \\"never\\",
--        \\"asyncArrow\\": \\"always\\"
--      }
--    ],
--    \\"spaced-comment\\": [
--      \\"warn\\",
--      \\"always\\",
--      {
--        \\"exceptions\\": [
--          \\"*\\",
--          \\"=\\",
--          \\"-\\"
--        ]
--      }
--    ],
-@@
--    \\"no-restricted-globals\\": [
--      \\"error\\",
--      \\"addEventListener\\",
--      \\"blur\\",
--      \\"close\\",
--      \\"closed\\",
--      \\"confirm\\",
--      \\"defaultStatus\\",
--      \\"defaultstatus\\",
--      \\"event\\",
--      \\"external\\",
--      \\"find\\",
--      \\"focus\\",
--      \\"frameElement\\",
--      \\"frames\\",
--      \\"history\\",
--      \\"innerHeight\\",
--      \\"innerWidth\\",
--      \\"length\\",
--      \\"location\\",
--      \\"locationbar\\",
--      \\"menubar\\",
--      \\"moveBy\\",
--      \\"moveTo\\",
--      \\"name\\",
--      \\"onblur\\",
--      \\"onerror\\",
--      \\"onfocus\\",
--      \\"onload\\",
--      \\"onresize\\",
--      \\"onunload\\",
--      \\"open\\",
--      \\"opener\\",
--      \\"opera\\",
--      \\"outerHeight\\",
--      \\"outerWidth\\",
--      \\"pageXOffset\\",
--      \\"pageYOffset\\",
--      \\"parent\\",
--      \\"print\\",
--      \\"removeEventListener\\",
--      \\"resizeBy\\",
--      \\"resizeTo\\",
--      \\"screen\\",
--      \\"screenLeft\\",
--      \\"screenTop\\",
--      \\"screenX\\",
--      \\"screenY\\",
--      \\"scroll\\",
--      \\"scrollbars\\",
--      \\"scrollBy\\",
--      \\"scrollTo\\",
--      \\"scrollX\\",
--      \\"scrollY\\",
--      \\"self\\",
--      \\"status\\",
--      \\"statusbar\\",
--      \\"stop\\",
--      \\"toolbar\\",
--      \\"top\\"
--    ],
--    \\"sort-imports\\": [
--      \\"error\\",
--      {
--        \\"ignoreDeclarationSort\\": true,
--        \\"ignoreCase\\": false,
--        \\"ignoreMemberSort\\": false
--      }
--    ],
--    \\"import/order\\": [
--      \\"error\\"
--    ],
--    \\"import/newline-after-import\\": [
--      \\"error\\"
--    ],
--    \\"import/default\\": [
--      \\"off\\"
--    ],
--    \\"@typescript-eslint/no-use-before-define\\": [
--      \\"off\\"
--    ],
--    \\"@typescript-eslint/no-unused-vars\\": [
--      \\"off\\"
--    ],
--    \\"@typescript-eslint/no-object-literal-type-assertion\\": [
--      \\"off\\"
--    ],
-@@
--    \\"@typescript-eslint/indent\\": [
--      \\"off\\"
--    ],
--    \\"@typescript-eslint/member-delimiter-style\\": [
--      \\"off\\"
--    ],
-@@
--    \\"@typescript-eslint/type-annotation-spacing\\": [
--      \\"off\\"
--    ],
-@@
--    \\"react/prop-types\\": [
--      2
--    ],
-@@
--    \\"import/named\\": [
--      2
--    ],
-@@
--    \\"import/export\\": [
--      2
--    ],
-@@
-+    \\"import/parsers\\": {
-+      \\"@typescript-eslint/parser\\": [
-+        \\".ts\\",
-+        \\".tsx\\"
-+      ]
-+    },
-@@
--    ],
--    \\"import/parsers\\": {
--      \\"@typescript-eslint/parser\\": [
--        \\".ts\\",
--        \\".tsx\\"
--      ]
--    }
-+    ]"
-`;
+exports[`configuration result for JS and TS differs 1`] = `""`;
 
 exports[`configuration result matches for JS 1`] = `
 "{
@@ -600,7 +12,7 @@ exports[`configuration result matches for JS 1`] = `
     \\"jest/globals\\": true
   },
   \\"globals\\": {},
-  \\"parser\\": null,
+  \\"parser\\": \\"[CWD]/node_modules/@typescript-eslint/parser/dist/parser.js\\",
   \\"parserOptions\\": {
     \\"ecmaVersion\\": 2018,
     \\"sourceType\\": \\"module\\",
@@ -614,6 +26,7 @@ exports[`configuration result matches for JS 1`] = `
     \\"import\\",
     \\"react\\",
     \\"jsx-a11y\\",
+    \\"filenames\\",
     \\"jest\\",
     \\"cypress\\",
     \\"prettier\\",
@@ -651,7 +64,7 @@ exports[`configuration result matches for JS 1`] = `
       \\"error\\"
     ],
     \\"no-array-constructor\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-caller\\": [
       \\"error\\"
@@ -833,7 +246,7 @@ exports[`configuration result matches for JS 1`] = `
       \\"error\\"
     ],
     \\"no-unexpected-multiline\\": [
-      \\"warn\\"
+      \\"off\\"
     ],
     \\"no-unreachable\\": [
       \\"error\\"
@@ -1225,7 +638,7 @@ exports[`configuration result matches for JS 1`] = `
       }
     ],
     \\"no-useless-constructor\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-var\\": [
       \\"error\\"
@@ -1432,19 +845,10 @@ exports[`configuration result matches for JS 1`] = `
       \\"error\\"
     ],
     \\"no-unused-vars\\": [
-      \\"error\\",
-      {
-        \\"varsIgnorePattern\\": \\"^_\\",
-        \\"ignoreRestSiblings\\": true,
-        \\"args\\": \\"none\\"
-      }
+      \\"off\\"
     ],
     \\"no-use-before-define\\": [
-      \\"error\\",
-      {
-        \\"functions\\": false,
-        \\"classes\\": false
-      }
+      \\"off\\"
     ],
     \\"array-bracket-spacing\\": [
       \\"warn\\",
@@ -1458,6 +862,9 @@ exports[`configuration result matches for JS 1`] = `
       \\"always\\"
     ],
     \\"camelcase\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/camelcase\\": [
       \\"warn\\"
     ],
     \\"comma-dangle\\": [
@@ -1497,6 +904,10 @@ exports[`configuration result matches for JS 1`] = `
         \\"flatTernaryExpressions\\": false,
         \\"ignoreComments\\": false
       }
+    ],
+    \\"@typescript-eslint/indent\\": [
+      \\"warn\\",
+      2
     ],
     \\"no-multiple-empty-lines\\": [
       \\"warn\\",
@@ -1734,6 +1145,33 @@ exports[`configuration result matches for JS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-array-constructor\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-namespace\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-use-before-define\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unused-vars\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-useless-constructor\\": [
+      \\"warn\\"
+    ],
+    \\"react/prop-types\\": [
+      \\"off\\"
+    ],
+    \\"import/export\\": [
+      \\"off\\"
+    ],
+    \\"import/named\\": [
+      \\"off\\"
+    ],
     \\"no-restricted-globals\\": [
       \\"error\\",
       \\"addEventListener\\",
@@ -1812,13 +1250,17 @@ exports[`configuration result matches for JS 1`] = `
     \\"import/default\\": [
       \\"off\\"
     ],
-    \\"@typescript-eslint/no-use-before-define\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-unused-vars\\": [
-      \\"off\\"
-    ],
     \\"@typescript-eslint/no-object-literal-type-assertion\\": [
+      \\"off\\"
+    ],
+    \\"filenames/match-regex\\": [
+      \\"error\\",
+      \\"^[a-zA-Z][a-zA-Z0-9.]+$\\"
+    ],
+    \\"filenames/match-exported\\": [
+      \\"error\\"
+    ],
+    \\"filenames/no-index\\": [
       \\"off\\"
     ],
     \\"react/jsx-child-element-spacing\\": [
@@ -1828,9 +1270,6 @@ exports[`configuration result matches for JS 1`] = `
       \\"off\\"
     ],
     \\"@typescript-eslint/func-call-spacing\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/indent\\": [
       \\"off\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
@@ -2218,403 +1657,14 @@ exports[`configuration result matches for JS 1`] = `
     \\"react/no-unsafe\\": [
       0
     ],
-    \\"react/prop-types\\": [
-      2
-    ],
     \\"import/no-named-as-default\\": [
       1
     ],
     \\"import/no-unresolved\\": [
       2
     ],
-    \\"import/named\\": [
-      2
-    ],
     \\"import/namespace\\": [
       2
-    ],
-    \\"import/export\\": [
-      2
-    ],
-    \\"constructor-super\\": [
-      \\"error\\"
-    ],
-    \\"for-direction\\": [
-      \\"error\\"
-    ],
-    \\"no-async-promise-executor\\": [
-      \\"error\\"
-    ],
-    \\"no-case-declarations\\": [
-      \\"error\\"
-    ],
-    \\"no-class-assign\\": [
-      \\"error\\"
-    ],
-    \\"no-compare-neg-zero\\": [
-      \\"error\\"
-    ],
-    \\"no-constant-condition\\": [
-      \\"error\\"
-    ],
-    \\"no-debugger\\": [
-      \\"error\\"
-    ],
-    \\"no-empty\\": [
-      \\"error\\"
-    ],
-    \\"no-extra-boolean-cast\\": [
-      \\"error\\"
-    ],
-    \\"no-inner-declarations\\": [
-      \\"error\\"
-    ],
-    \\"no-irregular-whitespace\\": [
-      \\"error\\"
-    ],
-    \\"no-misleading-character-class\\": [
-      \\"error\\"
-    ],
-    \\"no-prototype-builtins\\": [
-      \\"error\\"
-    ],
-    \\"no-shadow-restricted-names\\": [
-      \\"error\\"
-    ],
-    \\"no-unsafe-finally\\": [
-      \\"error\\"
-    ],
-    \\"no-unsafe-negation\\": [
-      \\"error\\"
-    ],
-    \\"no-useless-catch\\": [
-      \\"error\\"
-    ],
-    \\"no-with\\": [
-      \\"error\\"
-    ],
-    \\"require-atomic-updates\\": [
-      \\"error\\"
-    ]
-  },
-  \\"settings\\": {
-    \\"import/resolver\\": {
-      \\"babel-module\\": {
-        \\"extensions\\": [
-          \\".js\\",
-          \\".jsx\\",
-          \\".ts\\",
-          \\".tsx\\",
-          \\".json\\"
-        ],
-        \\"alias\\": {
-          \\"-\\": \\"./src/\\"
-        }
-      },
-      \\"node\\": {
-        \\"extensions\\": [
-          \\".js\\",
-          \\".jsx\\",
-          \\".ts\\",
-          \\".tsx\\"
-        ]
-      }
-    },
-    \\"react\\": {
-      \\"version\\": \\"detect\\"
-    },
-    \\"import/extensions\\": [
-      \\".js\\",
-      \\".jsx\\",
-      \\".ts\\",
-      \\".tsx\\"
-    ],
-    \\"import/parsers\\": {
-      \\"@typescript-eslint/parser\\": [
-        \\".ts\\",
-        \\".tsx\\"
-      ]
-    }
-  }
-}"
-`;
-
-exports[`configuration result matches for TS 1`] = `
-"{
-  \\"env\\": {
-    \\"browser\\": true,
-    \\"es6\\": true,
-    \\"node\\": true,
-    \\"shared-node-browser\\": true,
-    \\"jest/globals\\": true
-  },
-  \\"globals\\": {},
-  \\"parser\\": \\"[CWD]/node_modules/@typescript-eslint/parser/dist/parser.js\\",
-  \\"parserOptions\\": {
-    \\"sourceType\\": \\"module\\",
-    \\"ecmaVersion\\": 2018,
-    \\"ecmaFeatures\\": {
-      \\"jsx\\": true,
-      \\"impliedStrict\\": true
-    },
-    \\"warnOnUnsupportedTypeScriptVersion\\": true
-  },
-  \\"plugins\\": [
-    \\"import\\",
-    \\"react\\",
-    \\"jsx-a11y\\",
-    \\"jest\\",
-    \\"cypress\\",
-    \\"prettier\\",
-    \\"react-hooks\\",
-    \\"@typescript-eslint\\"
-  ],
-  \\"rules\\": {
-    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
-      \\"warn\\"
-    ],
-    \\"no-array-constructor\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-array-constructor\\": [
-      \\"warn\\"
-    ],
-    \\"@typescript-eslint/no-namespace\\": [
-      \\"error\\"
-    ],
-    \\"no-use-before-define\\": [
-      \\"off\\",
-      {
-        \\"functions\\": false,
-        \\"classes\\": false
-      }
-    ],
-    \\"@typescript-eslint/no-use-before-define\\": [
-      \\"off\\"
-    ],
-    \\"no-unused-vars\\": [
-      \\"off\\",
-      {
-        \\"varsIgnorePattern\\": \\"^_\\",
-        \\"ignoreRestSiblings\\": true,
-        \\"args\\": \\"none\\"
-      }
-    ],
-    \\"@typescript-eslint/no-unused-vars\\": [
-      \\"off\\"
-    ],
-    \\"no-useless-constructor\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-useless-constructor\\": [
-      \\"warn\\"
-    ],
-    \\"react/prop-types\\": [
-      \\"off\\"
-    ],
-    \\"import/export\\": [
-      \\"off\\"
-    ],
-    \\"no-unexpected-multiline\\": [
-      \\"warn\\"
-    ],
-    \\"import/named\\": [
-      \\"off\\"
-    ],
-    \\"array-bracket-spacing\\": [
-      \\"warn\\",
-      \\"always\\",
-      {
-        \\"objectsInArrays\\": false
-      }
-    ],
-    \\"arrow-parens\\": [
-      \\"warn\\",
-      \\"always\\"
-    ],
-    \\"camelcase\\": [
-      \\"warn\\"
-    ],
-    \\"comma-dangle\\": [
-      \\"warn\\",
-      \\"never\\"
-    ],
-    \\"comma-style\\": [
-      \\"warn\\",
-      \\"last\\"
-    ],
-    \\"func-names\\": [
-      \\"warn\\",
-      \\"as-needed\\"
-    ],
-    \\"func-style\\": [
-      \\"warn\\",
-      \\"declaration\\",
-      {
-        \\"allowArrowFunctions\\": true
-      }
-    ],
-    \\"indent\\": [
-      \\"warn\\",
-      2,
-      {
-        \\"SwitchCase\\": 1,
-        \\"VariableDeclarator\\": 1,
-        \\"outerIIFEBody\\": 0,
-        \\"MemberExpression\\": 1,
-        \\"FunctionExpression\\": {
-          \\"body\\": 1,
-          \\"parameters\\": 1
-        },
-        \\"CallExpression\\": {
-          \\"arguments\\": 1
-        },
-        \\"flatTernaryExpressions\\": false,
-        \\"ignoreComments\\": false
-      }
-    ],
-    \\"no-multiple-empty-lines\\": [
-      \\"warn\\",
-      {
-        \\"max\\": 4,
-        \\"maxEOF\\": 1,
-        \\"maxBOF\\": 0
-      }
-    ],
-    \\"no-trailing-spaces\\": [
-      \\"warn\\"
-    ],
-    \\"no-whitespace-before-property\\": [
-      \\"warn\\"
-    ],
-    \\"object-curly-spacing\\": [
-      \\"warn\\",
-      \\"always\\"
-    ],
-    \\"object-property-newline\\": [
-      \\"warn\\",
-      {
-        \\"allowMultiplePropertiesPerLine\\": true,
-        \\"allowAllPropertiesOnSameLine\\": false
-      }
-    ],
-    \\"one-var-declaration-per-line\\": [
-      \\"warn\\",
-      \\"initializations\\"
-    ],
-    \\"operator-assignment\\": [
-      \\"warn\\"
-    ],
-    \\"operator-linebreak\\": [
-      \\"warn\\",
-      \\"after\\"
-    ],
-    \\"semi\\": [
-      \\"warn\\",
-      \\"never\\"
-    ],
-    \\"space-before-function-paren\\": [
-      \\"warn\\",
-      {
-        \\"named\\": \\"never\\",
-        \\"anonymous\\": \\"never\\",
-        \\"asyncArrow\\": \\"always\\"
-      }
-    ],
-    \\"spaced-comment\\": [
-      \\"warn\\",
-      \\"always\\",
-      {
-        \\"exceptions\\": [
-          \\"*\\",
-          \\"=\\",
-          \\"-\\"
-        ]
-      }
-    ],
-    \\"no-restricted-globals\\": [
-      \\"error\\",
-      \\"addEventListener\\",
-      \\"blur\\",
-      \\"close\\",
-      \\"closed\\",
-      \\"confirm\\",
-      \\"defaultStatus\\",
-      \\"defaultstatus\\",
-      \\"event\\",
-      \\"external\\",
-      \\"find\\",
-      \\"focus\\",
-      \\"frameElement\\",
-      \\"frames\\",
-      \\"history\\",
-      \\"innerHeight\\",
-      \\"innerWidth\\",
-      \\"length\\",
-      \\"location\\",
-      \\"locationbar\\",
-      \\"menubar\\",
-      \\"moveBy\\",
-      \\"moveTo\\",
-      \\"name\\",
-      \\"onblur\\",
-      \\"onerror\\",
-      \\"onfocus\\",
-      \\"onload\\",
-      \\"onresize\\",
-      \\"onunload\\",
-      \\"open\\",
-      \\"opener\\",
-      \\"opera\\",
-      \\"outerHeight\\",
-      \\"outerWidth\\",
-      \\"pageXOffset\\",
-      \\"pageYOffset\\",
-      \\"parent\\",
-      \\"print\\",
-      \\"removeEventListener\\",
-      \\"resizeBy\\",
-      \\"resizeTo\\",
-      \\"screen\\",
-      \\"screenLeft\\",
-      \\"screenTop\\",
-      \\"screenX\\",
-      \\"screenY\\",
-      \\"scroll\\",
-      \\"scrollbars\\",
-      \\"scrollBy\\",
-      \\"scrollTo\\",
-      \\"scrollX\\",
-      \\"scrollY\\",
-      \\"self\\",
-      \\"status\\",
-      \\"statusbar\\",
-      \\"stop\\",
-      \\"toolbar\\",
-      \\"top\\"
-    ],
-    \\"sort-imports\\": [
-      \\"error\\",
-      {
-        \\"ignoreDeclarationSort\\": true,
-        \\"ignoreCase\\": false,
-        \\"ignoreMemberSort\\": false
-      }
-    ],
-    \\"import/order\\": [
-      \\"error\\"
-    ],
-    \\"import/newline-after-import\\": [
-      \\"error\\"
-    ],
-    \\"import/default\\": [
-      \\"off\\"
-    ],
-    \\"react/style-prop-object\\": [
-      \\"off\\"
-    ],
-    \\"@typescript-eslint/no-object-literal-type-assertion\\": [
-      \\"off\\"
     ],
     \\"@typescript-eslint/adjacent-overload-signatures\\": [
       \\"error\\"
@@ -2623,9 +1673,6 @@ exports[`configuration result matches for TS 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/ban-types\\": [
-      \\"error\\"
-    ],
-    \\"@typescript-eslint/camelcase\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/class-name-casing\\": [
@@ -2637,13 +1684,7 @@ exports[`configuration result matches for TS 1`] = `
     \\"@typescript-eslint/explicit-member-accessibility\\": [
       \\"error\\"
     ],
-    \\"@typescript-eslint/indent\\": [
-      \\"error\\"
-    ],
     \\"@typescript-eslint/interface-name-prefix\\": [
-      \\"error\\"
-    ],
-    \\"@typescript-eslint/member-delimiter-style\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/no-empty-interface\\": [
@@ -2676,9 +1717,141 @@ exports[`configuration result matches for TS 1`] = `
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
       \\"error\\"
     ],
-    \\"@typescript-eslint/type-annotation-spacing\\": [
+    \\"constructor-super\\": [
       \\"error\\"
     ],
+    \\"for-direction\\": [
+      \\"error\\"
+    ],
+    \\"no-async-promise-executor\\": [
+      \\"error\\"
+    ],
+    \\"no-case-declarations\\": [
+      \\"error\\"
+    ],
+    \\"no-class-assign\\": [
+      \\"error\\"
+    ],
+    \\"no-compare-neg-zero\\": [
+      \\"error\\"
+    ],
+    \\"no-constant-condition\\": [
+      \\"error\\"
+    ],
+    \\"no-debugger\\": [
+      \\"error\\"
+    ],
+    \\"no-empty\\": [
+      \\"error\\"
+    ],
+    \\"no-extra-boolean-cast\\": [
+      \\"error\\"
+    ],
+    \\"no-inner-declarations\\": [
+      \\"error\\"
+    ],
+    \\"no-irregular-whitespace\\": [
+      \\"error\\"
+    ],
+    \\"no-misleading-character-class\\": [
+      \\"error\\"
+    ],
+    \\"no-prototype-builtins\\": [
+      \\"error\\"
+    ],
+    \\"no-shadow-restricted-names\\": [
+      \\"error\\"
+    ],
+    \\"no-unsafe-finally\\": [
+      \\"error\\"
+    ],
+    \\"no-unsafe-negation\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-catch\\": [
+      \\"error\\"
+    ],
+    \\"no-with\\": [
+      \\"error\\"
+    ],
+    \\"require-atomic-updates\\": [
+      \\"error\\"
+    ]
+  },
+  \\"settings\\": {
+    \\"import/resolver\\": {
+      \\"babel-module\\": {
+        \\"extensions\\": [
+          \\".js\\",
+          \\".jsx\\",
+          \\".ts\\",
+          \\".tsx\\",
+          \\".json\\"
+        ],
+        \\"alias\\": {
+          \\"-\\": \\"./src/\\"
+        }
+      },
+      \\"node\\": {
+        \\"extensions\\": [
+          \\".js\\",
+          \\".jsx\\",
+          \\".ts\\",
+          \\".tsx\\"
+        ]
+      }
+    },
+    \\"import/parsers\\": {
+      \\"@typescript-eslint/parser\\": [
+        \\".ts\\",
+        \\".tsx\\"
+      ]
+    },
+    \\"react\\": {
+      \\"version\\": \\"detect\\"
+    },
+    \\"import/extensions\\": [
+      \\".js\\",
+      \\".jsx\\",
+      \\".ts\\",
+      \\".tsx\\"
+    ]
+  }
+}"
+`;
+
+exports[`configuration result matches for TS 1`] = `
+"{
+  \\"env\\": {
+    \\"browser\\": true,
+    \\"es6\\": true,
+    \\"node\\": true,
+    \\"shared-node-browser\\": true,
+    \\"jest/globals\\": true
+  },
+  \\"globals\\": {},
+  \\"parser\\": \\"[CWD]/node_modules/@typescript-eslint/parser/dist/parser.js\\",
+  \\"parserOptions\\": {
+    \\"ecmaVersion\\": 2018,
+    \\"sourceType\\": \\"module\\",
+    \\"ecmaFeatures\\": {
+      \\"jsx\\": true,
+      \\"impliedStrict\\": true
+    },
+    \\"warnOnUnsupportedTypeScriptVersion\\": true
+  },
+  \\"plugins\\": [
+    \\"import\\",
+    \\"react\\",
+    \\"jsx-a11y\\",
+    \\"filenames\\",
+    \\"jest\\",
+    \\"cypress\\",
+    \\"prettier\\",
+    \\"react-hooks\\",
+    \\"@typescript-eslint\\"
+  ],
+  \\"rules\\": {
     \\"react-hooks/rules-of-hooks\\": [
       \\"error\\"
     ],
@@ -2707,6 +1880,9 @@ exports[`configuration result matches for TS 1`] = `
     ],
     \\"new-parens\\": [
       \\"error\\"
+    ],
+    \\"no-array-constructor\\": [
+      \\"off\\"
     ],
     \\"no-caller\\": [
       \\"error\\"
@@ -2887,6 +2063,9 @@ exports[`configuration result matches for TS 1`] = `
     \\"no-undef\\": [
       \\"error\\"
     ],
+    \\"no-unexpected-multiline\\": [
+      \\"off\\"
+    ],
     \\"no-unreachable\\": [
       \\"error\\"
     ],
@@ -2917,6 +2096,9 @@ exports[`configuration result matches for TS 1`] = `
         \\"ignoreImport\\": false,
         \\"ignoreExport\\": false
       }
+    ],
+    \\"no-whitespace-before-property\\": [
+      \\"warn\\"
     ],
     \\"require-yield\\": [
       \\"error\\"
@@ -3062,6 +2244,9 @@ exports[`configuration result matches for TS 1`] = `
     ],
     \\"react/require-render-return\\": [
       \\"error\\"
+    ],
+    \\"react/style-prop-object\\": [
+      \\"off\\"
     ],
     \\"jsx-a11y/accessible-emoji\\": [
       \\"error\\"
@@ -3270,6 +2455,9 @@ exports[`configuration result matches for TS 1`] = `
         \\"allowParens\\": true
       }
     ],
+    \\"no-useless-constructor\\": [
+      \\"off\\"
+    ],
     \\"no-var\\": [
       \\"error\\"
     ],
@@ -3474,6 +2662,127 @@ exports[`configuration result matches for TS 1`] = `
     \\"no-unneeded-ternary\\": [
       \\"error\\"
     ],
+    \\"no-unused-vars\\": [
+      \\"off\\"
+    ],
+    \\"no-use-before-define\\": [
+      \\"off\\"
+    ],
+    \\"array-bracket-spacing\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"objectsInArrays\\": false
+      }
+    ],
+    \\"arrow-parens\\": [
+      \\"warn\\",
+      \\"always\\"
+    ],
+    \\"camelcase\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/camelcase\\": [
+      \\"warn\\"
+    ],
+    \\"comma-dangle\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"comma-style\\": [
+      \\"warn\\",
+      \\"last\\"
+    ],
+    \\"func-names\\": [
+      \\"warn\\",
+      \\"as-needed\\"
+    ],
+    \\"func-style\\": [
+      \\"warn\\",
+      \\"declaration\\",
+      {
+        \\"allowArrowFunctions\\": true
+      }
+    ],
+    \\"indent\\": [
+      \\"warn\\",
+      2,
+      {
+        \\"SwitchCase\\": 1,
+        \\"VariableDeclarator\\": 1,
+        \\"outerIIFEBody\\": 0,
+        \\"MemberExpression\\": 1,
+        \\"FunctionExpression\\": {
+          \\"body\\": 1,
+          \\"parameters\\": 1
+        },
+        \\"CallExpression\\": {
+          \\"arguments\\": 1
+        },
+        \\"flatTernaryExpressions\\": false,
+        \\"ignoreComments\\": false
+      }
+    ],
+    \\"@typescript-eslint/indent\\": [
+      \\"warn\\",
+      2
+    ],
+    \\"no-multiple-empty-lines\\": [
+      \\"warn\\",
+      {
+        \\"max\\": 4,
+        \\"maxEOF\\": 1,
+        \\"maxBOF\\": 0
+      }
+    ],
+    \\"no-trailing-spaces\\": [
+      \\"warn\\"
+    ],
+    \\"object-curly-spacing\\": [
+      \\"warn\\",
+      \\"always\\"
+    ],
+    \\"object-property-newline\\": [
+      \\"warn\\",
+      {
+        \\"allowMultiplePropertiesPerLine\\": true,
+        \\"allowAllPropertiesOnSameLine\\": false
+      }
+    ],
+    \\"one-var-declaration-per-line\\": [
+      \\"warn\\",
+      \\"initializations\\"
+    ],
+    \\"operator-assignment\\": [
+      \\"warn\\"
+    ],
+    \\"operator-linebreak\\": [
+      \\"warn\\",
+      \\"after\\"
+    ],
+    \\"semi\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"space-before-function-paren\\": [
+      \\"warn\\",
+      {
+        \\"named\\": \\"never\\",
+        \\"anonymous\\": \\"never\\",
+        \\"asyncArrow\\": \\"always\\"
+      }
+    ],
+    \\"spaced-comment\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"exceptions\\": [
+          \\"*\\",
+          \\"=\\",
+          \\"-\\"
+        ]
+      }
+    ],
     \\"jsx-quotes\\": [
       \\"error\\",
       \\"prefer-double\\"
@@ -3654,6 +2963,124 @@ exports[`configuration result matches for TS 1`] = `
     \\"jsx-a11y/lang\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-array-constructor\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-namespace\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-use-before-define\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unused-vars\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-useless-constructor\\": [
+      \\"warn\\"
+    ],
+    \\"react/prop-types\\": [
+      \\"off\\"
+    ],
+    \\"import/export\\": [
+      \\"off\\"
+    ],
+    \\"import/named\\": [
+      \\"off\\"
+    ],
+    \\"no-restricted-globals\\": [
+      \\"error\\",
+      \\"addEventListener\\",
+      \\"blur\\",
+      \\"close\\",
+      \\"closed\\",
+      \\"confirm\\",
+      \\"defaultStatus\\",
+      \\"defaultstatus\\",
+      \\"event\\",
+      \\"external\\",
+      \\"find\\",
+      \\"focus\\",
+      \\"frameElement\\",
+      \\"frames\\",
+      \\"history\\",
+      \\"innerHeight\\",
+      \\"innerWidth\\",
+      \\"length\\",
+      \\"location\\",
+      \\"locationbar\\",
+      \\"menubar\\",
+      \\"moveBy\\",
+      \\"moveTo\\",
+      \\"name\\",
+      \\"onblur\\",
+      \\"onerror\\",
+      \\"onfocus\\",
+      \\"onload\\",
+      \\"onresize\\",
+      \\"onunload\\",
+      \\"open\\",
+      \\"opener\\",
+      \\"opera\\",
+      \\"outerHeight\\",
+      \\"outerWidth\\",
+      \\"pageXOffset\\",
+      \\"pageYOffset\\",
+      \\"parent\\",
+      \\"print\\",
+      \\"removeEventListener\\",
+      \\"resizeBy\\",
+      \\"resizeTo\\",
+      \\"screen\\",
+      \\"screenLeft\\",
+      \\"screenTop\\",
+      \\"screenX\\",
+      \\"screenY\\",
+      \\"scroll\\",
+      \\"scrollbars\\",
+      \\"scrollBy\\",
+      \\"scrollTo\\",
+      \\"scrollX\\",
+      \\"scrollY\\",
+      \\"self\\",
+      \\"status\\",
+      \\"statusbar\\",
+      \\"stop\\",
+      \\"toolbar\\",
+      \\"top\\"
+    ],
+    \\"sort-imports\\": [
+      \\"error\\",
+      {
+        \\"ignoreDeclarationSort\\": true,
+        \\"ignoreCase\\": false,
+        \\"ignoreMemberSort\\": false
+      }
+    ],
+    \\"import/order\\": [
+      \\"error\\"
+    ],
+    \\"import/newline-after-import\\": [
+      \\"error\\"
+    ],
+    \\"import/default\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-object-literal-type-assertion\\": [
+      \\"off\\"
+    ],
+    \\"filenames/match-regex\\": [
+      \\"error\\",
+      \\"^[a-zA-Z][a-zA-Z0-9.]+$\\"
+    ],
+    \\"filenames/match-exported\\": [
+      \\"error\\"
+    ],
+    \\"filenames/no-index\\": [
+      \\"off\\"
+    ],
     \\"react/jsx-child-element-spacing\\": [
       \\"off\\"
     ],
@@ -3663,10 +3090,16 @@ exports[`configuration result matches for TS 1`] = `
     \\"@typescript-eslint/func-call-spacing\\": [
       \\"off\\"
     ],
+    \\"@typescript-eslint/member-delimiter-style\\": [
+      \\"off\\"
+    ],
     \\"@typescript-eslint/no-extra-parens\\": [
       \\"off\\"
     ],
     \\"@typescript-eslint/semi\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/type-annotation-spacing\\": [
       \\"off\\"
     ],
     \\"lines-around-comment\\": [
@@ -4051,6 +3484,57 @@ exports[`configuration result matches for TS 1`] = `
     \\"import/namespace\\": [
       2
     ],
+    \\"@typescript-eslint/adjacent-overload-signatures\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/array-type\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/ban-types\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/class-name-casing\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/explicit-function-return-type\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/explicit-member-accessibility\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/interface-name-prefix\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-empty-interface\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-explicit-any\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-inferrable-types\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-misused-new\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-non-null-assertion\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-parameter-properties\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-triple-slash-reference\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-var-requires\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/prefer-interface\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/prefer-namespace-keyword\\": [
+      \\"error\\"
+    ],
     \\"constructor-super\\": [
       \\"error\\"
     ],
@@ -4113,12 +3597,6 @@ exports[`configuration result matches for TS 1`] = `
     ]
   },
   \\"settings\\": {
-    \\"import/parsers\\": {
-      \\"@typescript-eslint/parser\\": [
-        \\".ts\\",
-        \\".tsx\\"
-      ]
-    },
     \\"import/resolver\\": {
       \\"babel-module\\": {
         \\"extensions\\": [
@@ -4140,6 +3618,12 @@ exports[`configuration result matches for TS 1`] = `
           \\".tsx\\"
         ]
       }
+    },
+    \\"import/parsers\\": {
+      \\"@typescript-eslint/parser\\": [
+        \\".ts\\",
+        \\".tsx\\"
+      ]
     },
     \\"react\\": {
       \\"version\\": \\"detect\\"
