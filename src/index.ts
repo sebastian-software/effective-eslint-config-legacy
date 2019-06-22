@@ -46,14 +46,6 @@ const tsImprovedCRARules: ESLintRules = {
 
   "@typescript-eslint/no-array-constructor": "warn",
 
-  "@typescript-eslint/no-unused-vars": [
-    "warn",
-    {
-      args: "none",
-      ignoreRestSiblings: true
-    }
-  ],
-
   "@typescript-eslint/no-useless-constructor": "warn"
 }
 
@@ -107,10 +99,6 @@ const customRules: ESLintRules = {
 
   // Fails with <FormattedNumber style="currency" />
   "react/style-prop-object": "off",
-
-  // This detects the React global as false-positive and doesn't properly
-  // understand deliberate exclusions from destructuring.
-  "@typescript-eslint/no-unused-vars": "off",
 
   // This if often necessary in order to initialize typed objects.
   "@typescript-eslint/no-object-literal-type-assertion": "off",

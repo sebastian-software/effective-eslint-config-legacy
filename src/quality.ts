@@ -82,7 +82,7 @@ export const quality: ESLintRules = {
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",
   "no-unneeded-ternary": "error",
-  "no-unused-vars": [
+  "@typescript-eslint/no-unused-vars": [
     "error",
     {
       varsIgnorePattern: "^_",
