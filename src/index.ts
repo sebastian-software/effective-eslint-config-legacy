@@ -62,7 +62,6 @@ const tsInterationFixes: ESLintRules = {
 
   // These are generally a good idea but do not work well with TypeScript usage
   "import/export": "off",
-  "no-unexpected-multiline": "off",
 
   // Conflicts with TypeScript import/export e.g. interfaces
   "import/named": "off"
@@ -99,9 +98,6 @@ const customRules: ESLintRules = {
 
   // Fails with <FormattedNumber style="currency" />
   "react/style-prop-object": "off",
-
-  // This if often necessary in order to initialize typed objects.
-  "@typescript-eslint/no-object-literal-type-assertion": "off",
 
   // Don't allow dashes or underscores.
   "filenames/match-regex": [
@@ -180,13 +176,13 @@ const config: ESLintConfig = {
     ...imports,
     ...node,
     ...variables,
-    ...quality,
-    ...formatting,
     ...react,
     ...tsImprovedCRARules,
     ...tsInterationFixes,
-    ...customRules
-    // ...tsOverrideRules
+    ...customRules,
+    ...quality,
+    ...formatting,
+    ...tsOverrideRules
   },
 
   overrides: [

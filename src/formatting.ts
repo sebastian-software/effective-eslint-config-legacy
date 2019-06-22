@@ -86,7 +86,6 @@ export const formatting: ESLintRules = {
     }
   ],
   "no-trailing-spaces": [ "warn" ],
-  "no-unexpected-multiline": "warn",
   "no-whitespace-before-property": "warn",
   "object-curly-spacing": [ "warn", "always" ],
   "object-property-newline": [

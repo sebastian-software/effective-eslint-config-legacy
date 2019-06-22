@@ -67,7 +67,6 @@ export const createReactApp: ESLintRules = {
   "no-this-before-super": "error",
   "no-throw-literal": "error",
   "no-undef": "error",
-  "no-unexpected-multiline": "error",
   "no-unreachable": "error",
   "no-unused-expressions": [
     "error",
