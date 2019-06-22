@@ -17,24 +17,24 @@ disabledByTS.forEach((name): void => { tsOverrideRules[name] = "off" })
 
 
 interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 }
 
 interface ESLintEnv {
-  [name: string]: boolean
+  [name: string]: boolean;
 }
 
 interface ESLintOverrides {
-  files: string[]
-  rules?: ESLintRules
-  env?: ESLintEnv
+  files: string[];
+  rules?: ESLintRules;
+  env?: ESLintEnv;
 }
 
 interface ESLintConfig extends Linter.Config {
-  root: boolean
-  plugins: string[]
-  extends: string[]
-  overrides: ESLintOverrides[]
+  root: boolean;
+  plugins: string[];
+  extends: string[];
+  overrides: ESLintOverrides[];
 }
 
 // Add TypeScript specific rules (and turn off ESLint equivalents)
@@ -149,10 +149,7 @@ const config: ESLintConfig = {
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended",
-    "plugin:cypress/recommended",
-    "prettier",
-    "prettier/@typescript-eslint",
-    "prettier/react"
+    "plugin:cypress/recommended"
   ],
 
   parserOptions: {
