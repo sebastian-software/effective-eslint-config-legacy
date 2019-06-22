@@ -13,7 +13,8 @@ export const formatting: ESLintRules = {
     }
   ],
   "arrow-parens": [ "warn", "always" ],
-  camelcase: "warn",
+  camelcase: "off",
+  "@typescript-eslint/camelcase": "warn",
   "comma-dangle": [ "warn", "never" ],
   "comma-style": [ "warn", "last" ],
   "func-names": [ "warn", "as-needed" ],
@@ -41,6 +42,7 @@ export const formatting: ESLintRules = {
       }
     }
   ],
+  "@typescript-eslint/indent": [ "warn", 2 ],
   "no-multiple-empty-lines": [
     "warn",
     {

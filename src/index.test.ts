@@ -48,6 +48,7 @@ test("configuration result for JS and TS differs", () => {
   const jsConfig = extractConfig(cli, "src/index.js")
   const tsConfig = extractConfig(cli, "src/index.ts")
 
+  // eslint-disable-next-line @typescript-eslint/camelcase
   expect(diff(jsConfig, tsConfig, { n_surrounding: 0 })).toMatchSnapshot()
 })
 
