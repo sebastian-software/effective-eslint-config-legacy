@@ -11,6 +11,11 @@
     "dist",
     "src"
   ],
+  "engines": {
+    "node": ">=8.10.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.0.0"
+  },
   "license": "Apache-2.0",
   "repository": "https://github.com/sebastian-software/effective-eslint-config.git",
   "main": "dist/index.js",
