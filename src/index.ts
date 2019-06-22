@@ -54,8 +54,6 @@ const reactHooksRecommended: ESLintRules = {
   "react-hooks/exhaustive-deps": "warn"
 }
 
-const preferFormattingPrettier = [ "prettier", "prettier/@typescript-eslint", "prettier/react" ]
-
 const tsInterationFixes: ESLintRules = {
   // We are fully in TypeScript. PropTypes are not useful anymore.
   "react/prop-types": "off",
@@ -152,8 +150,9 @@ const config: ESLintConfig = {
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended",
     "plugin:cypress/recommended",
-
-    ...preferFormattingPrettier
+    "prettier",
+    "prettier/@typescript-eslint",
+    "prettier/react"
   ],
 
   parserOptions: {
