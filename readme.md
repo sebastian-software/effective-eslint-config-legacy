@@ -6,9 +6,9 @@ Configuration for linting TS/JS files.
 
 The presets combines a lot of previous work into an effective configuration to work with:
 
-- Based on TypeScript ESLint parser for optional TypeScript support.
+- TypeScript first. Based on TypeScript ESLint parser.
 - Recommended presets by ESLint, TypeScript, React(+Hooks), JSX-A11N, Import Plugin, Jest and Cypress.
-- Auto environment handling for Jest tests (including relaxiation to some rules).
+- Auto environment handling for Jest tests (including relaxiation for some rules).
 - Support root alias imports via `-/...`-prefix via Babel.
 
 This all is offered by just one dependency and one `extends` and allow flexible customization via `rules`.
@@ -29,14 +29,6 @@ This all is offered by just one dependency and one `extends` and allow flexible 
 
 We also suggest adding the following scripts to the `package.json`:
 
-JS projects:
-
-```json
-"lint": "run-s \"lint:* {@}\" --",
-"lint:style": "prettier --check '**/*.{js,jsx,json,md}'",
-"lint:script": "eslint '**/*.{js,jsx}'",
-```
-
 TypeScript projects:
 
 ```json
@@ -44,6 +36,14 @@ TypeScript projects:
 "lint:style": "prettier --check '**/*.{js,jsx,json,md,ts,tsx}'",
 "lint:script": "eslint '**/*.{js,jsx,ts,tsx}'",
 "lint:types": "tsc --noEmit",
+```
+
+JS projects:
+
+```json
+"lint": "run-s \"lint:* {@}\" --",
+"lint:style": "prettier --check '**/*.{js,jsx,json,md}'",
+"lint:script": "eslint '**/*.{js,jsx}'",
 ```
 
 ## Status
