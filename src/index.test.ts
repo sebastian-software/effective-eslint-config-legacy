@@ -1,6 +1,5 @@
 import { CLIEngine } from "eslint"
 import { escapeRegExp } from "lodash"
-import diff from "diff-lines"
 
 const CWD_REPL = escapeRegExp(process.cwd())
 
