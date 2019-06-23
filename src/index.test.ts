@@ -3,8 +3,23 @@ import { escapeRegExp } from "lodash"
 
 const CWD_REPL = escapeRegExp(process.cwd())
 
+function cloneWithSortedKeys(obj) {
+  const clone: {[key: string]: any} = {}
+  const keys = Object.keys(obj).sort()
+  keys.forEach((key) => {
+    const value = obj[key]
+    if (typeof value === "object" && !(value instanceof Array)) {
+      clone[key] = cloneWithSortedKeys(value)
+    } else {
+      clone[key] = value
+    }
+  })
+  return clone
+}
+
 function extractConfig(cli: CLIEngine, file: string) {
-  const result = JSON.stringify(cli.getConfigForFile(file), null, "  ")
+  const config = cli.getConfigForFile(file)
+  const result = JSON.stringify(cloneWithSortedKeys(config), null, "  ")
   return result.replace(new RegExp(CWD_REPL), "[CWD]")
 }
 
