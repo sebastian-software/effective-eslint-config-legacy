@@ -1,15 +1,28 @@
 import { Linter } from "eslint"
 
 interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 }
 
 export const quality: ESLintRules = {
+  "@typescript-eslint/no-unused-vars": [
+    "error",
+    {
+      args: "none",
+      ignoreRestSiblings: true,
+      varsIgnorePattern: "^_"
+    }
+  ],
+  "@typescript-eslint/no-use-before-define": [
+    "error",
+    {
+      classes: false,
+      functions: false
+    }
+  ],
   "id-length": [
     "error",
     {
-      min: 4,
-      max: 40,
       exceptions: [
         "i",
         "l",
@@ -41,6 +54,8 @@ export const quality: ESLintRules = {
         "App",
         "API"
       ],
+      max: 40,
+      min: 4,
       properties: "never"
     }
   ],
@@ -81,20 +96,5 @@ export const quality: ESLintRules = {
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",
-  "no-unneeded-ternary": "error",
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    {
-      varsIgnorePattern: "^_",
-      ignoreRestSiblings: true,
-      args: "none"
-    }
-  ],
-  "@typescript-eslint/no-use-before-define": [
-    "error",
-    {
-      functions: false,
-      classes: false
-    }
-  ]
+  "no-unneeded-ternary": "error"
 }
