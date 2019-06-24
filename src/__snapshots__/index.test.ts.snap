@@ -47,6 +47,9 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/class-name-casing\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/consistent-type-definitions\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/explicit-function-return-type\\": [
       \\"warn\\"
     ],
@@ -143,16 +146,16 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/no-unused-vars\\": [
       \\"error\\",
       {
-        \\"varsIgnorePattern\\": \\"^_\\",
+        \\"args\\": \\"none\\",
         \\"ignoreRestSiblings\\": true,
-        \\"args\\": \\"none\\"
+        \\"varsIgnorePattern\\": \\"^_\\"
       }
     ],
     \\"@typescript-eslint/no-use-before-define\\": [
       \\"error\\",
       {
-        \\"functions\\": false,
-        \\"classes\\": false
+        \\"classes\\": false,
+        \\"functions\\": false
       }
     ],
     \\"@typescript-eslint/no-useless-constructor\\": [
@@ -162,7 +165,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/prefer-interface\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
       \\"error\\"
@@ -309,8 +312,6 @@ exports[`Full configuration result 1`] = `
     \\"id-length\\": [
       \\"error\\",
       {
-        \\"min\\": 4,
-        \\"max\\": 40,
         \\"exceptions\\": [
           \\"i\\",
           \\"l\\",
@@ -342,6 +343,8 @@ exports[`Full configuration result 1`] = `
           \\"App\\",
           \\"API\\"
         ],
+        \\"max\\": 40,
+        \\"min\\": 4,
         \\"properties\\": \\"never\\"
       }
     ],

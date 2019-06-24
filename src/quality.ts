@@ -20,6 +20,11 @@ export const quality: ESLintRules = {
       functions: false
     }
   ],
+
+  // Replaces rule by new one (original came from the recommended preset it seems)
+  "@typescript-eslint/prefer-interface": "off",
+  "@typescript-eslint/consistent-type-definitions": "error",
+
   "id-length": [
     "error",
     {
