@@ -47,6 +47,10 @@ export const formatting: ESLintRules = {
     }
   ],
 
+  "jsx-quotes": [ "error", "prefer-double" ],
+  "react/jsx-indent": [ "error", 2 ],
+  "react/jsx-indent-props": [ "error", 2 ],
+
   "@typescript-eslint/no-extra-parens": [
     "warn",
     "all",

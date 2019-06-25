@@ -30,22 +30,13 @@ export const essential: ESLintRules = {
     }
   ],
   "guard-for-in": "error",
-  "no-alert": "warn",
+  "no-alert": "error",
   "no-await-in-loop": "error",
   "no-floating-decimal": "error",
   "no-global-assign": [
     "error",
     {
       exceptions: []
-    }
-  ],
-  "no-implicit-coercion": [
-    "off",
-    {
-      boolean: false,
-      number: true,
-      string: true,
-      allow: []
     }
   ],
 
@@ -265,8 +256,6 @@ export const variables: ESLintRules = {
 }
 
 export const react: ESLintRules = {
-  "jsx-quotes": [ "error", "prefer-double" ],
-
   "react/jsx-no-target-blank": [
     "error",
     {
@@ -287,8 +276,6 @@ export const react: ESLintRules = {
   ],
   "react/jsx-equals-spacing": [ "error", "never" ],
   "react/jsx-first-prop-new-line": [ "error", "multiline-multiprop" ],
-  "react/jsx-indent": [ "error", 2 ],
-  "react/jsx-indent-props": [ "error", 2 ],
   "react/jsx-max-props-per-line": [
     "error",
     {

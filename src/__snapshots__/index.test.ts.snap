@@ -740,7 +740,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-alert\\": [
-      \\"warn\\"
+      \\"error\\"
     ],
     \\"no-array-constructor\\": [
       \\"off\\"
@@ -855,15 +855,6 @@ exports[`Full configuration result 1`] = `
       \\"error\\",
       {
         \\"exceptions\\": []
-      }
-    ],
-    \\"no-implicit-coercion\\": [
-      \\"off\\",
-      {
-        \\"boolean\\": false,
-        \\"number\\": true,
-        \\"string\\": true,
-        \\"allow\\": []
       }
     ],
     \\"no-implied-eval\\": [
