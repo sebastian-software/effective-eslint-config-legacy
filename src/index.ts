@@ -106,7 +106,7 @@ const config: ESLintConfig = {
   },
 
   parser: "@typescript-eslint/parser",
-  plugins: [ "@typescript-eslint", "react-hooks", "prettier", "cypress", "jest", "filenames" ],
+  plugins: [ "@typescript-eslint", "react-hooks", "cypress", "jest", "filenames" ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",

@@ -27,7 +27,6 @@ exports[`Full configuration result 1`] = `
     \\"filenames\\",
     \\"jest\\",
     \\"cypress\\",
-    \\"prettier\\",
     \\"react-hooks\\",
     \\"@typescript-eslint\\"
   ],
