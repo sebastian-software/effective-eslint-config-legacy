@@ -44,7 +44,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/class-name-casing\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/consistent-type-definitions\\": [
       \\"error\\"
@@ -56,7 +56,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/func-call-spacing\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\"
     ],
     \\"@typescript-eslint/indent\\": [
@@ -97,7 +97,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-extra-parens\\": [
-      \\"off\\",
+      \\"warn\\",
       \\"all\\",
       {
         \\"conditionalAssign\\": true,

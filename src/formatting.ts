@@ -43,7 +43,7 @@ export const formatting: ESLintRules = {
   ],
 
   "@typescript-eslint/no-extra-parens": [
-    "off",
+    "warn",
     "all",
     {
       conditionalAssign: true,
@@ -55,9 +55,9 @@ export const formatting: ESLintRules = {
   ],
 
   "func-call-spacing": "off",
-  "@typescript-eslint/func-call-spacing": [ "error", "never" ],
+  "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
 
-  "@typescript-eslint/class-name-casing": "error",
+  "@typescript-eslint/class-name-casing": "warn",
 
   "array-bracket-spacing": [
     "warn",
