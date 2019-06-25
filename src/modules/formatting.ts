@@ -1,27 +1,26 @@
 import { ESLintRules } from "../types"
 
 export const formatting: ESLintRules = {
+  "@typescript-eslint/camelcase": "warn",
+  "@typescript-eslint/class-name-casing": "warn",
+  "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
   "@typescript-eslint/indent": [
     "warn",
     2,
     {
-      SwitchCase: 1,
-      VariableDeclarator: 1,
-      outerIIFEBody: 0,
-      MemberExpression: 1,
+      CallExpression: {
+        arguments: 1
+      },
       FunctionExpression: {
         body: 1,
         parameters: 1
       },
-      CallExpression: {
-        arguments: 1
-      }
+      MemberExpression: 1,
+      outerIIFEBody: 0,
+      SwitchCase: 1,
+      VariableDeclarator: 1
     }
   ],
-
-  "@typescript-eslint/camelcase": "warn",
-
-  "@typescript-eslint/semi": [ "warn", "never" ],
   "@typescript-eslint/member-delimiter-style": [
     "warn",
     {
@@ -35,37 +34,28 @@ export const formatting: ESLintRules = {
       }
     }
   ],
-
-  "@typescript-eslint/no-magic-numbers": [
-    "warn",
-    {
-      ignore: [ 0, 1, 2, 10 ],
-      ignoreArrayIndexes: true,
-      // ignoreEnums: true,
-      enforceConst: true,
-      detectObjects: false
-    }
-  ],
-
-  "jsx-quotes": [ "error", "prefer-double" ],
-  "react/jsx-indent": [ "error", 2 ],
-  "react/jsx-indent-props": [ "error", 2 ],
-
   "@typescript-eslint/no-extra-parens": [
     "warn",
     "all",
     {
       conditionalAssign: true,
-      nestedBinaryExpressions: false,
-      returnAssign: false,
+      enforceForArrowConditionals: false,
       ignoreJSX: "all",
-      enforceForArrowConditionals: false
+      nestedBinaryExpressions: false,
+      returnAssign: false
     }
   ],
-  "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
-
-  "@typescript-eslint/class-name-casing": "warn",
-
+  "@typescript-eslint/no-magic-numbers": [
+    "warn",
+    {
+      detectObjects: false,
+      // ignoreEnums: true,
+      enforceConst: true,
+      ignore: [ 0, 1, 2, 10 ],
+      ignoreArrayIndexes: true
+    }
+  ],
+  "@typescript-eslint/semi": [ "warn", "never" ],
   "array-bracket-spacing": [
     "warn",
     "always",
@@ -83,12 +73,13 @@ export const formatting: ESLintRules = {
       allowArrowFunctions: true
     }
   ],
+  "jsx-quotes": [ "error", "prefer-double" ],
   "no-multiple-empty-lines": [
     "warn",
     {
       max: 4,
-      maxEOF: 1,
-      maxBOF: 0
+      maxBOF: 0,
+      maxEOF: 1
     }
   ],
   "no-trailing-spaces": [ "warn" ],
@@ -103,12 +94,14 @@ export const formatting: ESLintRules = {
   "one-var-declaration-per-line": [ "warn", "initializations" ],
   "operator-assignment": "warn",
   "operator-linebreak": [ "warn", "after" ],
+  "react/jsx-indent": [ "error", 2 ],
+  "react/jsx-indent-props": [ "error", 2 ],
   "space-before-function-paren": [
     "warn",
     {
-      named: "never",
       anonymous: "never",
-      asyncArrow: "always"
+      asyncArrow: "always",
+      named: "never"
     }
   ],
   "spaced-comment": [

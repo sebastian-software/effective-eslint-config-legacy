@@ -63,17 +63,17 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       2,
       {
-        \\"SwitchCase\\": 1,
-        \\"VariableDeclarator\\": 1,
-        \\"outerIIFEBody\\": 0,
-        \\"MemberExpression\\": 1,
+        \\"CallExpression\\": {
+          \\"arguments\\": 1
+        },
         \\"FunctionExpression\\": {
           \\"body\\": 1,
           \\"parameters\\": 1
         },
-        \\"CallExpression\\": {
-          \\"arguments\\": 1
-        },
+        \\"MemberExpression\\": 1,
+        \\"outerIIFEBody\\": 0,
+        \\"SwitchCase\\": 1,
+        \\"VariableDeclarator\\": 1,
         \\"flatTernaryExpressions\\": false,
         \\"ignoreComments\\": false
       }
@@ -111,10 +111,10 @@ exports[`Full configuration result 1`] = `
       \\"all\\",
       {
         \\"conditionalAssign\\": true,
-        \\"nestedBinaryExpressions\\": false,
-        \\"returnAssign\\": false,
+        \\"enforceForArrowConditionals\\": false,
         \\"ignoreJSX\\": \\"all\\",
-        \\"enforceForArrowConditionals\\": false
+        \\"nestedBinaryExpressions\\": false,
+        \\"returnAssign\\": false
       }
     ],
     \\"@typescript-eslint/no-inferrable-types\\": [
@@ -123,15 +123,15 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
       {
+        \\"detectObjects\\": false,
+        \\"enforceConst\\": true,
         \\"ignore\\": [
           0,
           1,
           2,
           10
         ],
-        \\"ignoreArrayIndexes\\": true,
-        \\"enforceConst\\": true,
-        \\"detectObjects\\": false
+        \\"ignoreArrayIndexes\\": true
       }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
@@ -945,8 +945,8 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       {
         \\"max\\": 4,
-        \\"maxEOF\\": 1,
-        \\"maxBOF\\": 0
+        \\"maxBOF\\": 0,
+        \\"maxEOF\\": 1
       }
     ],
     \\"no-nested-ternary\\": [
@@ -1611,9 +1611,9 @@ exports[`Full configuration result 1`] = `
     \\"space-before-function-paren\\": [
       \\"warn\\",
       {
-        \\"named\\": \\"never\\",
         \\"anonymous\\": \\"never\\",
-        \\"asyncArrow\\": \\"always\\"
+        \\"asyncArrow\\": \\"always\\",
+        \\"named\\": \\"never\\"
       }
     ],
     \\"spaced-comment\\": [
