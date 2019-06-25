@@ -2,7 +2,7 @@ import { CLIEngine } from "eslint"
 
 const PATH_REPL = /"\S+(\\|\/)parser\.js"/
 
-function cloneWithSortedKeys(obj) {
+function cloneWithSortedKeys(obj: any): any {
   const clone: { [key: string]: any } = {}
   const keys = Object.keys(obj).sort()
   keys.forEach((key) => {

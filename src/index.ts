@@ -1,9 +1,9 @@
 /* eslint-disable filenames/match-exported, import/order */
 
-import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"
 import allTSRulesUnfiltered from "@typescript-eslint/eslint-plugin/dist/configs/all.json"
 
+import { ESLintConfig, ESLintRules } from "./types"
 import { createReactApp } from "./cra"
 import { airbnb } from "./airbnb"
 import { quality } from "./quality"
@@ -16,27 +16,6 @@ const tsOverrideRules: any = {}
 disabledByTS.forEach((name): void => {
   tsOverrideRules[name] = "off"
 })
-
-interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
-}
-
-interface ESLintEnv {
-  [name: string]: boolean;
-}
-
-interface ESLintOverrides {
-  files: string[];
-  rules?: ESLintRules;
-  env?: ESLintEnv;
-}
-
-interface ESLintConfig extends Linter.Config {
-  root: boolean;
-  plugins: string[];
-  extends: string[];
-  overrides: ESLintOverrides[];
-}
 
 const customRules: ESLintRules = {
   "@typescript-eslint/no-angle-bracket-type-assertion": "error",

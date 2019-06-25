@@ -243,10 +243,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"default-case\\": [
-      \\"error\\",
-      {
-        \\"commentPattern\\": \\"^no default$\\"
-      }
+      \\"off\\"
     ],
     \\"dot-location\\": [
       \\"error\\",
@@ -789,7 +786,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-dupe-class-members\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-dupe-keys\\": [
       \\"error\\"
