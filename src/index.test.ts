@@ -4,7 +4,7 @@ import { escapeRegExp } from "lodash"
 const CWD_REPL = escapeRegExp(process.cwd())
 
 function cloneWithSortedKeys(obj) {
-  const clone: {[key: string]: any} = {}
+  const clone: { [key: string]: any } = {}
   const keys = Object.keys(obj).sort()
   keys.forEach((key) => {
     const value = obj[key]

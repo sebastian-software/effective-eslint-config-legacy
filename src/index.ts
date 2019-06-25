@@ -2,19 +2,20 @@
 
 import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"
-
 import allTSRulesUnfiltered from "@typescript-eslint/eslint-plugin/dist/configs/all.json"
+
 import { createReactApp } from "./cra"
 import { airbnb } from "./airbnb"
 import { quality } from "./quality"
 import { formatting } from "./formatting"
 
-
-const disabledByTS = Object.keys(allTSRulesUnfiltered.rules).filter((name) => !name.startsWith("@typescript-eslint/"))
+const disabledByTS = Object.keys(allTSRulesUnfiltered.rules).filter(
+  (name) => !name.startsWith("@typescript-eslint/")
+)
 const tsOverrideRules: any = {}
-disabledByTS.forEach((name): void => { tsOverrideRules[name] = "off" })
-
-
+disabledByTS.forEach((name): void => {
+  tsOverrideRules[name] = "off"
+})
 
 interface ESLintRules {
   [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
@@ -55,7 +56,6 @@ const customRules: ESLintRules = {
   "react-hooks/rules-of-hooks": "error",
   "react-hooks/exhaustive-deps": "warn",
 
-
   // The ESLint browser environment defines all browser globals as valid,
   // even though most people don't know some of them exist (e.g. `name` or `status`).
   // This is dangerous as it hides accidentally undefined variables.
@@ -69,10 +69,11 @@ const customRules: ESLintRules = {
 
   // Activate our concepts of formatting imports
   "import/order": [
-    "error"
-    // Disabled for now as it breaks with unknown types (e.g. aliases) right now.
-    // See our PR: https://github.com/benmosher/eslint-plugin-import/pull/1375
-    // { 'newlines-between': 'always' }
+    "error",
+    {
+      groups: [ "builtin", "external", "unknown", "parent", "sibling", "index" ],
+      "newlines-between": "always"
+    }
   ],
 
   // Order with groups are confused by our module-resolver setup.
@@ -88,10 +89,7 @@ const customRules: ESLintRules = {
   "react/style-prop-object": "off",
 
   // Don't allow dashes or underscores.
-  "filenames/match-regex": [
-    "error",
-    "^[a-zA-Z][a-zA-Z0-9.]+$"
-  ],
+  "filenames/match-regex": [ "error", "^[a-zA-Z][a-zA-Z0-9.]+$" ],
 
   // Keep in sync with exported symbol name.
   "filenames/match-exported": "error",

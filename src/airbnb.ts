@@ -180,7 +180,7 @@ export const es2015: ESLintRules = {
   "no-confusing-arrow": [
     "error",
     {
-      "allowParens": true
+      allowParens: true
     }
   ],
   "no-var": "error",
@@ -263,7 +263,7 @@ export const node: ESLintRules = {
 }
 
 export const variables: ESLintRules = {
-  'no-shadow': 'error',
+  "no-shadow": "error",
 
   // disallow use of undefined when initializing variables
   "no-undef-init": "error"

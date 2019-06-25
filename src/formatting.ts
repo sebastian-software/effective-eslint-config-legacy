@@ -1,7 +1,7 @@
 import { Linter } from "eslint"
 
 interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
+  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
 }
 
 export const formatting: ESLintRules = {
