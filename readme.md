@@ -1,4 +1,17 @@
-# ESLint Config - Effective Project
+# ESLint Config - Effective Project<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor] [![Dependencies][deps-img]][deps]
+
+[sponsor]: https://www.sebastian-software.de
+[deps]: https://david-dm.org/sebastian-software/effective-eslint-config
+[npm]: https://www.npmjs.com/package/effective-eslint-config
+[travis]: https://travis-ci.org/sebastian-software/effective-eslint-config
+[appveyor]: https://ci.appveyor.com/project/swernerx/effective-eslint-config/branch/master
+
+[sponsor-img]: https://badgen.net/badge/Sponsored%20by/Sebastian%20Software/692446
+[deps-img]: https://badgen.net/david/dep/sebastian-software/effective-eslint-config
+[npm-downloads-img]: https://badgen.net/npm/dm/@effective/eslint-config
+[npm-version-img]: https://badgen.net/npm/v/@effective/eslint-config
+[travis-img]: https://badgen.net/travis/sebastian-software/effective-eslint-config?label=unix%20build
+[appveyor-img]: https://badgen.net/appveyor/ci/swernerx/effective-eslint-config?label=windows%20build
 
 Configuration for linting TS/JS files.
 
@@ -46,7 +59,12 @@ JS projects:
 "lint:script": "eslint '**/*.{js,jsx}'",
 ```
 
-## Status
+## License
 
-- Correctly sorting unknown import types e.g. custom resolver aliases is not yet supported. I made [a small PR though for adding the capability](https://github.com/benmosher/eslint-plugin-import/pull/1375). Before this is merged auto-fixing of imports does not work well with these alias imports. Especially when combined with the `newline-between-groups` feature.
-- [Alphabetize imports within groups] is not yet offered by the [Import-Plugin](https://github.com/benmosher/eslint-plugin-import). See [this PR](https://github.com/benmosher/eslint-plugin-import/pull/1105)
+[Apache License Version 2.0, January 2004](license)
+
+## Copyright
+
+<img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/0d4ec9d6/sebastiansoftware-en.svg" alt="Logo of Sebastian Software GmbH, Mainz, Germany" width="460" height="160"/>
+
+Copyright 2019<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
