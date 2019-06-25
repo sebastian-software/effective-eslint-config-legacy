@@ -39,7 +39,6 @@ export const essential: ESLintRules = {
       exceptions: []
     }
   ],
-
   "no-multi-spaces": [
     "error",
     {
@@ -51,52 +50,52 @@ export const essential: ESLintRules = {
   "no-restricted-properties": [
     "error",
     {
+      message: "arguments.callee is deprecated",
       object: "arguments",
-      property: "callee",
-      message: "arguments.callee is deprecated"
+      property: "callee"
     },
     {
+      message: "Please use Number.isFinite instead",
       object: "global",
-      property: "isFinite",
-      message: "Please use Number.isFinite instead"
+      property: "isFinite"
     },
     {
+      message: "Please use Number.isFinite instead",
       object: "self",
-      property: "isFinite",
-      message: "Please use Number.isFinite instead"
+      property: "isFinite"
     },
     {
+      message: "Please use Number.isFinite instead",
       object: "window",
-      property: "isFinite",
-      message: "Please use Number.isFinite instead"
+      property: "isFinite"
     },
     {
+      message: "Please use Number.isNaN instead",
       object: "global",
-      property: "isNaN",
-      message: "Please use Number.isNaN instead"
+      property: "isNaN"
     },
     {
+      message: "Please use Number.isNaN instead",
       object: "self",
-      property: "isNaN",
-      message: "Please use Number.isNaN instead"
+      property: "isNaN"
     },
     {
+      message: "Please use Number.isNaN instead",
       object: "window",
-      property: "isNaN",
-      message: "Please use Number.isNaN instead"
+      property: "isNaN"
     },
     {
-      property: "__defineGetter__",
-      message: "Please use Object.defineProperty instead."
+      message: "Please use Object.defineProperty instead.",
+      property: "__defineGetter__"
     },
     {
-      property: "__defineSetter__",
-      message: "Please use Object.defineProperty instead."
+      message: "Please use Object.defineProperty instead.",
+      property: "__defineSetter__"
     },
     {
+      message: "Use the exponentiation operator (**) instead.",
       object: "Math",
-      property: "pow",
-      message: "Use the exponentiation operator (**) instead."
+      property: "pow"
     }
   ],
   "no-return-assign": [ "error", "always" ],
@@ -218,14 +217,13 @@ export const es2015: ESLintRules = {
 }
 
 export const imports: ESLintRules = {
+  "import/no-absolute-path": "error",
+  "import/no-duplicates": "error",
+  "import/no-dynamic-require": "error",
+  "import/no-mutable-exports": "error",
   // Note: Disabled as it conflicts with some typical HOC usage.
   // 'import/no-named-as-default': 'error',
-
   "import/no-named-as-default-member": "error",
-  "import/no-duplicates": "error",
-  "import/no-mutable-exports": "error",
-  "import/no-absolute-path": "error",
-  "import/no-dynamic-require": "error",
   "import/no-named-default": "error",
   "import/no-self-import": "error",
   "import/no-useless-path-segments": "error"
@@ -256,17 +254,47 @@ export const variables: ESLintRules = {
 }
 
 export const react: ESLintRules = {
-  "react/jsx-no-target-blank": [
+  "jsx-a11y/label-has-associated-control": [ "error" ],
+  "jsx-a11y/lang": "error",
+  "react/button-has-type": [
     "error",
     {
-      enforceDynamicLinks: "always"
+      button: true,
+      reset: false,
+      submit: true
     }
   ],
-
-  "jsx-a11y/label-has-associated-control": [ "error" ],
-
+  "react/default-props-match-prop-types": [
+    "error",
+    {
+      allowRequiredDefaults: false
+    }
+  ],
+  "react/destructuring-assignment": [ "error", "always" ],
+  "react/forbid-prop-types": [
+    "error",
+    {
+      checkChildContextTypes: true,
+      checkContextTypes: true,
+      forbid: [ "any", "array", "object" ]
+    }
+  ],
+  "react/jsx-boolean-value": [
+    "error",
+    "never",
+    {
+      always: []
+    }
+  ],
   "react/jsx-closing-bracket-location": [ "error", "line-aligned" ],
   "react/jsx-closing-tag-location": "error",
+  "react/jsx-curly-brace-presence": [
+    "error",
+    {
+      children: "never",
+      props: "never"
+    }
+  ],
   "react/jsx-curly-spacing": [
     "error",
     "never",
@@ -283,6 +311,22 @@ export const react: ESLintRules = {
       when: "multiline"
     }
   ],
+  "react/jsx-no-bind": [
+    "error",
+    {
+      allowArrowFunctions: true,
+      allowBind: false,
+      allowFunctions: false,
+      ignoreDOMComponents: true,
+      ignoreRefs: true
+    }
+  ],
+  "react/jsx-no-target-blank": [
+    "error",
+    {
+      enforceDynamicLinks: "always"
+    }
+  ],
   "react/jsx-one-expression-per-line": [
     "error",
     {
@@ -293,53 +337,38 @@ export const react: ESLintRules = {
   "react/jsx-tag-spacing": [
     "error",
     {
-      closingSlash: "never",
-      beforeSelfClosing: "always",
       afterOpening: "never",
-      beforeClosing: "never"
+      beforeClosing: "never",
+      beforeSelfClosing: "always",
+      closingSlash: "never"
     }
   ],
   "react/jsx-wrap-multilines": [
     "error",
     {
-      declaration: "parens-new-line",
-      assignment: "parens-new-line",
-      return: "parens-new-line",
       arrow: "parens-new-line",
+      assignment: "parens-new-line",
       condition: "parens-new-line",
+      declaration: "parens-new-line",
       logical: "parens-new-line",
-      prop: "parens-new-line"
+      prop: "parens-new-line",
+      return: "parens-new-line"
     }
   ],
-  "react/self-closing-comp": "error",
-
-  "react/forbid-prop-types": [
-    "error",
-    {
-      forbid: [ "any", "array", "object" ],
-      checkContextTypes: true,
-      checkChildContextTypes: true
-    }
-  ],
-  "react/jsx-boolean-value": [
-    "error",
-    "never",
-    {
-      always: []
-    }
-  ],
-  "react/jsx-no-bind": [
-    "error",
-    {
-      ignoreRefs: true,
-      allowArrowFunctions: true,
-      allowFunctions: false,
-      allowBind: false,
-      ignoreDOMComponents: true
-    }
-  ],
+  "react/no-access-state-in-setstate": "error",
+  "react/no-array-index-key": "error",
   "react/no-danger": "warn",
   "react/no-did-update-set-state": "error",
+  "react/no-redundant-should-component-update": "error",
+  "react/no-this-in-sfc": "error",
+  "react/no-unused-prop-types": [
+    "error",
+    {
+      customValidators: [],
+      skipShapeProps: true
+    }
+  ],
+  "react/no-unused-state": "error",
   "react/no-will-update-set-state": "error",
   "react/prefer-es6-class": [ "error", "always" ],
   "react/prefer-stateless-function": [
@@ -348,49 +377,14 @@ export const react: ESLintRules = {
       ignorePureComponents: true
     }
   ],
-  "react/no-unused-prop-types": [
-    "error",
-    {
-      customValidators: [],
-      skipShapeProps: true
-    }
-  ],
-  "react/no-array-index-key": "error",
   "react/require-default-props": [
     "error",
     {
       forbidDefaultForRequired: true
     }
   ],
-  "react/void-dom-elements-no-children": "error",
-  "react/default-props-match-prop-types": [
-    "error",
-    {
-      allowRequiredDefaults: false
-    }
-  ],
-  "react/no-redundant-should-component-update": "error",
-  "react/no-unused-state": "error",
-  "react/jsx-curly-brace-presence": [
-    "error",
-    {
-      props: "never",
-      children: "never"
-    }
-  ],
-  // Disabled as this is just style and nothing which produces any issues.
-  // 'react/destructuring-assignment': ['error', 'always'],
-  "react/no-access-state-in-setstate": "error",
-  "react/button-has-type": [
-    "error",
-    {
-      button: true,
-      submit: true,
-      reset: false
-    }
-  ],
-  "react/no-this-in-sfc": "error",
-  "jsx-a11y/lang": "error"
+  "react/self-closing-comp": "error",
+  "react/void-dom-elements-no-children": "error"
 }
 
 export const airbnb = {
