@@ -4,6 +4,8 @@ declare module "confusing-browser-globals" {
 }
 
 declare module "eslint-config-react-app" {
-  const config: ESLintConfig
-  export default config
+  export const rules: {}
+  export const overrides: {
+    rules: {};
+  }
 }
