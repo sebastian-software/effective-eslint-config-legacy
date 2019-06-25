@@ -10,7 +10,7 @@ exports[`Full configuration result 1`] = `
     \\"shared-node-browser\\": true
   },
   \\"globals\\": {},
-  \\"parser\\": \\"[CWD]/node_modules/@typescript-eslint/parser/dist/parser.js\\",
+  \\"parser\\": \\"[PATH]\\",
   \\"parserOptions\\": {
     \\"ecmaFeatures\\": {
       \\"impliedStrict\\": true,
