@@ -1,11 +1,8 @@
 import { overrides, rules } from "eslint-config-react-app"
-import { Linter } from "eslint"
 
-interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
-}
+import { ESLintRules } from "./types"
 
-export const createReactApp: any = {}
+export const createReactApp: ESLintRules = {}
 
 const blacklistRules = /^(flowtype\/\S+)|(no-native-reassign|no-negated-in-lhs)$/
 
