@@ -2,7 +2,7 @@
 
 [sponsor]: https://www.sebastian-software.de
 [deps]: https://david-dm.org/sebastian-software/effective-eslint-config
-[npm]: https://www.npmjs.com/package/effective-eslint-config
+[npm]: https://www.npmjs.com/package/@effective/eslint-config
 [travis]: https://travis-ci.org/sebastian-software/effective-eslint-config
 [appveyor]: https://ci.appveyor.com/project/swernerx/effective-eslint-config/branch/master
 
