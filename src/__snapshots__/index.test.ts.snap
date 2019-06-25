@@ -82,7 +82,17 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
-      \\"error\\"
+      \\"warn\\",
+      {
+        \\"multiline\\": {
+          \\"delimiter\\": \\"semi\\",
+          \\"requireLast\\": true
+        },
+        \\"singleline\\": {
+          \\"delimiter\\": \\"semi\\",
+          \\"requireLast\\": false
+        }
+      }
     ],
     \\"@typescript-eslint/no-angle-bracket-type-assertion\\": [
       \\"error\\"

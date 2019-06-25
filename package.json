@@ -35,6 +35,7 @@
     "lint": "run-s \"lint:* {@}\" --",
     "lint:script": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint:types": "tsc --noEmit",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}' && eslint --fix 'src/**/*.{js,jsx,ts,tsx}'",
     "check:conflicts": "eslint --print-config . | eslint-config-prettier-check",
     "pretest": "npm run build",
     "test": "jest"
@@ -51,7 +52,6 @@
     ],
     "*{ts,tsx}": [
       "eslint --fix",
-      "tsc --noEmit",
       "git add"
     ]
   },

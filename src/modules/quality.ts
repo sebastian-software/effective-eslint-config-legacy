@@ -1,6 +1,6 @@
 import restrictedGlobals from "confusing-browser-globals"
 
-import { ESLintRules } from "./types"
+import { ESLintRules } from "../types"
 
 export const quality: ESLintRules = {
   "@typescript-eslint/no-angle-bracket-type-assertion": "error",
@@ -10,12 +10,6 @@ export const quality: ESLintRules = {
 
   // We are fully in TypeScript. PropTypes are not useful anymore.
   "react/prop-types": "off",
-
-  // These are generally a good idea but do not work well with TypeScript usage
-  "import/export": "off",
-
-  // Conflicts with TypeScript import/export e.g. interfaces
-  "import/named": "off",
 
   "react-hooks/rules-of-hooks": "error",
   "react-hooks/exhaustive-deps": "warn",

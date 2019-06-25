@@ -1,4 +1,4 @@
-import { ESLintRules } from "./types"
+import { ESLintRules } from "../types"
 
 export const formatting: ESLintRules = {
   "@typescript-eslint/indent": [
@@ -22,6 +22,19 @@ export const formatting: ESLintRules = {
   "@typescript-eslint/camelcase": "warn",
 
   "@typescript-eslint/semi": [ "warn", "never" ],
+  "@typescript-eslint/member-delimiter-style": [
+    "warn",
+    {
+      multiline: {
+        delimiter: "semi",
+        requireLast: true
+      },
+      singleline: {
+        delimiter: "semi",
+        requireLast: false
+      }
+    }
+  ],
 
   "@typescript-eslint/no-magic-numbers": [
     "warn",

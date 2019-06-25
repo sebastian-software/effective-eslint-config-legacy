@@ -1,4 +1,4 @@
-import { ESLintRules } from "./types"
+import { ESLintRules } from "../types"
 
 const MAX_COMPLEXITY = 11
 
@@ -155,7 +155,7 @@ export const es2015: ESLintRules = {
     "error",
     "as-needed",
     {
-      "requireForBlockBody": true
+      requireForBlockBody: true
     }
   ],
   "arrow-spacing": [

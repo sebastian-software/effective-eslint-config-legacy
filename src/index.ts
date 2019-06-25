@@ -1,19 +1,10 @@
 /* eslint-disable filenames/match-exported, import/order */
-import allTSRulesUnfiltered from "@typescript-eslint/eslint-plugin/dist/configs/all.json"
-
 import { ESLintConfig } from "./types"
-import { createReactApp } from "./cra"
-import { airbnb } from "./airbnb"
-import { quality } from "./quality"
-import { formatting } from "./formatting"
-
-const disabledByTS = Object.keys(allTSRulesUnfiltered.rules).filter(
-  name => !name.startsWith("@typescript-eslint/")
-)
-const tsOverrideRules: any = {}
-disabledByTS.forEach((name): void => {
-  tsOverrideRules[name] = "off"
-})
+import { createReactApp } from "./modules/createReactApp"
+import { airbnb } from "./modules/airbnbInspired"
+import { quality } from "./modules/quality"
+import { formatting } from "./modules/formatting"
+import { typescriptOverride } from "./modules/typescriptOverride"
 
 const config: ESLintConfig = {
   root: true,
@@ -73,7 +64,7 @@ const config: ESLintConfig = {
     ...airbnb,
     ...quality,
     ...formatting,
-    ...tsOverrideRules
+    ...typescriptOverride
   },
 
   overrides: [
