@@ -1,8 +1,4 @@
-import { Linter } from "eslint"
-
-interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
-}
+import { ESLintRules } from "./types"
 
 export const formatting: ESLintRules = {
   indent: "off",

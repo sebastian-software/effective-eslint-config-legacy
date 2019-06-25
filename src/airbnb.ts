@@ -1,8 +1,4 @@
-import { Linter } from "eslint"
-
-interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions;
-}
+import { ESLintRules } from "./types"
 
 const MAX_COMPLEXITY = 11
 
