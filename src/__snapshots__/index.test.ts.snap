@@ -403,7 +403,18 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"import/order\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"groups\\": [
+          \\"builtin\\",
+          \\"external\\",
+          \\"unknown\\",
+          \\"parent\\",
+          \\"sibling\\",
+          \\"index\\"
+        ],
+        \\"newlines-between\\": \\"always\\"
+      }
     ],
     \\"indent\\": [
       \\"off\\"
@@ -1655,15 +1666,17 @@ exports[`Full configuration result 1`] = `
   },
   \\"settings\\": {
     \\"import/extensions\\": [
-      \\".js\\",
-      \\".jsx\\",
       \\".ts\\",
-      \\".tsx\\"
+      \\".tsx\\",
+      \\".d.ts\\",
+      \\".js\\",
+      \\".jsx\\"
     ],
     \\"import/parsers\\": {
       \\"@typescript-eslint/parser\\": [
         \\".ts\\",
-        \\".tsx\\"
+        \\".tsx\\",
+        \\".d.ts\\"
       ]
     },
     \\"import/resolver\\": {
@@ -1681,10 +1694,11 @@ exports[`Full configuration result 1`] = `
       },
       \\"node\\": {
         \\"extensions\\": [
-          \\".js\\",
-          \\".jsx\\",
           \\".ts\\",
-          \\".tsx\\"
+          \\".tsx\\",
+          \\".d.ts\\",
+          \\".js\\",
+          \\".jsx\\"
         ]
       }
     },
