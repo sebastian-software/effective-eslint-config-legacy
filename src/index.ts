@@ -1,4 +1,4 @@
-/* eslint-disable filenames/match-exported */
+/* eslint-disable filenames/match-exported, import/order */
 
 import { Linter } from "eslint"
 import restrictedGlobals from "confusing-browser-globals"

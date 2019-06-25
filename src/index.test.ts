@@ -1,7 +1,6 @@
 import { CLIEngine } from "eslint"
-import { escapeRegExp } from "lodash"
 
-const CWD_REPL = escapeRegExp(process.cwd())
+const PATH_REPL = /"\S+(\\|\/)parser\.js"/
 
 function cloneWithSortedKeys(obj) {
   const clone: { [key: string]: any } = {}
@@ -20,7 +19,7 @@ function cloneWithSortedKeys(obj) {
 function extractConfig(cli: CLIEngine, file: string) {
   const config = cli.getConfigForFile(file)
   const result = JSON.stringify(cloneWithSortedKeys(config), null, "  ")
-  return result.replace(new RegExp(CWD_REPL), "[CWD]")
+  return result.replace(new RegExp(PATH_REPL), '"[PATH]"')
 }
 
 test("load config in eslint to validate all rule syntax is correct", () => {
