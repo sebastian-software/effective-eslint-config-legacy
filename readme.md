@@ -5,7 +5,6 @@
 [npm]: https://www.npmjs.com/package/@effective/eslint-config
 [travis]: https://travis-ci.org/sebastian-software/effective-eslint-config
 [appveyor]: https://ci.appveyor.com/project/swernerx/effective-eslint-config/branch/master
-
 [sponsor-img]: https://badgen.net/badge/Sponsored%20by/Sebastian%20Software/692446
 [deps-img]: https://badgen.net/david/dep/sebastian-software/effective-eslint-config
 [npm-downloads-img]: https://badgen.net/npm/dm/@effective/eslint-config
@@ -26,7 +25,6 @@ The presets combines a lot of previous work into an effective configuration to w
 
 This all is offered by just one dependency and one `extends` and allow flexible customization via `rules`.
 
-
 ## Usage
 
 [ESLint supports our scoped packages](https://eslint.org/docs/developer-guide/shareable-configs#npm-scoped-modules) by just extending from the scope like so:
@@ -34,9 +32,7 @@ This all is offered by just one dependency and one `extends` and allow flexible 
 ```json
 {
   "extends": "@effective",
-  "rules": [
-
-  ]
+  "rules": []
 }
 ```
 
