@@ -197,8 +197,11 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"arrow-parens\\": [
-      \\"warn\\",
-      \\"always\\"
+      \\"error\\",
+      \\"as-needed\\",
+      {
+        \\"requireForBlockBody\\": true
+      }
     ],
     \\"arrow-spacing\\": [
       \\"error\\",

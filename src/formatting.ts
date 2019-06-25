@@ -1,7 +1,6 @@
 import { ESLintRules } from "./types"
 
 export const formatting: ESLintRules = {
-  indent: "off",
   "@typescript-eslint/indent": [
     "warn",
     2,
@@ -20,13 +19,10 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  camelcase: "off",
   "@typescript-eslint/camelcase": "warn",
 
-  semi: "off",
   "@typescript-eslint/semi": [ "warn", "never" ],
 
-  "no-magic-numbers": "off",
   "@typescript-eslint/no-magic-numbers": [
     "warn",
     {
@@ -49,8 +45,6 @@ export const formatting: ESLintRules = {
       enforceForArrowConditionals: false
     }
   ],
-
-  "func-call-spacing": "off",
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
 
   "@typescript-eslint/class-name-casing": "warn",
@@ -62,7 +56,6 @@ export const formatting: ESLintRules = {
       objectsInArrays: false
     }
   ],
-  "arrow-parens": [ "warn", "always" ],
   "comma-dangle": [ "warn", "never" ],
   "comma-style": [ "warn", "last" ],
   "func-names": [ "warn", "as-needed" ],

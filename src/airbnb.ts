@@ -151,14 +151,13 @@ export const es2015: ESLintRules = {
       requireReturnForObjectLiteral: false
     }
   ],
-  // Note: Disabled to align with prettier config
-  // "arrow-parens": [
-  //   "error",
-  //   "as-needed",
-  //   {
-  //     "requireForBlockBody": true
-  //   }
-  // ],
+  "arrow-parens": [
+    "error",
+    "as-needed",
+    {
+      "requireForBlockBody": true
+    }
+  ],
   "arrow-spacing": [
     "error",
     {
