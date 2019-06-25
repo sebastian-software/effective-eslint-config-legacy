@@ -35,7 +35,7 @@ This all is offered by just one dependency and one `extends` and allow flexible 
 {
   "extends": "@effective",
   "rules": [
-    ...
+
   ]
 }
 ```
