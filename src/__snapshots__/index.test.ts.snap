@@ -1071,7 +1071,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-process-exit\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-proto\\": [
       \\"error\\"
@@ -1763,9 +1763,6 @@ exports[`Full configuration result 1`] = `
       {
         \\"requireStringLiterals\\": true
       }
-    ],
-    \\"vars-on-top\\": [
-      \\"error\\"
     ],
     \\"wrap-iife\\": [
       \\"error\\",

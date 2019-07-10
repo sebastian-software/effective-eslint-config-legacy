@@ -167,5 +167,9 @@ export const quality: ESLintRules = {
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",
-  "no-unneeded-ternary": "error"
+  "no-unneeded-ternary": "error",
+
+  // Perfectly valid for CLI tools. Not sure about this for this reason.
+  // Might be enabled where needed by the project author.
+  "no-process-exit": "off"
 }

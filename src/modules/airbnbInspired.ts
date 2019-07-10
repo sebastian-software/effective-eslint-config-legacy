@@ -122,7 +122,6 @@ export const essential: ESLintRules = {
       requireStringLiterals: true
     }
   ],
-  "vars-on-top": "error",
   "wrap-iife": [
     "error",
     "outside",
