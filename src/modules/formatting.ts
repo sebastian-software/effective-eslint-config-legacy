@@ -110,5 +110,6 @@ export const formatting: ESLintRules = {
     {
       exceptions: [ "*", "=", "-" ]
     }
-  ]
+  ],
+  "wrap-regex": "warn"
 }
