@@ -71,7 +71,13 @@ const config: ESLintConfig = {
   overrides: [
     {
       // Relax a few rules inside tests
-      files: [ "*.test.js", "*.test.jsx", "*.test.ts", "*.test.tsx", "**/test/*.{js,jsx,ts,tsx}" ],
+      files: [
+        "*.test.js",
+        "*.test.jsx",
+        "*.test.ts",
+        "*.test.tsx",
+        "**/test/**/*.{js,jsx,ts,tsx}"
+      ],
       env: {
         jest: true,
         "jest/globals": true,

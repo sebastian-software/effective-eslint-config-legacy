@@ -1,5 +1,5 @@
 # Generally, we allow slightly longer lines (100 for code, 140 for comments)
-printWidth: 100
+printWidth: 95
 
 # Use two spaces for tabs
 tabWidth: 2
