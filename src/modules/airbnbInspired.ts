@@ -141,13 +141,6 @@ export const es2015: ESLintRules = {
       requireReturnForObjectLiteral: false
     }
   ],
-  "arrow-parens": [
-    "error",
-    "as-needed",
-    {
-      requireForBlockBody: true
-    }
-  ],
   "arrow-spacing": [
     "error",
     {
