@@ -34,7 +34,7 @@ const config: ESLintConfig = {
   },
 
   parser: "@typescript-eslint/parser",
-  plugins: [ "@typescript-eslint", "react-hooks", "cypress", "jest", "filenames" ],
+  plugins: [ "@typescript-eslint", "react-hooks", "jsdoc", "cypress", "jest", "filenames" ],
   extends: [
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",

@@ -79,6 +79,18 @@ export const quality: ESLintRules = {
   "@typescript-eslint/prefer-interface": "off",
   "@typescript-eslint/consistent-type-definitions": "error",
 
+  "jsdoc/check-alignment": "warn",
+  "jsdoc/check-param-names": "error",
+  "jsdoc/check-tag-names": "error",
+  "jsdoc/newline-after-description": "error",
+  "jsdoc/no-types": "error",
+  "jsdoc/require-param": "error",
+  "jsdoc/require-param-description": "warn",
+  "jsdoc/require-param-name": "error",
+  "jsdoc/require-returns": "error",
+  "jsdoc/require-returns-check": "error",
+  "jsdoc/require-returns-description": "warn",
+
   "id-length": [
     "error",
     {
