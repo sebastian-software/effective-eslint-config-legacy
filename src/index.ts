@@ -71,7 +71,7 @@ const config: ESLintConfig = {
   overrides: [
     {
       // Relax a few rules inside tests
-      files: [ "*.test.js", "*.test.jsx", "*.test.ts", "*.test.tsx" ],
+      files: [ "*.test.js", "*.test.jsx", "*.test.ts", "*.test.tsx", "**/test/*.{js,jsx,ts,tsx}" ],
       env: {
         jest: true,
         "jest/globals": true,
@@ -79,6 +79,9 @@ const config: ESLintConfig = {
       },
       rules: {
         "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/no-magic-numbers": "off",
+        "no-redeclare": "off",
+        "func-names": "off",
         "react/display-name": "off",
         "jsx-a11y/click-events-have-key-events": "off"
       }
