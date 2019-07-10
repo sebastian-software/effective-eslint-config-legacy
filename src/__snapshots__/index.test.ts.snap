@@ -207,11 +207,8 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"arrow-parens\\": [
-      \\"error\\",
-      \\"as-needed\\",
-      {
-        \\"requireForBlockBody\\": true
-      }
+      \\"warn\\",
+      \\"always\\"
     ],
     \\"arrow-spacing\\": [
       \\"error\\",
@@ -1663,7 +1660,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"wrap-regex\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"yield-star-spacing\\": [
       \\"error\\",
