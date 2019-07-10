@@ -1709,7 +1709,7 @@ exports[`Full configuration result 1`] = `
       }
     },
     \\"react\\": {
-      \\"version\\": \\"detect\\"
+      \\"version\\": \\"16.8\\"
     }
   }
 }"

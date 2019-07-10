@@ -29,7 +29,7 @@ const config: ESLintConfig = {
       "@typescript-eslint/parser": [ ".ts", ".tsx" ]
     },
     react: {
-      version: "detect"
+      version: "16.8"
     }
   },
 
