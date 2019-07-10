@@ -184,22 +184,6 @@ export const es2015: ESLintRules = {
       ignoreReadBeforeAssign: true
     }
   ],
-  "prefer-destructuring": [
-    "warn",
-    {
-      VariableDeclarator: {
-        array: false,
-        object: true
-      },
-      AssignmentExpression: {
-        array: true,
-        object: true
-      }
-    },
-    {
-      enforceForRenamedProperties: false
-    }
-  ],
   "prefer-numeric-literals": "error",
   "prefer-rest-params": "warn",
   "prefer-spread": "warn",

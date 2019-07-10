@@ -1278,22 +1278,6 @@ exports[`Full configuration result 1`] = `
         \\"ignoreReadBeforeAssign\\": true
       }
     ],
-    \\"prefer-destructuring\\": [
-      \\"warn\\",
-      {
-        \\"VariableDeclarator\\": {
-          \\"array\\": false,
-          \\"object\\": true
-        },
-        \\"AssignmentExpression\\": {
-          \\"array\\": true,
-          \\"object\\": true
-        }
-      },
-      {
-        \\"enforceForRenamedProperties\\": false
-      }
-    ],
     \\"prefer-numeric-literals\\": [
       \\"error\\"
     ],
