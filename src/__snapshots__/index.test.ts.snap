@@ -79,6 +79,7 @@ exports[`Full configuration result 1`] = `
     \\"filenames\\",
     \\"jest\\",
     \\"cypress\\",
+    \\"shopify\\",
     \\"jsdoc\\",
     \\"react-hooks\\",
     \\"@typescript-eslint\\"
@@ -1713,6 +1714,18 @@ exports[`Full configuration result 1`] = `
     ],
     \\"semi\\": [
       \\"off\\"
+    ],
+    \\"shopify/jsx-no-complex-expressions\\": [
+      \\"error\\"
+    ],
+    \\"shopify/jsx-no-hardcoded-content\\": [
+      \\"warn\\"
+    ],
+    \\"shopify/prefer-class-properties\\": [
+      \\"warn\\"
+    ],
+    \\"shopify/prefer-early-return\\": [
+      \\"warn\\"
     ],
     \\"sort-imports\\": [
       \\"error\\",
