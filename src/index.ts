@@ -45,8 +45,7 @@ const config: ESLintConfig = {
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:jest/recommended",
-    "plugin:cypress/recommended",
-    "plugin:compat/recommended"
+    "plugin:cypress/recommended"
   ],
 
   parserOptions: {
