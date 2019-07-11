@@ -1,6 +1,6 @@
 {
   "name": "@effective/eslint-config",
-  "version": "0.7.11",
+  "version": "0.7.12",
   "description": "ESLint Configuration for Effective Project",
   "author": {
     "name": "Sebastian Software",
