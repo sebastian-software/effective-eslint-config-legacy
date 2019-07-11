@@ -367,9 +367,6 @@ exports[`Full configuration result 1`] = `
     \\"global-require\\": [
       \\"error\\"
     ],
-    \\"guard-for-in\\": [
-      \\"error\\"
-    ],
     \\"id-length\\": [
       \\"error\\",
       {
