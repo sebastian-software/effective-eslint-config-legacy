@@ -79,6 +79,7 @@ exports[`Full configuration result 1`] = `
     \\"filenames\\",
     \\"jest\\",
     \\"cypress\\",
+    \\"unicorn\\",
     \\"shopify\\",
     \\"jsdoc\\",
     \\"react-hooks\\",
@@ -1767,6 +1768,30 @@ exports[`Full configuration result 1`] = `
     \\"unicode-bom\\": [
       \\"error\\",
       \\"never\\"
+    ],
+    \\"unicorn/no-array-instanceof\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-new-buffer\\": [
+      \\"error\\"
+    ],
+    \\"unicorn/no-unsafe-regex\\": [
+      \\"error\\"
+    ],
+    \\"unicorn/no-zero-fractions\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-includes\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-starts-ends-with\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/regex-shorthand\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/throw-new-error\\": [
+      \\"error\\"
     ],
     \\"use-isnan\\": [
       \\"error\\"
