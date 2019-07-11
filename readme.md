@@ -55,6 +55,16 @@ JS projects:
 "lint:script": "eslint '**/*.{js,jsx}'",
 ```
 
+Note: The `run-s` command requires installation of [NPM Run All](https://www.npmjs.com/package/npm-run-all).
+
+## Addons
+
+Depending on the project the following plugins might be interesting additions:
+
+- [Compat](https://www.npmjs.com/package/eslint-plugin-compat): Validates browser support for the written code and warn on required Polyfills. Excluded by default as it requires defining a browser list and does not work well in a mixed NodeJS/Browser code environment.
+- [GraphQL](https://www.npmjs.com/package/eslint-plugin-graphql): Validates usage of queries against an existing schema. Excluded by default as it requires a downloaded schema.
+
+
 ## License
 
 [Apache License Version 2.0, January 2004](license)
