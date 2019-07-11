@@ -112,8 +112,5 @@ export const formatting: ESLintRules = {
     }
   ],
   "wrap-regex": "warn",
-  "arrow-parens": [
-    "warn",
-    "always"
-  ]
+  "arrow-parens": [ "warn", "always" ]
 }

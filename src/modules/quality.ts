@@ -91,6 +91,12 @@ export const quality: ESLintRules = {
   "jsdoc/require-returns-check": "error",
   "jsdoc/require-returns-description": "warn",
 
+  // Shopify Plugin Extensions
+  "shopify/jsx-no-complex-expressions": "error",
+  "shopify/jsx-no-hardcoded-content": "warn",
+  "shopify/prefer-class-properties": "warn",
+  "shopify/prefer-early-return": "warn",
+
   "id-length": [
     "error",
     {
