@@ -2,14 +2,6 @@ import { CLIEngine } from "eslint"
 
 const PATH_REPL = /"\S+(\\|\/)parser\.js"/
 
-function fixJestRequire() {
-  // Jest overrides this, but it breaks the "Unicorn" package.
-  // See also: https://github.com/sindresorhus/import-modules/issues/2
-  require.extensions = {
-    '.js': require('default-require-extensions/js')
-  }
-}
-
 function cloneWithSortedKeys(obj: any): any {
   const clone: { [key: string]: any } = {}
   const keys = Object.keys(obj).sort()
@@ -40,8 +32,6 @@ test("Full configuration result", () => {
 })
 
 test("load config in eslint to validate all rule syntax is correct", () => {
-  fixJestRequire()
-
   const cli = new CLIEngine({
     useEslintrc: false,
     configFile: "dist/index.js"
@@ -54,8 +44,6 @@ test("load config in eslint to validate all rule syntax is correct", () => {
 })
 
 test("reports undeclared variable", () => {
-  fixJestRequire()
-
   const cli = new CLIEngine({
     useEslintrc: false,
     configFile: "dist/index.js"
