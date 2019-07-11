@@ -97,6 +97,16 @@ export const quality: ESLintRules = {
   "shopify/prefer-class-properties": "warn",
   "shopify/prefer-early-return": "warn",
 
+  // Unicorn Plugin Extensions
+  "unicorn/no-array-instanceof": "warn",
+  "unicorn/no-new-buffer": "error",
+  "unicorn/no-unsafe-regex": "error",
+  "unicorn/no-zero-fractions": "warn",
+  "unicorn/prefer-includes": "warn",
+  "unicorn/prefer-starts-ends-with": "warn",
+  "unicorn/regex-shorthand": "warn",
+  "unicorn/throw-new-error": "error",
+
   "id-length": [
     "error",
     {
