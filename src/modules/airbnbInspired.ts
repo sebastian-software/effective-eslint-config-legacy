@@ -29,7 +29,6 @@ export const essential: ESLintRules = {
       allowImplicit: true
     }
   ],
-  "guard-for-in": "error",
   "no-alert": "error",
   "no-await-in-loop": "error",
   "no-floating-decimal": "error",
