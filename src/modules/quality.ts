@@ -91,6 +91,8 @@ export const quality: ESLintRules = {
   "jsdoc/require-returns-check": "error",
   "jsdoc/require-returns-description": "warn",
 
+  "compat/compat": "warn",
+
   "id-length": [
     "error",
     {
