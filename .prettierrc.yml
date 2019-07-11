@@ -1,4 +1,6 @@
 # Generally, we allow slightly longer lines (100 for code, 140 for comments)
+# To support eslint post-fixes we aligned this to 95 to support some additional
+# spaces which might be injected by eslint later on.
 printWidth: 95
 
 # Use two spaces for tabs
