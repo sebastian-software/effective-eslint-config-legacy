@@ -79,6 +79,9 @@ export const quality: ESLintRules = {
   "@typescript-eslint/prefer-interface": "off",
   "@typescript-eslint/consistent-type-definitions": "error",
 
+  // Disabled old rule still in 'recommended' list of TS
+  "@typescript-eslint/no-triple-slash-reference": "off",
+
   "jsdoc/check-alignment": "warn",
   "jsdoc/check-param-names": "error",
   "jsdoc/check-tag-names": "error",

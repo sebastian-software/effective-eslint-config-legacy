@@ -4,6 +4,7 @@ exports[`Full configuration result 1`] = `
 "{
   \\"env\\": {
     \\"browser\\": true,
+    \\"cypress/globals\\": true,
     \\"es6\\": true,
     \\"jest/globals\\": true,
     \\"node\\": true,
@@ -205,7 +206,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/no-triple-slash-reference\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"@typescript-eslint/no-unused-vars\\": [
       \\"error\\",
