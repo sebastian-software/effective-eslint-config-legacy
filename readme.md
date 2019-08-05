@@ -25,6 +25,13 @@ The presets combines a lot of previous work into an effective configuration to w
 
 This all is offered by just one dependency and one `extends` and allow flexible customization via `rules`.
 
+## Installation
+
+- `npm install -D @effective/eslint-config`
+- `npm install -D eslint prettier typescript`
+
+Note: As this is based on the TypeScript parser it even requires the TypeScript installation in JS-only projects. This typically prepares the ground for a step-by-step migration to TypeScript and generally the rules in TypeScript are more advanced than their "native" ESLint counterparts.
+
 ## Usage
 
 [ESLint supports our scoped packages](https://eslint.org/docs/developer-guide/shareable-configs#npm-scoped-modules) by just extending from the scope like so:
@@ -36,14 +43,18 @@ This all is offered by just one dependency and one `extends` and allow flexible 
 }
 ```
 
+```yaml
+extends: "@effective"
+```
+
 We also suggest adding the following scripts to the `package.json`:
 
 TypeScript projects:
 
 ```json
 "lint": "run-s \"lint:* {@}\" --",
-"lint:style": "prettier --check '**/*.{js,jsx,json,md,ts,tsx}'",
-"lint:script": "eslint '**/*.{js,jsx,ts,tsx}'",
+"lint:style": "prettier --check '**/*.{js,jsx,ts,tsx,mjs,json,md}'",
+"lint:script": "eslint '**/*.{js,jsx,ts,tsx,mjs}'",
 "lint:types": "tsc --noEmit",
 ```
 

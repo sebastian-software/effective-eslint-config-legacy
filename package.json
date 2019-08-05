@@ -33,9 +33,9 @@
     "prepack": "npm run build",
     "prelint": "npm run build",
     "lint": "run-s \"lint:* {@}\" --",
-    "lint:code": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
+    "lint:script": "eslint --fix '**/*.{js,jsx,ts,tsx,mjs}'",
     "lint:types": "tsc --noEmit",
-    "format": "prettier --write '**/*.{js,jsx,ts,tsx,md}' && eslint --fix '**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write '**/*.{js,jsx,ts,tsx,mjs,json,md}' && eslint --fix '**/*.{js,jsx,ts,tsx,mjs}'",
     "check:conflicts": "eslint --print-config . | eslint-config-prettier-check",
     "pretest": "npm run build",
     "test": "jest"
