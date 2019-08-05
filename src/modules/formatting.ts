@@ -25,8 +25,8 @@ export const formatting: ESLintRules = {
     "warn",
     {
       multiline: {
-        delimiter: "semi",
-        requireLast: true
+        delimiter: "none",
+        requireLast: false
       },
       singleline: {
         delimiter: "semi",
