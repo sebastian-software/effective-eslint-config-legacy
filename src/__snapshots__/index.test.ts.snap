@@ -141,8 +141,8 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       {
         \\"multiline\\": {
-          \\"delimiter\\": \\"semi\\",
-          \\"requireLast\\": true
+          \\"delimiter\\": \\"none\\",
+          \\"requireLast\\": false
         },
         \\"singleline\\": {
           \\"delimiter\\": \\"semi\\",
