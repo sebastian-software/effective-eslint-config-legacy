@@ -87,10 +87,10 @@ export const quality: ESLintRules = {
   "jsdoc/check-tag-names": "error",
   "jsdoc/newline-after-description": "warn",
   "jsdoc/no-types": "error",
-  "jsdoc/require-param": "warn",
+  "jsdoc/require-param": "off",
   "jsdoc/require-param-description": "warn",
   "jsdoc/require-param-name": "warn",
-  "jsdoc/require-returns": "warn",
+  "jsdoc/require-returns": "off",
   "jsdoc/require-returns-check": "warn",
   "jsdoc/require-returns-description": "warn",
 

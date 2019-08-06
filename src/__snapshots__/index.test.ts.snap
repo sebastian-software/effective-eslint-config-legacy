@@ -518,25 +518,25 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"jsdoc/newline-after-description\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/no-types\\": [
       \\"error\\"
     ],
     \\"jsdoc/require-param\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"jsdoc/require-param-description\\": [
       \\"warn\\"
     ],
     \\"jsdoc/require-param-name\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/require-returns\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"jsdoc/require-returns-check\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/require-returns-description\\": [
       \\"warn\\"
