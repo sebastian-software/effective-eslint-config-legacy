@@ -51,7 +51,7 @@ export const formatting: ESLintRules = {
       detectObjects: false,
       // ignoreEnums: true,
       enforceConst: true,
-      ignore: [ 0, 1, 2, 10 ],
+      ignore: [ -1, 0, 1, 2, 10 ],
       ignoreArrayIndexes: true
     }
   ],
