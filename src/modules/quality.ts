@@ -85,13 +85,13 @@ export const quality: ESLintRules = {
   "jsdoc/check-alignment": "warn",
   "jsdoc/check-param-names": "error",
   "jsdoc/check-tag-names": "error",
-  "jsdoc/newline-after-description": "error",
+  "jsdoc/newline-after-description": "warn",
   "jsdoc/no-types": "error",
-  "jsdoc/require-param": "error",
+  "jsdoc/require-param": "warn",
   "jsdoc/require-param-description": "warn",
-  "jsdoc/require-param-name": "error",
-  "jsdoc/require-returns": "error",
-  "jsdoc/require-returns-check": "error",
+  "jsdoc/require-param-name": "warn",
+  "jsdoc/require-returns": "warn",
+  "jsdoc/require-returns-check": "warn",
   "jsdoc/require-returns-description": "warn",
 
   // Shopify Plugin Extensions
