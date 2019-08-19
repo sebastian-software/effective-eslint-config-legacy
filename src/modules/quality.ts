@@ -3,7 +3,9 @@ import restrictedGlobals from "confusing-browser-globals"
 import { ESLintRules } from "../types"
 
 export const quality: ESLintRules = {
-  "@typescript-eslint/no-angle-bracket-type-assertion": "error",
+  // Most code bases will want to enforce not using angle-bracket style because
+  // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
+  "@typescript-eslint/consistent-type-assertions": [ "error", { assertionStyle: "as" }],
   "@typescript-eslint/no-namespace": "error",
   "@typescript-eslint/no-array-constructor": "error",
   "@typescript-eslint/no-useless-constructor": "error",
