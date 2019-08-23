@@ -142,6 +142,7 @@ export const quality: ESLintRules = {
         "css",
         "app",
         "api",
+        "spy",
         "cli",
         "App",
         "API"
@@ -156,15 +157,6 @@ export const quality: ESLintRules = {
     "error",
     {
       maximum: 3
-    }
-  ],
-  "max-len": [
-    "error",
-    {
-      code: 100,
-      comments: 140,
-      ignoreUrls: true,
-      tabWidth: 2
     }
   ],
   "max-params": [ "error", 3 ],

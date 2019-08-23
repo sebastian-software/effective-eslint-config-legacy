@@ -73,6 +73,15 @@ export const formatting: ESLintRules = {
       allowArrowFunctions: true
     }
   ],
+  "max-len": [
+    "warn",
+    {
+      code: 100,
+      comments: 140,
+      ignoreUrls: true,
+      tabWidth: 2
+    }
+  ],
   "jsx-quotes": [ "error", "prefer-double" ],
   "no-multiple-empty-lines": [
     "warn",

@@ -405,6 +405,7 @@ exports[`Full configuration result 1`] = `
           \\"css\\",
           \\"app\\",
           \\"api\\",
+          \\"spy\\",
           \\"cli\\",
           \\"App\\",
           \\"API\\"
@@ -806,7 +807,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"max-len\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"code\\": 100,
         \\"comments\\": 140,
