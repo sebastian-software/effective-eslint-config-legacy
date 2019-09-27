@@ -49,7 +49,7 @@ exports[`Full configuration result 1`] = `
     \\"clearInterval\\": \\"readonly\\",
     \\"clearTimeout\\": \\"readonly\\",
     \\"console\\": \\"readonly\\",
-    \\"exports\\": \\"readonly\\",
+    \\"exports\\": \\"writable\\",
     \\"global\\": \\"readonly\\",
     \\"globalThis\\": \\"readonly\\",
     \\"module\\": \\"readonly\\",
@@ -1341,6 +1341,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"node/no-deprecated-api\\": [
+      \\"error\\"
+    ],
+    \\"node/no-exports-assign\\": [
       \\"error\\"
     ],
     \\"node/no-extraneous-import\\": [
