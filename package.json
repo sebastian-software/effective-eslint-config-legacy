@@ -56,7 +56,7 @@
     ]
   },
   "peerDependencies": {
-    "eslint": ">=6.2.1",
+    "eslint": ">=6.4.0",
     "prettier": ">=1.18.2",
     "typescript": ">=3.6.3"
   },
@@ -78,7 +78,7 @@
     "eslint-plugin-react": "^7.14.3",
     "eslint-plugin-react-hooks": "^2.0.1",
     "eslint-plugin-shopify": "^30.0.1",
-    "eslint-plugin-unicorn": "^10.0.0"
+    "eslint-plugin-unicorn": "^12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -87,8 +87,9 @@
     "@types/eslint": "^6.1.1",
     "@types/jest": "^24.0.18",
     "@types/lodash": "^4.14.140",
-    "eslint": "^6.0.1",
+    "eslint": "^6.4.0",
     "husky": "^3.0.5",
+    "import-modules": "github:swernerx/import-modules#fix/replace-deprecated-require-extensions",
     "jest": "^24.9.0",
     "lint-staged": "^9.4.0",
     "lodash": "^4.17.15",
@@ -97,6 +98,6 @@
     "prettier": "^1.18.2",
     "react": "^16.9.0",
     "rimraf": "^3.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^3.6.3"
   }
 }

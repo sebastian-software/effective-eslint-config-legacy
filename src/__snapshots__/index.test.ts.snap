@@ -280,6 +280,9 @@ exports[`Full configuration result 1`] = `
     \\"block-scoped-var\\": [
       \\"error\\"
     ],
+    \\"brace-style\\": [
+      \\"off\\"
+    ],
     \\"camelcase\\": [
       \\"off\\"
     ],
@@ -1447,6 +1450,9 @@ exports[`Full configuration result 1`] = `
     \\"prefer-template\\": [
       \\"warn\\"
     ],
+    \\"quotes\\": [
+      \\"off\\"
+    ],
     \\"radix\\": [
       \\"error\\"
     ],
@@ -1787,6 +1793,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\",
       \\"never\\"
     ],
+    \\"unicorn/consistent-function-scoping\\": [
+      \\"error\\"
+    ],
     \\"unicorn/no-array-instanceof\\": [
       \\"warn\\"
     ],
@@ -1885,99 +1894,19 @@ exports[`Full configuration result 1`] = `
 
 exports[`load config in eslint to validate all rule syntax is correct 1`] = `
 Object {
-  "errorCount": 9,
+  "errorCount": 1,
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
   "results": Array [
     Object {
-      "errorCount": 9,
+      "errorCount": 1,
       "filePath": "<text>",
       "fixableErrorCount": 0,
       "fixableWarningCount": 0,
       "messages": Array [
         Object {
           "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-array-instanceof' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-array-instanceof",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-new-buffer' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-new-buffer",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-unsafe-regex' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-unsafe-regex",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-zero-fractions' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-zero-fractions",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/prefer-includes' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/prefer-includes",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/prefer-starts-ends-with' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/prefer-starts-ends-with",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/regex-shorthand' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/regex-shorthand",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/throw-new-error' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/throw-new-error",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 21,
+          "endColumn": 18,
           "endLine": 2,
           "line": 2,
           "message": "Missing return type on function.",
@@ -2010,96 +1939,16 @@ second(first)
 
 exports[`reports undeclared variable 1`] = `
 Object {
-  "errorCount": 9,
+  "errorCount": 1,
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
   "results": Array [
     Object {
-      "errorCount": 9,
+      "errorCount": 1,
       "filePath": "<text>",
       "fixableErrorCount": 0,
       "fixableWarningCount": 0,
       "messages": Array [
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-array-instanceof' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-array-instanceof",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-new-buffer' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-new-buffer",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-unsafe-regex' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-unsafe-regex",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/no-zero-fractions' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/no-zero-fractions",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/prefer-includes' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/prefer-includes",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/prefer-starts-ends-with' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/prefer-starts-ends-with",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/regex-shorthand' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/regex-shorthand",
-          "severity": 2,
-        },
-        Object {
-          "column": 1,
-          "endColumn": 2,
-          "endLine": 1,
-          "line": 1,
-          "message": "Definition for rule 'unicorn/throw-new-error' was not found.",
-          "nodeType": null,
-          "ruleId": "unicorn/throw-new-error",
-          "severity": 2,
-        },
         Object {
           "column": 1,
           "endColumn": 2,

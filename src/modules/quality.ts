@@ -117,6 +117,7 @@ export const quality: ESLintRules = {
   "unicorn/prefer-starts-ends-with": "warn",
   "unicorn/regex-shorthand": "warn",
   "unicorn/throw-new-error": "error",
+  "unicorn/consistent-function-scoping": "error",
 
   "id-length": [
     "error",
