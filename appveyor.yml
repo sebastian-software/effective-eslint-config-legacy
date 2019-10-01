@@ -21,7 +21,7 @@ deploy: off
 install:
   - ps: Install-Product node $env:nodejs_version $env:platform
   - npm -g install npm
-  - npm install
+  - npm ci
 
 test_script:
   - npm test
