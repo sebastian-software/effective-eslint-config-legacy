@@ -58,7 +58,8 @@ export const quality: ESLintRules = {
   "react/style-prop-object": "off",
 
   // Don't allow dashes or underscores.
-  "filenames/match-regex": [ "error", "^[a-zA-Z][a-zA-Z0-9.]+$" ],
+  // Replaced by "unicorn/filename-case"
+  // "filenames/match-regex": [ "error", "^[a-zA-Z][a-zA-Z0-9.]+$" ],
 
   // Keep in sync with exported symbol name.
   "filenames/match-exported": "error",
