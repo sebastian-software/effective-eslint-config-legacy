@@ -1794,9 +1794,30 @@ exports[`Full configuration result 1`] = `
       \\"never\\"
     ],
     \\"unicorn/consistent-function-scoping\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/custom-error-definition\\": [
+      \\"error\\"
+    ],
+    \\"unicorn/explicit-length-check\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/filename-case\\": [
+      \\"warn\\",
+      {
+        \\"cases\\": {
+          \\"camelCase\\": true,
+          \\"pascalCase\\": true
+        }
+      }
+    ],
+    \\"unicorn/new-for-builtins\\": [
       \\"error\\"
     ],
     \\"unicorn/no-array-instanceof\\": [
+      \\"error\\"
+    ],
+    \\"unicorn/no-nested-ternary\\": [
       \\"warn\\"
     ],
     \\"unicorn/no-new-buffer\\": [
@@ -1813,6 +1834,12 @@ exports[`Full configuration result 1`] = `
     ],
     \\"unicorn/prefer-starts-ends-with\\": [
       \\"warn\\"
+    ],
+    \\"unicorn/prefer-string-slice\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-type-error\\": [
+      \\"error\\"
     ],
     \\"unicorn/regex-shorthand\\": [
       \\"warn\\"
