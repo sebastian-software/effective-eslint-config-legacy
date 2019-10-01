@@ -95,7 +95,6 @@ const config: ESLintConfig = {
         "cypress/globals": true
       },
       rules: {
-        "@typescript-eslint/explicit-function-return-type": "off",
         "@typescript-eslint/no-magic-numbers": "off",
         "no-redeclare": "off",
         "func-names": "off",

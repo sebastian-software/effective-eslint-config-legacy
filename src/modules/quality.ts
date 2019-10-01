@@ -75,6 +75,7 @@ export const quality: ESLintRules = {
       varsIgnorePattern: "^_"
     }
   ],
+
   "@typescript-eslint/no-use-before-define": [
     "error",
     {
@@ -89,6 +90,9 @@ export const quality: ESLintRules = {
 
   // Disabled old rule still in 'recommended' list of TS
   "@typescript-eslint/no-triple-slash-reference": "off",
+
+  // This does not work well in JS environments.
+  "@typescript-eslint/explicit-function-return-type": "off",
 
   "jsdoc/check-alignment": "warn",
   "jsdoc/check-param-names": "error",
