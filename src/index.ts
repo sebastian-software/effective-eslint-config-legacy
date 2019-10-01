@@ -41,7 +41,6 @@ const config: ESLintConfig = {
     "jsdoc",
     "shopify",
     "unicorn",
-    "cypress",
     "jest",
     "filenames"
   ],
@@ -55,8 +54,7 @@ const config: ESLintConfig = {
     "plugin:import/typescript",
     "plugin:react/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:jest/recommended",
-    "plugin:cypress/recommended"
+    "plugin:jest/recommended"
   ],
 
   parserOptions: {
@@ -91,8 +89,7 @@ const config: ESLintConfig = {
       ],
       env: {
         jest: true,
-        "jest/globals": true,
-        "cypress/globals": true
+        "jest/globals": true
       },
       rules: {
         "@typescript-eslint/no-magic-numbers": "off",

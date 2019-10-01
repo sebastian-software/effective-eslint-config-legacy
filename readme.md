@@ -18,10 +18,10 @@ Configuration for linting TS/JS files.
 
 The presets combines a lot of previous work into an effective configuration to work with:
 
-- TypeScript first. Based on TypeScript ESLint parser.
-- Recommended presets by ESLint, TypeScript, React(+Hooks), JSX-A11N, Import Plugin, Jest and Cypress.
+- TypeScript first. Based on TypeScript ESLint parser and presets.
+- Recommended presets by React(+Hooks), [JSX-A11N](https://github.com/evcohen/eslint-plugin-jsx-a11y), [Import](https://github.com/benmosher/eslint-plugin-import/issues), [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn), and [Jest](https://github.com/jest-community/eslint-plugin-jest).
 - Auto environment handling for Jest tests (including relaxiation for some rules).
-- Support root alias imports via `-/...`-prefix via Babel.
+- Supports root alias imports via `-/...`-prefix via Babel.
 
 This all is offered by just one dependency and one `extends` and allow flexible customization via `rules`.
 
@@ -74,6 +74,7 @@ Depending on the project the following plugins might be interesting additions:
 
 - [Compat](https://www.npmjs.com/package/eslint-plugin-compat): Validates browser support for the written code and warn on required Polyfills. Excluded by default as it requires defining a browser list and does not work well in a mixed NodeJS/Browser code environment.
 - [GraphQL](https://www.npmjs.com/package/eslint-plugin-graphql): Validates usage of queries against an existing schema. Excluded by default as it requires a downloaded schema.
+- [Cypress](https://github.com/cypress-io/eslint-plugin-cypress): Offers rules and presets for working with Cypress E2E solution.
 
 ## License
 

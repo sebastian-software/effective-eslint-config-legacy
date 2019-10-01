@@ -4,7 +4,6 @@ exports[`Full configuration result 1`] = `
 "{
   \\"env\\": {
     \\"browser\\": true,
-    \\"cypress/globals\\": true,
     \\"es6\\": true,
     \\"jest/globals\\": true,
     \\"node\\": true,
@@ -79,7 +78,6 @@ exports[`Full configuration result 1`] = `
     \\"jsx-a11y\\",
     \\"filenames\\",
     \\"jest\\",
-    \\"cypress\\",
     \\"unicorn\\",
     \\"shopify\\",
     \\"jsdoc\\",
@@ -308,12 +306,6 @@ exports[`Full configuration result 1`] = `
       \\"error\\",
       \\"multi-line\\"
     ],
-    \\"cypress/no-assigning-return-values\\": [
-      \\"error\\"
-    ],
-    \\"cypress/no-unnecessary-waiting\\": [
-      \\"error\\"
-    ],
     \\"default-case\\": [
       \\"error\\",
       {
@@ -337,10 +329,6 @@ exports[`Full configuration result 1`] = `
     ],
     \\"filenames/match-exported\\": [
       \\"error\\"
-    ],
-    \\"filenames/match-regex\\": [
-      \\"error\\",
-      \\"^[a-zA-Z][a-zA-Z0-9.]+$\\"
     ],
     \\"filenames/no-index\\": [
       \\"off\\"
