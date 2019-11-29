@@ -77,6 +77,15 @@ export const quality: ESLintRules = {
     }
   ],
 
+  "@typescript-eslint/no-unused-expressions": [
+    "error",
+    {
+      "allowShortCircuit": true,
+      "allowTernary": true,
+      "allowTaggedTemplates": true
+    }
+  ],
+
   "@typescript-eslint/no-use-before-define": [
     "error",
     {

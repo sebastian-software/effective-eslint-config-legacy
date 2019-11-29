@@ -105,7 +105,7 @@ export const formatting: ESLintRules = {
   "operator-linebreak": [ "warn", "after" ],
   "react/jsx-indent": [ "error", 2 ],
   "react/jsx-indent-props": [ "error", 2 ],
-  "space-before-function-paren": [
+  "@typescript-eslint/space-before-function-paren": [
     "warn",
     {
       anonymous: "never",

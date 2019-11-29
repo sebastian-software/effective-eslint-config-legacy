@@ -60,6 +60,9 @@ exports[`Full configuration result 1`] = `
     \\"setInterval\\": \\"readonly\\",
     \\"setTimeout\\": \\"readonly\\"
   },
+  \\"ignorePatterns\\": [
+    \\"dist\\"
+  ],
   \\"parser\\": \\"[PATH]\\",
   \\"parserOptions\\": {
     \\"ecmaFeatures\\": {
@@ -207,6 +210,14 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/no-triple-slash-reference\\": [
       \\"off\\"
     ],
+    \\"@typescript-eslint/no-unused-expressions\\": [
+      \\"error\\",
+      {
+        \\"allowShortCircuit\\": true,
+        \\"allowTernary\\": true,
+        \\"allowTaggedTemplates\\": true
+      }
+    ],
     \\"@typescript-eslint/no-unused-vars\\": [
       \\"error\\",
       {
@@ -237,6 +248,14 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/semi\\": [
       \\"warn\\",
       \\"never\\"
+    ],
+    \\"@typescript-eslint/space-before-function-paren\\": [
+      \\"warn\\",
+      {
+        \\"anonymous\\": \\"never\\",
+        \\"asyncArrow\\": \\"always\\",
+        \\"named\\": \\"never\\"
+      }
     ],
     \\"@typescript-eslint/triple-slash-reference\\": [
       \\"error\\"
@@ -477,11 +496,17 @@ exports[`Full configuration result 1`] = `
     \\"indent\\": [
       \\"off\\"
     ],
-    \\"jest/no-alias-methods\\": [
+    \\"jest/expect-expect\\": [
+      \\"warn\\"
+    ],
+    \\"jest/no-commented-out-tests\\": [
       \\"warn\\"
     ],
     \\"jest/no-disabled-tests\\": [
       \\"warn\\"
+    ],
+    \\"jest/no-export\\": [
+      \\"error\\"
     ],
     \\"jest/no-focused-tests\\": [
       \\"error\\"
@@ -495,7 +520,19 @@ exports[`Full configuration result 1`] = `
     \\"jest/no-jest-import\\": [
       \\"error\\"
     ],
+    \\"jest/no-mocks-import\\": [
+      \\"error\\"
+    ],
+    \\"jest/no-standalone-expect\\": [
+      \\"error\\"
+    ],
+    \\"jest/no-test-callback\\": [
+      \\"error\\"
+    ],
     \\"jest/no-test-prefixes\\": [
+      \\"error\\"
+    ],
+    \\"jest/no-try-expect\\": [
       \\"error\\"
     ],
     \\"jest/valid-describe\\": [
@@ -1277,12 +1314,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-unused-expressions\\": [
-      \\"error\\",
-      {
-        \\"allowShortCircuit\\": true,
-        \\"allowTernary\\": true,
-        \\"allowTaggedTemplates\\": true
-      }
+      \\"off\\"
     ],
     \\"no-unused-labels\\": [
       \\"error\\"
@@ -1749,12 +1781,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"space-before-function-paren\\": [
-      \\"warn\\",
-      {
-        \\"anonymous\\": \\"never\\",
-        \\"asyncArrow\\": \\"always\\",
-        \\"named\\": \\"never\\"
-      }
+      \\"off\\"
     ],
     \\"spaced-comment\\": [
       \\"warn\\",
