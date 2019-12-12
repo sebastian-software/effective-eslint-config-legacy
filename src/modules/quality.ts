@@ -42,7 +42,7 @@ export const quality: ESLintRules = {
   "import/order": [
     "error",
     {
-      groups: [ "builtin", "external", "unknown", "parent", "sibling", "index" ],
+      groups: [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
       "newlines-between": "always"
     }
   ],

@@ -486,9 +486,11 @@ exports[`Full configuration result 1`] = `
           \\"builtin\\",
           \\"external\\",
           \\"unknown\\",
-          \\"parent\\",
-          \\"sibling\\",
-          \\"index\\"
+          [
+            \\"parent\\",
+            \\"sibling\\",
+            \\"index\\"
+          ]
         ],
         \\"newlines-between\\": \\"always\\"
       }
