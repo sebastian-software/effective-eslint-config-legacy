@@ -1373,13 +1373,13 @@ exports[`Full configuration result 1`] = `
       \\"off\\"
     ],
     \\"node/no-extraneous-require\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"node/no-missing-import\\": [
       \\"off\\"
     ],
     \\"node/no-missing-require\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"node/no-unpublished-bin\\": [
       \\"error\\"

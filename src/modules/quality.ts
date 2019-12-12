@@ -23,7 +23,9 @@ export const quality: ESLintRules = {
   // about babel based aliases, etc.
   "node/no-unpublished-import": "off",
   "node/no-missing-import": "off",
+  "node/no-missing-require": "off",
   "node/no-extraneous-import": "off",
+  "node/no-extraneous-require": "off",
 
   // The ESLint browser environment defines all browser globals as valid,
   // even though most people don't know some of them exist (e.g. `name` or `status`).
