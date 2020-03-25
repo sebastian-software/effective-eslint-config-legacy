@@ -867,9 +867,6 @@ exports[`Full configuration result 1`] = `
     \\"no-array-constructor\\": [
       \\"off\\"
     ],
-    \\"no-async-promise-executor\\": [
-      \\"error\\"
-    ],
     \\"no-await-in-loop\\": [
       \\"error\\"
     ],
@@ -932,7 +929,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-empty\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-empty-character-class\\": [
       \\"error\\"
@@ -1322,9 +1319,6 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-use-before-define\\": [
       \\"off\\"
-    ],
-    \\"no-useless-catch\\": [
-      \\"error\\"
     ],
     \\"no-useless-computed-key\\": [
       \\"error\\"
