@@ -1,4 +1,4 @@
-import { overrides, rules } from "eslint-config-react-app"
+import { rules } from "eslint-config-react-app"
 
 import { ESLintRules } from "../types"
 
@@ -16,7 +16,7 @@ const typescriptReplaced: { [key: string]: string } = {
   "no-unused-vars": "@typescript-eslint/no-unused-vars"
 }
 
-function addNormalizedRules(data: ESLintRules): void {
+function merge(data: ESLintRules): void {
   const ruleNames = Object.keys(data)
   ruleNames.forEach((name: string): void => {
     if (flowtypeRules.test(name) || deprecatedRules.has(name)) {
@@ -42,10 +42,4 @@ function addNormalizedRules(data: ESLintRules): void {
   })
 }
 
-addNormalizedRules(rules)
-
-// Note: Next version of CRA will use an array, not an object (as specified by ESLint)
-// https://github.com/facebook/create-react-app/commit/24489ac0a667af416f1d59dd806dfc2623aabe36
-if (overrides.rules) {
-//  addNormalizedRules(overrides.rules)
-}
+merge(rules)
