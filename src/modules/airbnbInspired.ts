@@ -22,7 +22,6 @@ export const essential: ESLintRules = {
       allowPattern: ""
     }
   ],
-  eqeqeq: [ "error", "smart" ],
   "getter-return": [
     "error",
     {
@@ -98,7 +97,10 @@ export const essential: ESLintRules = {
     }
   ],
   "no-return-assign": [ "error", "always" ],
-  "no-return-await": "error",
+
+  // Replaced by TS
+  // "no-return-await": "error",
+
   "no-self-assign": [
     "error",
     {
@@ -114,7 +116,6 @@ export const essential: ESLintRules = {
     }
   ],
   radix: "error",
-  strict: [ "error", "never" ],
   "valid-typeof": [
     "error",
     {
