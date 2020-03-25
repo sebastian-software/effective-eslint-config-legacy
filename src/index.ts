@@ -128,17 +128,15 @@ const config: ESLintConfig = {
   rules: combinedRules,
 
   overrides: [
+    // Jest Test Runner
     {
-      // Relax a few rules inside tests
       files: [
         "*.test.{js,jsx,ts,tsx}",
         "**/test/**/*.{js,jsx,ts,tsx}"
       ],
-      env: {
-        jest: true,
-        "jest/globals": true
-      },
+      extends: [ "plugin:jest/recommended" ],
       rules: {
+        // Relax a few rules inside tests
         "filenames/match-exported": "off",
         "@typescript-eslint/no-magic-numbers": "off",
         "no-redeclare": "off",
@@ -147,6 +145,8 @@ const config: ESLintConfig = {
         "jsx-a11y/click-events-have-key-events": "off"
       }
     },
+
+    // TypeScript Definitions
     {
       // Definition files are typically really TS specific and
       // do not work in the same way as normal TS files.

@@ -10,6 +10,7 @@ export interface ESLintEnv {
 
 export interface ESLintOverrides {
   files: string[]
+  extends?: string[]
   rules?: ESLintRules
   env?: ESLintEnv
 }
