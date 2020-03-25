@@ -1,12 +1,13 @@
 /* eslint-disable filenames/match-exported, import/order */
 import { ESLintConfig, ESLintRules } from "./types"
+import { isDisabled } from "./util"
+
 import { typescript } from "./modules/typescript"
 import { eslint } from "./modules/eslint"
 import { cra } from "./modules/cra"
 import { airbnb } from "./modules/airbnb"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
-import { isDisabled } from "./util"
 
 const combinedRules: ESLintRules = {
   ...typescript
@@ -122,10 +123,7 @@ const config: ESLintConfig = {
     {
       // Relax a few rules inside tests
       files: [
-        "*.test.js",
-        "*.test.jsx",
-        "*.test.ts",
-        "*.test.tsx",
+        "*.test.{js,jsx,ts,tsx}",
         "**/test/**/*.{js,jsx,ts,tsx}"
       ],
       env: {
