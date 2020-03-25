@@ -6,7 +6,6 @@ import { createReactApp } from "./modules/createReactApp"
 import { airbnb } from "./modules/airbnbInspired"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
-import { typescriptOverride } from "./modules/typescriptOverride"
 
 const combinedRules: ESLintRules = {
   ...typescript
@@ -39,15 +38,6 @@ mergeWithWarnings(createReactApp, "cra")
 // mergeWithWarnings(airbnb, "airbnb")
 // mergeWithWarnings(quality, "quality")
 // mergeWithWarnings(formatting, "formatting")
-// mergeWithWarnings(typescriptOverride, "typescript")
-
-
-
-// ...airbnb,
-// ...quality,
-// ...formatting,
-// ...typescriptOverride
-
 
 const config: ESLintConfig = {
   root: true,
