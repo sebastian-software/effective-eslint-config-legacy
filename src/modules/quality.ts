@@ -1,5 +1,9 @@
 import { ESLintRules } from "../types"
 
+const MAX_STATEMENTS = 30
+const MAX_DEPTH = 4
+const MAX_PARAMS = 4
+
 export const quality: ESLintRules = {
   // Most code bases will want to enforce not using angle-bracket style because
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
@@ -58,15 +62,7 @@ export const quality: ESLintRules = {
   // This does not work well in JS environments.
   "@typescript-eslint/explicit-function-return-type": "off",
 
-  "jsdoc/check-alignment": "warn",
-  "jsdoc/check-param-names": "error",
-  "jsdoc/check-tag-names": "error",
-  "jsdoc/newline-after-description": "warn",
-  "jsdoc/no-types": "error",
-  "jsdoc/require-param-description": "warn",
-  "jsdoc/require-param-name": "warn",
-  "jsdoc/require-returns-check": "warn",
-  "jsdoc/require-returns-description": "warn",
+
 
   // Lean Shopify Plugin Extensions
   "shopify-lean/jsx-no-complex-expressions": "error",
@@ -118,13 +114,13 @@ export const quality: ESLintRules = {
   "max-depth": [
     "error",
     {
-      maximum: 3
+      maximum: MAX_DEPTH
     }
   ],
-  "max-params": [ "error", 3 ],
+  "max-params": [ "error", MAX_PARAMS ],
   "max-statements": [
     "error",
-    30,
+    MAX_STATEMENTS,
     {
       ignoreTopLevelFunctions: true
     }

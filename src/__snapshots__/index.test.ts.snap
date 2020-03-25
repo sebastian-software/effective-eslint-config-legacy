@@ -482,7 +482,7 @@ exports[`Full configuration result 1`] = `
     \\"max-depth\\": [
       \\"error\\",
       {
-        \\"maximum\\": 3
+        \\"maximum\\": 4
       }
     ],
     \\"max-len\\": [
@@ -496,7 +496,7 @@ exports[`Full configuration result 1`] = `
     ],
     \\"max-params\\": [
       \\"error\\",
-      3
+      4
     ],
     \\"max-statements\\": [
       \\"error\\",
