@@ -17,6 +17,6 @@ export interface ESLintOverrides {
 export interface ESLintConfig extends Linter.Config {
   root: boolean
   plugins: string[]
-  extends: string[]
+  extends?: string[]
   overrides: ESLintOverrides[]
 }
