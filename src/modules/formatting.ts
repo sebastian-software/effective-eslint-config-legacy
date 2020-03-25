@@ -3,7 +3,80 @@
 import { ESLintRules } from "../types"
 
 export const formatting: ESLintRules = {
+  "array-bracket-spacing": [
+    "warn",
+    "always",
+    {
+      objectsInArrays: false
+    }
+  ],
+
+  "comma-dangle": [ "warn", "never" ],
+  "comma-style": [ "warn", "last" ],
+  "func-names": [ "warn", "as-needed" ],
+
+  "func-style": [
+    "warn",
+    "declaration",
+    {
+      allowArrowFunctions: true
+    }
+  ],
+
+  "max-len": [
+    "warn",
+    {
+      code: 100,
+      comments: 150,
+      ignoreUrls: true,
+      tabWidth: 2
+    }
+  ],
+
+  "no-multiple-empty-lines": [
+    "warn",
+    {
+      max: 4,
+      maxBOF: 0,
+      maxEOF: 1
+    }
+  ],
+
+  "no-trailing-spaces": [ "warn" ],
+  "object-curly-spacing": [ "warn", "always" ],
+
+  "object-property-newline": [
+    "warn",
+    {
+      allowMultiplePropertiesPerLine: true
+    }
+  ],
+
+  "one-var-declaration-per-line": [ "warn", "initializations" ],
+  "operator-assignment": "warn",
+  "operator-linebreak": [ "warn", "after" ],
+
+  "@typescript-eslint/space-before-function-paren": [
+    "warn",
+    {
+      anonymous: "never",
+      asyncArrow: "always",
+      named: "never"
+    }
+  ],
+
+  "spaced-comment": [
+    "warn",
+    "always",
+    {
+      exceptions: [ "*", "=", "-" ]
+    }
+  ],
+
+  "wrap-regex": "warn",
+
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
+
   "@typescript-eslint/indent": [
     "warn",
     2,
@@ -21,6 +94,7 @@ export const formatting: ESLintRules = {
       VariableDeclarator: 1
     }
   ],
+
   "@typescript-eslint/member-delimiter-style": [
     "warn",
     {
@@ -34,6 +108,7 @@ export const formatting: ESLintRules = {
       }
     }
   ],
+
   "@typescript-eslint/no-extra-parens": [
     "warn",
     "all",
@@ -45,6 +120,7 @@ export const formatting: ESLintRules = {
       returnAssign: false
     }
   ],
+
   "@typescript-eslint/no-magic-numbers": [
     "warn",
     {
@@ -55,71 +131,6 @@ export const formatting: ESLintRules = {
       ignoreArrayIndexes: true
     }
   ],
-  "@typescript-eslint/semi": [ "warn", "never" ],
-  "array-bracket-spacing": [
-    "warn",
-    "always",
-    {
-      objectsInArrays: false
-    }
-  ],
-  "comma-dangle": [ "warn", "never" ],
-  "comma-style": [ "warn", "last" ],
-  "func-names": [ "warn", "as-needed" ],
-  "func-style": [
-    "warn",
-    "declaration",
-    {
-      allowArrowFunctions: true
-    }
-  ],
-  "max-len": [
-    "warn",
-    {
-      code: 100,
-      comments: 140,
-      ignoreUrls: true,
-      tabWidth: 2
-    }
-  ],
-  "jsx-quotes": [ "error", "prefer-double" ],
-  "no-multiple-empty-lines": [
-    "warn",
-    {
-      max: 4,
-      maxBOF: 0,
-      maxEOF: 1
-    }
-  ],
-  "no-trailing-spaces": [ "warn" ],
-  "no-whitespace-before-property": "warn",
-  "object-curly-spacing": [ "warn", "always" ],
-  "object-property-newline": [
-    "warn",
-    {
-      allowMultiplePropertiesPerLine: true
-    }
-  ],
-  "one-var-declaration-per-line": [ "warn", "initializations" ],
-  "operator-assignment": "warn",
-  "operator-linebreak": [ "warn", "after" ],
-  "react/jsx-indent": [ "error", 2 ],
-  "react/jsx-indent-props": [ "error", 2 ],
-  "@typescript-eslint/space-before-function-paren": [
-    "warn",
-    {
-      anonymous: "never",
-      asyncArrow: "always",
-      named: "never"
-    }
-  ],
-  "spaced-comment": [
-    "warn",
-    "always",
-    {
-      exceptions: [ "*", "=", "-" ]
-    }
-  ],
-  "wrap-regex": "warn",
-  "arrow-parens": [ "warn", "always" ]
+
+  "@typescript-eslint/semi": [ "warn", "never" ]
 }

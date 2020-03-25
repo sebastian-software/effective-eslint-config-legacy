@@ -264,7 +264,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"arrow-parens\\": [
-      \\"warn\\",
+      \\"error\\",
       \\"always\\"
     ],
     \\"arrow-spacing\\": [
@@ -471,10 +471,6 @@ exports[`Full configuration result 1`] = `
     \\"jsx-a11y/scope\\": [
       \\"error\\"
     ],
-    \\"jsx-quotes\\": [
-      \\"error\\",
-      \\"prefer-double\\"
-    ],
     \\"linebreak-style\\": [
       \\"error\\",
       \\"unix\\"
@@ -489,7 +485,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       {
         \\"code\\": 100,
-        \\"comments\\": 140,
+        \\"comments\\": 150,
         \\"ignoreUrls\\": true,
         \\"tabWidth\\": 2
       }
@@ -924,7 +920,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-whitespace-before-property\\": [
-      \\"warn\\"
+      \\"error\\"
     ],
     \\"no-with\\": [
       \\"error\\"
@@ -971,14 +967,6 @@ exports[`Full configuration result 1`] = `
       {
         \\"allowInPropTypes\\": true
       }
-    ],
-    \\"react/jsx-indent\\": [
-      \\"error\\",
-      2
-    ],
-    \\"react/jsx-indent-props\\": [
-      \\"error\\",
-      2
     ],
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
