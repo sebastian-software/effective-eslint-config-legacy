@@ -1,6 +1,7 @@
 /* eslint-disable filenames/match-exported, import/order */
 import { ESLintConfig, ESLintRules } from "./types"
-import { eslintRecommended } from "./modules/eslintRecommended"
+import { typescript } from "./modules/typescript"
+import { eslint } from "./modules/eslint"
 import { createReactApp } from "./modules/createReactApp"
 import { airbnb } from "./modules/airbnbInspired"
 import { quality } from "./modules/quality"
@@ -8,7 +9,7 @@ import { formatting } from "./modules/formatting"
 import { typescriptOverride } from "./modules/typescriptOverride"
 
 const combinedRules: ESLintRules = {
-  ...eslintRecommended
+  ...typescript
 }
 
 function mergeWithWarnings(rules: ESLintRules, name: string) {
@@ -25,11 +26,12 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
   }
 }
 
-mergeWithWarnings(createReactApp, "cra")
-mergeWithWarnings(airbnb, "airbnb")
-mergeWithWarnings(quality, "quality")
-mergeWithWarnings(formatting, "formatting")
-mergeWithWarnings(typescriptOverride, "typescript")
+mergeWithWarnings(eslint, "eslint")
+// mergeWithWarnings(createReactApp, "cra")
+// mergeWithWarnings(airbnb, "airbnb")
+// mergeWithWarnings(quality, "quality")
+// mergeWithWarnings(formatting, "formatting")
+// mergeWithWarnings(typescriptOverride, "typescript")
 
 
 
@@ -78,15 +80,15 @@ const config: ESLintConfig = {
     "filenames"
   ],
 
-  extends: [
-    "plugin:@typescript-eslint/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
-    "plugin:react/recommended",
-    "plugin:jsx-a11y/recommended",
-    "plugin:jest/recommended"
-  ],
+  // extends: [
+  //   "plugin:@typescript-eslint/recommended",
+  //   "plugin:import/errors",
+  //   "plugin:import/warnings",
+  //   "plugin:import/typescript",
+  //   "plugin:react/recommended",
+  //   "plugin:jsx-a11y/recommended",
+  //   "plugin:jest/recommended"
+  // ],
 
   parserOptions: {
     ecmaVersion: 2018,
