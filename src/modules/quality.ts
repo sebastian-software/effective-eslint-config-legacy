@@ -68,13 +68,7 @@ export const quality: ESLintRules = {
     }
   ],
 
-  "@typescript-eslint/no-use-before-define": [
-    "error",
-    {
-      classes: false,
-      functions: false
-    }
-  ],
+  "@typescript-eslint/no-use-before-define": [ "error", { classes: false, functions: false }],
 
   // Replaces rule by new one (original came from the recommended preset it seems)
   "@typescript-eslint/prefer-interface": "off",
@@ -191,6 +185,7 @@ export const quality: ESLintRules = {
       max: 2
     }
   ],
+
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
   "no-mixed-spaces-and-tabs": "error",
