@@ -193,7 +193,6 @@ export const quality: ESLintRules = {
   ],
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
-  "no-extra-semi": "error",
   "no-mixed-spaces-and-tabs": "error",
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
