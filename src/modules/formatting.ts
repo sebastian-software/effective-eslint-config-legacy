@@ -1,8 +1,47 @@
+/* eslint-disable @typescript-eslint/naming-convention */
+
 import { ESLintRules } from "../types"
 
 export const formatting: ESLintRules = {
-  "@typescript-eslint/camelcase": "warn",
-  "@typescript-eslint/class-name-casing": "warn",
+  "@typescript-eslint/camelcase": "off",
+  "@typescript-eslint/class-name-casing": "off",
+  "@typescript-eslint/interface-name-prefix": "off",
+
+  // Via: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md#enforce-the-codebase-follows-eslints-camelcase-conventions
+  "@typescript-eslint/naming-convention": [
+    "error",
+    {
+      "selector": "default",
+      "format": [ "camelCase" ]
+    },
+
+    {
+      "selector": "variable",
+      "format": [ "camelCase", "UPPER_CASE" ]
+    },
+    {
+      "selector": "parameter",
+      "format": [ "camelCase" ],
+      "leadingUnderscore": "allow"
+    },
+
+    {
+      "selector": "memberLike",
+      "modifiers": [ "private" ],
+      "format": [ "camelCase" ],
+      "leadingUnderscore": "require"
+    },
+
+    {
+      "selector": "typeLike",
+      "format": [ "PascalCase" ]
+    }
+  ],
+
+  // The rule was renamed
+  "@typescript-eslint/ban-ts-ignore": "off",
+  "@typescript-eslint/ban-ts-comment": "warn",
+
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
   "@typescript-eslint/indent": [
     "warn",
