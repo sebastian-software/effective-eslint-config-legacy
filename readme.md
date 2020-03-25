@@ -19,7 +19,7 @@ Configuration for linting TS/JS files.
 The presets combines a lot of previous work into an effective configuration to work with:
 
 - TypeScript first. Based on TypeScript ESLint parser and presets.
-- Recommended presets by React(+Hooks), [JSX-A11N](https://github.com/evcohen/eslint-plugin-jsx-a11y), [Import](https://github.com/benmosher/eslint-plugin-import/issues), [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn), and [Jest](https://github.com/jest-community/eslint-plugin-jest).
+- Recommended presets by React(+Hooks), [JSX-A11N](https://github.com/evcohen/eslint-plugin-jsx-a11y), [Import](https://github.com/benmosher/eslint-plugin-import/issues), [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn), [Shopify](https://github.com/sebastian-software/eslint-plugin-shopify-lean) and [Jest](https://github.com/jest-community/eslint-plugin-jest).
 - Auto environment handling for Jest tests (including relaxiation for some rules).
 - Supports root alias imports via `-/...`-prefix via Babel.
 
