@@ -90,10 +90,19 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/no-unused-vars\\": [
-      \\"warn\\"
+      \\"error\\",
+      {
+        \\"args\\": \\"none\\",
+        \\"ignoreRestSiblings\\": true
+      }
     ],
     \\"@typescript-eslint/no-use-before-define\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"functions\\": false,
+        \\"classes\\": false,
+        \\"variables\\": false
+      }
     ],
     \\"@typescript-eslint/no-var-requires\\": [
       \\"error\\"
@@ -212,7 +221,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-array-constructor\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-async-promise-executor\\": [
       \\"error\\"
@@ -545,12 +554,7 @@ exports[`Full configuration result 1`] = `
       \\"off\\"
     ],
     \\"no-use-before-define\\": [
-      \\"error\\",
-      {
-        \\"functions\\": false,
-        \\"classes\\": false,
-        \\"variables\\": false
-      }
+      \\"off\\"
     ],
     \\"no-useless-catch\\": [
       \\"error\\"

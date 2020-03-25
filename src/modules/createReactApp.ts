@@ -4,26 +4,28 @@ import { ESLintRules } from "../types"
 
 export const createReactApp: ESLintRules = {}
 
-const blacklistRules = /^(flowtype\/\S+)$/
+const flowtypeRules = /^(flowtype\/\S+)$/
 
 // CRA defines some deprecated rules which we filter out for our usage.
-const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
+const deprecatedRules = new Set(["no-native-reassign", "no-negated-in-lhs"])
 
-// These are already defined in eslint/recommended
-const duplicateRules = new Set([ "no-unused-vars" ])
+// These are still defined in CRA but are replaced by TS-enhanced versions in TS parser/plugin.
+const typescriptReplaced: { [key: string]: string } = {
+  "no-array-constructor": "@typescript-eslint/no-array-constructor",
+  "no-use-before-define": "@typescript-eslint/no-use-before-define",
+  "no-unused-vars": "@typescript-eslint/no-unused-vars"
+}
 
 function addNormalizedRules(data: ESLintRules): void {
   const ruleNames = Object.keys(data)
-  ruleNames.forEach((name): void => {
-    if (blacklistRules.test(name)) {
-      return
-    }
-
-    if (deprecatedRules.has(name) || duplicateRules.has(name)) {
+  ruleNames.forEach((name: string): void => {
+    if (flowtypeRules.test(name) || deprecatedRules.has(name)) {
       return
     }
 
     let value = data[name]
+
+    const exportName = typescriptReplaced[name] || name
 
     // Switch rule state to "error". CRA uses "warn" for errors to
     // not break the build, but to match our infrastructure this would
@@ -36,7 +38,7 @@ function addNormalizedRules(data: ESLintRules): void {
       value = "error"
     }
 
-    createReactApp[name] = value
+    createReactApp[exportName] = value
   })
 }
 
