@@ -76,7 +76,7 @@ const config: ESLintConfig = {
       "@typescript-eslint/parser": [ ".ts", ".tsx" ]
     },
     react: {
-      version: "16.10"
+      version: "detect"
     }
   },
 
