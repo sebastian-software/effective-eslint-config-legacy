@@ -1,7 +1,6 @@
 import { ESLintRules } from "../types"
 
 export const unicorn: ESLintRules = {
-  // Unicorn Plugin Extensions
   "unicorn/no-array-instanceof": "error",
   "unicorn/no-new-buffer": "error",
   "unicorn/no-unsafe-regex": "error",
