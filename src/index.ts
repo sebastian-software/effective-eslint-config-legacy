@@ -19,7 +19,14 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
     }
 
     if (rule in combinedRules) {
-      console.warn(`Section ${name} is overriding ${rule} from ${JSON.stringify(combinedRules[rule])} => ${JSON.stringify(rules[rule])}`)
+      const oldValue = JSON.stringify(combinedRules[rule])
+      const newValue = JSON.stringify(rules[rule])
+
+      if (newValue === oldValue) {
+        continue
+      }
+
+      console.warn(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
     }
 
     combinedRules[rule] = rules[rule]
@@ -27,7 +34,8 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
 }
 
 mergeWithWarnings(eslint, "eslint")
-// mergeWithWarnings(createReactApp, "cra")
+mergeWithWarnings(createReactApp, "cra")
+
 // mergeWithWarnings(airbnb, "airbnb")
 // mergeWithWarnings(quality, "quality")
 // mergeWithWarnings(formatting, "formatting")
@@ -72,6 +80,9 @@ const config: ESLintConfig = {
 
   plugins: [
     "@typescript-eslint",
+    "import",
+    "react",
+    "jsx-a11y",
     "react-hooks",
     "jsdoc",
     "shopify-lean",

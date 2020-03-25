@@ -29,6 +29,9 @@ exports[`Full configuration result 1`] = `
     \\"shopify-lean\\",
     \\"jsdoc\\",
     \\"react-hooks\\",
+    \\"jsx-a11y\\",
+    \\"react\\",
+    \\"import\\",
     \\"@typescript-eslint\\"
   ],
   \\"rules\\": {
@@ -104,19 +107,117 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/type-annotation-spacing\\": [
       \\"error\\"
     ],
+    \\"array-callback-return\\": [
+      \\"error\\"
+    ],
     \\"camelcase\\": [
       \\"off\\"
     ],
     \\"constructor-super\\": [
       \\"error\\"
     ],
+    \\"default-case\\": [
+      \\"error\\",
+      {
+        \\"commentPattern\\": \\"^no default$\\"
+      }
+    ],
+    \\"dot-location\\": [
+      \\"error\\",
+      \\"property\\"
+    ],
+    \\"eqeqeq\\": [
+      \\"error\\",
+      \\"smart\\"
+    ],
     \\"for-direction\\": [
       \\"error\\"
     ],
+    \\"getter-return\\": [
+      \\"error\\"
+    ],
+    \\"import/first\\": [
+      \\"error\\"
+    ],
+    \\"import/no-amd\\": [
+      \\"error\\"
+    ],
+    \\"import/no-webpack-loader-syntax\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/accessible-emoji\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/alt-text\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/anchor-has-content\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/anchor-is-valid\\": [
+      \\"error\\",
+      {
+        \\"aspects\\": [
+          \\"noHref\\",
+          \\"invalidHref\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/aria-activedescendant-has-tabindex\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-proptypes\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-role\\": [
+      \\"error\\",
+      {
+        \\"ignoreNonDOM\\": true
+      }
+    ],
+    \\"jsx-a11y/aria-unsupported-elements\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/heading-has-content\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/iframe-has-title\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/img-redundant-alt\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-access-key\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-distracting-elements\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-redundant-roles\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/role-has-required-aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/role-supports-aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/scope\\": [
+      \\"error\\"
+    ],
+    \\"new-parens\\": [
+      \\"error\\"
+    ],
     \\"no-array-constructor\\": [
-      \\"off\\"
+      \\"error\\"
     ],
     \\"no-async-promise-executor\\": [
+      \\"error\\"
+    ],
+    \\"no-caller\\": [
       \\"error\\"
     ],
     \\"no-case-declarations\\": [
@@ -129,6 +230,10 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-cond-assign\\": [
+      \\"error\\",
+      \\"except-parens\\"
+    ],
+    \\"no-const-assign\\": [
       \\"error\\"
     ],
     \\"no-constant-condition\\": [
@@ -141,6 +246,15 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-delete-var\\": [
+      \\"error\\"
+    ],
+    \\"no-dupe-args\\": [
+      \\"error\\"
+    ],
+    \\"no-dupe-class-members\\": [
+      \\"error\\"
+    ],
+    \\"no-dupe-keys\\": [
       \\"error\\"
     ],
     \\"no-duplicate-case\\": [
@@ -158,10 +272,22 @@ exports[`Full configuration result 1`] = `
     \\"no-empty-pattern\\": [
       \\"error\\"
     ],
+    \\"no-eval\\": [
+      \\"error\\"
+    ],
     \\"no-ex-assign\\": [
       \\"error\\"
     ],
+    \\"no-extend-native\\": [
+      \\"error\\"
+    ],
+    \\"no-extra-bind\\": [
+      \\"error\\"
+    ],
     \\"no-extra-boolean-cast\\": [
+      \\"error\\"
+    ],
+    \\"no-extra-label\\": [
       \\"error\\"
     ],
     \\"no-extra-semi\\": [
@@ -176,6 +302,9 @@ exports[`Full configuration result 1`] = `
     \\"no-global-assign\\": [
       \\"error\\"
     ],
+    \\"no-implied-eval\\": [
+      \\"error\\"
+    ],
     \\"no-inner-declarations\\": [
       \\"error\\"
     ],
@@ -185,10 +314,79 @@ exports[`Full configuration result 1`] = `
     \\"no-irregular-whitespace\\": [
       \\"error\\"
     ],
+    \\"no-iterator\\": [
+      \\"error\\"
+    ],
+    \\"no-label-var\\": [
+      \\"error\\"
+    ],
+    \\"no-labels\\": [
+      \\"error\\",
+      {
+        \\"allowLoop\\": true,
+        \\"allowSwitch\\": false
+      }
+    ],
+    \\"no-lone-blocks\\": [
+      \\"error\\"
+    ],
+    \\"no-loop-func\\": [
+      \\"error\\"
+    ],
     \\"no-misleading-character-class\\": [
       \\"error\\"
     ],
+    \\"no-mixed-operators\\": [
+      \\"error\\",
+      {
+        \\"groups\\": [
+          [
+            \\"&\\",
+            \\"|\\",
+            \\"^\\",
+            \\"~\\",
+            \\"<<\\",
+            \\">>\\",
+            \\">>>\\"
+          ],
+          [
+            \\"==\\",
+            \\"!=\\",
+            \\"===\\",
+            \\"!==\\",
+            \\">\\",
+            \\">=\\",
+            \\"<\\",
+            \\"<=\\"
+          ],
+          [
+            \\"&&\\",
+            \\"||\\"
+          ],
+          [
+            \\"in\\",
+            \\"instanceof\\"
+          ]
+        ],
+        \\"allowSamePrecedence\\": false
+      }
+    ],
     \\"no-mixed-spaces-and-tabs\\": [
+      \\"error\\"
+    ],
+    \\"no-multi-str\\": [
+      \\"error\\"
+    ],
+    \\"no-new-func\\": [
+      \\"error\\"
+    ],
+    \\"no-new-object\\": [
+      \\"error\\"
+    ],
+    \\"no-new-symbol\\": [
+      \\"error\\"
+    ],
+    \\"no-new-wrappers\\": [
       \\"error\\"
     ],
     \\"no-obj-calls\\": [
@@ -197,13 +395,109 @@ exports[`Full configuration result 1`] = `
     \\"no-octal\\": [
       \\"error\\"
     ],
+    \\"no-octal-escape\\": [
+      \\"error\\"
+    ],
     \\"no-prototype-builtins\\": [
       \\"error\\"
+    ],
+    \\"no-redeclare\\": [
+      \\"error\\",
+      {
+        \\"builtinGlobals\\": false
+      }
     ],
     \\"no-regex-spaces\\": [
       \\"error\\"
     ],
+    \\"no-restricted-globals\\": [
+      \\"error\\",
+      \\"addEventListener\\",
+      \\"blur\\",
+      \\"close\\",
+      \\"closed\\",
+      \\"confirm\\",
+      \\"defaultStatus\\",
+      \\"defaultstatus\\",
+      \\"event\\",
+      \\"external\\",
+      \\"find\\",
+      \\"focus\\",
+      \\"frameElement\\",
+      \\"frames\\",
+      \\"history\\",
+      \\"innerHeight\\",
+      \\"innerWidth\\",
+      \\"length\\",
+      \\"location\\",
+      \\"locationbar\\",
+      \\"menubar\\",
+      \\"moveBy\\",
+      \\"moveTo\\",
+      \\"name\\",
+      \\"onblur\\",
+      \\"onerror\\",
+      \\"onfocus\\",
+      \\"onload\\",
+      \\"onresize\\",
+      \\"onunload\\",
+      \\"open\\",
+      \\"opener\\",
+      \\"opera\\",
+      \\"outerHeight\\",
+      \\"outerWidth\\",
+      \\"pageXOffset\\",
+      \\"pageYOffset\\",
+      \\"parent\\",
+      \\"print\\",
+      \\"removeEventListener\\",
+      \\"resizeBy\\",
+      \\"resizeTo\\",
+      \\"screen\\",
+      \\"screenLeft\\",
+      \\"screenTop\\",
+      \\"screenX\\",
+      \\"screenY\\",
+      \\"scroll\\",
+      \\"scrollbars\\",
+      \\"scrollBy\\",
+      \\"scrollTo\\",
+      \\"scrollX\\",
+      \\"scrollY\\",
+      \\"self\\",
+      \\"status\\",
+      \\"statusbar\\",
+      \\"stop\\",
+      \\"toolbar\\",
+      \\"top\\"
+    ],
+    \\"no-restricted-properties\\": [
+      \\"error\\",
+      {
+        \\"object\\": \\"require\\",
+        \\"property\\": \\"ensure\\",
+        \\"message\\": \\"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting\\"
+      },
+      {
+        \\"object\\": \\"System\\",
+        \\"property\\": \\"import\\",
+        \\"message\\": \\"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting\\"
+      }
+    ],
+    \\"no-restricted-syntax\\": [
+      \\"error\\",
+      \\"WithStatement\\"
+    ],
+    \\"no-script-url\\": [
+      \\"error\\"
+    ],
     \\"no-self-assign\\": [
+      \\"error\\"
+    ],
+    \\"no-self-compare\\": [
+      \\"error\\"
+    ],
+    \\"no-sequences\\": [
       \\"error\\"
     ],
     \\"no-shadow-restricted-names\\": [
@@ -212,7 +506,22 @@ exports[`Full configuration result 1`] = `
     \\"no-sparse-arrays\\": [
       \\"error\\"
     ],
+    \\"no-template-curly-in-string\\": [
+      \\"error\\"
+    ],
+    \\"no-this-before-super\\": [
+      \\"error\\"
+    ],
+    \\"no-throw-literal\\": [
+      \\"error\\"
+    ],
+    \\"no-undef\\": [
+      \\"error\\"
+    ],
     \\"no-unexpected-multiline\\": [
+      \\"error\\"
+    ],
+    \\"no-unreachable\\": [
       \\"error\\"
     ],
     \\"no-unsafe-finally\\": [
@@ -221,6 +530,14 @@ exports[`Full configuration result 1`] = `
     \\"no-unsafe-negation\\": [
       \\"error\\"
     ],
+    \\"no-unused-expressions\\": [
+      \\"error\\",
+      {
+        \\"allowShortCircuit\\": true,
+        \\"allowTernary\\": true,
+        \\"allowTaggedTemplates\\": true
+      }
+    ],
     \\"no-unused-labels\\": [
       \\"error\\"
     ],
@@ -228,15 +545,40 @@ exports[`Full configuration result 1`] = `
       \\"off\\"
     ],
     \\"no-use-before-define\\": [
-      \\"off\\"
+      \\"error\\",
+      {
+        \\"functions\\": false,
+        \\"classes\\": false,
+        \\"variables\\": false
+      }
     ],
     \\"no-useless-catch\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-computed-key\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-concat\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-constructor\\": [
       \\"error\\"
     ],
     \\"no-useless-escape\\": [
       \\"error\\"
     ],
+    \\"no-useless-rename\\": [
+      \\"error\\",
+      {
+        \\"ignoreDestructuring\\": false,
+        \\"ignoreImport\\": false,
+        \\"ignoreExport\\": false
+      }
+    ],
     \\"no-var\\": [
+      \\"error\\"
+    ],
+    \\"no-whitespace-before-property\\": [
       \\"error\\"
     ],
     \\"no-with\\": [
@@ -251,10 +593,83 @@ exports[`Full configuration result 1`] = `
     \\"prefer-spread\\": [
       \\"error\\"
     ],
+    \\"react-hooks/exhaustive-deps\\": [
+      \\"error\\"
+    ],
+    \\"react-hooks/rules-of-hooks\\": [
+      \\"error\\"
+    ],
+    \\"react/forbid-foreign-prop-types\\": [
+      \\"error\\",
+      {
+        \\"allowInPropTypes\\": true
+      }
+    ],
+    \\"react/jsx-no-comment-textnodes\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-duplicate-props\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-target-blank\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-undef\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-pascal-case\\": [
+      \\"error\\",
+      {
+        \\"allowAllCaps\\": true,
+        \\"ignore\\": []
+      }
+    ],
+    \\"react/jsx-uses-react\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-uses-vars\\": [
+      \\"error\\"
+    ],
+    \\"react/no-danger-with-children\\": [
+      \\"error\\"
+    ],
+    \\"react/no-direct-mutation-state\\": [
+      \\"error\\"
+    ],
+    \\"react/no-is-mounted\\": [
+      \\"error\\"
+    ],
+    \\"react/no-typos\\": [
+      \\"error\\"
+    ],
+    \\"react/react-in-jsx-scope\\": [
+      \\"error\\"
+    ],
+    \\"react/require-render-return\\": [
+      \\"error\\"
+    ],
+    \\"react/style-prop-object\\": [
+      \\"error\\"
+    ],
     \\"require-yield\\": [
       \\"error\\"
     ],
+    \\"rest-spread-spacing\\": [
+      \\"error\\",
+      \\"never\\"
+    ],
+    \\"strict\\": [
+      \\"error\\",
+      \\"never\\"
+    ],
+    \\"unicode-bom\\": [
+      \\"error\\",
+      \\"never\\"
+    ],
     \\"use-isnan\\": [
+      \\"error\\"
+    ],
+    \\"valid-typeof\\": [
       \\"error\\"
     ]
   },
@@ -358,16 +773,29 @@ second(first)
 
 exports[`reports undeclared variable 1`] = `
 Object {
-  "errorCount": 0,
+  "errorCount": 1,
   "fixableErrorCount": 0,
   "fixableWarningCount": 0,
   "results": Array [
     Object {
-      "errorCount": 0,
+      "errorCount": 1,
       "filePath": "<text>",
       "fixableErrorCount": 0,
       "fixableWarningCount": 0,
-      "messages": Array [],
+      "messages": Array [
+        Object {
+          "column": 1,
+          "endColumn": 2,
+          "endLine": 1,
+          "line": 1,
+          "message": "'i' is not defined.",
+          "messageId": "undef",
+          "nodeType": "Identifier",
+          "ruleId": "no-undef",
+          "severity": 2,
+        },
+      ],
+      "source": "i++",
       "warningCount": 0,
     },
   ],
