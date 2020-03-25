@@ -64,6 +64,7 @@ const config: ESLintConfig = {
   },
 
   settings: {
+    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"],
     "import/resolver": {
       "babel-module": {
         extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ],
