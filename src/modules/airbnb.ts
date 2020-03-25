@@ -6,7 +6,6 @@ import varRules from "eslint-config-airbnb-base/rules/variables"
 import es6Rules from "eslint-config-airbnb-base/rules/es6"
 import importRules from "eslint-config-airbnb-base/rules/imports"
 import strictRules from "eslint-config-airbnb-base/rules/strict"
-
 import react from "eslint-config-airbnb/rules/react"
 import reactHooks from "eslint-config-airbnb/rules/react-hooks"
 import reactAccessibility from "eslint-config-airbnb/rules/react-a11y"

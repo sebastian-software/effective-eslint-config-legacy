@@ -7,7 +7,7 @@ export const cra: ESLintRules = {}
 const flowtypeRules = /^(flowtype\/\S+)$/
 
 // CRA defines some deprecated rules which we filter out for our usage.
-const deprecatedRules = new Set(["no-native-reassign", "no-negated-in-lhs"])
+const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
 
 // These are still defined in CRA but are replaced by TS-enhanced versions in TS parser/plugin.
 const typescriptReplaced: { [key: string]: string } = {

@@ -2,11 +2,11 @@ import { CLIEngine } from "eslint"
 
 const PATH_REPL = /"\S+(\\|\/)parser\.js"/
 
-function cloneWithSortedKeys(obj: any): any {
+function cloneWithSortedKeys(object): any {
   const clone: { [key: string]: any } = {}
-  const keys = Object.keys(obj).sort()
+  const keys = Object.keys(object).sort()
   keys.forEach((key) => {
-    const value = obj[key]
+    const value = object[key]
     if (typeof value === "object" && !Array.isArray(value)) {
       clone[key] = cloneWithSortedKeys(value)
     } else {

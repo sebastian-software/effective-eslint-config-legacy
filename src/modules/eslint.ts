@@ -1,7 +1,8 @@
+import recommended from "eslint/conf/eslint-recommended"
+
 import { ESLintRules } from "../types"
 import { blacklist } from "../util"
 
-import recommended from "eslint/conf/eslint-recommended"
 
 // From eslint recommended and not yet alternatively implemented in TS preset
 export const eslint: ESLintRules = {}
