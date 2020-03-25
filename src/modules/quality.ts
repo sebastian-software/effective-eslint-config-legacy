@@ -118,11 +118,11 @@ export const quality: ESLintRules = {
   "jsdoc/require-returns-check": "warn",
   "jsdoc/require-returns-description": "warn",
 
-  // Shopify Plugin Extensions
-  "shopify/jsx-no-complex-expressions": "error",
-  "shopify/jsx-no-hardcoded-content": "warn",
-  "shopify/prefer-class-properties": "warn",
-  "shopify/prefer-early-return": "warn",
+  // Lean Shopify Plugin Extensions
+  "shopify-lean/jsx-no-complex-expressions": "error",
+  "shopify-lean/jsx-no-hardcoded-content": "warn",
+  "shopify-lean/prefer-class-properties": "warn",
+  "shopify-lean/prefer-early-return": "warn",
 
   // Unicorn Plugin Extensions
   "unicorn/no-array-instanceof": "error",

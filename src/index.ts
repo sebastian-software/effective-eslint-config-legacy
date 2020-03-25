@@ -39,7 +39,7 @@ const config: ESLintConfig = {
     "@typescript-eslint",
     "react-hooks",
     "jsdoc",
-    "shopify",
+    "shopify-lean",
     "unicorn",
     "jest",
     "filenames"

@@ -82,7 +82,7 @@ exports[`Full configuration result 1`] = `
     \\"filenames\\",
     \\"jest\\",
     \\"unicorn\\",
-    \\"shopify\\",
+    \\"shopify-lean\\",
     \\"jsdoc\\",
     \\"react-hooks\\",
     \\"@typescript-eslint\\"
@@ -1762,16 +1762,16 @@ exports[`Full configuration result 1`] = `
     \\"semi\\": [
       \\"off\\"
     ],
-    \\"shopify/jsx-no-complex-expressions\\": [
+    \\"shopify-lean/jsx-no-complex-expressions\\": [
       \\"error\\"
     ],
-    \\"shopify/jsx-no-hardcoded-content\\": [
+    \\"shopify-lean/jsx-no-hardcoded-content\\": [
       \\"warn\\"
     ],
-    \\"shopify/prefer-class-properties\\": [
+    \\"shopify-lean/prefer-class-properties\\": [
       \\"warn\\"
     ],
-    \\"shopify/prefer-early-return\\": [
+    \\"shopify-lean/prefer-early-return\\": [
       \\"warn\\"
     ],
     \\"sort-imports\\": [
