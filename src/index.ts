@@ -6,6 +6,7 @@ import { cra } from "./modules/cra"
 import { airbnb } from "./modules/airbnb"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
+import { isDisabled } from "./util"
 
 const combinedRules: ESLintRules = {
   ...typescript
@@ -42,6 +43,13 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
       console.warn(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
     }
 
+    // If new and old value are both disabled, then we do not need to
+    // store anything here.
+    if (isDisabled(combinedRules[rule]) && isDisabled(rules[rule])) {
+      console.warn(`Section ${name} defines disabled ${rule}! Dropping...`)
+      continue
+    }
+
     combinedRules[rule] = rules[rule]
   }
 }
@@ -49,8 +57,8 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
+mergeWithWarnings(quality, "quality")
 
-// mergeWithWarnings(quality, "quality")
 // mergeWithWarnings(formatting, "formatting")
 
 const config: ESLintConfig = {

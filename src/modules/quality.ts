@@ -12,7 +12,6 @@ export const quality: ESLintRules = {
   "react/prop-types": "off",
 
   "react-hooks/rules-of-hooks": "error",
-  "react-hooks/exhaustive-deps": "warn",
 
   // We are using the import plugin with its ordering capabilities
   // for sorting declarations.
@@ -35,9 +34,6 @@ export const quality: ESLintRules = {
 
   // Nowadays we prefer not using default exports, but named ones
   "import/default": "off",
-
-  // Fails with <FormattedNumber style="currency" />
-  "react/style-prop-object": "off",
 
   // Don't allow dashes or underscores.
   // Replaced by "unicorn/filename-case"

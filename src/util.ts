@@ -5,7 +5,11 @@ export const replacedByTS = Object.keys(configs.recommended.rules).filter((name)
 
 export const blacklist = new Set([ ...blockedByTS, ...replacedByTS ])
 
-export function isDisabled(value) {
-  const toggle = value instanceof Array ? value[0] : value
+export function isDisabled(value: any) {
+  if (value == null) {
+    return true
+  }
+
+  const toggle = Array.isArray(value) ? value[0] : value
   return toggle === "off"
 }
