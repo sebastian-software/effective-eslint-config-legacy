@@ -4,12 +4,18 @@ import { ESLintRules } from "../types"
 
 export const createReactApp: ESLintRules = {}
 
-const blacklistRules = /^(flowtype\/\S+)|(no-native-reassign|no-negated-in-lhs)$/
+const blacklistRules = /^(flowtype\/\S+)$/
+
+// CRA defines some deprecated rules which we filter out for our usage.
+const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
+
+// These are already defined in eslint/recommended
+const duplicateRules = new Set([ "no-unused-vars" ])
 
 function addNormalizedRules(data: any): void {
   const ruleNames = Object.keys(data)
   ruleNames.forEach((name): void => {
-    if (!blacklistRules.test(name)) {
+    if (!blacklistRules.test(name) && !deprecatedRules.has(name) && !duplicateRules.has(name)) {
       let value = data[name]
 
       // Switch rule state to "error". CRA uses "warn" for errors to
