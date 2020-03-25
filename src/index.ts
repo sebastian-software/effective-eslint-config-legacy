@@ -11,6 +11,20 @@ const combinedRules: ESLintRules = {
   ...typescript
 }
 
+// Relatively simple solution for having sorted JSON keys
+// This is required to unify configs from different locations for correct comparison.
+function sortReplacer(key, value) {
+  if (value == null || value.constructor !== Object) {
+    return value
+  }
+  return Object.keys(value)
+    .sort()
+    .reduce((result, name) => {
+      result[name] = value[name]
+      return result
+    }, {})
+}
+
 function mergeWithWarnings(rules: ESLintRules, name: string) {
   for (const rule in rules) {
     if (!rules[rule]) {
@@ -18,8 +32,8 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
     }
 
     if (rule in combinedRules) {
-      const oldValue = JSON.stringify(combinedRules[rule])
-      const newValue = JSON.stringify(rules[rule])
+      const oldValue = JSON.stringify(combinedRules[rule], sortReplacer)
+      const newValue = JSON.stringify(rules[rule], sortReplacer)
 
       if (newValue === oldValue) {
         continue
