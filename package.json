@@ -47,12 +47,10 @@
   },
   "lint-staged": {
     "*{js,jsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ],
     "*{ts,tsx}": [
-      "eslint --fix",
-      "git add"
+      "eslint --fix"
     ]
   },
   "peerDependencies": {
