@@ -12,7 +12,7 @@
     "src"
   ],
   "engines": {
-    "node": ">=8.10.0",
+    "node": ">=10.0.0",
     "npm": ">=6.0.0",
     "yarn": ">=1.0.0"
   },
@@ -36,7 +36,7 @@
     "lint:script": "eslint --fix '**/*.{js,jsx,ts,tsx,mjs}'",
     "lint:types": "tsc --noEmit",
     "format": "prettier --write '**/*.{js,jsx,ts,tsx,mjs,json,md}' && eslint --fix '**/*.{js,jsx,ts,tsx,mjs}'",
-    "check:conflicts": "eslint --print-config . | eslint-config-prettier-check",
+    "check:conflicts": "eslint --print-config src/index.js | eslint-config-prettier-check || exit 0",
     "pretest": "npm run build",
     "test": "jest"
   },
@@ -80,16 +80,14 @@
     "@types/eslint": "^6.1.8",
     "@types/jest": "^25.1.4",
     "@types/lodash": "^4.14.149",
-    "eslint": "^6.7.2",
+    "eslint": "^6.8.0",
     "husky": "^4.2.3",
     "jest": "^25.1.0",
     "lint-staged": "^10.0.9",
-    "lodash": "^4.17.15",
-    "npm-run-all": "^4.1.5",
     "preppy": "^9.3.1",
-    "prettier": "^1.18.2",
+    "prettier": ">=2.0.2",
     "react": "^16.13.1",
     "rimraf": "^3.0.2",
-    "typescript": "^3.6.3"
+    "typescript": "^3.8.3"
   }
 }
