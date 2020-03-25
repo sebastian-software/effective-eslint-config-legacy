@@ -62,14 +62,6 @@ export const quality: ESLintRules = {
   // This does not work well in JS environments.
   "@typescript-eslint/explicit-function-return-type": "off",
 
-
-
-  // Lean Shopify Plugin Extensions
-  "shopify-lean/jsx-no-complex-expressions": "error",
-  "shopify-lean/jsx-no-hardcoded-content": "warn",
-  "shopify-lean/prefer-class-properties": "warn",
-  "shopify-lean/prefer-early-return": "warn",
-
   "id-length": [
     "error",
     {

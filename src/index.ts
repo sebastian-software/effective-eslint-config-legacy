@@ -8,6 +8,7 @@ import { cra } from "./modules/cra"
 import { airbnb } from "./modules/airbnb"
 import { jsdoc } from "./modules/jsdoc"
 import { unicorn } from "./modules/unicorn"
+import { shopify } from "./modules/shopify"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 
@@ -65,6 +66,7 @@ mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
 mergeWithWarnings(jsdoc, "jsdoc")
 mergeWithWarnings(unicorn, "unicorn")
+mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
 
