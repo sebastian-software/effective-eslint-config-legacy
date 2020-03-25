@@ -12,25 +12,31 @@ const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
 // These are already defined in eslint/recommended
 const duplicateRules = new Set([ "no-unused-vars" ])
 
-function addNormalizedRules(data: any): void {
+function addNormalizedRules(data: ESLintRules): void {
   const ruleNames = Object.keys(data)
   ruleNames.forEach((name): void => {
-    if (!blacklistRules.test(name) && !deprecatedRules.has(name) && !duplicateRules.has(name)) {
-      let value = data[name]
-
-      // Switch rule state to "error". CRA uses "warn" for errors to
-      // not break the build, but to match our infrastructure this would
-      // be a bad match. As CRA only reports "error" not e.g. formatting
-      // related stuff, we can assume that all the reported issues are
-      // actually errors, not warnings.
-      if (Array.isArray(value) && value[0] === "warn") {
-        value[0] = "error"
-      } else if (value === "warn") {
-        value = "error"
-      }
-
-      createReactApp[name] = value
+    if (blacklistRules.test(name)) {
+      return
     }
+
+    if (deprecatedRules.has(name) || duplicateRules.has(name)) {
+      return
+    }
+
+    let value = data[name]
+
+    // Switch rule state to "error". CRA uses "warn" for errors to
+    // not break the build, but to match our infrastructure this would
+    // be a bad match. As CRA only reports "error" not e.g. formatting
+    // related stuff, we can assume that all the reported issues are
+    // actually errors, not warnings.
+    if (Array.isArray(value) && value[0] === "warn") {
+      value[0] = "error"
+    } else if (value === "warn") {
+      value = "error"
+    }
+
+    createReactApp[name] = value
   })
 }
 
