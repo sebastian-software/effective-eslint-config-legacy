@@ -8,9 +8,6 @@ export const quality: ESLintRules = {
   "@typescript-eslint/no-array-constructor": "error",
   "@typescript-eslint/no-useless-constructor": "error",
 
-  // We are fully in TypeScript. PropTypes are not useful anymore.
-  "react/prop-types": "off",
-
   "react-hooks/rules-of-hooks": "error",
 
   // We are using the import plugin with its ordering capabilities
@@ -32,19 +29,12 @@ export const quality: ESLintRules = {
   // the actual implementation section.
   "import/newline-after-import": "error",
 
-  // Nowadays we prefer not using default exports, but named ones
-  "import/default": "off",
-
   // Don't allow dashes or underscores.
   // Replaced by "unicorn/filename-case"
   // "filenames/match-regex": [ "error", "^[a-zA-Z][a-zA-Z0-9.]+$" ],
 
   // Keep in sync with exported symbol name.
   "filenames/match-exported": "error",
-
-  // Disable don't allow index.js files as this is used for exporting libs often times.
-  // Just be sure to not use them everywhere.
-  "filenames/no-index": "off",
 
   "@typescript-eslint/no-unused-vars": [
     "error",
@@ -67,11 +57,7 @@ export const quality: ESLintRules = {
   "@typescript-eslint/no-use-before-define": [ "error", { classes: false, functions: false }],
 
   // Replaces rule by new one (original came from the recommended preset it seems)
-  "@typescript-eslint/prefer-interface": "off",
   "@typescript-eslint/consistent-type-definitions": "error",
-
-  // Disabled old rule still in 'recommended' list of TS
-  "@typescript-eslint/no-triple-slash-reference": "off",
 
   // This does not work well in JS environments.
   "@typescript-eslint/explicit-function-return-type": "off",
@@ -81,10 +67,8 @@ export const quality: ESLintRules = {
   "jsdoc/check-tag-names": "error",
   "jsdoc/newline-after-description": "warn",
   "jsdoc/no-types": "error",
-  "jsdoc/require-param": "off",
   "jsdoc/require-param-description": "warn",
   "jsdoc/require-param-name": "warn",
-  "jsdoc/require-returns": "off",
   "jsdoc/require-returns-check": "warn",
   "jsdoc/require-returns-description": "warn",
 
@@ -188,9 +172,5 @@ export const quality: ESLintRules = {
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",
-  "no-unneeded-ternary": "error",
-
-  // Perfectly valid for CLI tools. Not sure about this for this reason.
-  // Might be enabled where needed by the project author.
-  "no-process-exit": "off"
+  "no-unneeded-ternary": "error"
 }

@@ -131,6 +131,7 @@ const config: ESLintConfig = {
         "jest/globals": true
       },
       rules: {
+        "filenames/match-exported": "off",
         "@typescript-eslint/no-magic-numbers": "off",
         "no-redeclare": "off",
         "func-names": "off",
