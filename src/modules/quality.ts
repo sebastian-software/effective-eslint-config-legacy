@@ -4,11 +4,7 @@ export const quality: ESLintRules = {
   // Most code bases will want to enforce not using angle-bracket style because
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
   "@typescript-eslint/consistent-type-assertions": [ "error", { assertionStyle: "as" }],
-  "@typescript-eslint/no-namespace": "error",
-  "@typescript-eslint/no-array-constructor": "error",
   "@typescript-eslint/no-useless-constructor": "error",
-
-  "react-hooks/rules-of-hooks": "error",
 
   // We are using the import plugin with its ordering capabilities
   // for sorting declarations.
@@ -168,7 +164,6 @@ export const quality: ESLintRules = {
 
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
-  "no-mixed-spaces-and-tabs": "error",
   "no-nested-ternary": "error",
   "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",

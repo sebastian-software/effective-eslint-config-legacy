@@ -27,7 +27,7 @@ function sortReplacer(key, value) {
     }, {})
 }
 
-function mergeWithWarnings(rules: ESLintRules, name: string) {
+function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
   for (const rule in rules) {
     if (!rules[rule]) {
       continue
@@ -38,6 +38,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
       const newValue = JSON.stringify(rules[rule], sortReplacer)
 
       if (newValue === oldValue) {
+        if (warnSame) {
+          console.warn(`Section ${name} defines identical value for ${rule}! Dropping...`)
+        }
         continue
       }
 
@@ -58,8 +61,8 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
-mergeWithWarnings(quality, "quality")
-mergeWithWarnings(formatting, "formatting")
+mergeWithWarnings(quality, "quality", true)
+mergeWithWarnings(formatting, "formatting", true)
 
 const config: ESLintConfig = {
   root: true,
