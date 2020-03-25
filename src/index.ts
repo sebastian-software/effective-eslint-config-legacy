@@ -1,10 +1,43 @@
 /* eslint-disable filenames/match-exported, import/order */
-import { ESLintConfig } from "./types"
+import { ESLintConfig, ESLintRules } from "./types"
+import { eslintRecommended } from "./modules/eslintRecommended"
 import { createReactApp } from "./modules/createReactApp"
 import { airbnb } from "./modules/airbnbInspired"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { typescriptOverride } from "./modules/typescriptOverride"
+
+const combinedRules: ESLintRules = {
+  ...eslintRecommended
+}
+
+function mergeWithWarnings(rules: ESLintRules, name: string) {
+  for (const rule in rules) {
+    if (!rules[rule]) {
+      continue
+    }
+
+    if (rule in combinedRules) {
+      console.warn(`Section ${name} is overriding ${rule} from ${JSON.stringify(combinedRules[rule])} => ${JSON.stringify(rules[rule])}`)
+    }
+
+    combinedRules[rule] = rules[rule]
+  }
+}
+
+mergeWithWarnings(createReactApp, "cra")
+mergeWithWarnings(airbnb, "airbnb")
+mergeWithWarnings(quality, "quality")
+mergeWithWarnings(formatting, "formatting")
+mergeWithWarnings(typescriptOverride, "typescript")
+
+
+
+// ...airbnb,
+// ...quality,
+// ...formatting,
+// ...typescriptOverride
+
 
 const config: ESLintConfig = {
   root: true,
@@ -46,7 +79,6 @@ const config: ESLintConfig = {
   ],
 
   extends: [
-    "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
@@ -68,13 +100,7 @@ const config: ESLintConfig = {
     warnOnUnsupportedTypeScriptVersion: true
   },
 
-  rules: {
-    ...createReactApp,
-    ...airbnb,
-    ...quality,
-    ...formatting,
-    ...typescriptOverride
-  },
+  rules: combinedRules,
 
   overrides: [
     {

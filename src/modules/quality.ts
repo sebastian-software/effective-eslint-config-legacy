@@ -62,9 +62,9 @@ export const quality: ESLintRules = {
   "@typescript-eslint/no-unused-expressions": [
     "error",
     {
-      "allowShortCircuit": true,
-      "allowTernary": true,
-      "allowTaggedTemplates": true
+      allowShortCircuit: true,
+      allowTernary: true,
+      allowTaggedTemplates: true
     }
   ],
 
@@ -118,9 +118,9 @@ export const quality: ESLintRules = {
   "unicorn/filename-case": [
     "warn",
     {
-      "cases": {
-        "camelCase": true,
-        "pascalCase": true
+      cases: {
+        camelCase: true,
+        pascalCase: true
       }
     }
   ],
