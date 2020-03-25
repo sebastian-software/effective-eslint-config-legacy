@@ -2,7 +2,7 @@ import { overrides, rules } from "eslint-config-react-app"
 
 import { ESLintRules } from "../types"
 
-export const createReactApp: ESLintRules = {}
+export const cra: ESLintRules = {}
 
 const flowtypeRules = /^(flowtype\/\S+)$/
 
@@ -38,7 +38,7 @@ function addNormalizedRules(data: ESLintRules): void {
       value = "error"
     }
 
-    createReactApp[exportName] = value
+    cra[exportName] = value
   })
 }
 
@@ -47,5 +47,5 @@ addNormalizedRules(rules)
 // Note: Next version of CRA will use an array, not an object (as specified by ESLint)
 // https://github.com/facebook/create-react-app/commit/24489ac0a667af416f1d59dd806dfc2623aabe36
 if (overrides.rules) {
-  addNormalizedRules(overrides.rules)
+//  addNormalizedRules(overrides.rules)
 }

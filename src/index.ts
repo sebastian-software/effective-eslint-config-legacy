@@ -2,8 +2,8 @@
 import { ESLintConfig, ESLintRules } from "./types"
 import { typescript } from "./modules/typescript"
 import { eslint } from "./modules/eslint"
-import { createReactApp } from "./modules/createReactApp"
-import { airbnb } from "./modules/airbnbInspired"
+import { cra } from "./modules/cra"
+import { airbnb } from "./modules/airbnb"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 
@@ -33,9 +33,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string) {
 }
 
 mergeWithWarnings(eslint, "eslint")
-mergeWithWarnings(createReactApp, "cra")
+mergeWithWarnings(cra, "cra")
+mergeWithWarnings(airbnb, "airbnb")
 
-// mergeWithWarnings(airbnb, "airbnb")
 // mergeWithWarnings(quality, "quality")
 // mergeWithWarnings(formatting, "formatting")
 
