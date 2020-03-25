@@ -16,17 +16,6 @@ export const quality: ESLintRules = {
   "react-hooks/rules-of-hooks": "error",
   "react-hooks/exhaustive-deps": "warn",
 
-  // We use the new syntax even for NodeJS apps (e.g. transpiled via Rollup)
-  "node/no-unsupported-features/es-syntax": "off",
-
-  // These are better implemented by the import plugin which also cares
-  // about babel based aliases, etc.
-  "node/no-unpublished-import": "off",
-  "node/no-missing-import": "off",
-  "node/no-missing-require": "off",
-  "node/no-extraneous-import": "off",
-  "node/no-extraneous-require": "off",
-
   // The ESLint browser environment defines all browser globals as valid,
   // even though most people don't know some of them exist (e.g. `name` or `status`).
   // This is dangerous as it hides accidentally undefined variables.
