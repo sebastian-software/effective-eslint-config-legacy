@@ -67,14 +67,14 @@ const config: ESLintConfig = {
     "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"],
     "import/resolver": {
       "babel-module": {
-        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ],
+        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
         alias: {
           "-": "./src/"
         }
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [ ".ts", ".tsx" ]
+      "@typescript-eslint/parser": [".ts", ".tsx"]
     },
     react: {
       version: "detect"
@@ -95,16 +95,6 @@ const config: ESLintConfig = {
     "jest",
     "filenames"
   ],
-
-  // extends: [
-  //   "plugin:@typescript-eslint/recommended",
-  //   "plugin:import/errors",
-  //   "plugin:import/warnings",
-  //   "plugin:import/typescript",
-  //   "plugin:react/recommended",
-  //   "plugin:jsx-a11y/recommended",
-  //   "plugin:jest/recommended"
-  // ],
 
   parserOptions: {
     ecmaVersion: 2018,
@@ -145,7 +135,7 @@ const config: ESLintConfig = {
     {
       // Definition files are typically really TS specific and
       // do not work in the same way as normal TS files.
-      files: [ "*.d.ts", "*.d.tsx" ],
+      files: ["*.d.ts", "*.d.tsx"],
       rules: {
         "no-undef": "off",
         "@typescript-eslint/no-unused-vars": "off"

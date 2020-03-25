@@ -116,8 +116,32 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/type-annotation-spacing\\": [
       \\"error\\"
     ],
+    \\"accessor-pairs\\": [
+      \\"off\\"
+    ],
     \\"array-callback-return\\": [
       \\"error\\"
+    ],
+    \\"arrow-body-style\\": [
+      \\"error\\",
+      \\"as-needed\\",
+      {
+        \\"requireReturnForObjectLiteral\\": false
+      }
+    ],
+    \\"arrow-parens\\": [
+      \\"error\\",
+      \\"always\\"
+    ],
+    \\"arrow-spacing\\": [
+      \\"error\\",
+      {
+        \\"before\\": true,
+        \\"after\\": true
+      }
+    ],
+    \\"callback-return\\": [
+      \\"off\\"
     ],
     \\"camelcase\\": [
       \\"off\\"
@@ -142,8 +166,21 @@ exports[`Full configuration result 1`] = `
     \\"for-direction\\": [
       \\"error\\"
     ],
+    \\"generator-star-spacing\\": [
+      \\"error\\",
+      {
+        \\"before\\": false,
+        \\"after\\": true
+      }
+    ],
     \\"getter-return\\": [
       \\"error\\"
+    ],
+    \\"global-require\\": [
+      \\"error\\"
+    ],
+    \\"handle-callback-err\\": [
+      \\"off\\"
     ],
     \\"import/first\\": [
       \\"error\\"
@@ -153,6 +190,9 @@ exports[`Full configuration result 1`] = `
     ],
     \\"import/no-webpack-loader-syntax\\": [
       \\"error\\"
+    ],
+    \\"init-declarations\\": [
+      \\"off\\"
     ],
     \\"jsx-a11y/accessible-emoji\\": [
       \\"error\\"
@@ -226,11 +266,17 @@ exports[`Full configuration result 1`] = `
     \\"no-async-promise-executor\\": [
       \\"error\\"
     ],
+    \\"no-buffer-constructor\\": [
+      \\"error\\"
+    ],
     \\"no-caller\\": [
       \\"error\\"
     ],
     \\"no-case-declarations\\": [
       \\"error\\"
+    ],
+    \\"no-catch-shadow\\": [
+      \\"off\\"
     ],
     \\"no-class-assign\\": [
       \\"error\\"
@@ -241,6 +287,12 @@ exports[`Full configuration result 1`] = `
     \\"no-cond-assign\\": [
       \\"error\\",
       \\"except-parens\\"
+    ],
+    \\"no-confusing-arrow\\": [
+      \\"error\\",
+      {
+        \\"allowParens\\": true
+      }
     ],
     \\"no-const-assign\\": [
       \\"error\\"
@@ -380,6 +432,10 @@ exports[`Full configuration result 1`] = `
         \\"allowSamePrecedence\\": false
       }
     ],
+    \\"no-mixed-requires\\": [
+      \\"off\\",
+      false
+    ],
     \\"no-mixed-spaces-and-tabs\\": [
       \\"error\\"
     ],
@@ -390,6 +446,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-new-object\\": [
+      \\"error\\"
+    ],
+    \\"no-new-require\\": [
       \\"error\\"
     ],
     \\"no-new-symbol\\": [
@@ -406,6 +465,15 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-octal-escape\\": [
       \\"error\\"
+    ],
+    \\"no-path-concat\\": [
+      \\"error\\"
+    ],
+    \\"no-process-env\\": [
+      \\"off\\"
+    ],
+    \\"no-process-exit\\": [
+      \\"off\\"
     ],
     \\"no-prototype-builtins\\": [
       \\"error\\"
@@ -480,6 +548,9 @@ exports[`Full configuration result 1`] = `
       \\"toolbar\\",
       \\"top\\"
     ],
+    \\"no-restricted-modules\\": [
+      \\"off\\"
+    ],
     \\"no-restricted-properties\\": [
       \\"error\\",
       {
@@ -514,6 +585,9 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-sparse-arrays\\": [
       \\"error\\"
+    ],
+    \\"no-sync\\": [
+      \\"off\\"
     ],
     \\"no-template-curly-in-string\\": [
       \\"error\\"
@@ -678,6 +752,13 @@ exports[`Full configuration result 1`] = `
     ]
   },
   \\"settings\\": {
+    \\"import/extensions\\": [
+      \\".js\\",
+      \\".jsx\\",
+      \\".ts\\",
+      \\".tsx\\",
+      \\".mjs\\"
+    ],
     \\"import/parsers\\": {
       \\"@typescript-eslint/parser\\": [
         \\".ts\\",
@@ -699,7 +780,7 @@ exports[`Full configuration result 1`] = `
       }
     },
     \\"react\\": {
-      \\"version\\": \\"16.10\\"
+      \\"version\\": \\"detect\\"
     }
   }
 }"
