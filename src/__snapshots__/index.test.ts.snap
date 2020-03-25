@@ -38,6 +38,9 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/adjacent-overload-signatures\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/ban-ts-comment\\": [
+      \\"warn\\"
+    ],
     \\"@typescript-eslint/ban-ts-ignore\\": [
       \\"error\\"
     ],
@@ -62,11 +65,83 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/explicit-function-return-type\\": [
       \\"off\\"
     ],
+    \\"@typescript-eslint/func-call-spacing\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"@typescript-eslint/indent\\": [
+      \\"warn\\",
+      2,
+      {
+        \\"CallExpression\\": {
+          \\"arguments\\": 1
+        },
+        \\"FunctionExpression\\": {
+          \\"body\\": 1,
+          \\"parameters\\": 1
+        },
+        \\"MemberExpression\\": 1,
+        \\"outerIIFEBody\\": 0,
+        \\"SwitchCase\\": 1,
+        \\"VariableDeclarator\\": 1,
+        \\"flatTernaryExpressions\\": false,
+        \\"ignoreComments\\": false
+      }
+    ],
     \\"@typescript-eslint/interface-name-prefix\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
-      \\"error\\"
+      \\"warn\\",
+      {
+        \\"multiline\\": {
+          \\"delimiter\\": \\"none\\",
+          \\"requireLast\\": false
+        },
+        \\"singleline\\": {
+          \\"delimiter\\": \\"semi\\",
+          \\"requireLast\\": false
+        }
+      }
+    ],
+    \\"@typescript-eslint/naming-convention\\": [
+      \\"error\\",
+      {
+        \\"selector\\": \\"default\\",
+        \\"format\\": [
+          \\"camelCase\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"variable\\",
+        \\"format\\": [
+          \\"camelCase\\",
+          \\"UPPER_CASE\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"parameter\\",
+        \\"format\\": [
+          \\"camelCase\\"
+        ],
+        \\"leadingUnderscore\\": \\"allow\\"
+      },
+      {
+        \\"selector\\": \\"memberLike\\",
+        \\"modifiers\\": [
+          \\"private\\"
+        ],
+        \\"format\\": [
+          \\"camelCase\\"
+        ],
+        \\"leadingUnderscore\\": \\"require\\"
+      },
+      {
+        \\"selector\\": \\"typeLike\\",
+        \\"format\\": [
+          \\"PascalCase\\"
+        ]
+      }
     ],
     \\"@typescript-eslint/no-array-constructor\\": [
       \\"error\\"
@@ -80,8 +155,34 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/no-explicit-any\\": [
       \\"warn\\"
     ],
+    \\"@typescript-eslint/no-extra-parens\\": [
+      \\"warn\\",
+      \\"all\\",
+      {
+        \\"conditionalAssign\\": true,
+        \\"enforceForArrowConditionals\\": false,
+        \\"ignoreJSX\\": \\"all\\",
+        \\"nestedBinaryExpressions\\": false,
+        \\"returnAssign\\": false
+      }
+    ],
     \\"@typescript-eslint/no-inferrable-types\\": [
       \\"error\\"
+    ],
+    \\"@typescript-eslint/no-magic-numbers\\": [
+      \\"warn\\",
+      {
+        \\"detectObjects\\": false,
+        \\"enforceConst\\": true,
+        \\"ignore\\": [
+          -1,
+          0,
+          1,
+          2,
+          10
+        ],
+        \\"ignoreArrayIndexes\\": true
+      }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
       \\"error\\"
@@ -127,11 +228,30 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/semi\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"@typescript-eslint/space-before-function-paren\\": [
+      \\"warn\\",
+      {
+        \\"anonymous\\": \\"never\\",
+        \\"asyncArrow\\": \\"always\\",
+        \\"named\\": \\"never\\"
+      }
+    ],
     \\"@typescript-eslint/triple-slash-reference\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/type-annotation-spacing\\": [
       \\"error\\"
+    ],
+    \\"array-bracket-spacing\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"objectsInArrays\\": false
+      }
     ],
     \\"array-callback-return\\": [
       \\"error\\"
@@ -144,7 +264,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"arrow-parens\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"always\\"
     ],
     \\"arrow-spacing\\": [
@@ -156,6 +276,14 @@ exports[`Full configuration result 1`] = `
     ],
     \\"camelcase\\": [
       \\"off\\"
+    ],
+    \\"comma-dangle\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"comma-style\\": [
+      \\"warn\\",
+      \\"last\\"
     ],
     \\"constructor-super\\": [
       \\"error\\"
@@ -179,6 +307,17 @@ exports[`Full configuration result 1`] = `
     ],
     \\"for-direction\\": [
       \\"error\\"
+    ],
+    \\"func-names\\": [
+      \\"warn\\",
+      \\"as-needed\\"
+    ],
+    \\"func-style\\": [
+      \\"warn\\",
+      \\"declaration\\",
+      {
+        \\"allowArrowFunctions\\": true
+      }
     ],
     \\"generator-star-spacing\\": [
       \\"error\\",
@@ -358,6 +497,10 @@ exports[`Full configuration result 1`] = `
     \\"jsx-a11y/scope\\": [
       \\"error\\"
     ],
+    \\"jsx-quotes\\": [
+      \\"error\\",
+      \\"prefer-double\\"
+    ],
     \\"linebreak-style\\": [
       \\"error\\",
       \\"unix\\"
@@ -366,6 +509,15 @@ exports[`Full configuration result 1`] = `
       \\"error\\",
       {
         \\"maximum\\": 3
+      }
+    ],
+    \\"max-len\\": [
+      \\"warn\\",
+      {
+        \\"code\\": 100,
+        \\"comments\\": 140,
+        \\"ignoreUrls\\": true,
+        \\"tabWidth\\": 2
       }
     ],
     \\"max-params\\": [
@@ -566,6 +718,14 @@ exports[`Full configuration result 1`] = `
     \\"no-multi-str\\": [
       \\"error\\"
     ],
+    \\"no-multiple-empty-lines\\": [
+      \\"warn\\",
+      {
+        \\"max\\": 4,
+        \\"maxBOF\\": 0,
+        \\"maxEOF\\": 1
+      }
+    ],
     \\"no-nested-ternary\\": [
       \\"error\\"
     ],
@@ -710,6 +870,9 @@ exports[`Full configuration result 1`] = `
     \\"no-throw-literal\\": [
       \\"error\\"
     ],
+    \\"no-trailing-spaces\\": [
+      \\"warn\\"
+    ],
     \\"no-undef\\": [
       \\"error\\"
     ],
@@ -787,10 +950,32 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-whitespace-before-property\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-with\\": [
       \\"error\\"
+    ],
+    \\"object-curly-spacing\\": [
+      \\"warn\\",
+      \\"always\\"
+    ],
+    \\"object-property-newline\\": [
+      \\"warn\\",
+      {
+        \\"allowMultiplePropertiesPerLine\\": true,
+        \\"allowAllPropertiesOnSameLine\\": false
+      }
+    ],
+    \\"one-var-declaration-per-line\\": [
+      \\"warn\\",
+      \\"initializations\\"
+    ],
+    \\"operator-assignment\\": [
+      \\"warn\\"
+    ],
+    \\"operator-linebreak\\": [
+      \\"warn\\",
+      \\"after\\"
     ],
     \\"prefer-const\\": [
       \\"error\\"
@@ -812,6 +997,14 @@ exports[`Full configuration result 1`] = `
       {
         \\"allowInPropTypes\\": true
       }
+    ],
+    \\"react/jsx-indent\\": [
+      \\"error\\",
+      2
+    ],
+    \\"react/jsx-indent-props\\": [
+      \\"error\\",
+      2
     ],
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
@@ -886,6 +1079,17 @@ exports[`Full configuration result 1`] = `
         \\"ignoreMemberSort\\": false
       }
     ],
+    \\"spaced-comment\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"exceptions\\": [
+          \\"*\\",
+          \\"=\\",
+          \\"-\\"
+        ]
+      }
+    ],
     \\"strict\\": [
       \\"error\\",
       \\"never\\"
@@ -953,6 +1157,9 @@ exports[`Full configuration result 1`] = `
     ],
     \\"valid-typeof\\": [
       \\"error\\"
+    ],
+    \\"wrap-regex\\": [
+      \\"warn\\"
     ]
   },
   \\"settings\\": {

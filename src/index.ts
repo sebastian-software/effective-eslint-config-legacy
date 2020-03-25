@@ -59,8 +59,7 @@ mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
 mergeWithWarnings(quality, "quality")
-
-// mergeWithWarnings(formatting, "formatting")
+mergeWithWarnings(formatting, "formatting")
 
 const config: ESLintConfig = {
   root: true,
@@ -73,17 +72,17 @@ const config: ESLintConfig = {
   },
 
   settings: {
-    "import/extensions": [".js", ".jsx", ".ts", ".tsx", ".mjs"],
+    "import/extensions": [ ".js", ".jsx", ".ts", ".tsx", ".mjs" ],
     "import/resolver": {
       "babel-module": {
-        extensions: [".js", ".jsx", ".ts", ".tsx", ".json"],
+        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ],
         alias: {
           "-": "./src/"
         }
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [ ".ts", ".tsx" ]
     },
     react: {
       version: "detect"
@@ -142,7 +141,7 @@ const config: ESLintConfig = {
     {
       // Definition files are typically really TS specific and
       // do not work in the same way as normal TS files.
-      files: ["*.d.ts", "*.d.tsx"],
+      files: [ "*.d.ts", "*.d.tsx" ],
       rules: {
         "no-undef": "off",
         "@typescript-eslint/no-unused-vars": "off"
