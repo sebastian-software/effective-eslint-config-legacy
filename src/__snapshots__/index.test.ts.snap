@@ -128,13 +128,9 @@ exports[`Full configuration result 1`] = `
       },
       {
         \\"selector\\": \\"memberLike\\",
-        \\"modifiers\\": [
-          \\"private\\"
-        ],
         \\"format\\": [
           \\"camelCase\\"
-        ],
-        \\"leadingUnderscore\\": \\"require\\"
+        ]
       },
       {
         \\"selector\\": \\"typeLike\\",
