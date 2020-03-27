@@ -26,6 +26,7 @@ const newRules: ESLintRules = {
       selector: "variable",
       format: [ "camelCase", "UPPER_CASE" ]
     },
+
     {
       selector: "parameter",
       format: [ "camelCase" ],
@@ -34,9 +35,7 @@ const newRules: ESLintRules = {
 
     {
       selector: "memberLike",
-      modifiers: [ "private" ],
-      format: [ "camelCase" ],
-      leadingUnderscore: "require"
+      format: [ "camelCase" ]
     },
 
     {
