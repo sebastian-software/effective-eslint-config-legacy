@@ -1140,6 +1140,9 @@ exports[`Full configuration result 1`] = `
     \\"unicorn/prefer-replace-all\\": [
       \\"warn\\"
     ],
+    \\"unicorn/prefer-set-has\\": [
+      \\"warn\\"
+    ],
     \\"unicorn/prefer-spread\\": [
       \\"warn\\"
     ],
@@ -1170,14 +1173,17 @@ exports[`Full configuration result 1`] = `
   },
   \\"settings\\": {
     \\"import/extensions\\": [
+      \\".d.ts\\",
       \\".js\\",
       \\".jsx\\",
       \\".ts\\",
       \\".tsx\\",
-      \\".mjs\\"
+      \\".mjs\\",
+      \\".json\\"
     ],
     \\"import/parsers\\": {
       \\"@typescript-eslint/parser\\": [
+        \\".d.ts\\",
         \\".ts\\",
         \\".tsx\\"
       ]
@@ -1192,6 +1198,7 @@ exports[`Full configuration result 1`] = `
           \\".jsx\\",
           \\".ts\\",
           \\".tsx\\",
+          \\".mjs\\",
           \\".json\\"
         ]
       }
