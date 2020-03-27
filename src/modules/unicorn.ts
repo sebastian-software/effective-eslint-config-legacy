@@ -16,6 +16,7 @@ export const unicorn: ESLintRules = {
   "unicorn/no-zero-fractions": "warn",
   "unicorn/prefer-includes": "warn",
   "unicorn/prefer-replace-all": "warn",
+  "unicorn/prefer-set-has": "warn",
   "unicorn/prefer-spread": "warn",
   "unicorn/prefer-starts-ends-with": "warn",
   "unicorn/prefer-string-slice": "warn",
