@@ -81,17 +81,17 @@ const config: ESLintConfig = {
   },
 
   settings: {
-    "import/extensions": [ ".js", ".jsx", ".ts", ".tsx", ".mjs" ],
+    "import/extensions": [ ".d.ts", ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json" ],
     "import/resolver": {
       "babel-module": {
-        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".json" ],
+        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json" ],
         alias: {
           "-": "./src/"
         }
       }
     },
     "import/parsers": {
-      "@typescript-eslint/parser": [ ".ts", ".tsx" ]
+      "@typescript-eslint/parser": [ ".d.ts", ".ts", ".tsx" ]
     },
     react: {
       version: "detect"
