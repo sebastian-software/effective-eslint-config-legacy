@@ -159,6 +159,11 @@ const config: ESLintConfig = {
       ],
       extends: [ "plugin:jest/recommended" ],
       rules: {
+        // Reduce config from recommended to warn for autofixable rules
+        "jest/no-focused-tests": "warn",
+        "jest/no-test-callback": "warn",
+        "jest/no-test-prefixes": "warn",
+
         // Relax a few rules inside tests
         "filenames/match-exported": "off",
         "@typescript-eslint/no-magic-numbers": "off",

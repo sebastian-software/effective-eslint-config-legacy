@@ -104,5 +104,5 @@ export const quality: ESLintRules = {
   "import/newline-after-import": "error",
 
   // Keep in sync with exported symbol name.
-  "filenames/match-exported": "error"
+  "filenames/match-exported": "warn"
 }
