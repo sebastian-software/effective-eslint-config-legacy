@@ -42,7 +42,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/ban-types\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/consistent-type-assertions\\": [
       \\"error\\",
@@ -51,7 +51,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"@typescript-eslint/consistent-type-definitions\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/explicit-function-return-type\\": [
       \\"off\\"
@@ -128,13 +128,13 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"@typescript-eslint/no-array-constructor\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-empty-function\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/no-empty-interface\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-explicit-any\\": [
       \\"warn\\"
@@ -151,7 +151,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"@typescript-eslint/no-inferrable-types\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
@@ -210,7 +210,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/semi\\": [
       \\"warn\\",
@@ -228,7 +228,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/type-annotation-spacing\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"array-bracket-spacing\\": [
       \\"warn\\",
@@ -241,18 +241,18 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"arrow-body-style\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"as-needed\\",
       {
         \\"requireReturnForObjectLiteral\\": false
       }
     ],
     \\"arrow-parens\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"always\\"
     ],
     \\"arrow-spacing\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"before\\": true,
         \\"after\\": true
@@ -279,11 +279,11 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"dot-location\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"property\\"
     ],
     \\"eqeqeq\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"smart\\"
     ],
     \\"filenames/match-exported\\": [
@@ -304,7 +304,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"generator-star-spacing\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"before\\": false,
         \\"after\\": true
@@ -328,13 +328,13 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"import/first\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"import/named\\": [
       \\"error\\"
     ],
     \\"import/newline-after-import\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"import/no-amd\\": [
       \\"error\\"
@@ -350,7 +350,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"import/order\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"groups\\": [
           \\"builtin\\",
@@ -369,16 +369,16 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"jsdoc/check-param-names\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/check-tag-names\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/newline-after-description\\": [
       \\"warn\\"
     ],
     \\"jsdoc/no-types\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"jsdoc/require-param-description\\": [
       \\"warn\\"
@@ -456,7 +456,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"linebreak-style\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"unix\\"
     ],
     \\"max-depth\\": [
@@ -483,7 +483,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"new-parens\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-array-constructor\\": [
       \\"off\\"
@@ -508,7 +508,7 @@ exports[`Full configuration result 1`] = `
       \\"except-parens\\"
     ],
     \\"no-confusing-arrow\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowParens\\": true
       }
@@ -529,7 +529,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-div-regex\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-dupe-args\\": [
       \\"error\\"
@@ -568,16 +568,16 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-extra-bind\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-extra-boolean-cast\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-extra-label\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-extra-semi\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-fallthrough\\": [
       \\"error\\"
@@ -708,7 +708,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"no-regex-spaces\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
@@ -840,7 +840,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-unneeded-ternary\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-unreachable\\": [
       \\"error\\"
@@ -860,7 +860,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"no-unused-labels\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-unused-vars\\": [
       \\"off\\"
@@ -872,7 +872,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-useless-computed-key\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-useless-concat\\": [
       \\"error\\"
@@ -884,7 +884,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-useless-rename\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignoreDestructuring\\": false,
         \\"ignoreImport\\": false,
@@ -892,10 +892,10 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"no-var\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-whitespace-before-property\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-with\\": [
       \\"error\\"
@@ -923,7 +923,7 @@ exports[`Full configuration result 1`] = `
       \\"after\\"
     ],
     \\"prefer-const\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"prefer-rest-params\\": [
       \\"error\\"
@@ -993,7 +993,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"rest-spread-spacing\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\"
     ],
     \\"shopify-lean/jsx-no-complex-expressions\\": [
@@ -1042,7 +1042,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"sort-imports\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignoreDeclarationSort\\": true,
         \\"ignoreCase\\": false,
@@ -1061,11 +1061,11 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"strict\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\"
     ],
     \\"unicode-bom\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\"
     ],
     \\"unicorn/better-regex\\": [
@@ -1093,16 +1093,16 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"unicorn/new-for-builtins\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"unicorn/no-array-instanceof\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"unicorn/no-nested-ternary\\": [
       \\"warn\\"
     ],
     \\"unicorn/no-new-buffer\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"unicorn/no-unreadable-array-destructuring\\": [
       \\"warn\\"
@@ -1138,7 +1138,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"unicorn/throw-new-error\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"use-isnan\\": [
       \\"error\\"

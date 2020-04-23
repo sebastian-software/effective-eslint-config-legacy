@@ -1,3 +1,4 @@
+import { Linter } from "eslint"
 import { configs } from "@typescript-eslint/eslint-plugin"
 
 export const blockedByTS = Object.keys(configs["eslint-recommended"].overrides[0].rules)
@@ -12,4 +13,16 @@ export function isDisabled(value: any) {
 
   const toggle = Array.isArray(value) ? value[0] : value
   return toggle === "off"
+}
+
+export function setLevel(value: any, newLevel: Linter.RuleLevel | Linter.RuleLevelAndOptions) {
+  if (Array.isArray(value)) {
+    const newValue = [ ...value ]
+    newValue[0] = newLevel
+    return newValue
+  } else if (value != null) {
+    return newLevel
+  }
+
+  return value
 }

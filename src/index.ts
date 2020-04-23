@@ -1,6 +1,6 @@
 /* eslint-disable filenames/match-exported, import/order */
 import { ESLintConfig, ESLintRules } from "./types"
-import { isDisabled } from "./util"
+import { isDisabled, setLevel } from "./util"
 
 import { typescript } from "./modules/typescript"
 import { eslint } from "./modules/eslint"
@@ -11,6 +11,7 @@ import { unicorn } from "./modules/unicorn"
 import { shopify } from "./modules/shopify"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
+import { autofix } from "./modules/autofix"
 
 const combinedRules: ESLintRules = {
   ...typescript
@@ -61,6 +62,23 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
   }
 }
 
+function mergeLevelOverrides(rules: ESLintRules, name: string) {
+  for (const rule in rules) {
+    if (!rules[rule]) {
+      continue
+    }
+
+    if (rule in combinedRules) {
+      const oldValue = combinedRules[rule]
+      const newValue = setLevel(oldValue, rules[rule])
+
+      combinedRules[rule] =newValue
+    } else {
+      console.warn(`Level override for undefined rule: ${name}. Dropping...`)
+    }
+  }
+}
+
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
@@ -69,6 +87,7 @@ mergeWithWarnings(unicorn, "unicorn")
 mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
+mergeLevelOverrides(autofix, "autofix")
 
 const config: ESLintConfig = {
   root: true,
