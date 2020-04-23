@@ -17,6 +17,8 @@ const combinedRules: ESLintRules = {
   ...typescript
 }
 
+const DEBUG_ESLINT = process.env.DEBUG_ESLINT
+
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
 function sortReplacer(key, value) {
@@ -48,7 +50,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
         continue
       }
 
-      console.warn(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
+      if (DEBUG_ESLINT) {
+        console.warn(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
+      }
     }
 
     // If new and old value are both disabled, then we do not need to
@@ -73,7 +77,7 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
       const newValue = setLevel(oldValue, rules[rule])
 
       combinedRules[rule] =newValue
-    } else {
+    } else if (DEBUG_ESLINT) {
       console.warn(`Level override for undefined rule: ${name}. Dropping...`)
     }
   }
