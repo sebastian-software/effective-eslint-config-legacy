@@ -23,16 +23,6 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  "max-len": [
-    "warn",
-    {
-      code: 100,
-      comments: 150,
-      ignoreUrls: true,
-      tabWidth: 2
-    }
-  ],
-
   "no-multiple-empty-lines": [
     "warn",
     {
