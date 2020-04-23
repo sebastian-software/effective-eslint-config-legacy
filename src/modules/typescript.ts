@@ -49,7 +49,7 @@ const newRules: ESLintRules = {
 
 for (const name in allRules) {
   // "Funnily" the recommended preset lists deprecated rules
-  if (name in oldRuleNames) {
+  if (oldRuleNames.has(name)) {
     continue
   }
 

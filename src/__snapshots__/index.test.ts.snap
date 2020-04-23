@@ -41,16 +41,7 @@ exports[`Full configuration result 1`] = `
     \\"@typescript-eslint/ban-ts-comment\\": [
       \\"warn\\"
     ],
-    \\"@typescript-eslint/ban-ts-ignore\\": [
-      \\"error\\"
-    ],
     \\"@typescript-eslint/ban-types\\": [
-      \\"error\\"
-    ],
-    \\"@typescript-eslint/camelcase\\": [
-      \\"error\\"
-    ],
-    \\"@typescript-eslint/class-name-casing\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/consistent-type-assertions\\": [
@@ -87,9 +78,6 @@ exports[`Full configuration result 1`] = `
         \\"flatTernaryExpressions\\": false,
         \\"ignoreComments\\": false
       }
-    ],
-    \\"@typescript-eslint/interface-name-prefix\\": [
-      \\"error\\"
     ],
     \\"@typescript-eslint/member-delimiter-style\\": [
       \\"warn\\",
@@ -1239,32 +1227,7 @@ second(first)
       "warningCount": 0,
     },
   ],
-  "usedDeprecatedRules": Array [
-    Object {
-      "replacedBy": Array [
-        "@typescript-eslint/ban-ts-comment",
-      ],
-      "ruleId": "@typescript-eslint/ban-ts-ignore",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/camelcase",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/class-name-casing",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/interface-name-prefix",
-    },
-  ],
+  "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
 `;
@@ -1297,32 +1260,7 @@ Object {
       "warningCount": 0,
     },
   ],
-  "usedDeprecatedRules": Array [
-    Object {
-      "replacedBy": Array [
-        "@typescript-eslint/ban-ts-comment",
-      ],
-      "ruleId": "@typescript-eslint/ban-ts-ignore",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/camelcase",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/class-name-casing",
-    },
-    Object {
-      "replacedBy": Array [
-        "naming-convention",
-      ],
-      "ruleId": "@typescript-eslint/interface-name-prefix",
-    },
-  ],
+  "usedDeprecatedRules": Array [],
   "warningCount": 0,
 }
 `;
