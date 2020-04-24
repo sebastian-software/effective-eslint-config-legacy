@@ -107,7 +107,7 @@ const config: ESLintConfig = {
     "import/extensions": [ ".d.ts", ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json" ],
     "import/resolver": {
       "babel-module": {
-        extensions: [ ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json" ],
+        extensions: [ ".js", ".jsx", ".d.ts", ".ts", ".tsx", ".mjs", ".json" ],
         alias: {
           "-": "./src/"
         }
