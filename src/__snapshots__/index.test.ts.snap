@@ -1134,9 +1134,6 @@ exports[`Full configuration result 1`] = `
     \\"unicorn/prefer-type-error\\": [
       \\"warn\\"
     ],
-    \\"unicorn/prevent-abbreviations\\": [
-      \\"warn\\"
-    ],
     \\"unicorn/throw-new-error\\": [
       \\"warn\\"
     ],
