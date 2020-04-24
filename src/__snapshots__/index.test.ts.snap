@@ -1175,6 +1175,7 @@ exports[`Full configuration result 1`] = `
         \\"extensions\\": [
           \\".js\\",
           \\".jsx\\",
+          \\".d.ts\\",
           \\".ts\\",
           \\".tsx\\",
           \\".mjs\\",
