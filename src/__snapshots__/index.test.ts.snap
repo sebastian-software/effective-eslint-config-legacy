@@ -855,12 +855,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-unused-expressions\\": [
-      \\"error\\",
-      {
-        \\"allowShortCircuit\\": true,
-        \\"allowTernary\\": true,
-        \\"allowTaggedTemplates\\": true
-      }
+      \\"off\\"
     ],
     \\"no-unused-labels\\": [
       \\"warn\\"
@@ -1160,13 +1155,6 @@ exports[`Full configuration result 1`] = `
       \\".mjs\\",
       \\".json\\"
     ],
-    \\"import/parsers\\": {
-      \\"@typescript-eslint/parser\\": [
-        \\".d.ts\\",
-        \\".ts\\",
-        \\".tsx\\"
-      ]
-    },
     \\"import/resolver\\": {
       \\"babel-module\\": {
         \\"alias\\": {
