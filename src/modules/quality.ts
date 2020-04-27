@@ -60,6 +60,8 @@ export const quality: ESLintRules = {
   // Most code bases will want to enforce not using angle-bracket style because
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
   "@typescript-eslint/consistent-type-assertions": [ "error", { assertionStyle: "as" }],
+
+  "no-useless-constructor": "off",
   "@typescript-eslint/no-useless-constructor": "error",
 
   "@typescript-eslint/no-unused-vars": [

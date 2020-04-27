@@ -107,10 +107,11 @@ export const formatting: ESLintRules = {
     "all",
     {
       conditionalAssign: true,
-      enforceForArrowConditionals: false,
-      ignoreJSX: "all",
+      returnAssign: false,
       nestedBinaryExpressions: false,
-      returnAssign: false
+      ignoreJSX: "all",
+      enforceForArrowConditionals: true,
+      enforceForSequenceExpressions: true
     }
   ],
 

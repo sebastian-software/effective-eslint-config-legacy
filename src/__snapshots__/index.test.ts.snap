@@ -155,10 +155,11 @@ exports[`Full configuration result 1`] = `
       \\"all\\",
       {
         \\"conditionalAssign\\": true,
-        \\"enforceForArrowConditionals\\": false,
-        \\"ignoreJSX\\": \\"all\\",
+        \\"returnAssign\\": false,
         \\"nestedBinaryExpressions\\": false,
-        \\"returnAssign\\": false
+        \\"ignoreJSX\\": \\"all\\",
+        \\"enforceForArrowConditionals\\": true,
+        \\"enforceForSequenceExpressions\\": true
       }
     ],
     \\"@typescript-eslint/no-inferrable-types\\": [
@@ -880,7 +881,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-useless-constructor\\": [
-      \\"error\\"
+      \\"off\\"
     ],
     \\"no-useless-escape\\": [
       \\"error\\"
