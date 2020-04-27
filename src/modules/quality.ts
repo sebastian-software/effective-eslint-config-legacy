@@ -71,6 +71,7 @@ export const quality: ESLintRules = {
     }
   ],
 
+  "no-unused-expressions": "off",
   "@typescript-eslint/no-unused-expressions": [
     "error",
     {
