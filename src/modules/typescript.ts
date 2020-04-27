@@ -23,19 +23,24 @@ const newRules: ESLintRules = {
     },
 
     {
+      selector: "function",
+      format: [ "PascalCase", "camelCase" ]
+    },
+
+    {
       selector: "variable",
-      format: [ "camelCase", "UPPER_CASE" ]
+      format: [ "PascalCase", "camelCase", "UPPER_CASE" ]
     },
 
     {
       selector: "parameter",
-      format: [ "camelCase" ],
+      format: [  "PascalCase", "camelCase" ],
       leadingUnderscore: "allow"
     },
 
     {
       selector: "memberLike",
-      format: [ "camelCase" ]
+      format: [ 'PascalCase', 'camelCase', 'UPPER_CASE' ]
     },
 
     {

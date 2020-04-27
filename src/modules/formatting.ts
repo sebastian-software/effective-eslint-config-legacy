@@ -46,6 +46,9 @@ export const formatting: ESLintRules = {
   "operator-assignment": "warn",
   "operator-linebreak": [ "warn", "after" ],
 
+  // Replaced by @typescript-eslint/naming-convention
+  "no-underscore-dangle": "off",
+
   "@typescript-eslint/space-before-function-paren": [
     "warn",
     {
