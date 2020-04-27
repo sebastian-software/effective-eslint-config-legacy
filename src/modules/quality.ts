@@ -24,8 +24,6 @@ export const quality: ESLintRules = {
     }
   ],
 
-  "linebreak-style": [ "error", "unix" ],
-
   "max-depth": [
     "error",
     {

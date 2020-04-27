@@ -32,6 +32,8 @@ export const formatting: ESLintRules = {
     }
   ],
 
+  "linebreak-style": [ "warn", "unix" ],
+
   "no-trailing-spaces": [ "warn" ],
   "object-curly-spacing": [ "warn", "always" ],
 
