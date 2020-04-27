@@ -113,9 +113,6 @@ const config: ESLintConfig = {
         }
       }
     },
-    "import/parsers": {
-      "@typescript-eslint/parser": [ ".d.ts", ".ts", ".tsx" ]
-    },
     react: {
       version: "detect"
     }
