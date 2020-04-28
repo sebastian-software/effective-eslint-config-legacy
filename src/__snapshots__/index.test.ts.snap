@@ -921,6 +921,54 @@ exports[`Full configuration result 1`] = `
         }
       }
     ],
+    \\"padding-line-between-statements\\": [
+      \\"warn\\",
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"case\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"default\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"case\\",
+        \\"next\\": \\"default\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"try\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"switch\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"function\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"class\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"for\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"while\\"
+      }
+    ],
     \\"prefer-const\\": [
       \\"warn\\"
     ],
@@ -929,6 +977,10 @@ exports[`Full configuration result 1`] = `
     ],
     \\"prefer-spread\\": [
       \\"error\\"
+    ],
+    \\"quote-props\\": [
+      \\"warn\\",
+      \\"consistent-as-needed\\"
     ],
     \\"react-hooks/exhaustive-deps\\": [
       \\"error\\"
@@ -1183,14 +1235,32 @@ exports[`load config in eslint to validate all rule syntax is correct 1`] = `
 Object {
   "errorCount": 1,
   "fixableErrorCount": 0,
-  "fixableWarningCount": 0,
+  "fixableWarningCount": 1,
   "results": Array [
     Object {
       "errorCount": 1,
       "filePath": "<text>",
       "fixableErrorCount": 0,
-      "fixableWarningCount": 0,
+      "fixableWarningCount": 1,
       "messages": Array [
+        Object {
+          "column": 1,
+          "endColumn": 21,
+          "endLine": 2,
+          "fix": Object {
+            "range": Array [
+              15,
+              15,
+            ],
+            "text": "
+",
+          },
+          "line": 2,
+          "message": "Expected blank line before this statement.",
+          "nodeType": "FunctionDeclaration",
+          "ruleId": "padding-line-between-statements",
+          "severity": 1,
+        },
         Object {
           "column": 19,
           "line": 2,
@@ -1205,11 +1275,11 @@ Object {
 function second() {}
 second(first)
 ",
-      "warningCount": 0,
+      "warningCount": 1,
     },
   ],
   "usedDeprecatedRules": Array [],
-  "warningCount": 0,
+  "warningCount": 1,
 }
 `;
 
