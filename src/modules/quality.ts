@@ -31,6 +31,13 @@ export const quality: ESLintRules = {
     }
   ],
 
+  "no-empty": [
+    "error",
+    {
+      allowEmptyCatch: true
+    }
+  ],
+
   "max-params": [ "error", MAX_PARAMS ],
 
   "max-statements": [

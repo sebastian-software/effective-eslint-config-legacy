@@ -559,7 +559,10 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-empty\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"allowEmptyCatch\\": true
+      }
     ],
     \\"no-empty-character-class\\": [
       \\"error\\"
