@@ -32,6 +32,8 @@ export const formatting: ESLintRules = {
     }
   ],
 
+  "quote-props": [ "warn", "consistent-as-needed" ],
+
   "linebreak-style": [ "warn", "unix" ],
 
   "no-trailing-spaces": [ "warn" ],
@@ -53,22 +55,27 @@ export const formatting: ESLintRules = {
   // Python-inspired behavior. This is what we implement here in ESLint.
   // https://github.com/prettier/prettier/issues/3806
   // https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator
-  "operator-linebreak": [ "warn", "after", { "overrides": {
-    '=': "before",
-    '+=': "before",
-    '-=': "before",
-    '*=': "before",
-    '**=': "before",
-    '/=': "before",
-    '%=': "before",
-    '+': "before",
-    '-': "before",
-    '*': "before",
-    '**': "before",
-    '/': "before",
-    '%': "before"
-  } }],
-
+  "operator-linebreak": [
+    "warn",
+    "after",
+    {
+      overrides: {
+        "=": "before",
+        "+=": "before",
+        "-=": "before",
+        "*=": "before",
+        "**=": "before",
+        "/=": "before",
+        "%=": "before",
+        "+": "before",
+        "-": "before",
+        "*": "before",
+        "**": "before",
+        "/": "before",
+        "%": "before"
+      }
+    }
+  ],
 
   // Replaced by @typescript-eslint/naming-convention
   "no-underscore-dangle": "off",

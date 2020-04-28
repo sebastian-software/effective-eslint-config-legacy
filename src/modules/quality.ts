@@ -12,12 +12,7 @@ export const quality: ESLintRules = {
   "id-length": [
     "error",
     {
-      exceptions: [
-        "i",
-        "l",
-        "id",
-        "fs"
-      ],
+      exceptions: [ "i", "l", "id", "fs" ],
       max: 40,
       min: 3,
       properties: "never"
@@ -100,7 +95,7 @@ export const quality: ESLintRules = {
   "import/order": [
     "error",
     {
-      groups: [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
+      "groups": [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
       "newlines-between": "always"
     }
   ],

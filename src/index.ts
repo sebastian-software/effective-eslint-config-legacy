@@ -76,7 +76,7 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
       const oldValue = combinedRules[rule]
       const newValue = setLevel(oldValue, rules[rule])
 
-      combinedRules[rule] =newValue
+      combinedRules[rule] = newValue
     } else if (DEBUG_ESLINT) {
       console.warn(`Level override for undefined rule: ${name}. Dropping...`)
     }
@@ -97,9 +97,9 @@ const config: ESLintConfig = {
   root: true,
 
   env: {
-    browser: true,
-    es6: true,
-    node: true,
+    "browser": true,
+    "es6": true,
+    "node": true,
     "shared-node-browser": true
   },
 
@@ -113,7 +113,7 @@ const config: ESLintConfig = {
         }
       }
     },
-    react: {
+    "react": {
       version: "detect"
     }
   },
@@ -150,10 +150,7 @@ const config: ESLintConfig = {
   overrides: [
     // Jest Test Runner
     {
-      files: [
-        "*.test.{js,jsx,ts,tsx}",
-        "**/test/**/*.{js,jsx,ts,tsx}"
-      ],
+      files: [ "*.test.{js,jsx,ts,tsx}", "**/test/**/*.{js,jsx,ts,tsx}" ],
       extends: [ "plugin:jest/recommended" ],
       rules: {
         // Reduce config from recommended to warn for autofixable rules

@@ -34,13 +34,13 @@ const newRules: ESLintRules = {
 
     {
       selector: "parameter",
-      format: [  "PascalCase", "camelCase" ],
+      format: [ "PascalCase", "camelCase" ],
       leadingUnderscore: "allow"
     },
 
     {
       selector: "memberLike",
-      format: [ 'PascalCase', 'camelCase', 'UPPER_CASE' ]
+      format: [ "PascalCase", "camelCase", "UPPER_CASE" ]
     },
 
     {
