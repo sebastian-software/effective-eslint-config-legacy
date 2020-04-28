@@ -73,13 +73,6 @@ export const formatting: ESLintRules = {
     "after",
     {
       overrides: {
-        "=": "before",
-        "+=": "before",
-        "-=": "before",
-        "*=": "before",
-        "**=": "before",
-        "/=": "before",
-        "%=": "before",
         "+": "before",
         "-": "before",
         "*": "before",
