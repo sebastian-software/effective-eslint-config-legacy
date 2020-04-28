@@ -46,7 +46,29 @@ export const formatting: ESLintRules = {
 
   "one-var-declaration-per-line": [ "warn", "initializations" ],
   "operator-assignment": "warn",
-  "operator-linebreak": [ "warn", "after" ],
+
+  // Prettier does not allow customization on operator linebreak
+  // The current behavior is quite discussed intensively and there
+  // is some consensus that the best approach would be to follow a
+  // Python-inspired behavior. This is what we implement here in ESLint.
+  // https://github.com/prettier/prettier/issues/3806
+  // https://www.python.org/dev/peps/pep-0008/#should-a-line-break-before-or-after-a-binary-operator
+  "operator-linebreak": [ "warn", "after", { "overrides": {
+    '=': "before",
+    '+=': "before",
+    '-=': "before",
+    '*=': "before",
+    '**=': "before",
+    '/=': "before",
+    '%=': "before",
+    '+': "before",
+    '-': "before",
+    '*': "before",
+    '**': "before",
+    '/': "before",
+    '%': "before"
+  } }],
+
 
   // Replaced by @typescript-eslint/naming-convention
   "no-underscore-dangle": "off",
@@ -72,23 +94,26 @@ export const formatting: ESLintRules = {
 
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
 
-  "@typescript-eslint/indent": [
-    "warn",
-    2,
-    {
-      CallExpression: {
-        arguments: 1
-      },
-      FunctionExpression: {
-        body: 1,
-        parameters: 1
-      },
-      MemberExpression: 1,
-      outerIIFEBody: 0,
-      SwitchCase: 1,
-      VariableDeclarator: 1
-    }
-  ],
+  // The rule is broken right now. We might rely on Prettier only here instead.
+  // "@typescript-eslint/indent": "off",
+
+  // "@typescript-eslint/indent": [
+  //   "warn",
+  //   2,
+  //   {
+  //     CallExpression: {
+  //       arguments: 1
+  //     },
+  //     FunctionExpression: {
+  //       body: 1,
+  //       parameters: 1
+  //     },
+  //     MemberExpression: 1,
+  //     outerIIFEBody: 0,
+  //     SwitchCase: 1,
+  //     VariableDeclarator: 1
+  //   }
+  // ],
 
   "@typescript-eslint/member-delimiter-style": [
     "warn",

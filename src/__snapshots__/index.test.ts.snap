@@ -60,25 +60,6 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       \\"never\\"
     ],
-    \\"@typescript-eslint/indent\\": [
-      \\"warn\\",
-      2,
-      {
-        \\"CallExpression\\": {
-          \\"arguments\\": 1
-        },
-        \\"FunctionExpression\\": {
-          \\"body\\": 1,
-          \\"parameters\\": 1
-        },
-        \\"MemberExpression\\": 1,
-        \\"outerIIFEBody\\": 0,
-        \\"SwitchCase\\": 1,
-        \\"VariableDeclarator\\": 1,
-        \\"flatTernaryExpressions\\": false,
-        \\"ignoreComments\\": false
-      }
-    ],
     \\"@typescript-eslint/member-delimiter-style\\": [
       \\"warn\\",
       {
@@ -921,7 +902,24 @@ exports[`Full configuration result 1`] = `
     ],
     \\"operator-linebreak\\": [
       \\"warn\\",
-      \\"after\\"
+      \\"after\\",
+      {
+        \\"overrides\\": {
+          \\"=\\": \\"before\\",
+          \\"+=\\": \\"before\\",
+          \\"-=\\": \\"before\\",
+          \\"*=\\": \\"before\\",
+          \\"**=\\": \\"before\\",
+          \\"/=\\": \\"before\\",
+          \\"%=\\": \\"before\\",
+          \\"+\\": \\"before\\",
+          \\"-\\": \\"before\\",
+          \\"*\\": \\"before\\",
+          \\"**\\": \\"before\\",
+          \\"/\\": \\"before\\",
+          \\"%\\": \\"before\\"
+        }
+      }
     ],
     \\"prefer-const\\": [
       \\"warn\\"
