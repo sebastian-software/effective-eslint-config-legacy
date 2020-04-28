@@ -39,6 +39,19 @@ export const formatting: ESLintRules = {
   "no-trailing-spaces": [ "warn" ],
   "object-curly-spacing": [ "warn", "always" ],
 
+  "padding-line-between-statements": [
+    "warn",
+    { blankLine: "always", prev: "case", next: "case" },
+    { blankLine: "always", prev: "default", next: "case" },
+    { blankLine: "always", prev: "case", next: "default" },
+    { blankLine: "always", prev: "*", next: "try" },
+    { blankLine: "always", prev: "*", next: "switch" },
+    { blankLine: "always", prev: "*", next: "function" },
+    { blankLine: "always", prev: "*", next: "class" },
+    { blankLine: "always", prev: "*", next: "for" },
+    { blankLine: "always", prev: "*", next: "while" }
+  ],
+
   "object-property-newline": [
     "warn",
     {
