@@ -32,6 +32,8 @@ export const formatting: ESLintRules = {
     }
   ],
 
+  // The "quotes" setting is required to make "quote-props" work correctly.
+  "quotes": [ "warn", "double", { avoidEscape: true }],
   "quote-props": [ "warn", "consistent-as-needed" ],
 
   "linebreak-style": [ "warn", "unix" ],
@@ -41,7 +43,7 @@ export const formatting: ESLintRules = {
 
   "padding-line-between-statements": [
     "warn",
-    { blankLine: "always", prev: "case", next: "case" },
+    { blankLine: "always", prev: "*", next: "case" },
     { blankLine: "always", prev: "default", next: "case" },
     { blankLine: "always", prev: "case", next: "default" },
     { blankLine: "always", prev: "*", next: "try" },
