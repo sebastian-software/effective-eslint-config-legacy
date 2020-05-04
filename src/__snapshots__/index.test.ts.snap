@@ -918,7 +918,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       {
         \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"case\\",
+        \\"prev\\": \\"*\\",
         \\"next\\": \\"case\\"
       },
       {
@@ -974,6 +974,13 @@ exports[`Full configuration result 1`] = `
     \\"quote-props\\": [
       \\"warn\\",
       \\"consistent-as-needed\\"
+    ],
+    \\"quotes\\": [
+      \\"warn\\",
+      \\"double\\",
+      {
+        \\"avoidEscape\\": true
+      }
     ],
     \\"react-hooks/exhaustive-deps\\": [
       \\"error\\"
@@ -1158,9 +1165,6 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"unicorn/prefer-includes\\": [
-      \\"warn\\"
-    ],
-    \\"unicorn/prefer-replace-all\\": [
       \\"warn\\"
     ],
     \\"unicorn/prefer-set-has\\": [
