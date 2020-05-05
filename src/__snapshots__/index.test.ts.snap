@@ -910,7 +910,9 @@ exports[`Full configuration result 1`] = `
           \\"*\\": \\"before\\",
           \\"**\\": \\"before\\",
           \\"/\\": \\"before\\",
-          \\"%\\": \\"before\\"
+          \\"%\\": \\"before\\",
+          \\"?\\": \\"before\\",
+          \\":\\": \\"before\\"
         }
       }
     ],

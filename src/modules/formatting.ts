@@ -64,7 +64,7 @@ export const formatting: ESLintRules = {
   "one-var-declaration-per-line": [ "warn", "initializations" ],
   "operator-assignment": "warn",
 
-  // Prettier does not allow customization on operator linebreak
+  // Prettier does not allow customization on operator line break
   // The current behavior is quite discussed intensively and there
   // is some consensus that the best approach would be to follow a
   // Python-inspired behavior. This is what we implement here in ESLint.
@@ -80,7 +80,9 @@ export const formatting: ESLintRules = {
         "*": "before",
         "**": "before",
         "/": "before",
-        "%": "before"
+        "%": "before",
+        "?": "before",
+        ":": "before"
       }
     }
   ],
