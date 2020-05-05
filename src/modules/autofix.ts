@@ -43,5 +43,6 @@ export const autofix: ESLintRules = {
   "no-unneeded-ternary": "warn",
   "@typescript-eslint/consistent-type-definitions": "warn",
   "import/order": "warn",
-  "import/newline-after-import": "warn"
+  "import/newline-after-import": "warn",
+  "react-hooks/exhaustive-deps": "warn"
 }
