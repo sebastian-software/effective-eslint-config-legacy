@@ -89,6 +89,7 @@
     "preppy": "^10.4.1",
     "prettier": ">=2.0.5",
     "react": "^16.13.1",
+    "release-it": "^13.5.8",
     "rimraf": "^3.0.2",
     "typescript": "^3.8.3"
   }
