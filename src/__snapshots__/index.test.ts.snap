@@ -263,6 +263,9 @@ exports[`Full configuration result 1`] = `
         \\"after\\": true
       }
     ],
+    \\"block-scoped-var\\": [
+      \\"error\\"
+    ],
     \\"comma-dangle\\": [
       \\"warn\\",
       \\"never\\"
@@ -283,6 +286,13 @@ exports[`Full configuration result 1`] = `
     \\"dot-location\\": [
       \\"warn\\",
       \\"property\\"
+    ],
+    \\"dot-notation\\": [
+      \\"error\\",
+      {
+        \\"allowKeywords\\": true,
+        \\"allowPattern\\": \\"\\"
+      }
     ],
     \\"eqeqeq\\": [
       \\"warn\\",
@@ -338,6 +348,9 @@ exports[`Full configuration result 1`] = `
     \\"import/newline-after-import\\": [
       \\"warn\\"
     ],
+    \\"import/no-absolute-path\\": [
+      \\"error\\"
+    ],
     \\"import/no-amd\\": [
       \\"error\\"
     ],
@@ -346,11 +359,32 @@ exports[`Full configuration result 1`] = `
       {
         \\"maxDepth\\": null
       }
+    \\"import/no-mutable-exports\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-as-default\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-as-default-member\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-default\\": [
+      \\"error\\"
+    ],
+    \\"import/no-self-import\\": [
+      \\"error\\"
+    ],
     \\"import/no-unresolved\\": [
       \\"error\\",
       {
         \\"commonjs\\": true,
         \\"caseSensitive\\": true
+      }
+    ],
+    \\"import/no-useless-path-segments\\": [
+      \\"error\\",
+      {
+        \\"commonjs\\": true
       }
     ],
     \\"import/no-webpack-loader-syntax\\": [
@@ -675,6 +709,9 @@ exports[`Full configuration result 1`] = `
     \\"new-parens\\": [
       \\"warn\\"
     ],
+    \\"no-alert\\": [
+      \\"warn\\"
+    ],
     \\"no-async-promise-executor\\": [
       \\"error\\"
     ],
@@ -850,6 +887,12 @@ exports[`Full configuration result 1`] = `
     \\"no-mixed-spaces-and-tabs\\": [
       \\"error\\"
     ],
+    \\"no-multi-spaces\\": [
+      \\"error\\",
+      {
+        \\"ignoreEOLComments\\": false
+      }
+    ],
     \\"no-multi-str\\": [
       \\"error\\"
     ],
@@ -862,6 +905,9 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"no-nested-ternary\\": [
+      \\"error\\"
+    ],
+    \\"no-new\\": [
       \\"error\\"
     ],
     \\"no-new-func\\": [
@@ -886,6 +932,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-param-reassign\\": [
+      \\"error\\"
+    ],
+    \\"no-proto\\": [
       \\"error\\"
     ],
     \\"no-prototype-builtins\\": [
@@ -972,6 +1021,38 @@ exports[`Full configuration result 1`] = `
         \\"object\\": \\"System\\",
         \\"property\\": \\"import\\",
         \\"message\\": \\"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting\\"
+      {
+        \\"object\\": \\"window\\",
+        \\"property\\": \\"isFinite\\",
+        \\"message\\": \\"Please use Number.isFinite instead\\"
+      },
+      {
+        \\"object\\": \\"global\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"object\\": \\"self\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"object\\": \\"window\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"property\\": \\"__defineGetter__\\",
+        \\"message\\": \\"Please use Object.defineProperty instead.\\"
+      },
+      {
+        \\"property\\": \\"__defineSetter__\\",
+        \\"message\\": \\"Please use Object.defineProperty instead.\\"
+      },
+      {
+        \\"object\\": \\"Math\\",
+        \\"property\\": \\"pow\\",
+        \\"message\\": \\"Use the exponentiation operator (**) instead.\\"
       }
     ],
     \\"no-restricted-syntax\\": [
@@ -982,7 +1063,10 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-self-assign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"props\\": true
+      }
     ],
     \\"no-self-compare\\": [
       \\"error\\"
@@ -1012,6 +1096,9 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"no-undef\\": [
+      \\"error\\"
+    ],
+    \\"no-undef-init\\": [
       \\"error\\"
     ],
     \\"no-underscore-dangle\\": [
@@ -1149,6 +1236,22 @@ exports[`Full configuration result 1`] = `
         \\"next\\": \\"while\\"
       }
     ],
+    \\"prefer-destructuring\\": [
+      \\"error\\",
+      {
+        \\"VariableDeclarator\\": {
+          \\"array\\": false,
+          \\"object\\": true
+        },
+        \\"AssignmentExpression\\": {
+          \\"array\\": true,
+          \\"object\\": false
+        }
+      },
+      {
+        \\"enforceForRenamedProperties\\": false
+      }
+    ],
     \\"prefer-rest-params\\": [
       \\"warn\\"
     ],
@@ -1178,11 +1281,25 @@ exports[`Full configuration result 1`] = `
         \\"allowInPropTypes\\": true
       }
     ],
+    \\"react/jsx-boolean-value\\": [
+      \\"error\\",
+      \\"never\\",
+      {
+        \\"always\\": []
+      }
+    ],
+    \\"react/jsx-fragments\\": [
+      \\"error\\",
+      \\"syntax\\"
+    ],
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
     ],
     \\"react/jsx-no-duplicate-props\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"ignoreCase\\": true
+      }
     ],
     \\"react/jsx-no-target-blank\\": [
       \\"error\\"
