@@ -263,9 +263,6 @@ exports[`Full configuration result 1`] = `
         \\"after\\": true
       }
     ],
-    \\"camelcase\\": [
-      \\"off\\"
-    ],
     \\"comma-dangle\\": [
       \\"warn\\",
       \\"never\\"
