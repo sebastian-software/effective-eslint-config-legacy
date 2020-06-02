@@ -1,6 +1,7 @@
 import { rules } from "eslint-config-react-app"
 
 import { ESLintRules } from "../types"
+import { blacklist, hasMatchingTypescriptRule, setLevel } from "../util"
 
 export const cra: ESLintRules = {}
 
@@ -10,13 +11,6 @@ const flowtypeRules = /^(flowtype\/\S+)$/
 // Last tested 2020, June, 02nd
 const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
 
-// These are still defined in CRA but are replaced by TS-enhanced versions in TS parser/plugin.
-const typescriptReplaced: { [key: string]: string } = {
-  "no-array-constructor": "@typescript-eslint/no-array-constructor",
-  "no-use-before-define": "@typescript-eslint/no-use-before-define",
-  "no-unused-vars": "@typescript-eslint/no-unused-vars"
-}
-
 function merge(data: ESLintRules): void {
   const ruleNames = Object.keys(data)
   ruleNames.forEach((name: string): void => {
@@ -25,8 +19,15 @@ function merge(data: ESLintRules): void {
     }
 
     let value = data[name]
+    let exportName = name
 
-    const exportName = typescriptReplaced[name] || name
+    if (blacklist.has(name)) {
+      if (hasMatchingTypescriptRule(name)) {
+        exportName = `@typescript-eslint/${name}`
+      } else {
+        return
+      }
+    }
 
     // Switch rule state to "error". CRA uses "warn" for errors to
     // not break the build, but to match our infrastructure this would

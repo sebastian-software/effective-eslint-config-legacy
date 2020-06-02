@@ -1,5 +1,5 @@
 import { Linter } from "eslint"
-import { configs } from "@typescript-eslint/eslint-plugin"
+import { configs, rules as tsrules } from "@typescript-eslint/eslint-plugin"
 
 import { ESLintRules } from "./types"
 
@@ -20,10 +20,14 @@ export const tsRecommendedReplaced = Object.keys(configs.recommended.rules).filt
 
 export const blacklist = new Set([ ...eslintRecommendedBlocked, ...tsRecommendedReplaced ])
 
+export function hasMatchingTypescriptRule(name: string): boolean {
+  return !!tsrules[name]
+}
+
 export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
   const result: ESLintRules = {}
 
-  for (var rule in rules) {
+  for (let rule in rules) {
     if (!blacklist.has(rule)) {
       result[rule] = rules[rule]
     } else if (DEBUG_ESLINT) {
@@ -32,14 +36,6 @@ export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
   }
 
   return result
-}
-
-export function isDisabled(value: any) {
-  if (value == null) {
-    return true
-  }
-
-  return getLevel(value) === "off"
 }
 
 export function setLevel(value: any, newLevel: Linter.RuleLevel | Linter.RuleLevelAndOptions) {
@@ -60,4 +56,12 @@ export function getLevel(value: any) {
   }
 
   return Array.isArray(value) ? value[0] : value
+}
+
+export function isDisabled(value: any) {
+  if (value == null) {
+    return true
+  }
+
+  return getLevel(value) === "off"
 }
