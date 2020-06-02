@@ -45,20 +45,20 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
 
       if (newValue === oldValue) {
         if (warnSame) {
-          console.warn(`Section ${name} defines identical value for ${rule}! Dropping...`)
+          console.log(`Section ${name} defines identical value for ${rule}! Dropping...`)
         }
         continue
       }
 
       if (DEBUG_ESLINT) {
-        console.warn(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
+        console.log(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
       }
     }
 
     // If new and old value are both disabled, then we do not need to
     // store anything here.
     if (isDisabled(combinedRules[rule]) && isDisabled(rules[rule])) {
-      console.warn(`Section ${name} defines disabled ${rule}! Dropping...`)
+      console.log(`Section ${name} defines disabled ${rule}! Dropping...`)
       continue
     }
 
@@ -78,7 +78,7 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
 
       combinedRules[rule] = newValue
     } else if (DEBUG_ESLINT) {
-      console.warn(`Level override for previously undefined rule: ${name}. Dropping...`)
+      console.log(`Level override for previously unconfigured rule: ${rule}. Dropping...`)
     }
   }
 }
