@@ -13,9 +13,7 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
-const combinedRules: ESLintRules = {
-  ...typescript
-}
+const combinedRules: ESLintRules = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
@@ -86,6 +84,7 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
   }
 }
 
+mergeWithWarnings(typescript, "typescript")
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 mergeWithWarnings(airbnb, "airbnb")
@@ -94,6 +93,7 @@ mergeWithWarnings(unicorn, "unicorn")
 mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
+
 mergeLevelOverrides(autofix, "autofix")
 
 const config: ESLintConfig = {

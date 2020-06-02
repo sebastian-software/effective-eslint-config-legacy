@@ -1,12 +1,26 @@
 import { Linter } from "eslint"
 import { configs } from "@typescript-eslint/eslint-plugin"
 
+import { ESLintRules } from "./types"
+
 export const blockedByTS = Object.keys(configs["eslint-recommended"].overrides[0].rules)
 export const replacedByTS = Object.keys(configs.recommended.rules).filter(
   (name) => !name.startsWith("@typescript-eslint")
 )
 
 export const blacklist = new Set([ ...blockedByTS, ...replacedByTS ])
+
+export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
+  const result: ESLintRules = {}
+
+  for (var rule in rules) {
+    if (!blacklist.has(rule)) {
+      result[rule] = rules[rule]
+    }
+  }
+
+  return result
+}
 
 export function isDisabled(value: any) {
   if (value == null) {

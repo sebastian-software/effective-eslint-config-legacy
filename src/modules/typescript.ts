@@ -1,6 +1,7 @@
 import { configs } from "@typescript-eslint/eslint-plugin"
 
 import { ESLintRules } from "../types"
+import { filterWithBlacklist } from "../util"
 
 const allRules = configs.recommended.rules
 
@@ -44,6 +45,6 @@ const newRules: ESLintRules = {
 }
 
 export const typescript: ESLintRules = {
-  ...allRules,
+  ...filterWithBlacklist(allRules),
   ...newRules
 }
