@@ -1,6 +1,6 @@
 import { CLIEngine } from "eslint"
 
-const PATH_REPL = /"\S+(\\|\/)parser\.js"/
+const PATH_REPL = /"\S+(\\|\/)index\.js"/
 
 function cloneWithSortedKeys(object): any {
   const clone: { [key: string]: any } = {}
