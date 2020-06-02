@@ -3,12 +3,20 @@ import { configs } from "@typescript-eslint/eslint-plugin"
 
 import { ESLintRules } from "./types"
 
-export const blockedByTS = Object.keys(configs["eslint-recommended"].overrides[0].rules)
-export const replacedByTS = Object.keys(configs.recommended.rules).filter(
+const eslintRecommendedBlocked: string[] = []
+const eslintRecommendedOverrides = configs["eslint-recommended"].overrides[0].rules
+
+for (const rule in eslintRecommendedOverrides) {
+  if (eslintRecommendedOverrides[rule] === "off") {
+    eslintRecommendedBlocked.push(rule)
+  }
+}
+
+export const tsRecommendedReplaced = Object.keys(configs.recommended.rules).filter(
   (name) => !name.startsWith("@typescript-eslint")
 )
 
-export const blacklist = new Set([ ...blockedByTS, ...replacedByTS ])
+export const blacklist = new Set([ ...eslintRecommendedBlocked, ...tsRecommendedReplaced ])
 
 export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
   const result: ESLintRules = {}
@@ -16,6 +24,8 @@ export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
   for (var rule in rules) {
     if (!blacklist.has(rule)) {
       result[rule] = rules[rule]
+    } else {
+      console.log("Rule:" + rule + " was filtered by blacklist")
     }
   }
 
