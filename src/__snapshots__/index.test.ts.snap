@@ -967,9 +967,6 @@ exports[`Full configuration result 1`] = `
         \\"next\\": \\"while\\"
       }
     ],
-    \\"prefer-const\\": [
-      \\"warn\\"
-    ],
     \\"prefer-rest-params\\": [
       \\"warn\\"
     ],
