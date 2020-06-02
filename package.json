@@ -79,7 +79,6 @@
     "@babel/plugin-transform-runtime": "^7.10.1",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
-    "@types/eslint": "^6.8.1",
     "@types/jest": "^25.2.3",
     "@types/lodash": "^4.14.154",
     "eslint": "^7.1.0",
