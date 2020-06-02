@@ -49,7 +49,7 @@ test("reports undeclared variable", () => {
     configFile: "dist/index.js"
   })
 
-  const code = "i++"
+  const code = "if (obj=null) run()"
   const result = cli.executeOnText(code)
 
   expect(result).toMatchSnapshot()
