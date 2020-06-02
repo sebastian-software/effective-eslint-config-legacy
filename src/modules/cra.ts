@@ -32,13 +32,7 @@ function merge(data: ESLintRules): void {
     // be a bad match. As CRA only reports "error" not e.g. formatting
     // related stuff, we can assume that all the reported issues are
     // actually errors, not warnings.
-    if (Array.isArray(value) && value[0] === "warn") {
-      value[0] = "error"
-    } else if (value === "warn") {
-      value = "error"
-    }
-
-    cra[exportName] = value
+    cra[exportName] = setLevel(value, "error")
   })
 }
 
