@@ -490,9 +490,6 @@ exports[`Full configuration result 1`] = `
     \\"new-parens\\": [
       \\"warn\\"
     ],
-    \\"no-array-constructor\\": [
-      \\"off\\"
-    ],
     \\"no-async-promise-executor\\": [
       \\"error\\"
     ],
@@ -563,9 +560,6 @@ exports[`Full configuration result 1`] = `
     \\"no-empty-character-class\\": [
       \\"error\\"
     ],
-    \\"no-empty-function\\": [
-      \\"off\\"
-    ],
     \\"no-empty-pattern\\": [
       \\"error\\"
     ],
@@ -586,9 +580,6 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-extra-label\\": [
       \\"warn\\"
-    ],
-    \\"no-extra-semi\\": [
-      \\"off\\"
     ],
     \\"no-fallthrough\\": [
       \\"error\\"
@@ -864,9 +855,6 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-unused-labels\\": [
       \\"warn\\"
-    ],
-    \\"no-unused-vars\\": [
-      \\"off\\"
     ],
     \\"no-useless-catch\\": [
       \\"error\\"
