@@ -271,9 +271,6 @@ exports[`Full configuration result 1`] = `
       \\"warn\\",
       \\"last\\"
     ],
-    \\"constructor-super\\": [
-      \\"error\\"
-    ],
     \\"default-case\\": [
       \\"error\\",
       {
