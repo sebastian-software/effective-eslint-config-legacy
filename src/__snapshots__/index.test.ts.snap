@@ -585,6 +585,9 @@ exports[`Full configuration result 1`] = `
     \\"no-implied-eval\\": [
       \\"error\\"
     ],
+    \\"no-import-assign\\": [
+      \\"error\\"
+    ],
     \\"no-inner-declarations\\": [
       \\"error\\"
     ],
@@ -792,6 +795,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-sequences\\": [
+      \\"error\\"
+    ],
+    \\"no-setter-return\\": [
       \\"error\\"
     ],
     \\"no-shadow-restricted-names\\": [
