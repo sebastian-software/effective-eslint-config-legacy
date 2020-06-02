@@ -15,10 +15,14 @@ import { blacklist, isDisabled } from "../util"
 
 // This list contains value we do not accept. These often times overwrite values from other configs where we
 // prefer the original value
-const unwantedValues = new Set([
+const blocked = new Set([
+  "no-global-assign",
+  "no-labels",
+  "jsx-a11y/anchor-has-content",
   "array-callback-return",
   "no-restricted-globals",
   "no-else-return",
+  "prefer-destructuring",
 
   "import/prefer-default-export", // named exports are much better
   "import/no-extraneous-dependencies", // does not work well in mono repos
@@ -29,7 +33,18 @@ const unwantedValues = new Set([
   "react/jsx-props-no-spreading",
   "react/jsx-no-bind",
 
+  // Own configuration in quality
+  "import/order",
+  "import/extensions",
+  "@typescript-eslint/no-use-before-define",
+
+  // Unchanged Values
+  "jsx-a11y/no-distracting-elements",
+  "jsx-a11y/heading-has-content",
+  "react/jsx-uses-react",
+
   // Have different opinion here
+  "no-underscore-dangle", // there is a richer naming check for TS in place
   "no-console", // a little too strict, okay when used rarely
   "guard-for-in", // not that relevant anymore in todays JS
   "class-methods-use-this", // content too ReactJS specific
@@ -46,6 +61,7 @@ const unwantedValues = new Set([
 
   // Better solved by TS
   "consistent-return",
+  "no-unused-expressions",
   "react/prop-types",
   "react/require-default-props",
 
@@ -80,19 +96,11 @@ const unwantedValues = new Set([
   "react/static-property-placement"
 ])
 
-// This list contains properties which do not add real changes. There might be some empty array here, which
-// is not defined in the original definition and such things. These are not changing the behavior of eslint at all.
-const basicallyUnchanged = new Set([
-  "no-global-assign",
-  "no-labels",
-  "jsx-a11y/anchor-has-content"
-])
-
 export const airbnb: ESLintRules = {}
 
 function merge(rules: ESLintRules): void {
   for (const name in rules) {
-    if (blacklist.has(name) || basicallyUnchanged.has(name) || unwantedValues.has(name)) {
+    if (blacklist.has(name) || blocked.has(name)) {
       continue
     }
 
@@ -116,5 +124,3 @@ merge(strictRules.rules)
 merge(react.rules)
 merge(reactHooks.rules)
 merge(reactAccessibility.rules)
-
-console.log("XXX TEST:", airbnb["no-confusing-arrow"])

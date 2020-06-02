@@ -26,8 +26,6 @@ export const quality: ESLintRules = {
     }
   ],
 
-  "max-classes-per-file": "warn",
-
   "no-empty": [
     "error",
     {
@@ -55,7 +53,6 @@ export const quality: ESLintRules = {
   "no-div-regex": "error",
   "no-duplicate-imports": "error",
   "no-nested-ternary": "error",
-  "no-param-reassign": "error",
   "no-unmodified-loop-condition": "error",
   "no-unneeded-ternary": "error",
   "no-import-assign": "error",
@@ -113,12 +110,6 @@ export const quality: ESLintRules = {
       tsx: "never"
     }
   ],
-
-  // Order with groups are confused by our module-resolver setup.
-  // It adds a newline after each import startinng with "-".
-  // At very least we like to have a newline between the import and the
-  // the actual implementation section.
-  "import/newline-after-import": "error",
 
   // Keep in sync with exported symbol name.
   "filenames/match-exported": "warn"

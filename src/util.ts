@@ -3,6 +3,8 @@ import { configs } from "@typescript-eslint/eslint-plugin"
 
 import { ESLintRules } from "./types"
 
+const DEBUG_ESLINT = process.env.DEBUG_ESLINT
+
 const eslintRecommendedBlocked: string[] = []
 const eslintRecommendedOverrides = configs["eslint-recommended"].overrides[0].rules
 
@@ -24,8 +26,8 @@ export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
   for (var rule in rules) {
     if (!blacklist.has(rule)) {
       result[rule] = rules[rule]
-    } else {
-      console.log(`Rule ${rule} was filtered by blacklist!`)
+    } else if (DEBUG_ESLINT) {
+      // console.log(`Rule ${rule} was filtered by blacklist!`)
     }
   }
 

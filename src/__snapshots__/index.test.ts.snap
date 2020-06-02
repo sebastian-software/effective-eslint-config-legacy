@@ -544,12 +544,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"jsx-a11y/heading-has-content\\": [
-      \\"error\\",
-      {
-        \\"components\\": [
-          \\"\\"
-        ]
-      }
+      \\"error\\"
     ],
     \\"jsx-a11y/html-has-lang\\": [
       \\"error\\"
@@ -597,13 +592,7 @@ exports[`Full configuration result 1`] = `
       }
     ],
     \\"jsx-a11y/no-distracting-elements\\": [
-      \\"error\\",
-      {
-        \\"elements\\": [
-          \\"marquee\\",
-          \\"blink\\"
-        ]
-      }
+      \\"error\\"
     ],
     \\"jsx-a11y/no-interactive-element-to-noninteractive-role\\": [
       \\"error\\",
@@ -705,7 +694,8 @@ exports[`Full configuration result 1`] = `
       \\"unix\\"
     ],
     \\"max-classes-per-file\\": [
-      \\"warn\\"
+      \\"error\\",
+      1
     ],
     \\"max-depth\\": [
       \\"error\\",
@@ -768,7 +758,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-constant-condition\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-control-regex\\": [
       \\"error\\"
@@ -962,7 +952,22 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-param-reassign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"props\\": true,
+        \\"ignorePropertyModificationsFor\\": [
+          \\"acc\\",
+          \\"accumulator\\",
+          \\"e\\",
+          \\"ctx\\",
+          \\"req\\",
+          \\"request\\",
+          \\"res\\",
+          \\"response\\",
+          \\"$scope\\",
+          \\"staticContext\\"
+        ]
+      }
     ],
     \\"no-proto\\": [
       \\"error\\"
@@ -1138,9 +1143,6 @@ exports[`Full configuration result 1`] = `
     ],
     \\"no-undef-init\\": [
       \\"error\\"
-    ],
-    \\"no-underscore-dangle\\": [
-      \\"off\\"
     ],
     \\"no-unexpected-multiline\\": [
       \\"error\\"
