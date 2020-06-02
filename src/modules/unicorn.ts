@@ -20,5 +20,7 @@ export const unicorn: ESLintRules = {
   "unicorn/prefer-starts-ends-with": "warn",
   "unicorn/prefer-string-slice": "warn",
   "unicorn/prefer-type-error": "warn",
-  "unicorn/throw-new-error": "error"
+  "unicorn/throw-new-error": "error",
+  "unicorn/prefer-optional-catch-binding": "warn",
+  "unicorn/no-useless-undefined": "warn"
 }

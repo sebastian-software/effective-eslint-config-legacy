@@ -37,6 +37,8 @@ export const autofix: ESLintRules = {
   "unicorn/no-array-instanceof": "warn",
   "unicorn/no-new-buffer": "warn",
   "unicorn/throw-new-error": "warn",
+  "unicorn/prefer-optional-catch-binding": "warn",
+  "unicorn/no-useless-undefined": "warn",
   "sort-imports": "warn",
   "linebreak-style": "warn",
   "no-div-regex": "warn",
