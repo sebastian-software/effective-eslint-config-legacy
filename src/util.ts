@@ -25,7 +25,7 @@ export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
     if (!blacklist.has(rule)) {
       result[rule] = rules[rule]
     } else {
-      console.log("Rule:" + rule + " was filtered by blacklist")
+      console.log(`Rule ${rule} was filtered by blacklist!`)
     }
   }
 
