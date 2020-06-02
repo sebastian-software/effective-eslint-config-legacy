@@ -170,5 +170,7 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  "@typescript-eslint/semi": [ "warn", "never" ]
+  "@typescript-eslint/semi": [ "warn", "never" ],
+
+  "@typescript-eslint/type-annotation-spacing": "warn"
 }
