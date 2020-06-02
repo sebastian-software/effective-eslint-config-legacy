@@ -844,9 +844,6 @@ exports[`Full configuration result 1`] = `
     \\"no-unsafe-finally\\": [
       \\"error\\"
     ],
-    \\"no-unsafe-negation\\": [
-      \\"error\\"
-    ],
     \\"no-unused-expressions\\": [
       \\"off\\"
     ],
