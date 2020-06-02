@@ -868,9 +868,6 @@ exports[`Full configuration result 1`] = `
     \\"no-unused-vars\\": [
       \\"off\\"
     ],
-    \\"no-use-before-define\\": [
-      \\"off\\"
-    ],
     \\"no-useless-catch\\": [
       \\"error\\"
     ],
