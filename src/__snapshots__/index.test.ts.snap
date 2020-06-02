@@ -339,6 +339,20 @@ exports[`Full configuration result 1`] = `
         \\"properties\\": \\"never\\"
       }
     ],
+    \\"import/export\\": [
+      \\"error\\"
+    ],
+    \\"import/extensions\\": [
+      \\"error\\",
+      \\"ignorePackages\\",
+      {
+        \\"js\\": \\"never\\",
+        \\"jsx\\": \\"never\\",
+        \\"mjs\\": \\"never\\",
+        \\"ts\\": \\"never\\",
+        \\"tsx\\": \\"never\\"
+      }
+    ],
     \\"import/first\\": [
       \\"warn\\"
     ],

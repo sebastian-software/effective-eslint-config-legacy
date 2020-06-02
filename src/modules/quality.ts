@@ -26,6 +26,8 @@ export const quality: ESLintRules = {
     }
   ],
 
+  "max-classes-per-file": "warn",
+
   "no-empty": [
     "error",
     {
@@ -97,6 +99,18 @@ export const quality: ESLintRules = {
     {
       "groups": [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
       "newlines-between": "always"
+    }
+  ],
+
+  "import/extensions": [
+    "error",
+    "ignorePackages",
+    {
+      js: "never",
+      jsx: "never",
+      mjs: "never",
+      ts: "never",
+      tsx: "never"
     }
   ],
 
