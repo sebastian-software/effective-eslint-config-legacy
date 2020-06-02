@@ -74,9 +74,12 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
 
     if (rule in combinedRules) {
       const oldValue = combinedRules[rule]
-      const newValue = setLevel(oldValue, rules[rule])
+      if (isDisabled(oldValue)) {
+        console.log(`Level override for previously disabled rule: ${rule}. Dropping...`)
+        continue
+      }
 
-      combinedRules[rule] = newValue
+      combinedRules[rule] = setLevel(oldValue, rules[rule])
     } else if (DEBUG_ESLINT) {
       console.log(`Level override for previously unconfigured rule: ${rule}. Dropping...`)
     }

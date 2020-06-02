@@ -13,8 +13,7 @@ export function isDisabled(value: any) {
     return true
   }
 
-  const toggle = Array.isArray(value) ? value[0] : value
-  return toggle === "off"
+  return getLevel(value) === "off"
 }
 
 export function setLevel(value: any, newLevel: Linter.RuleLevel | Linter.RuleLevelAndOptions) {
@@ -27,4 +26,12 @@ export function setLevel(value: any, newLevel: Linter.RuleLevel | Linter.RuleLev
   }
 
   return value
+}
+
+export function getLevel(value: any) {
+  if (!value) {
+    return "off"
+  }
+
+  return Array.isArray(value) ? value[0] : value
 }
