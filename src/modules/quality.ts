@@ -58,6 +58,7 @@ export const quality: ESLintRules = {
   "no-unneeded-ternary": "error",
   "no-import-assign": "error",
   "no-setter-return": "error",
+  "default-case-last": "error",
 
   // Most code bases will want to enforce not using angle-bracket style because
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.

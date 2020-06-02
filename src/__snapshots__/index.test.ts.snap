@@ -269,6 +269,9 @@ exports[`Full configuration result 1`] = `
         \\"commentPattern\\": \\"^no default$\\"
       }
     ],
+    \\"default-case-last\\": [
+      \\"error\\"
+    ],
     \\"dot-location\\": [
       \\"warn\\",
       \\"property\\"
