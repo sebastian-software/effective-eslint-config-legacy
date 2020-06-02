@@ -88,9 +88,6 @@ export const quality: ESLintRules = {
   // Replaces rule by new one (original came from the recommended preset it seems)
   "@typescript-eslint/consistent-type-definitions": "error",
 
-  // This does not work well in pure JS environments.
-  "@typescript-eslint/explicit-function-return-type": "off",
-
   // Activate our concepts of formatting imports
   "import/order": [
     "error",
