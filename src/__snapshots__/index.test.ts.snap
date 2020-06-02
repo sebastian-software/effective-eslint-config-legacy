@@ -891,9 +891,6 @@ exports[`Full configuration result 1`] = `
         \\"ignoreExport\\": false
       }
     ],
-    \\"no-var\\": [
-      \\"warn\\"
-    ],
     \\"no-whitespace-before-property\\": [
       \\"warn\\"
     ],
