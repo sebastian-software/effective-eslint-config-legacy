@@ -373,6 +373,7 @@ exports[`Full configuration result 1`] = `
       {
         \\"maxDepth\\": null
       }
+    ],
     \\"import/no-duplicates\\": [
       \\"error\\"
     ],
@@ -1437,6 +1438,12 @@ exports[`Full configuration result 1`] = `
     \\"react/no-typos\\": [
       \\"error\\"
     ],
+    \\"react/no-unescaped-entities\\": [
+      \\"error\\"
+    ],
+    \\"react/no-unknown-property\\": [
+      \\"error\\"
+    ],
     \\"react/prefer-stateless-function\\": [
       \\"error\\",
       {
@@ -1453,6 +1460,9 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"react/style-prop-object\\": [
+      \\"error\\"
+    ],
+    \\"react/void-dom-elements-no-children\\": [
       \\"error\\"
     ],
     \\"require-yield\\": [
@@ -1529,6 +1539,12 @@ exports[`Full configuration result 1`] = `
     \\"strict\\": [
       \\"warn\\",
       \\"never\\"
+    ],
+    \\"symbol-description\\": [
+      \\"error\\"
+    ],
+    \\"template-curly-spacing\\": [
+      \\"error\\"
     ],
     \\"unicode-bom\\": [
       \\"warn\\",
