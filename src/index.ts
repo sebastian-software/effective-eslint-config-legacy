@@ -21,7 +21,7 @@ const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
-function sortReplacer(key, value) {
+function sortReplacer(key: string, value: any) {
   if (value == null || value.constructor !== Object) {
     return value
   }
@@ -78,7 +78,7 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
 
       combinedRules[rule] = newValue
     } else if (DEBUG_ESLINT) {
-      console.warn(`Level override for undefined rule: ${name}. Dropping...`)
+      console.warn(`Level override for previously undefined rule: ${name}. Dropping...`)
     }
   }
 }
