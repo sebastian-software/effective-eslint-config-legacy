@@ -971,10 +971,10 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"prefer-rest-params\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"prefer-spread\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"quote-props\\": [
       \\"warn\\",
