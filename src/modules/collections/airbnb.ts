@@ -56,6 +56,7 @@ const blocked = new Set([
   "react/no-unused-prop-types",
   "react/no-unused-state",
   "react/no-will-update-set-state",
+  "react/prefer-es6-class",
 
   // Better solved by TS
   "consistent-return",

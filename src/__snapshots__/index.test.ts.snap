@@ -1013,6 +1013,8 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
+      \\"isFinite\\",
+      \\"isNaN\\",
       \\"addEventListener\\",
       \\"blur\\",
       \\"close\\",
