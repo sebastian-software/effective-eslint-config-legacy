@@ -18,8 +18,16 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
-const projectConfigFiles = findUp.sync([ "./tsconfig.json", "./jsconfig.json" ])
+const projectConfigFiles = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
 const ROOT = path.dirname(projectConfigFiles)
+
+if (projectConfigFiles == null) {
+  throw new Error(`Unable to find any package configuration file in the current folder: ${process.cwd()}!`)
+}
+
+if (projectConfigFiles.endsWith("package.json")) {
+  throw new Error(`Unable to find any project configuration file in the current folder: ${ROOT}!`)
+}
 
 const combinedRules: ESLintRules = {}
 
