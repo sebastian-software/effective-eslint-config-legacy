@@ -171,6 +171,40 @@ export const formatting: ESLintRules = {
 
   "@typescript-eslint/type-annotation-spacing": "warn",
 
+  "@typescript-eslint/naming-convention": [
+    "error",
+    {
+      selector: "default",
+      format: [ "camelCase" ]
+    },
+
+    {
+      selector: "function",
+      format: [ "PascalCase", "camelCase" ]
+    },
+
+    {
+      selector: "variable",
+      format: [ "PascalCase", "camelCase", "UPPER_CASE" ]
+    },
+
+    {
+      selector: "parameter",
+      format: [ "PascalCase", "camelCase" ],
+      leadingUnderscore: "allow"
+    },
+
+    {
+      selector: "memberLike",
+      format: [ "PascalCase", "camelCase", "UPPER_CASE" ]
+    },
+
+    {
+      selector: "typeLike",
+      format: [ "PascalCase" ]
+    }
+  ],
+
   "prefer-rest-params": "warn",
   "prefer-spread": "warn"
 }
