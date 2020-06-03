@@ -886,10 +886,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\",
-      {
-        \\"exceptions\\": []
-      }
+      \\"error\\"
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -2630,10 +2627,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\",
-      {
-        \\"exceptions\\": []
-      }
+      \\"error\\"
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"

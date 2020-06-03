@@ -23,7 +23,7 @@ const ROOT = path.dirname(projectConfigFiles)
 
 const combinedRules: ESLintRules = {}
 
-const { DEBUG_ESLINT } = process.env
+const DEBUG_ESLINT = process.env.DEBUG_ESLINT === "true"
 
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
@@ -54,7 +54,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
     // If new and old value are both disabled, then we do not need to
     // store anything here.
     if (isDisabled(combinedRules[ruleName]) && isDisabled(rules[ruleName])) {
-      console.log(`Module ${name}: Defines disabled ${ruleName}! Dropping...`)
+      if (DEBUG_ESLINT) {
+        console.log(`Module ${name}: Defines disabled ${ruleName}! Dropping...`)
+      }
       continue
     }
 
@@ -64,7 +66,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
     // if that is possible.
     if (hasMatchingTypescriptRule(ruleName)) {
       exportRuleName = `@typescript-eslint/${ruleName}`
-      console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
+      if (DEBUG_ESLINT) {
+        console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
+      }
     } else if (blacklist.has(ruleName)) {
       continue
     }
@@ -77,7 +81,7 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
         const newValue = JSON.stringify(ruleValue, sortReplacer, 2)
 
         if (newValue === oldValue) {
-          if (warnSame) {
+          if (warnSame && DEBUG_ESLINT) {
             console.log(`Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`)
           }
           continue
@@ -86,7 +90,9 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
         // Merge values for specific rules
         if (ruleName === "no-restricted-properties") {
           ruleValue.push(...ruleOldValue.slice(1))
-          console.log(`Module ${name}: Merging ${exportRuleName}: ${JSON.stringify(ruleValue, sortReplacer, 2)}`)
+          if (DEBUG_ESLINT) {
+            console.log(`Module ${name}: Merging ${exportRuleName}: ${JSON.stringify(ruleValue, sortReplacer, 2)}`)
+          }
         } else if (DEBUG_ESLINT) {
           console.log(`Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`)
         }

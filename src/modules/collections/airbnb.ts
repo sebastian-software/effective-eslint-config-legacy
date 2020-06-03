@@ -29,9 +29,15 @@ const blocked = new Set([
   // "react/jsx-no-bind",
 
   // Unchanged Values
+  "no-global-assign",
   "jsx-a11y/anchor-has-content",
   "jsx-a11y/heading-has-content",
   "jsx-a11y/no-distracting-elements",
+  "react/jsx-uses-react",
+
+  // Custom settings in our modules
+  "@typescript-eslint/no-unused-vars",
+  "@typescript-eslint/no-use-before-define",
 
   // Have different opinion here
   "no-underscore-dangle", // there is a richer naming check for TS in place
@@ -54,7 +60,6 @@ const blocked = new Set([
 
   // Better solved by TS
   "consistent-return",
-  "no-unused-expressions",
   "react/prop-types",
   "react/require-default-props",
 
