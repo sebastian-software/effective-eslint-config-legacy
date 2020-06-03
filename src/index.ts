@@ -87,13 +87,7 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false)
           continue
         }
 
-        // Merge values for specific rules
-        if (ruleName === "no-restricted-properties") {
-          ruleValue.push(...ruleOldValue.slice(1))
-          if (DEBUG_ESLINT) {
-            console.log(`Module ${name}: Merging ${exportRuleName}: ${JSON.stringify(ruleValue, sortReplacer, 2)}`)
-          }
-        } else if (DEBUG_ESLINT) {
+        if (DEBUG_ESLINT) {
           console.log(`Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`)
         }
       }
