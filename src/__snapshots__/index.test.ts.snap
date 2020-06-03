@@ -268,13 +268,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"@typescript-eslint/prefer-regexp-exec\\": [
       \\"error\\"
     ],
-    \\"@typescript-eslint/quotes\\": [
-      \\"warn\\",
-      \\"double\\",
-      {
-        \\"avoidEscape\\": true
-      }
-    ],
     \\"@typescript-eslint/require-await\\": [
       \\"error\\"
     ],
@@ -1370,10 +1363,6 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"prefer-template\\": [
       \\"warn\\"
-    ],
-    \\"quote-props\\": [
-      \\"warn\\",
-      \\"consistent-as-needed\\"
     ],
     \\"radix\\": [
       \\"error\\"
@@ -2009,13 +1998,6 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"@typescript-eslint/prefer-regexp-exec\\": [
       \\"error\\"
     ],
-    \\"@typescript-eslint/quotes\\": [
-      \\"warn\\",
-      \\"double\\",
-      {
-        \\"avoidEscape\\": true
-      }
-    ],
     \\"@typescript-eslint/require-await\\": [
       \\"error\\"
     ],
@@ -3111,10 +3093,6 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"prefer-template\\": [
       \\"warn\\"
-    ],
-    \\"quote-props\\": [
-      \\"warn\\",
-      \\"consistent-as-needed\\"
     ],
     \\"radix\\": [
       \\"error\\"
