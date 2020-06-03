@@ -20,7 +20,7 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
-function writeDefaultProjectConfig(projectConfig) {
+function writeDefaultProjectConfig(projectConfig: string) {
   fs.writeFileSync(projectConfig, JSON.stringify({
     lib: [ 'dom', 'dom.iterable', 'esnext' ],
     allowJs: true,
@@ -32,7 +32,7 @@ function writeDefaultProjectConfig(projectConfig) {
     moduleResolution: "node",
     resolveJsonModule:true,
     jsx: "react"
-  }), { encoding: "utf-8" })
+  }, null, 2), { encoding: "utf-8" })
 }
 
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
