@@ -88,6 +88,7 @@ const blocked = new Set([
   "react/jsx-indent",
   "react/jsx-indent-props",
   "react/jsx-max-props-per-line",
+  "react/jsx-one-expression-per-line",
   "react/jsx-props-no-multi-spaces",
   "react/jsx-tag-spacing",
   "react/jsx-wrap-multilines",
