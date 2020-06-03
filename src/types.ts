@@ -30,3 +30,9 @@ export interface ESLintConfig extends Linter.Config {
   parserOptions?: ESLintValues
   rules?: ESLintRules
 }
+
+export interface Json {
+  [x: string]: string|number|boolean|Date|Json|JsonArray
+}
+
+export type JsonArray = Array<string|number|boolean|Date|Json|JsonArray>

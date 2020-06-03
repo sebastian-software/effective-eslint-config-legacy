@@ -1,6 +1,6 @@
 /* eslint-disable filenames/match-exported, import/order */
-import { ESLintConfig, ESLintRules } from "./types"
 import { isDisabled, setLevel } from "./util"
+import { ESLintConfig, ESLintRules, Json } from "./types"
 
 import { typescript } from "./modules/typescript"
 import { eslint } from "./modules/eslint"
@@ -16,11 +16,6 @@ import { autofix } from "./modules/autofix"
 const combinedRules: ESLintRules = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
-
-interface Json {
-  [x: string]: string|number|boolean|Date|Json|JsonArray
-}
-type JsonArray = Array<string|number|boolean|Date|Json|JsonArray>
 
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
