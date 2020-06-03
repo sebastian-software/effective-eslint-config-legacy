@@ -1320,22 +1320,6 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowUnboundThis\\": true
       }
     ],
-    \\"prefer-destructuring\\": [
-      \\"warn\\",
-      {
-        \\"VariableDeclarator\\": {
-          \\"array\\": false,
-          \\"object\\": true
-        },
-        \\"AssignmentExpression\\": {
-          \\"array\\": true,
-          \\"object\\": false
-        }
-      },
-      {
-        \\"enforceForRenamedProperties\\": false
-      }
-    ],
     \\"prefer-numeric-literals\\": [
       \\"warn\\"
     ],
@@ -3038,22 +3022,6 @@ exports[`Full JS/TS configuration result 2`] = `
       {
         \\"allowNamedFunctions\\": false,
         \\"allowUnboundThis\\": true
-      }
-    ],
-    \\"prefer-destructuring\\": [
-      \\"warn\\",
-      {
-        \\"VariableDeclarator\\": {
-          \\"array\\": false,
-          \\"object\\": true
-        },
-        \\"AssignmentExpression\\": {
-          \\"array\\": true,
-          \\"object\\": false
-        }
-      },
-      {
-        \\"enforceForRenamedProperties\\": false
       }
     ],
     \\"prefer-numeric-literals\\": [

@@ -16,18 +16,6 @@ import { isDisabled } from "../../util"
 // This list contains value we do not accept. These often times overwrite values from other configs where we
 // prefer the original value
 const blocked = new Set([
-  // "no-global-assign",
-  // "no-labels",
-  // "jsx-a11y/anchor-has-content",
-  // "array-callback-return",
-  // "no-restricted-globals",
-  // "no-else-return",
-  // "prefer-destructuring",
-  // "jsx-a11y/aria-role",
-  // "react/prefer-es6-class",
-  // "react/jsx-props-no-spreading",
-  // "react/jsx-no-bind",
-
   // Unchanged Values
   "no-global-assign",
   "jsx-a11y/anchor-has-content",
@@ -44,6 +32,7 @@ const blocked = new Set([
   "no-console", // a little too strict, okay when used rarely
   "guard-for-in", // not that relevant anymore in todays JS
   "class-methods-use-this", // content too ReactJS specific
+  "prefer-destructuring", // that's definitely more complex for junior devs
   "prefer-const", // there were some articles critical on const. TODO
   "eqeqeq", // smart mode disabled here which is not good
   "import/prefer-default-export", // named exports are much better
