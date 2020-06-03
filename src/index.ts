@@ -1,3 +1,5 @@
+/* eslint-disable filenames/match-exported */
+
 import fs from "fs"
 import path from "path"
 
@@ -18,6 +20,21 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
+function writeDefaultProjectConfig(projectConfig) {
+  fs.writeFileSync(projectConfig, JSON.stringify({
+    lib: [ 'dom', 'dom.iterable', 'esnext' ],
+    allowJs: true,
+    skipLibCheck: true,
+    esModuleInterop: true,
+    allowSyntheticDefaultImports: true,
+    strict: true,
+    module: "esnext",
+    moduleResolution: "node",
+    resolveJsonModule:true,
+    jsx: "react"
+  }), { encoding: "utf-8" })
+}
+
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
 
 if (projectConfig == null) {
@@ -29,7 +46,7 @@ const ROOT = path.dirname(projectConfig)
 if (projectConfig.endsWith("package.json")) {
   console.warn(`Unable to find any project configuration file in the current folder: ${ROOT}! Automatically creating empty one...`)
   projectConfig = projectConfig.replace("package.json", "tsconfig.json")
-  fs.writeFileSync(projectConfig, '{}')
+  writeDefaultProjectConfig(projectConfig)
 }
 
 const combinedRules: ESLintRules = {}
