@@ -44,7 +44,7 @@ if (projectConfig == null) {
 const ROOT = path.dirname(projectConfig)
 
 if (projectConfig.endsWith("package.json")) {
-  console.warn(`Unable to find any project configuration file in the current folder: ${ROOT}! Automatically creating empty one...`)
+  console.warn(`Automatically creating new project configuration in ${ROOT}...`)
   projectConfig = projectConfig.replace("package.json", "tsconfig.json")
   writeDefaultProjectConfig(projectConfig)
 }
