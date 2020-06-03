@@ -63,17 +63,9 @@ export const quality: ESLintRules = {
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
   "@typescript-eslint/consistent-type-assertions": [ "error", { assertionStyle: "as" }],
 
-  "no-useless-constructor": "off",
-  "@typescript-eslint/no-useless-constructor": "error",
-
-  "@typescript-eslint/no-unused-vars": [
-    "error",
-    {
-      args: "none",
-      ignoreRestSiblings: true,
-      varsIgnorePattern: "^_"
-    }
-  ],
+  // Waiting for scope manager. Too many issues in current version.
+  // As of June-2020. https://github.com/typescript-eslint/typescript-eslint/issues/1856
+  "@typescript-eslint/no-unused-vars": "off",
 
   "no-unused-expressions": "off",
   "@typescript-eslint/no-unused-expressions": [
@@ -85,6 +77,7 @@ export const quality: ESLintRules = {
     }
   ],
 
+  // Variable checks are mostly okay. Mix between airbnb and cra.
   "@typescript-eslint/no-use-before-define": [ "error", { classes: false, functions: false }],
 
   // Replaces rule by new one (original came from the recommended preset it seems)
