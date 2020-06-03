@@ -27,7 +27,7 @@ const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
-function sortReplacer(key: string, value: Json) {
+function sortReplacer(key: string, value: Json): Json {
   if (value == null || value.constructor !== Object) {
     return value
   }
