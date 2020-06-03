@@ -313,7 +313,11 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"array-callback-return\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"allowImplicit\\": true,
+        \\"checkForEach\\": false
+      }
     ],
     \\"arrow-body-style\\": [
       \\"warn\\",
@@ -563,7 +567,8 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"jsx-a11y/aria-role\\": [
       \\"error\\",
       {
-        \\"ignoreNonDOM\\": true
+        \\"ignoreNonDom\\": false,
+        \\"ignoreNonDOM\\": false
       }
     ],
     \\"jsx-a11y/aria-unsupported-elements\\": [
@@ -838,6 +843,12 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-duplicate-imports\\": [
       \\"error\\"
     ],
+    \\"no-else-return\\": [
+      \\"error\\",
+      {
+        \\"allowElseIf\\": false
+      }
+    ],
     \\"no-empty\\": [
       \\"error\\",
       {
@@ -875,7 +886,10 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -895,7 +909,7 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-labels\\": [
       \\"error\\",
       {
-        \\"allowLoop\\": true,
+        \\"allowLoop\\": false,
         \\"allowSwitch\\": false
       }
     ],
@@ -1326,6 +1340,22 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowUnboundThis\\": true
       }
     ],
+    \\"prefer-destructuring\\": [
+      \\"error\\",
+      {
+        \\"VariableDeclarator\\": {
+          \\"array\\": false,
+          \\"object\\": true
+        },
+        \\"AssignmentExpression\\": {
+          \\"array\\": true,
+          \\"object\\": false
+        }
+      },
+      {
+        \\"enforceForRenamedProperties\\": false
+      }
+    ],
     \\"prefer-numeric-literals\\": [
       \\"error\\"
     ],
@@ -1399,6 +1429,16 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\",
       \\"syntax\\"
     ],
+    \\"react/jsx-no-bind\\": [
+      \\"error\\",
+      {
+        \\"ignoreRefs\\": true,
+        \\"allowArrowFunctions\\": true,
+        \\"allowFunctions\\": false,
+        \\"allowBind\\": false,
+        \\"ignoreDOMComponents\\": true
+      }
+    ],
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
     ],
@@ -1422,6 +1462,14 @@ exports[`Full JS/TS configuration result 1`] = `
       {
         \\"allowAllCaps\\": true,
         \\"ignore\\": []
+      }
+    ],
+    \\"react/jsx-props-no-spreading\\": [
+      \\"error\\",
+      {
+        \\"html\\": \\"enforce\\",
+        \\"custom\\": \\"enforce\\",
+        \\"exceptions\\": []
       }
     ],
     \\"react/jsx-uses-react\\": [
@@ -2009,7 +2057,11 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"array-callback-return\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"allowImplicit\\": true,
+        \\"checkForEach\\": false
+      }
     ],
     \\"arrow-body-style\\": [
       \\"warn\\",
@@ -2259,7 +2311,8 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"jsx-a11y/aria-role\\": [
       \\"error\\",
       {
-        \\"ignoreNonDOM\\": true
+        \\"ignoreNonDom\\": false,
+        \\"ignoreNonDOM\\": false
       }
     ],
     \\"jsx-a11y/aria-unsupported-elements\\": [
@@ -2534,6 +2587,12 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-duplicate-imports\\": [
       \\"error\\"
     ],
+    \\"no-else-return\\": [
+      \\"error\\",
+      {
+        \\"allowElseIf\\": false
+      }
+    ],
     \\"no-empty\\": [
       \\"error\\",
       {
@@ -2571,7 +2630,10 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -2591,7 +2653,7 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-labels\\": [
       \\"error\\",
       {
-        \\"allowLoop\\": true,
+        \\"allowLoop\\": false,
         \\"allowSwitch\\": false
       }
     ],
@@ -2709,6 +2771,8 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
+      \\"isFinite\\",
+      \\"isNaN\\",
       \\"addEventListener\\",
       \\"blur\\",
       \\"close\\",
@@ -3020,6 +3084,22 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"allowUnboundThis\\": true
       }
     ],
+    \\"prefer-destructuring\\": [
+      \\"error\\",
+      {
+        \\"VariableDeclarator\\": {
+          \\"array\\": false,
+          \\"object\\": true
+        },
+        \\"AssignmentExpression\\": {
+          \\"array\\": true,
+          \\"object\\": false
+        }
+      },
+      {
+        \\"enforceForRenamedProperties\\": false
+      }
+    ],
     \\"prefer-numeric-literals\\": [
       \\"error\\"
     ],
@@ -3093,6 +3173,16 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\",
       \\"syntax\\"
     ],
+    \\"react/jsx-no-bind\\": [
+      \\"error\\",
+      {
+        \\"ignoreRefs\\": true,
+        \\"allowArrowFunctions\\": true,
+        \\"allowFunctions\\": false,
+        \\"allowBind\\": false,
+        \\"ignoreDOMComponents\\": true
+      }
+    ],
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
     ],
@@ -3116,6 +3206,14 @@ exports[`Full JS/TS configuration result 2`] = `
       {
         \\"allowAllCaps\\": true,
         \\"ignore\\": []
+      }
+    ],
+    \\"react/jsx-props-no-spreading\\": [
+      \\"error\\",
+      {
+        \\"html\\": \\"enforce\\",
+        \\"custom\\": \\"enforce\\",
+        \\"exceptions\\": []
       }
     ],
     \\"react/jsx-uses-react\\": [

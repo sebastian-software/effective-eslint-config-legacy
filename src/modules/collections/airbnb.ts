@@ -28,16 +28,10 @@ const blocked = new Set([
   // "react/jsx-props-no-spreading",
   // "react/jsx-no-bind",
 
-  // Own configuration in quality
-  "import/order",
-  "import/extensions",
-  "@typescript-eslint/no-use-before-define",
-
   // Unchanged Values
   "jsx-a11y/anchor-has-content",
   "jsx-a11y/heading-has-content",
   "jsx-a11y/no-distracting-elements",
-  "react/jsx-uses-react",
 
   // Have different opinion here
   "no-underscore-dangle", // there is a richer naming check for TS in place
