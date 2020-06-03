@@ -18,15 +18,18 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
-const projectConfigFiles = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
-const ROOT = path.dirname(projectConfigFiles)
+let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
 
-if (projectConfigFiles == null) {
+if (projectConfig == null) {
   throw new Error(`Unable to find any package configuration file in the current folder: ${process.cwd()}!`)
 }
 
-if (projectConfigFiles.endsWith("package.json")) {
-  throw new Error(`Unable to find any project configuration file in the current folder: ${ROOT}!`)
+const ROOT = path.dirname(projectConfig)
+
+if (projectConfig.endsWith("package.json")) {
+  console.warn(`Unable to find any project configuration file in the current folder: ${ROOT}! Automatically creating empty one...`)
+  projectConfig = projectConfig.replace("package.json", "tsconfig.json")
+  fs.writeFileSync(projectConfig, '{}')
 }
 
 const combinedRules: ESLintRules = {}
@@ -192,7 +195,7 @@ const config: ESLintConfig = {
 
     // Required for linting with type information
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-    project: projectConfigFiles,
+    project: projectConfig,
     tsconfigRootDir: ROOT,
 
     // typescript-eslint specific options
