@@ -15,7 +15,6 @@ exports[`Full configuration result 1`] = `
   \\"parser\\": \\"[PATH]\\",
   \\"parserOptions\\": {
     \\"ecmaFeatures\\": {
-      \\"impliedStrict\\": true,
       \\"jsx\\": true
     },
     \\"ecmaVersion\\": 2018,
