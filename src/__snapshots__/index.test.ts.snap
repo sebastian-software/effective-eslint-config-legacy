@@ -59,7 +59,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/dot-notation\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
@@ -155,7 +155,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-extra-non-null-assertion\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-extra-parens\\": [
       \\"warn\\",
@@ -170,7 +170,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"@typescript-eslint/no-extra-semi\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-floating-promises\\": [
       \\"error\\"
@@ -221,7 +221,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/no-unnecessary-type-assertion\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-unsafe-assignment\\": [
       \\"warn\\"
@@ -260,7 +260,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/prefer-as-const\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
       \\"warn\\"
@@ -1800,7 +1800,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/dot-notation\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
@@ -1896,7 +1896,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-extra-non-null-assertion\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-extra-parens\\": [
       \\"warn\\",
@@ -1911,7 +1911,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"@typescript-eslint/no-extra-semi\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-floating-promises\\": [
       \\"error\\"
@@ -1962,7 +1962,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/no-unnecessary-type-assertion\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-unsafe-assignment\\": [
       \\"off\\"
@@ -2001,7 +2001,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/prefer-as-const\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
       \\"warn\\"

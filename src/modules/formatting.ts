@@ -32,10 +32,6 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  // The "quotes" setting is required to make "quote-props" work correctly.
-  "quotes": [ "warn", "double", { avoidEscape: true }],
-  "quote-props": [ "warn", "consistent-as-needed" ],
-
   "linebreak-style": [ "warn", "unix" ],
 
   "no-trailing-spaces": [ "warn" ],

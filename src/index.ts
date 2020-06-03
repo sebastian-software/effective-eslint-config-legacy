@@ -42,7 +42,7 @@ function sortReplacer(key: string, value: Json): Json {
   return result
 }
 
-function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
+function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false) {
   for (const ruleName in rules) {
     const ruleValue = rules[ruleName]
 
@@ -66,7 +66,7 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
     // if that is possible.
     if (hasMatchingTypescriptRule(ruleName)) {
       exportRuleName = `@typescript-eslint/${ruleName}`
-      if (DEBUG_ESLINT) {
+      if (DEBUG_ESLINT || warnLocale) {
         console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
       }
     } else if (blacklist.has(ruleName)) {
@@ -81,7 +81,7 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
         const newValue = JSON.stringify(ruleValue, sortReplacer, 2)
 
         if (newValue === oldValue) {
-          if (warnSame && DEBUG_ESLINT) {
+          if (warnLocale && DEBUG_ESLINT) {
             console.log(`Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`)
           }
           continue
