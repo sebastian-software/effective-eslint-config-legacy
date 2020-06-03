@@ -83,6 +83,12 @@ export const quality: ESLintRules = {
   // Replaces rule by new one (original came from the recommended preset it seems)
   "@typescript-eslint/consistent-type-definitions": "error",
 
+  // Relax some strict TS checks to warning level
+  "@typescript-eslint/no-unsafe-member-access": "warn",
+  "@typescript-eslint/no-explicit-any": "warn",
+  "@typescript-eslint/no-unsafe-assignment": "warn",
+  "@typescript-eslint/no-unsafe-call": "warn",
+
   // Activate our concepts of formatting imports
   "import/order": [
     "error",

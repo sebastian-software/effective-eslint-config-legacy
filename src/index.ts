@@ -1,3 +1,8 @@
+import fs from "fs"
+import path from "path"
+
+import rootPath from "app-root-path"
+
 /* eslint-disable filenames/match-exported, import/order */
 import { isDisabled, setLevel } from "./util"
 import { ESLintConfig, ESLintRules, Json } from "./types"
@@ -12,6 +17,9 @@ import { shopify } from "./modules/shopify"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
+
+const ROOT = rootPath.toString()
+const projectConfigFiles = [ "./tsconfig.json", "./jsconfig.json" ].filter((fileName) => fs.existsSync(path.join(ROOT, fileName)))
 
 const combinedRules: ESLintRules = {}
 
@@ -170,6 +178,11 @@ const config: ESLintConfig = {
       jsx: true,
       impliedStrict: true
     },
+
+    // Required for linting with type information
+    // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
+    project: projectConfigFiles,
+    tsconfigRootDir: ROOT,
 
     // typescript-eslint specific options
     warnOnUnsupportedTypeScriptVersion: true

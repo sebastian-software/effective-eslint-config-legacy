@@ -1,9 +1,9 @@
 import { configs } from "@typescript-eslint/eslint-plugin"
 
 import { ESLintRules } from "../types"
-import { filterWithBlacklist } from "../util"
 
-const allRules = configs.recommended.rules
+const recommended = configs.recommended.rules
+const recommendedTypes = configs["recommended-requiring-type-checking"].rules
 
 const newRules: ESLintRules = {
   // Via: https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md#enforce-the-codebase-follows-eslints-camelcase-conventions
@@ -45,6 +45,7 @@ const newRules: ESLintRules = {
 }
 
 export const typescript: ESLintRules = {
-  ...filterWithBlacklist(allRules),
+  ...recommended,
+  ...recommendedTypes,
   ...newRules
 }
