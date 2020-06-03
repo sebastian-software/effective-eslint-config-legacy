@@ -4,7 +4,7 @@ import path from "path"
 import rootPath from "app-root-path"
 
 /* eslint-disable filenames/match-exported, import/order */
-import { isDisabled, setLevel } from "./util"
+import { blacklist, hasMatchingTypescriptRule, isDisabled, setLevel } from "./util"
 import { ESLintConfig, ESLintRules, Json } from "./types"
 
 import { typescript } from "./modules/typescript"
@@ -122,9 +122,13 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
 mergeWithWarnings(typescript, "typescript")
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
+
+// plugin scope only
 mergeWithWarnings(airbnb, "airbnb")
 mergeWithWarnings(jsdoc, "jsdoc")
 mergeWithWarnings(unicorn, "unicorn")
+
+// our local settings/overrides
 mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
@@ -175,8 +179,7 @@ const config: ESLintConfig = {
     ecmaVersion: 2018,
     sourceType: "module",
     ecmaFeatures: {
-      jsx: true,
-      impliedStrict: true
+      jsx: true
     },
 
     // Required for linting with type information
@@ -196,7 +199,7 @@ const config: ESLintConfig = {
       files: [ "*.test.{js,jsx,ts,tsx}", "**/test/**/*.{js,jsx,ts,tsx}" ],
       extends: [ "plugin:jest/recommended" ],
       rules: {
-        // Reduce config from recommended to warn for autofixable rules
+        // Reduce config from recommended to warn for auto-fixable rules
         "jest/no-focused-tests": "warn",
         "jest/no-test-callback": "warn",
         "jest/no-test-prefixes": "warn",
