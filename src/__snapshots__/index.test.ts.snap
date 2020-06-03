@@ -439,7 +439,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"import/no-duplicates\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"import/no-dynamic-require\\": [
       \\"error\\"
@@ -467,7 +467,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"import/no-useless-path-segments\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"commonjs\\": true
       }
@@ -844,7 +844,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-else-return\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowElseIf\\": false
       }
@@ -883,7 +883,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-floating-decimal\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-global-assign\\": [
       \\"error\\"
@@ -958,7 +958,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"no-multi-spaces\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignoreEOLComments\\": false
       }
@@ -1188,7 +1188,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"no-undef-init\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-unexpected-multiline\\": [
       \\"error\\"
@@ -1226,7 +1226,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"no-useless-return\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-var\\": [
       \\"warn\\"
@@ -1252,7 +1252,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"object-shorthand\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"always\\",
       {
         \\"ignoreConstructors\\": false,
@@ -1331,14 +1331,14 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"prefer-arrow-callback\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowNamedFunctions\\": false,
         \\"allowUnboundThis\\": true
       }
     ],
     \\"prefer-destructuring\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"VariableDeclarator\\": {
           \\"array\\": false,
@@ -1354,7 +1354,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"prefer-numeric-literals\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"prefer-promise-reject-errors\\": [
       \\"error\\",
@@ -1369,7 +1369,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"prefer-template\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"quote-props\\": [
       \\"warn\\",
@@ -1409,21 +1409,21 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"react/jsx-boolean-value\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\",
       {
         \\"always\\": []
       }
     ],
     \\"react/jsx-curly-brace-presence\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"props\\": \\"never\\",
         \\"children\\": \\"never\\"
       }
     ],
     \\"react/jsx-fragments\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"syntax\\"
     ],
     \\"react/jsx-no-bind\\": [
@@ -1521,7 +1521,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"react/no-unknown-property\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/prefer-stateless-function\\": [
       \\"error\\",
@@ -1536,7 +1536,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"react/self-closing-comp\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/style-prop-object\\": [
       \\"error\\"
@@ -1623,7 +1623,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"template-curly-spacing\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"unicode-bom\\": [
       \\"warn\\",
@@ -2180,7 +2180,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"import/no-duplicates\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"import/no-dynamic-require\\": [
       \\"error\\"
@@ -2208,7 +2208,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"import/no-useless-path-segments\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"commonjs\\": true
       }
@@ -2585,7 +2585,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"no-else-return\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowElseIf\\": false
       }
@@ -2624,7 +2624,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"no-floating-decimal\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-global-assign\\": [
       \\"error\\"
@@ -2699,7 +2699,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"no-multi-spaces\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignoreEOLComments\\": false
       }
@@ -2929,7 +2929,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"no-undef-init\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-unexpected-multiline\\": [
       \\"error\\"
@@ -2967,7 +2967,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"no-useless-return\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"no-var\\": [
       \\"warn\\"
@@ -2993,7 +2993,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"object-shorthand\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"always\\",
       {
         \\"ignoreConstructors\\": false,
@@ -3072,14 +3072,14 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"prefer-arrow-callback\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"allowNamedFunctions\\": false,
         \\"allowUnboundThis\\": true
       }
     ],
     \\"prefer-destructuring\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"VariableDeclarator\\": {
           \\"array\\": false,
@@ -3095,7 +3095,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"prefer-numeric-literals\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"prefer-promise-reject-errors\\": [
       \\"error\\",
@@ -3110,7 +3110,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"prefer-template\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"quote-props\\": [
       \\"warn\\",
@@ -3150,21 +3150,21 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"react/jsx-boolean-value\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"never\\",
       {
         \\"always\\": []
       }
     ],
     \\"react/jsx-curly-brace-presence\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"props\\": \\"never\\",
         \\"children\\": \\"never\\"
       }
     ],
     \\"react/jsx-fragments\\": [
-      \\"error\\",
+      \\"warn\\",
       \\"syntax\\"
     ],
     \\"react/jsx-no-bind\\": [
@@ -3262,7 +3262,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"react/no-unknown-property\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/prefer-stateless-function\\": [
       \\"error\\",
@@ -3277,7 +3277,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"react/self-closing-comp\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/style-prop-object\\": [
       \\"error\\"
@@ -3364,7 +3364,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"template-curly-spacing\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"unicode-bom\\": [
       \\"warn\\",
