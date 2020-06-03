@@ -1,4 +1,4 @@
-import { rules } from "eslint-config-react-app"
+import { rules as reactRules } from "eslint-config-react-app"
 
 import { ESLintRules } from "../types"
 import { blacklist, hasMatchingTypescriptRule, setLevel } from "../util"
@@ -11,23 +11,15 @@ const flowtypeRules = /^(flowtype\/\S+)$/
 // Last tested 2020, June, 02nd
 const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
 
-function merge(data: ESLintRules): void {
-  const ruleNames = Object.keys(data)
-  ruleNames.forEach((name: string): void => {
-    if (flowtypeRules.test(name) || deprecatedRules.has(name)) {
+function merge(rules: ESLintRules): void {
+  const ruleNames = Object.keys(rules)
+  ruleNames.forEach((ruleName: string): void => {
+    if (flowtypeRules.test(ruleName) || deprecatedRules.has(ruleName)) {
       return
     }
 
-    let value = data[name]
-    let exportName = name
-
-    if (blacklist.has(name)) {
-      if (hasMatchingTypescriptRule(name)) {
-        exportName = `@typescript-eslint/${name}`
-      } else {
-        return
-      }
-    }
+    let value = rules[ruleName]
+    let exportName = ruleName
 
     // Switch rule state to "error". CRA uses "warn" for errors to
     // not break the build, but to match our infrastructure this would
@@ -38,4 +30,4 @@ function merge(data: ESLintRules): void {
   })
 }
 
-merge(rules)
+merge(reactRules)

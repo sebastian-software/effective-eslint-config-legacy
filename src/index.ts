@@ -17,50 +17,80 @@ const combinedRules: ESLintRules = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
+interface Json {
+  [x: string]: string|number|boolean|Date|Json|JsonArray
+}
+type JsonArray = Array<string|number|boolean|Date|Json|JsonArray>
+
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
-function sortReplacer(key: string, value: any) {
+function sortReplacer(key: string, value: Json) {
   if (value == null || value.constructor !== Object) {
     return value
   }
-  return Object.keys(value)
-    .sort()
-    .reduce((result, name) => {
-      result[name] = value[name]
-      return result
-    }, {})
+
+  const keys = Object.keys(value)
+  keys.sort()
+
+  const result: ESLintRules = {}
+  keys.forEach((name) => {
+    result[name] = value[name]
+  })
+  return result
 }
 
 function mergeWithWarnings(rules: ESLintRules, name: string, warnSame = false) {
-  for (const rule in rules) {
-    if (!rules[rule]) {
+  for (const ruleName in rules) {
+    const ruleValue = rules[ruleName]
+
+    // Filter entries without actual value
+    if (!ruleValue) {
       continue
-    }
-
-    if (rule in combinedRules) {
-      const oldValue = JSON.stringify(combinedRules[rule], sortReplacer)
-      const newValue = JSON.stringify(rules[rule], sortReplacer)
-
-      if (newValue === oldValue) {
-        if (warnSame) {
-          console.log(`Section ${name} defines identical value for ${rule}! Dropping...`)
-        }
-        continue
-      }
-
-      if (DEBUG_ESLINT) {
-        console.log(`Section ${name} overrides ${rule}: ${oldValue} => ${newValue}`)
-      }
     }
 
     // If new and old value are both disabled, then we do not need to
     // store anything here.
-    if (isDisabled(combinedRules[rule]) && isDisabled(rules[rule])) {
-      console.log(`Section ${name} defines disabled ${rule}! Dropping...`)
+    if (isDisabled(combinedRules[ruleName]) && isDisabled(rules[ruleName])) {
+      console.log(`Module ${name}: Defines disabled ${ruleName}! Dropping...`)
       continue
     }
 
-    combinedRules[rule] = rules[rule]
+    let exportRuleName = ruleName
+
+    // Take care of rules blocked by TS plugin and adjust to new replaced name
+    // if that is possible.
+    if (hasMatchingTypescriptRule(ruleName)) {
+      exportRuleName = `@typescript-eslint/${ruleName}`
+      console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
+    } else if (blacklist.has(ruleName)) {
+      continue
+    }
+
+    if (exportRuleName in combinedRules) {
+      const ruleOldValue = combinedRules[exportRuleName]
+
+      if (ruleOldValue) {
+        const oldValue = JSON.stringify(ruleOldValue, sortReplacer, 2)
+        const newValue = JSON.stringify(ruleValue, sortReplacer, 2)
+
+        if (newValue === oldValue) {
+          if (warnSame) {
+            console.log(`Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`)
+          }
+          continue
+        }
+
+        // Merge values for specific rules
+        if (ruleName === "no-restricted-properties") {
+          ruleValue.push(...ruleOldValue.slice(1))
+          console.log(`Module ${name}: Merging ${exportRuleName}: ${JSON.stringify(ruleValue, sortReplacer, 2)}`)
+        } else if (DEBUG_ESLINT) {
+          console.log(`Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`)
+        }
+      }
+    }
+
+    combinedRules[exportRuleName] = ruleValue
   }
 }
 
@@ -74,14 +104,14 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
       const oldValue = combinedRules[rule]
       if (isDisabled(oldValue)) {
         if (DEBUG_ESLINT) {
-          console.log(`Level override for previously disabled rule: ${rule}. Dropping...`)
+          console.log(`Module ${name}: Level override for previously disabled rule: ${rule}. Dropping...`)
         }
         continue
       }
 
       combinedRules[rule] = setLevel(oldValue, rules[rule])
     } else if (DEBUG_ESLINT) {
-      console.log(`Level override for previously unconfigured rule: ${rule}. Dropping...`)
+      console.log(`Module ${name}: Level override for previously unconfigured rule: ${rule}. Dropping...`)
     }
   }
 }

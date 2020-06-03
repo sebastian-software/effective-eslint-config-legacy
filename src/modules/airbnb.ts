@@ -11,7 +11,7 @@ import reactHooks from "eslint-config-airbnb/rules/react-hooks"
 import reactAccessibility from "eslint-config-airbnb/rules/react-a11y"
 
 import { ESLintRules } from "../types"
-import { blacklist, isDisabled } from "../util"
+import { isDisabled } from "../util"
 
 // This list contains value we do not accept. These often times overwrite values from other configs where we
 // prefer the original value
@@ -100,7 +100,7 @@ export const airbnb: ESLintRules = {}
 
 function merge(rules: ESLintRules): void {
   for (const name in rules) {
-    if (blacklist.has(name) || blocked.has(name)) {
+    if (blocked.has(name)) {
       continue
     }
 
