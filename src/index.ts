@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-import rootPath from "app-root-path"
+import findUp from "find-up"
 
 /* eslint-disable filenames/match-exported, import/order */
 import { blacklist, hasMatchingTypescriptRule, isDisabled, setLevel } from "./util"
@@ -18,8 +18,10 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
-const ROOT = rootPath.toString()
-const projectConfigFiles = [ "./tsconfig.json", "./jsconfig.json" ].filter((fileName) => fs.existsSync(path.join(ROOT, fileName)))
+const projectConfigFiles = findUp.sync([ "./tsconfig.json", "./jsconfig.json" ])
+const ROOT = path.dirname(projectConfigFiles)
+
+console.log("ROOT:", ROOT, projectConfigFiles)
 
 const combinedRules: ESLintRules = {}
 
