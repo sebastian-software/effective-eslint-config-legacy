@@ -1,0 +1,1 @@
+if (obj = null) run()

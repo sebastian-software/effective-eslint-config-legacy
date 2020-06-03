@@ -1,5 +1,7 @@
 import { CLIEngine } from "eslint"
 
+import { Json } from "./types"
+
 function cloneWithSortedKeys(object): any {
   const clone: { [key: string]: any } = {}
   const keys = Object.keys(object).sort()
@@ -24,6 +26,19 @@ function extractConfig(cli: CLIEngine, file: string) {
   return JSON.stringify(sorted, null, 2)
 }
 
+function runOnFile(fileName: string): Json {
+  const cli = new CLIEngine({
+    useEslintrc: false,
+    ignore: false,
+    configFile: "dist/index.js"
+  })
+
+  const retVal = cli.executeOnFiles([ fileName ]) as Json
+  // eslint-disable-next-line no-param-reassign
+  (retVal.results as Array<Json>).forEach((result) => { result.filePath = "[PATH]" })
+  return retVal
+}
+
 test("Full configuration result", () => {
   const cli = new CLIEngine({
     useEslintrc: false,
@@ -34,25 +49,9 @@ test("Full configuration result", () => {
 })
 
 test("load config in eslint to validate all rule syntax is correct", () => {
-  const cli = new CLIEngine({
-    useEslintrc: false,
-    configFile: "dist/index.js"
-  })
-
-  const code = "const first = 1\nfunction second() {}\nsecond(first)\n"
-  const result = cli.executeOnText(code)
-
-  expect(result).toMatchSnapshot()
+  expect(runOnFile("./src/fixtures/test1.ts")).toMatchSnapshot()
 })
 
 test("reports undeclared variable", () => {
-  const cli = new CLIEngine({
-    useEslintrc: false,
-    configFile: "dist/index.js"
-  })
-
-  const code = "if (obj=null) run()"
-  const result = cli.executeOnText(code)
-
-  expect(result).toMatchSnapshot()
+  expect(runOnFile("./src/fixtures/test2.ts")).toMatchSnapshot()
 })

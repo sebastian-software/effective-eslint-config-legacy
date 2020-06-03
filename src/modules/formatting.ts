@@ -87,9 +87,6 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  // Replaced by @typescript-eslint/naming-convention
-  "no-underscore-dangle": "off",
-
   "@typescript-eslint/space-before-function-paren": [
     "warn",
     {
