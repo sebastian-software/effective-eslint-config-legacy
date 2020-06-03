@@ -1,4 +1,4 @@
-import { ESLintRules } from "../types"
+import { ESLintRules } from "../../types"
 
 export const shopify: ESLintRules = {
   // Lean Shopify Plugin Extensions

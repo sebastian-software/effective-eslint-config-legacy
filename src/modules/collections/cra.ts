@@ -1,7 +1,7 @@
 import { rules as reactRules } from "eslint-config-react-app"
 
-import { ESLintRules } from "../types"
-import { blacklist, hasMatchingTypescriptRule, setLevel } from "../util"
+import { ESLintRules } from "../../types"
+import { blacklist, hasMatchingTypescriptRule, setLevel } from "../../util"
 
 export const cra: ESLintRules = {}
 

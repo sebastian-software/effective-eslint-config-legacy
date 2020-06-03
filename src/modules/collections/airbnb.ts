@@ -10,28 +10,23 @@ import react from "eslint-config-airbnb/rules/react"
 import reactHooks from "eslint-config-airbnb/rules/react-hooks"
 import reactAccessibility from "eslint-config-airbnb/rules/react-a11y"
 
-import { ESLintRules } from "../types"
-import { isDisabled } from "../util"
+import { ESLintRules } from "../../types"
+import { isDisabled } from "../../util"
 
 // This list contains value we do not accept. These often times overwrite values from other configs where we
 // prefer the original value
 const blocked = new Set([
-  "no-global-assign",
-  "no-labels",
-  "jsx-a11y/anchor-has-content",
-  "array-callback-return",
-  "no-restricted-globals",
-  "no-else-return",
-  "prefer-destructuring",
-
-  "import/prefer-default-export", // named exports are much better
-  "import/no-extraneous-dependencies", // does not work well in mono repos
-
-  "jsx-a11y/aria-role",
-
-  "react/prefer-es6-class",
-  "react/jsx-props-no-spreading",
-  "react/jsx-no-bind",
+  // "no-global-assign",
+  // "no-labels",
+  // "jsx-a11y/anchor-has-content",
+  // "array-callback-return",
+  // "no-restricted-globals",
+  // "no-else-return",
+  // "prefer-destructuring",
+  // "jsx-a11y/aria-role",
+  // "react/prefer-es6-class",
+  // "react/jsx-props-no-spreading",
+  // "react/jsx-no-bind",
 
   // Own configuration in quality
   "import/order",
@@ -39,8 +34,9 @@ const blocked = new Set([
   "@typescript-eslint/no-use-before-define",
 
   // Unchanged Values
-  "jsx-a11y/no-distracting-elements",
+  "jsx-a11y/anchor-has-content",
   "jsx-a11y/heading-has-content",
+  "jsx-a11y/no-distracting-elements",
   "react/jsx-uses-react",
 
   // Have different opinion here
@@ -50,6 +46,8 @@ const blocked = new Set([
   "class-methods-use-this", // content too ReactJS specific
   "prefer-const", // there were some articles critical on const. TODO
   "eqeqeq", // smart mode disabled here which is not good
+  "import/prefer-default-export", // named exports are much better
+  "import/no-extraneous-dependencies", // does not work well in mono repos
 
   // Focused on older pre-hook React
   "react/forbid-foreign-prop-types",

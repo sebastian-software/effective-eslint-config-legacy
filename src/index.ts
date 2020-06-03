@@ -7,13 +7,13 @@ import findUp from "find-up"
 import { blacklist, hasMatchingTypescriptRule, isDisabled, setLevel } from "./util"
 import { ESLintConfig, ESLintRules, Json } from "./types"
 
-import { typescript } from "./modules/typescript"
-import { eslint } from "./modules/eslint"
-import { cra } from "./modules/cra"
-import { airbnb } from "./modules/airbnb"
-import { jsdoc } from "./modules/jsdoc"
-import { unicorn } from "./modules/unicorn"
-import { shopify } from "./modules/shopify"
+import { typescript } from "./modules/collections/typescript"
+import { eslint } from "./modules/collections/eslint"
+import { cra } from "./modules/collections/cra"
+import { airbnb } from "./modules/collections/airbnb"
+import { jsdoc } from "./modules/sandboxed/jsdoc"
+import { unicorn } from "./modules/sandboxed/unicorn"
+import { shopify } from "./modules/sandboxed/shopify"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
@@ -23,7 +23,7 @@ const ROOT = path.dirname(projectConfigFiles)
 
 const combinedRules: ESLintRules = {}
 
-const DEBUG_ESLINT = process.env.DEBUG_ESLINT
+const { DEBUG_ESLINT } = process.env
 
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
