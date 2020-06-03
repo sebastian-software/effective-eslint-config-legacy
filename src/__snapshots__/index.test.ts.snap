@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Full configuration result 1`] = `
+exports[`Full JS/TS configuration result 1`] = `
 "{
   \\"env\\": {
     \\"browser\\": true,
@@ -19,9 +19,7 @@ exports[`Full configuration result 1`] = `
       \\"jsx\\": true
     },
     \\"ecmaVersion\\": 2018,
-    \\"project\\": [
-      \\"./tsconfig.json\\"
-    ],
+    \\"project\\": \\"[PATH]\\",
     \\"sourceType\\": \\"module\\",
     \\"tsconfigRootDir\\": \\"[PATH]\\",
     \\"warnOnUnsupportedTypeScriptVersion\\": true
@@ -46,7 +44,7 @@ exports[`Full configuration result 1`] = `
       \\"error\\"
     ],
     \\"@typescript-eslint/ban-ts-comment\\": [
-      \\"warn\\"
+      \\"error\\"
     ],
     \\"@typescript-eslint/ban-types\\": [
       \\"warn\\"
@@ -235,7 +233,7 @@ exports[`Full configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-unsafe-return\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/no-unused-expressions\\": [
       \\"error\\",
@@ -1417,11 +1415,1699 @@ exports[`Full configuration result 1`] = `
     \\"react/jsx-no-undef\\": [
       \\"error\\"
     ],
-    \\"react/jsx-one-expression-per-line\\": [
+    \\"react/jsx-pascal-case\\": [
       \\"error\\",
       {
-        \\"allow\\": \\"single-child\\"
+        \\"allowAllCaps\\": true,
+        \\"ignore\\": []
       }
+    ],
+    \\"react/jsx-uses-react\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-uses-vars\\": [
+      \\"error\\"
+    ],
+    \\"react/no-access-state-in-setstate\\": [
+      \\"error\\"
+    ],
+    \\"react/no-array-index-key\\": [
+      \\"error\\"
+    ],
+    \\"react/no-children-prop\\": [
+      \\"error\\"
+    ],
+    \\"react/no-danger\\": [
+      \\"warn\\"
+    ],
+    \\"react/no-danger-with-children\\": [
+      \\"error\\"
+    ],
+    \\"react/no-deprecated\\": [
+      \\"error\\"
+    ],
+    \\"react/no-did-update-set-state\\": [
+      \\"error\\"
+    ],
+    \\"react/no-direct-mutation-state\\": [
+      \\"error\\"
+    ],
+    \\"react/no-find-dom-node\\": [
+      \\"error\\"
+    ],
+    \\"react/no-is-mounted\\": [
+      \\"error\\"
+    ],
+    \\"react/no-render-return-value\\": [
+      \\"error\\"
+    ],
+    \\"react/no-string-refs\\": [
+      \\"error\\"
+    ],
+    \\"react/no-this-in-sfc\\": [
+      \\"error\\"
+    ],
+    \\"react/no-typos\\": [
+      \\"error\\"
+    ],
+    \\"react/no-unescaped-entities\\": [
+      \\"error\\"
+    ],
+    \\"react/no-unknown-property\\": [
+      \\"error\\"
+    ],
+    \\"react/prefer-stateless-function\\": [
+      \\"error\\",
+      {
+        \\"ignorePureComponents\\": true
+      }
+    ],
+    \\"react/react-in-jsx-scope\\": [
+      \\"error\\"
+    ],
+    \\"react/require-render-return\\": [
+      \\"error\\"
+    ],
+    \\"react/self-closing-comp\\": [
+      \\"error\\"
+    ],
+    \\"react/style-prop-object\\": [
+      \\"error\\"
+    ],
+    \\"react/void-dom-elements-no-children\\": [
+      \\"error\\"
+    ],
+    \\"require-yield\\": [
+      \\"error\\"
+    ],
+    \\"rest-spread-spacing\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"shopify-lean/jsx-no-complex-expressions\\": [
+      \\"error\\"
+    ],
+    \\"shopify-lean/jsx-no-hardcoded-content\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/jsx-prefer-fragment-wrappers\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/no-ancestor-directory-import\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/no-namespace-imports\\": [
+      \\"error\\"
+    ],
+    \\"shopify-lean/no-useless-computed-properties\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/prefer-class-properties\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/prefer-early-return\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/prefer-module-scope-constants\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/react-no-multiple-render-methods\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/react-prefer-private-members\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/react-type-state\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/restrict-full-import\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/strict-component-boundaries\\": [
+      \\"warn\\"
+    ],
+    \\"shopify-lean/typescript/prefer-singular-enums\\": [
+      \\"warn\\"
+    ],
+    \\"sort-imports\\": [
+      \\"warn\\",
+      {
+        \\"ignoreDeclarationSort\\": true,
+        \\"ignoreCase\\": false,
+        \\"ignoreMemberSort\\": false
+      }
+    ],
+    \\"spaced-comment\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"exceptions\\": [
+          \\"*\\",
+          \\"=\\",
+          \\"-\\"
+        ]
+      }
+    ],
+    \\"strict\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"symbol-description\\": [
+      \\"error\\"
+    ],
+    \\"template-curly-spacing\\": [
+      \\"error\\"
+    ],
+    \\"unicode-bom\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"unicorn/better-regex\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/consistent-function-scoping\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/custom-error-definition\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/explicit-length-check\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/filename-case\\": [
+      \\"warn\\",
+      {
+        \\"cases\\": {
+          \\"camelCase\\": true,
+          \\"pascalCase\\": true
+        }
+      }
+    ],
+    \\"unicorn/import-index\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/new-for-builtins\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-array-instanceof\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-nested-ternary\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-new-buffer\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-unreadable-array-destructuring\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-unsafe-regex\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-useless-undefined\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/no-zero-fractions\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-includes\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-optional-catch-binding\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-set-has\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-spread\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-starts-ends-with\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-string-slice\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/prefer-type-error\\": [
+      \\"warn\\"
+    ],
+    \\"unicorn/throw-new-error\\": [
+      \\"warn\\"
+    ],
+    \\"use-isnan\\": [
+      \\"error\\"
+    ],
+    \\"wrap-regex\\": [
+      \\"warn\\"
+    ]
+  },
+  \\"settings\\": {
+    \\"import/extensions\\": [
+      \\".d.ts\\",
+      \\".js\\",
+      \\".jsx\\",
+      \\".ts\\",
+      \\".tsx\\",
+      \\".mjs\\",
+      \\".json\\"
+    ],
+    \\"import/resolver\\": {
+      \\"babel-module\\": {
+        \\"alias\\": {
+          \\"-\\": \\"./src/\\"
+        },
+        \\"extensions\\": [
+          \\".js\\",
+          \\".jsx\\",
+          \\".d.ts\\",
+          \\".ts\\",
+          \\".tsx\\",
+          \\".mjs\\",
+          \\".json\\"
+        ]
+      }
+    },
+    \\"react\\": {
+      \\"version\\": \\"detect\\"
+    }
+  }
+}"
+`;
+
+exports[`Full JS/TS configuration result 2`] = `
+"{
+  \\"env\\": {
+    \\"browser\\": true,
+    \\"es6\\": true,
+    \\"node\\": true,
+    \\"shared-node-browser\\": true
+  },
+  \\"globals\\": {},
+  \\"ignorePatterns\\": [
+    \\"dist\\",
+    \\"src/fixtures\\"
+  ],
+  \\"parser\\": \\"[PATH]\\",
+  \\"parserOptions\\": {
+    \\"ecmaFeatures\\": {
+      \\"jsx\\": true
+    },
+    \\"ecmaVersion\\": 2018,
+    \\"project\\": \\"[PATH]\\",
+    \\"sourceType\\": \\"module\\",
+    \\"tsconfigRootDir\\": \\"[PATH]\\",
+    \\"warnOnUnsupportedTypeScriptVersion\\": true
+  },
+  \\"plugins\\": [
+    \\"filenames\\",
+    \\"jest\\",
+    \\"unicorn\\",
+    \\"shopify-lean\\",
+    \\"jsdoc\\",
+    \\"react-hooks\\",
+    \\"jsx-a11y\\",
+    \\"react\\",
+    \\"import\\",
+    \\"@typescript-eslint\\"
+  ],
+  \\"rules\\": {
+    \\"@typescript-eslint/adjacent-overload-signatures\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/await-thenable\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/ban-ts-comment\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/ban-types\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/consistent-type-assertions\\": [
+      \\"error\\",
+      {
+        \\"assertionStyle\\": \\"as\\"
+      }
+    ],
+    \\"@typescript-eslint/consistent-type-definitions\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/dot-notation\\": [
+      \\"error\\",
+      {
+        \\"allowKeywords\\": true,
+        \\"allowPattern\\": \\"\\",
+        \\"allowPrivateClassPropertyAccess\\": false
+      }
+    ],
+    \\"@typescript-eslint/explicit-module-boundary-types\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/func-call-spacing\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"@typescript-eslint/member-delimiter-style\\": [
+      \\"warn\\",
+      {
+        \\"multiline\\": {
+          \\"delimiter\\": \\"none\\",
+          \\"requireLast\\": false
+        },
+        \\"singleline\\": {
+          \\"delimiter\\": \\"semi\\",
+          \\"requireLast\\": false
+        }
+      }
+    ],
+    \\"@typescript-eslint/naming-convention\\": [
+      \\"error\\",
+      {
+        \\"selector\\": \\"default\\",
+        \\"format\\": [
+          \\"camelCase\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"function\\",
+        \\"format\\": [
+          \\"PascalCase\\",
+          \\"camelCase\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"variable\\",
+        \\"format\\": [
+          \\"PascalCase\\",
+          \\"camelCase\\",
+          \\"UPPER_CASE\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"parameter\\",
+        \\"format\\": [
+          \\"PascalCase\\",
+          \\"camelCase\\"
+        ],
+        \\"leadingUnderscore\\": \\"allow\\"
+      },
+      {
+        \\"selector\\": \\"memberLike\\",
+        \\"format\\": [
+          \\"PascalCase\\",
+          \\"camelCase\\",
+          \\"UPPER_CASE\\"
+        ]
+      },
+      {
+        \\"selector\\": \\"typeLike\\",
+        \\"format\\": [
+          \\"PascalCase\\"
+        ]
+      }
+    ],
+    \\"@typescript-eslint/no-array-constructor\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-dupe-class-members\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-empty-function\\": [
+      \\"error\\",
+      {
+        \\"allow\\": [
+          \\"arrowFunctions\\",
+          \\"functions\\",
+          \\"methods\\"
+        ]
+      }
+    ],
+    \\"@typescript-eslint/no-empty-interface\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-explicit-any\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-extra-non-null-assertion\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-extra-parens\\": [
+      \\"warn\\",
+      \\"all\\",
+      {
+        \\"conditionalAssign\\": true,
+        \\"returnAssign\\": false,
+        \\"nestedBinaryExpressions\\": false,
+        \\"ignoreJSX\\": \\"all\\",
+        \\"enforceForArrowConditionals\\": true,
+        \\"enforceForSequenceExpressions\\": true
+      }
+    ],
+    \\"@typescript-eslint/no-extra-semi\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-floating-promises\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-for-in-array\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-implied-eval\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-inferrable-types\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-magic-numbers\\": [
+      \\"warn\\",
+      {
+        \\"detectObjects\\": false,
+        \\"enforceConst\\": true,
+        \\"ignore\\": [
+          -1,
+          0,
+          1,
+          2,
+          10
+        ],
+        \\"ignoreArrayIndexes\\": true
+      }
+    ],
+    \\"@typescript-eslint/no-misused-new\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-misused-promises\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-namespace\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-non-null-asserted-optional-chain\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-non-null-assertion\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-this-alias\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-throw-literal\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-unnecessary-type-assertion\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-assignment\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-call\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-member-access\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-return\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-unused-expressions\\": [
+      \\"error\\",
+      {
+        \\"allowShortCircuit\\": true,
+        \\"allowTernary\\": true,
+        \\"allowTaggedTemplates\\": true
+      }
+    ],
+    \\"@typescript-eslint/no-unused-vars\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/no-use-before-define\\": [
+      \\"error\\",
+      {
+        \\"classes\\": false,
+        \\"functions\\": false
+      }
+    ],
+    \\"@typescript-eslint/no-useless-constructor\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-var-requires\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/prefer-as-const\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/prefer-namespace-keyword\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/prefer-regexp-exec\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/quotes\\": [
+      \\"warn\\",
+      \\"double\\",
+      {
+        \\"avoidEscape\\": true
+      }
+    ],
+    \\"@typescript-eslint/require-await\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/restrict-plus-operands\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/restrict-template-expressions\\": [
+      \\"off\\"
+    ],
+    \\"@typescript-eslint/semi\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"@typescript-eslint/space-before-function-paren\\": [
+      \\"warn\\",
+      {
+        \\"anonymous\\": \\"never\\",
+        \\"asyncArrow\\": \\"always\\",
+        \\"named\\": \\"never\\"
+      }
+    ],
+    \\"@typescript-eslint/triple-slash-reference\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/type-annotation-spacing\\": [
+      \\"warn\\"
+    ],
+    \\"@typescript-eslint/unbound-method\\": [
+      \\"error\\"
+    ],
+    \\"array-bracket-spacing\\": [
+      \\"warn\\",
+      \\"always\\",
+      {
+        \\"objectsInArrays\\": false
+      }
+    ],
+    \\"array-callback-return\\": [
+      \\"error\\"
+    ],
+    \\"arrow-body-style\\": [
+      \\"warn\\",
+      \\"as-needed\\",
+      {
+        \\"requireReturnForObjectLiteral\\": false
+      }
+    ],
+    \\"arrow-parens\\": [
+      \\"warn\\",
+      \\"always\\"
+    ],
+    \\"arrow-spacing\\": [
+      \\"warn\\",
+      {
+        \\"before\\": true,
+        \\"after\\": true
+      }
+    ],
+    \\"block-scoped-var\\": [
+      \\"error\\"
+    ],
+    \\"comma-dangle\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
+    \\"comma-style\\": [
+      \\"warn\\",
+      \\"last\\"
+    ],
+    \\"default-case\\": [
+      \\"error\\",
+      {
+        \\"commentPattern\\": \\"^no default$\\"
+      }
+    ],
+    \\"default-case-last\\": [
+      \\"error\\"
+    ],
+    \\"dot-location\\": [
+      \\"warn\\",
+      \\"property\\"
+    ],
+    \\"eqeqeq\\": [
+      \\"warn\\",
+      \\"smart\\"
+    ],
+    \\"filenames/match-exported\\": [
+      \\"warn\\"
+    ],
+    \\"for-direction\\": [
+      \\"error\\"
+    ],
+    \\"func-names\\": [
+      \\"warn\\",
+      \\"as-needed\\"
+    ],
+    \\"func-style\\": [
+      \\"warn\\",
+      \\"declaration\\",
+      {
+        \\"allowArrowFunctions\\": true
+      }
+    ],
+    \\"generator-star-spacing\\": [
+      \\"warn\\",
+      {
+        \\"before\\": false,
+        \\"after\\": true
+      }
+    ],
+    \\"id-length\\": [
+      \\"error\\",
+      {
+        \\"exceptions\\": [
+          \\"i\\",
+          \\"l\\",
+          \\"id\\",
+          \\"fs\\"
+        ],
+        \\"max\\": 40,
+        \\"min\\": 3,
+        \\"properties\\": \\"never\\"
+      }
+    ],
+    \\"import/export\\": [
+      \\"error\\"
+    ],
+    \\"import/extensions\\": [
+      \\"error\\",
+      \\"ignorePackages\\",
+      {
+        \\"js\\": \\"never\\",
+        \\"jsx\\": \\"never\\",
+        \\"mjs\\": \\"never\\",
+        \\"ts\\": \\"never\\",
+        \\"tsx\\": \\"never\\"
+      }
+    ],
+    \\"import/first\\": [
+      \\"warn\\"
+    ],
+    \\"import/named\\": [
+      \\"error\\"
+    ],
+    \\"import/newline-after-import\\": [
+      \\"warn\\"
+    ],
+    \\"import/no-absolute-path\\": [
+      \\"error\\"
+    ],
+    \\"import/no-amd\\": [
+      \\"error\\"
+    ],
+    \\"import/no-cycle\\": [
+      \\"error\\",
+      {
+        \\"maxDepth\\": null
+      }
+    ],
+    \\"import/no-duplicates\\": [
+      \\"error\\"
+    ],
+    \\"import/no-dynamic-require\\": [
+      \\"error\\"
+    ],
+    \\"import/no-mutable-exports\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-as-default\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-as-default-member\\": [
+      \\"error\\"
+    ],
+    \\"import/no-named-default\\": [
+      \\"error\\"
+    ],
+    \\"import/no-self-import\\": [
+      \\"error\\"
+    ],
+    \\"import/no-unresolved\\": [
+      \\"error\\",
+      {
+        \\"commonjs\\": true,
+        \\"caseSensitive\\": true
+      }
+    ],
+    \\"import/no-useless-path-segments\\": [
+      \\"error\\",
+      {
+        \\"commonjs\\": true
+      }
+    ],
+    \\"import/no-webpack-loader-syntax\\": [
+      \\"error\\"
+    ],
+    \\"import/order\\": [
+      \\"warn\\",
+      {
+        \\"groups\\": [
+          \\"builtin\\",
+          \\"external\\",
+          \\"unknown\\",
+          [
+            \\"parent\\",
+            \\"sibling\\",
+            \\"index\\"
+          ]
+        ],
+        \\"newlines-between\\": \\"always\\"
+      }
+    ],
+    \\"jsdoc/check-alignment\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/check-param-names\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/check-tag-names\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/newline-after-description\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/no-types\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/require-param-description\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/require-param-name\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/require-returns-check\\": [
+      \\"warn\\"
+    ],
+    \\"jsdoc/require-returns-description\\": [
+      \\"warn\\"
+    ],
+    \\"jsx-a11y/accessible-emoji\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/alt-text\\": [
+      \\"error\\",
+      {
+        \\"elements\\": [
+          \\"img\\",
+          \\"object\\",
+          \\"area\\",
+          \\"input[type=\\\\\\"image\\\\\\"]\\"
+        ],
+        \\"img\\": [],
+        \\"object\\": [],
+        \\"area\\": [],
+        \\"input[type=\\\\\\"image\\\\\\"]\\": []
+      }
+    ],
+    \\"jsx-a11y/anchor-has-content\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/anchor-is-valid\\": [
+      \\"error\\",
+      {
+        \\"components\\": [
+          \\"Link\\"
+        ],
+        \\"specialLink\\": [
+          \\"to\\"
+        ],
+        \\"aspects\\": [
+          \\"noHref\\",
+          \\"invalidHref\\",
+          \\"preferButton\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/aria-activedescendant-has-tabindex\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-proptypes\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/aria-role\\": [
+      \\"error\\",
+      {
+        \\"ignoreNonDOM\\": true
+      }
+    ],
+    \\"jsx-a11y/aria-unsupported-elements\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/click-events-have-key-events\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/control-has-associated-label\\": [
+      \\"error\\",
+      {
+        \\"labelAttributes\\": [
+          \\"label\\"
+        ],
+        \\"controlComponents\\": [],
+        \\"ignoreElements\\": [
+          \\"audio\\",
+          \\"canvas\\",
+          \\"embed\\",
+          \\"input\\",
+          \\"textarea\\",
+          \\"tr\\",
+          \\"video\\"
+        ],
+        \\"ignoreRoles\\": [
+          \\"grid\\",
+          \\"listbox\\",
+          \\"menu\\",
+          \\"menubar\\",
+          \\"radiogroup\\",
+          \\"row\\",
+          \\"tablist\\",
+          \\"toolbar\\",
+          \\"tree\\",
+          \\"treegrid\\"
+        ],
+        \\"depth\\": 5
+      }
+    ],
+    \\"jsx-a11y/heading-has-content\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/html-has-lang\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/iframe-has-title\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/img-redundant-alt\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/interactive-supports-focus\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/label-has-associated-control\\": [
+      \\"error\\",
+      {
+        \\"labelComponents\\": [],
+        \\"labelAttributes\\": [],
+        \\"controlComponents\\": [],
+        \\"assert\\": \\"both\\",
+        \\"depth\\": 25
+      }
+    ],
+    \\"jsx-a11y/lang\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/media-has-caption\\": [
+      \\"error\\",
+      {
+        \\"audio\\": [],
+        \\"video\\": [],
+        \\"track\\": []
+      }
+    ],
+    \\"jsx-a11y/mouse-events-have-key-events\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-access-key\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-autofocus\\": [
+      \\"error\\",
+      {
+        \\"ignoreNonDOM\\": true
+      }
+    ],
+    \\"jsx-a11y/no-distracting-elements\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-interactive-element-to-noninteractive-role\\": [
+      \\"error\\",
+      {
+        \\"tr\\": [
+          \\"none\\",
+          \\"presentation\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/no-noninteractive-element-interactions\\": [
+      \\"error\\",
+      {
+        \\"handlers\\": [
+          \\"onClick\\",
+          \\"onMouseDown\\",
+          \\"onMouseUp\\",
+          \\"onKeyPress\\",
+          \\"onKeyDown\\",
+          \\"onKeyUp\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/no-noninteractive-element-to-interactive-role\\": [
+      \\"error\\",
+      {
+        \\"ul\\": [
+          \\"listbox\\",
+          \\"menu\\",
+          \\"menubar\\",
+          \\"radiogroup\\",
+          \\"tablist\\",
+          \\"tree\\",
+          \\"treegrid\\"
+        ],
+        \\"ol\\": [
+          \\"listbox\\",
+          \\"menu\\",
+          \\"menubar\\",
+          \\"radiogroup\\",
+          \\"tablist\\",
+          \\"tree\\",
+          \\"treegrid\\"
+        ],
+        \\"li\\": [
+          \\"menuitem\\",
+          \\"option\\",
+          \\"row\\",
+          \\"tab\\",
+          \\"treeitem\\"
+        ],
+        \\"table\\": [
+          \\"grid\\"
+        ],
+        \\"td\\": [
+          \\"gridcell\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/no-noninteractive-tabindex\\": [
+      \\"error\\",
+      {
+        \\"tags\\": [],
+        \\"roles\\": [
+          \\"tabpanel\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/no-redundant-roles\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/no-static-element-interactions\\": [
+      \\"error\\",
+      {
+        \\"handlers\\": [
+          \\"onClick\\",
+          \\"onMouseDown\\",
+          \\"onMouseUp\\",
+          \\"onKeyPress\\",
+          \\"onKeyDown\\",
+          \\"onKeyUp\\"
+        ]
+      }
+    ],
+    \\"jsx-a11y/role-has-required-aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/role-supports-aria-props\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/scope\\": [
+      \\"error\\"
+    ],
+    \\"jsx-a11y/tabindex-no-positive\\": [
+      \\"error\\"
+    ],
+    \\"linebreak-style\\": [
+      \\"warn\\",
+      \\"unix\\"
+    ],
+    \\"max-classes-per-file\\": [
+      \\"error\\",
+      1
+    ],
+    \\"max-depth\\": [
+      \\"error\\",
+      {
+        \\"maximum\\": 4
+      }
+    ],
+    \\"max-params\\": [
+      \\"error\\",
+      4
+    ],
+    \\"max-statements\\": [
+      \\"error\\",
+      30,
+      {
+        \\"ignoreTopLevelFunctions\\": true
+      }
+    ],
+    \\"max-statements-per-line\\": [
+      \\"error\\",
+      {
+        \\"max\\": 2
+      }
+    ],
+    \\"new-parens\\": [
+      \\"warn\\"
+    ],
+    \\"no-alert\\": [
+      \\"warn\\"
+    ],
+    \\"no-async-promise-executor\\": [
+      \\"error\\"
+    ],
+    \\"no-await-in-loop\\": [
+      \\"error\\"
+    ],
+    \\"no-caller\\": [
+      \\"error\\"
+    ],
+    \\"no-case-declarations\\": [
+      \\"error\\"
+    ],
+    \\"no-class-assign\\": [
+      \\"error\\"
+    ],
+    \\"no-compare-neg-zero\\": [
+      \\"error\\"
+    ],
+    \\"no-cond-assign\\": [
+      \\"error\\",
+      \\"always\\"
+    ],
+    \\"no-confusing-arrow\\": [
+      \\"warn\\",
+      {
+        \\"allowParens\\": true
+      }
+    ],
+    \\"no-constant-condition\\": [
+      \\"warn\\"
+    ],
+    \\"no-control-regex\\": [
+      \\"error\\"
+    ],
+    \\"no-debugger\\": [
+      \\"error\\"
+    ],
+    \\"no-delete-var\\": [
+      \\"error\\"
+    ],
+    \\"no-div-regex\\": [
+      \\"warn\\"
+    ],
+    \\"no-dupe-else-if\\": [
+      \\"error\\"
+    ],
+    \\"no-duplicate-case\\": [
+      \\"error\\"
+    ],
+    \\"no-duplicate-imports\\": [
+      \\"error\\"
+    ],
+    \\"no-empty\\": [
+      \\"error\\",
+      {
+        \\"allowEmptyCatch\\": true
+      }
+    ],
+    \\"no-empty-character-class\\": [
+      \\"error\\"
+    ],
+    \\"no-empty-pattern\\": [
+      \\"error\\"
+    ],
+    \\"no-eval\\": [
+      \\"error\\"
+    ],
+    \\"no-ex-assign\\": [
+      \\"error\\"
+    ],
+    \\"no-extend-native\\": [
+      \\"error\\"
+    ],
+    \\"no-extra-bind\\": [
+      \\"warn\\"
+    ],
+    \\"no-extra-boolean-cast\\": [
+      \\"warn\\"
+    ],
+    \\"no-extra-label\\": [
+      \\"warn\\"
+    ],
+    \\"no-fallthrough\\": [
+      \\"error\\"
+    ],
+    \\"no-floating-decimal\\": [
+      \\"error\\"
+    ],
+    \\"no-global-assign\\": [
+      \\"error\\"
+    ],
+    \\"no-inner-declarations\\": [
+      \\"error\\"
+    ],
+    \\"no-invalid-regexp\\": [
+      \\"error\\"
+    ],
+    \\"no-irregular-whitespace\\": [
+      \\"error\\"
+    ],
+    \\"no-iterator\\": [
+      \\"error\\"
+    ],
+    \\"no-label-var\\": [
+      \\"error\\"
+    ],
+    \\"no-labels\\": [
+      \\"error\\",
+      {
+        \\"allowLoop\\": true,
+        \\"allowSwitch\\": false
+      }
+    ],
+    \\"no-lone-blocks\\": [
+      \\"error\\"
+    ],
+    \\"no-loop-func\\": [
+      \\"error\\"
+    ],
+    \\"no-misleading-character-class\\": [
+      \\"error\\"
+    ],
+    \\"no-mixed-operators\\": [
+      \\"error\\",
+      {
+        \\"groups\\": [
+          [
+            \\"&\\",
+            \\"|\\",
+            \\"^\\",
+            \\"~\\",
+            \\"<<\\",
+            \\">>\\",
+            \\">>>\\"
+          ],
+          [
+            \\"==\\",
+            \\"!=\\",
+            \\"===\\",
+            \\"!==\\",
+            \\">\\",
+            \\">=\\",
+            \\"<\\",
+            \\"<=\\"
+          ],
+          [
+            \\"&&\\",
+            \\"||\\"
+          ],
+          [
+            \\"in\\",
+            \\"instanceof\\"
+          ]
+        ],
+        \\"allowSamePrecedence\\": false
+      }
+    ],
+    \\"no-mixed-spaces-and-tabs\\": [
+      \\"error\\"
+    ],
+    \\"no-multi-spaces\\": [
+      \\"error\\",
+      {
+        \\"ignoreEOLComments\\": false
+      }
+    ],
+    \\"no-multi-str\\": [
+      \\"error\\"
+    ],
+    \\"no-multiple-empty-lines\\": [
+      \\"warn\\",
+      {
+        \\"max\\": 4,
+        \\"maxBOF\\": 0,
+        \\"maxEOF\\": 1
+      }
+    ],
+    \\"no-nested-ternary\\": [
+      \\"error\\"
+    ],
+    \\"no-new\\": [
+      \\"error\\"
+    ],
+    \\"no-new-func\\": [
+      \\"error\\"
+    ],
+    \\"no-new-object\\": [
+      \\"error\\"
+    ],
+    \\"no-new-wrappers\\": [
+      \\"error\\"
+    ],
+    \\"no-octal\\": [
+      \\"error\\"
+    ],
+    \\"no-octal-escape\\": [
+      \\"error\\"
+    ],
+    \\"no-param-reassign\\": [
+      \\"error\\",
+      {
+        \\"props\\": true,
+        \\"ignorePropertyModificationsFor\\": [
+          \\"acc\\",
+          \\"accumulator\\",
+          \\"e\\",
+          \\"ctx\\",
+          \\"req\\",
+          \\"request\\",
+          \\"res\\",
+          \\"response\\",
+          \\"$scope\\",
+          \\"staticContext\\"
+        ]
+      }
+    ],
+    \\"no-proto\\": [
+      \\"error\\"
+    ],
+    \\"no-prototype-builtins\\": [
+      \\"error\\"
+    ],
+    \\"no-regex-spaces\\": [
+      \\"warn\\"
+    ],
+    \\"no-restricted-globals\\": [
+      \\"error\\",
+      \\"addEventListener\\",
+      \\"blur\\",
+      \\"close\\",
+      \\"closed\\",
+      \\"confirm\\",
+      \\"defaultStatus\\",
+      \\"defaultstatus\\",
+      \\"event\\",
+      \\"external\\",
+      \\"find\\",
+      \\"focus\\",
+      \\"frameElement\\",
+      \\"frames\\",
+      \\"history\\",
+      \\"innerHeight\\",
+      \\"innerWidth\\",
+      \\"length\\",
+      \\"location\\",
+      \\"locationbar\\",
+      \\"menubar\\",
+      \\"moveBy\\",
+      \\"moveTo\\",
+      \\"name\\",
+      \\"onblur\\",
+      \\"onerror\\",
+      \\"onfocus\\",
+      \\"onload\\",
+      \\"onresize\\",
+      \\"onunload\\",
+      \\"open\\",
+      \\"opener\\",
+      \\"opera\\",
+      \\"outerHeight\\",
+      \\"outerWidth\\",
+      \\"pageXOffset\\",
+      \\"pageYOffset\\",
+      \\"parent\\",
+      \\"print\\",
+      \\"removeEventListener\\",
+      \\"resizeBy\\",
+      \\"resizeTo\\",
+      \\"screen\\",
+      \\"screenLeft\\",
+      \\"screenTop\\",
+      \\"screenX\\",
+      \\"screenY\\",
+      \\"scroll\\",
+      \\"scrollbars\\",
+      \\"scrollBy\\",
+      \\"scrollTo\\",
+      \\"scrollX\\",
+      \\"scrollY\\",
+      \\"self\\",
+      \\"status\\",
+      \\"statusbar\\",
+      \\"stop\\",
+      \\"toolbar\\",
+      \\"top\\"
+    ],
+    \\"no-restricted-properties\\": [
+      \\"error\\",
+      {
+        \\"object\\": \\"arguments\\",
+        \\"property\\": \\"callee\\",
+        \\"message\\": \\"arguments.callee is deprecated\\"
+      },
+      {
+        \\"object\\": \\"global\\",
+        \\"property\\": \\"isFinite\\",
+        \\"message\\": \\"Please use Number.isFinite instead\\"
+      },
+      {
+        \\"object\\": \\"self\\",
+        \\"property\\": \\"isFinite\\",
+        \\"message\\": \\"Please use Number.isFinite instead\\"
+      },
+      {
+        \\"object\\": \\"window\\",
+        \\"property\\": \\"isFinite\\",
+        \\"message\\": \\"Please use Number.isFinite instead\\"
+      },
+      {
+        \\"object\\": \\"global\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"object\\": \\"self\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"object\\": \\"window\\",
+        \\"property\\": \\"isNaN\\",
+        \\"message\\": \\"Please use Number.isNaN instead\\"
+      },
+      {
+        \\"property\\": \\"__defineGetter__\\",
+        \\"message\\": \\"Please use Object.defineProperty instead.\\"
+      },
+      {
+        \\"property\\": \\"__defineSetter__\\",
+        \\"message\\": \\"Please use Object.defineProperty instead.\\"
+      },
+      {
+        \\"object\\": \\"Math\\",
+        \\"property\\": \\"pow\\",
+        \\"message\\": \\"Use the exponentiation operator (**) instead.\\"
+      },
+      {
+        \\"object\\": \\"require\\",
+        \\"property\\": \\"ensure\\",
+        \\"message\\": \\"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting\\"
+      },
+      {
+        \\"object\\": \\"System\\",
+        \\"property\\": \\"import\\",
+        \\"message\\": \\"Please use import() instead. More info: https://facebook.github.io/create-react-app/docs/code-splitting\\"
+      }
+    ],
+    \\"no-restricted-syntax\\": [
+      \\"error\\",
+      \\"WithStatement\\"
+    ],
+    \\"no-return-assign\\": [
+      \\"error\\",
+      \\"always\\"
+    ],
+    \\"no-return-await\\": [
+      \\"error\\"
+    ],
+    \\"no-script-url\\": [
+      \\"error\\"
+    ],
+    \\"no-self-assign\\": [
+      \\"error\\",
+      {
+        \\"props\\": true
+      }
+    ],
+    \\"no-self-compare\\": [
+      \\"error\\"
+    ],
+    \\"no-sequences\\": [
+      \\"error\\"
+    ],
+    \\"no-shadow\\": [
+      \\"error\\"
+    ],
+    \\"no-shadow-restricted-names\\": [
+      \\"error\\"
+    ],
+    \\"no-sparse-arrays\\": [
+      \\"error\\"
+    ],
+    \\"no-template-curly-in-string\\": [
+      \\"error\\"
+    ],
+    \\"no-trailing-spaces\\": [
+      \\"warn\\"
+    ],
+    \\"no-undef-init\\": [
+      \\"error\\"
+    ],
+    \\"no-unexpected-multiline\\": [
+      \\"error\\"
+    ],
+    \\"no-unmodified-loop-condition\\": [
+      \\"error\\"
+    ],
+    \\"no-unneeded-ternary\\": [
+      \\"warn\\"
+    ],
+    \\"no-unsafe-finally\\": [
+      \\"error\\"
+    ],
+    \\"no-unused-labels\\": [
+      \\"warn\\"
+    ],
+    \\"no-useless-catch\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-computed-key\\": [
+      \\"warn\\"
+    ],
+    \\"no-useless-concat\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-escape\\": [
+      \\"error\\"
+    ],
+    \\"no-useless-rename\\": [
+      \\"warn\\",
+      {
+        \\"ignoreDestructuring\\": false,
+        \\"ignoreImport\\": false,
+        \\"ignoreExport\\": false
+      }
+    ],
+    \\"no-useless-return\\": [
+      \\"error\\"
+    ],
+    \\"no-var\\": [
+      \\"warn\\"
+    ],
+    \\"no-void\\": [
+      \\"error\\"
+    ],
+    \\"no-whitespace-before-property\\": [
+      \\"warn\\"
+    ],
+    \\"no-with\\": [
+      \\"error\\"
+    ],
+    \\"object-curly-spacing\\": [
+      \\"warn\\",
+      \\"always\\"
+    ],
+    \\"object-property-newline\\": [
+      \\"warn\\",
+      {
+        \\"allowMultiplePropertiesPerLine\\": true,
+        \\"allowAllPropertiesOnSameLine\\": false
+      }
+    ],
+    \\"object-shorthand\\": [
+      \\"error\\",
+      \\"always\\",
+      {
+        \\"ignoreConstructors\\": false,
+        \\"avoidQuotes\\": true
+      }
+    ],
+    \\"one-var-declaration-per-line\\": [
+      \\"warn\\",
+      \\"initializations\\"
+    ],
+    \\"operator-assignment\\": [
+      \\"warn\\"
+    ],
+    \\"operator-linebreak\\": [
+      \\"warn\\",
+      \\"after\\",
+      {
+        \\"overrides\\": {
+          \\"+\\": \\"before\\",
+          \\"-\\": \\"before\\",
+          \\"*\\": \\"before\\",
+          \\"**\\": \\"before\\",
+          \\"/\\": \\"before\\",
+          \\"%\\": \\"before\\",
+          \\"?\\": \\"before\\",
+          \\":\\": \\"before\\"
+        }
+      }
+    ],
+    \\"padding-line-between-statements\\": [
+      \\"warn\\",
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"default\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"case\\",
+        \\"next\\": \\"default\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"try\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"switch\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"function\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"class\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"for\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"while\\"
+      }
+    ],
+    \\"prefer-arrow-callback\\": [
+      \\"error\\",
+      {
+        \\"allowNamedFunctions\\": false,
+        \\"allowUnboundThis\\": true
+      }
+    ],
+    \\"prefer-numeric-literals\\": [
+      \\"error\\"
+    ],
+    \\"prefer-promise-reject-errors\\": [
+      \\"error\\",
+      {
+        \\"allowEmptyReject\\": true
+      }
+    ],
+    \\"prefer-rest-params\\": [
+      \\"warn\\"
+    ],
+    \\"prefer-spread\\": [
+      \\"warn\\"
+    ],
+    \\"prefer-template\\": [
+      \\"error\\"
+    ],
+    \\"quote-props\\": [
+      \\"warn\\",
+      \\"consistent-as-needed\\"
+    ],
+    \\"radix\\": [
+      \\"error\\"
+    ],
+    \\"react-hooks/exhaustive-deps\\": [
+      \\"warn\\"
+    ],
+    \\"react-hooks/rules-of-hooks\\": [
+      \\"error\\"
+    ],
+    \\"react/button-has-type\\": [
+      \\"error\\",
+      {
+        \\"button\\": true,
+        \\"submit\\": true,
+        \\"reset\\": false
+      }
+    ],
+    \\"react/default-props-match-prop-types\\": [
+      \\"error\\",
+      {
+        \\"allowRequiredDefaults\\": false
+      }
+    ],
+    \\"react/destructuring-assignment\\": [
+      \\"error\\",
+      \\"always\\"
+    ],
+    \\"react/forbid-foreign-prop-types\\": [
+      \\"error\\",
+      {
+        \\"allowInPropTypes\\": true
+      }
+    ],
+    \\"react/jsx-boolean-value\\": [
+      \\"error\\",
+      \\"never\\",
+      {
+        \\"always\\": []
+      }
+    ],
+    \\"react/jsx-curly-brace-presence\\": [
+      \\"error\\",
+      {
+        \\"props\\": \\"never\\",
+        \\"children\\": \\"never\\"
+      }
+    ],
+    \\"react/jsx-fragments\\": [
+      \\"error\\",
+      \\"syntax\\"
+    ],
+    \\"react/jsx-no-comment-textnodes\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-duplicate-props\\": [
+      \\"error\\",
+      {
+        \\"ignoreCase\\": true
+      }
+    ],
+    \\"react/jsx-no-target-blank\\": [
+      \\"error\\",
+      {
+        \\"enforceDynamicLinks\\": \\"always\\"
+      }
+    ],
+    \\"react/jsx-no-undef\\": [
+      \\"error\\"
     ],
     \\"react/jsx-pascal-case\\": [
       \\"error\\",
@@ -1700,6 +3386,56 @@ exports[`Full configuration result 1`] = `
     }
   }
 }"
+`;
+
+exports[`Full JS/TS configuration result 3`] = `
+Array [
+  Object {
+    "jsValue": "[
+  \\"off\\"
+]",
+    "ruleName": "@typescript-eslint/no-unsafe-assignment",
+    "tsValue": "[
+  \\"warn\\"
+]",
+  },
+  Object {
+    "jsValue": "[
+  \\"off\\"
+]",
+    "ruleName": "@typescript-eslint/no-unsafe-call",
+    "tsValue": "[
+  \\"warn\\"
+]",
+  },
+  Object {
+    "jsValue": "[
+  \\"off\\"
+]",
+    "ruleName": "@typescript-eslint/no-unsafe-member-access",
+    "tsValue": "[
+  \\"warn\\"
+]",
+  },
+  Object {
+    "jsValue": "[
+  \\"off\\"
+]",
+    "ruleName": "@typescript-eslint/no-unsafe-return",
+    "tsValue": "[
+  \\"warn\\"
+]",
+  },
+  Object {
+    "jsValue": "[
+  \\"off\\"
+]",
+    "ruleName": "@typescript-eslint/restrict-template-expressions",
+    "tsValue": "[
+  \\"error\\"
+]",
+  },
+]
 `;
 
 exports[`load config in eslint to validate all rule syntax is correct 1`] = `

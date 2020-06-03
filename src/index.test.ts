@@ -21,9 +21,10 @@ function extractConfig(cli: CLIEngine, file: string) {
   const sorted = cloneWithSortedKeys(config)
 
   sorted.parser = "[PATH]"
+  sorted.parserOptions.project = "[PATH]"
   sorted.parserOptions.tsconfigRootDir = "[PATH]"
 
-  return JSON.stringify(sorted, null, 2)
+  return sorted
 }
 
 function runOnFile(fileName: string): Json {
@@ -39,13 +40,34 @@ function runOnFile(fileName: string): Json {
   return retVal
 }
 
-test("Full configuration result", () => {
+test("Full JS/TS configuration result", () => {
   const cli = new CLIEngine({
     useEslintrc: false,
     configFile: "dist/index.js"
   })
 
-  expect(extractConfig(cli, "src/index.js")).toMatchSnapshot()
+  const tsConfig = extractConfig(cli, "src/index.ts")
+  expect(JSON.stringify(tsConfig, null, 2)).toMatchSnapshot()
+
+  const jsConfig = extractConfig(cli, "src/index.js")
+  expect(JSON.stringify(jsConfig, null, 2)).toMatchSnapshot()
+
+  const tsRules = tsConfig.rules
+  const jsRules = jsConfig.rules
+
+  const ruleNames = Object.keys(tsRules)
+  const configDiff = []
+
+  ruleNames.forEach((ruleName) => {
+    const tsValue = JSON.stringify(tsRules[ruleName], null, 2)
+    const jsValue = JSON.stringify(jsRules[ruleName], null, 2)
+
+    if (tsValue !== jsValue) {
+      configDiff.push({ ruleName, tsValue, jsValue })
+    }
+  })
+
+  expect(configDiff).toMatchSnapshot()
 })
 
 test("load config in eslint to validate all rule syntax is correct", () => {

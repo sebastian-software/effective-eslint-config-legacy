@@ -21,8 +21,6 @@ import { autofix } from "./modules/autofix"
 const projectConfigFiles = findUp.sync([ "./tsconfig.json", "./jsconfig.json" ])
 const ROOT = path.dirname(projectConfigFiles)
 
-console.log("ROOT:", ROOT, projectConfigFiles)
-
 const combinedRules: ESLintRules = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
@@ -237,6 +235,7 @@ const config: ESLintConfig = {
         "@typescript-eslint/no-unsafe-assignment": "off",
         "@typescript-eslint/no-unsafe-call": "off",
         "@typescript-eslint/no-unsafe-member-access": "off",
+        "@typescript-eslint/no-unsafe-return": "off",
         "@typescript-eslint/restrict-template-expressions": "off"
       }
     }
