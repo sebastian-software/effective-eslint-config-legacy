@@ -1,7 +1,5 @@
 import { CLIEngine } from "eslint"
 
-const PATH_REPL = /"\S+(\\|\/)index\.js"/
-
 function cloneWithSortedKeys(object): any {
   const clone: { [key: string]: any } = {}
   const keys = Object.keys(object).sort()
@@ -18,8 +16,12 @@ function cloneWithSortedKeys(object): any {
 
 function extractConfig(cli: CLIEngine, file: string) {
   const config = cli.getConfigForFile(file)
-  const result = JSON.stringify(cloneWithSortedKeys(config), null, "  ")
-  return result.replace(new RegExp(PATH_REPL), '"[PATH]"')
+  const sorted = cloneWithSortedKeys(config)
+
+  sorted.parser = "[PATH]"
+  sorted.parserOptions.tsconfigRootDir = "[PATH]"
+
+  return JSON.stringify(sorted, null, 2)
 }
 
 test("Full configuration result", () => {
