@@ -4,6 +4,7 @@ import fs from "fs"
 import path from "path"
 
 import findUp from "find-up"
+import appRootPath from "app-root-path"
 
 /* eslint-disable filenames/match-exported, import/order */
 import { blacklist, hasMatchingTypescriptRule, isDisabled, setLevel } from "./util"
@@ -35,11 +36,12 @@ function writeDefaultProjectConfig(projectConfig: string) {
   }, null, 2), { encoding: "utf-8" })
 }
 
-let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
-let projectRoot
+const ROOT = String(appRootPath)
+let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], { cwd: ROOT })
+let projectRoot = ROOT
 
 if (projectConfig == null) {
-  console.warn(`Unable to find any package configuration file in the current folder: ${process.cwd()}!`)
+  console.warn(`Unable to find any package configuration file in the current folder: ${ROOT}!`)
 } else {
   projectRoot = path.dirname(projectConfig)
 
