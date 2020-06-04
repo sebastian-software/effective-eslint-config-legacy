@@ -36,17 +36,18 @@ function writeDefaultProjectConfig(projectConfig: string) {
 }
 
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ])
+let projectRoot
 
 if (projectConfig == null) {
-  throw new Error(`Unable to find any package configuration file in the current folder: ${process.cwd()}!`)
-}
+  console.warn(`Unable to find any package configuration file in the current folder: ${process.cwd()}!`)
+} else {
+  projectRoot = path.dirname(projectConfig)
 
-const ROOT = path.dirname(projectConfig)
-
-if (projectConfig.endsWith("package.json")) {
-  console.warn(`Automatically creating new project configuration in ${ROOT}...`)
-  projectConfig = projectConfig.replace("package.json", "tsconfig.json")
-  writeDefaultProjectConfig(projectConfig)
+  if (projectConfig.endsWith("package.json")) {
+    console.warn(`Automatically creating new project configuration in ${projectRoot}...`)
+    projectConfig = projectConfig.replace("package.json", "tsconfig.json")
+    writeDefaultProjectConfig(projectConfig)
+  }
 }
 
 const combinedRules: ESLintRules = {}
@@ -213,7 +214,7 @@ const config: ESLintConfig = {
     // Required for linting with type information
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
     project: projectConfig,
-    tsconfigRootDir: ROOT,
+    tsconfigRootDir: projectRoot,
 
     // typescript-eslint specific options
     warnOnUnsupportedTypeScriptVersion: true
