@@ -13,6 +13,7 @@ export const formatting: ESLintRules = {
 
   "comma-dangle": [ "warn", "never" ],
   "comma-style": [ "warn", "last" ],
+  "curly": [ "warn", "all" ],
   "func-names": [ "warn", "as-needed" ],
 
   "func-style": [
