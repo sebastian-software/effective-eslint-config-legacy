@@ -59,7 +59,6 @@ const blocked = new Set([
   "no-path-concat",
 
   // Solved by Prettier
-  "curly",
   "jsx-quotes",
   "vars-on-top",
   "wrap-iife",
