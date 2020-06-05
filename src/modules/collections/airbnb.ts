@@ -48,6 +48,7 @@ const blocked = new Set([
   "react/prefer-es6-class",
 
   // Better solved by TS
+  "no-shadow",
   "consistent-return",
   "react/prop-types",
   "react/require-default-props",
