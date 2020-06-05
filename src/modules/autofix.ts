@@ -65,7 +65,6 @@ export const autofix: ESLintRules = {
   "unicorn/new-for-builtins": "warn",
   "unicorn/no-array-instanceof": "warn",
   "unicorn/no-new-buffer": "warn",
-  "unicorn/no-useless-undefined": "warn",
   "unicorn/prefer-optional-catch-binding": "warn",
   "unicorn/throw-new-error": "warn"
 }

@@ -1634,9 +1634,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"unicorn/no-unsafe-regex\\": [
       \\"warn\\"
     ],
-    \\"unicorn/no-useless-undefined\\": [
-      \\"warn\\"
-    ],
     \\"unicorn/no-zero-fractions\\": [
       \\"warn\\"
     ],
@@ -3336,9 +3333,6 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"unicorn/no-unsafe-regex\\": [
-      \\"warn\\"
-    ],
-    \\"unicorn/no-useless-undefined\\": [
       \\"warn\\"
     ],
     \\"unicorn/no-zero-fractions\\": [
