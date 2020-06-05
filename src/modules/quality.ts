@@ -110,6 +110,22 @@ export const quality: ESLintRules = {
     }
   ],
 
+  "@typescript-eslint/prefer-regexp-exec": "warn",
+
+  "react/prefer-stateless-function": [
+    "warn",
+    {
+      "ignorePureComponents": true
+    }
+  ],
+
+  "react/no-unescaped-entities": "warn",
+
+  // That rule is far to inflexible to be useful. In some
+  // situations it might be a good idea to use that approach, but not
+  // in all. Moving that responsibility to the developers
+  "react/destructuring-assignment": "off",
+
   // Keep in sync with exported symbol name.
   "filenames/match-exported": "warn"
 }
