@@ -341,6 +341,12 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\",
       \\"last\\"
     ],
+    \\"complexity\\": [
+      \\"error\\",
+      {
+        \\"max\\": 10
+      }
+    ],
     \\"curly\\": [
       \\"warn\\",
       \\"all\\"
@@ -2042,6 +2048,12 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"comma-style\\": [
       \\"warn\\",
       \\"last\\"
+    ],
+    \\"complexity\\": [
+      \\"error\\",
+      {
+        \\"max\\": 10
+      }
     ],
     \\"curly\\": [
       \\"warn\\",

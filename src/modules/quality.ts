@@ -19,6 +19,8 @@ export const quality: ESLintRules = {
     }
   ],
 
+  complexity: [ "error", { max: 10 }],
+
   "max-depth": [
     "error",
     {
@@ -93,7 +95,7 @@ export const quality: ESLintRules = {
   "import/order": [
     "error",
     {
-      "groups": [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
+      groups: [ "builtin", "external", "unknown", [ "parent", "sibling", "index" ] ],
       "newlines-between": "always"
     }
   ],
@@ -115,7 +117,7 @@ export const quality: ESLintRules = {
   "react/prefer-stateless-function": [
     "warn",
     {
-      "ignorePureComponents": true
+      ignorePureComponents: true
     }
   ],
 
