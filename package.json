@@ -46,14 +46,17 @@
     }
   },
   "lint-staged": {
+    "*{json,md,yaml}": [
+      "prettier --write"
+    ],
     "*{js,jsx,ts,tsx}": [
+      "prettier --write",
       "eslint --fix"
     ]
   },
   "peerDependencies": {
-    "eslint": ">=7.1.0",
-    "prettier": ">=2.0.5",
-    "typescript": ">=3.9.5"
+    "eslint": "^7.2.0",
+    "typescript": "^3.9.5"
   },
   "dependencies": {
     "@babel/runtime": "^7.10.2",
@@ -89,9 +92,10 @@
     "jest": "^26.0.1",
     "lint-staged": "^10.2.9",
     "preppy": "^10.5.0",
+    "prettier": "^2.0.5",
     "react": "^16.13.1",
     "release-it": "^13.6.2",
     "rimraf": "^3.0.2",
-    "typescript": "^3.9.3"
+    "typescript": "^3.9.5"
   }
 }
