@@ -2,7 +2,8 @@ import { ESLintRules } from "../types"
 
 const MAX_STATEMENTS = 30
 const MAX_DEPTH = 4
-const MAX_PARAMS = 4
+const MAX_PARAMS = 3
+const MAX_COMPLEXITY = 15
 
 export const quality: ESLintRules = {
   // We are using the import plugin with its ordering capabilities
@@ -19,7 +20,7 @@ export const quality: ESLintRules = {
     }
   ],
 
-  complexity: [ "error", { max: 10 }],
+  complexity: [ "error", { max: MAX_COMPLEXITY }],
 
   "max-depth": [
     "error",

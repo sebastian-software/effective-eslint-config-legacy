@@ -774,7 +774,7 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"max-params\\": [
       \\"error\\",
-      4
+      3
     ],
     \\"max-statements\\": [
       \\"error\\",
@@ -2482,7 +2482,7 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"max-params\\": [
       \\"error\\",
-      4
+      3
     ],
     \\"max-statements\\": [
       \\"error\\",

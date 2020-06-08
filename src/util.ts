@@ -43,7 +43,8 @@ export function setLevel(value: any, newLevel: Linter.RuleLevel | Linter.RuleLev
     const newValue = [ ...value ]
     newValue[0] = newLevel
     return newValue
-  } else if (value != null) {
+  }
+  if (value != null) {
     return newLevel
   }
 
