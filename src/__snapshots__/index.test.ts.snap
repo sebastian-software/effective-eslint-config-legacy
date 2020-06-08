@@ -344,7 +344,7 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"complexity\\": [
       \\"error\\",
       {
-        \\"max\\": 10
+        \\"max\\": 15
       }
     ],
     \\"curly\\": [
@@ -2052,7 +2052,7 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"complexity\\": [
       \\"error\\",
       {
-        \\"max\\": 10
+        \\"max\\": 15
       }
     ],
     \\"curly\\": [
