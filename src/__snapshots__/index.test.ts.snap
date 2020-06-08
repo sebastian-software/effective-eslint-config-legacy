@@ -266,7 +266,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-regexp-exec\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/require-await\\": [
       \\"error\\"
@@ -340,6 +340,10 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"comma-style\\": [
       \\"warn\\",
       \\"last\\"
+    ],
+    \\"curly\\": [
+      \\"warn\\",
+      \\"all\\"
     ],
     \\"default-case\\": [
       \\"error\\",
@@ -428,7 +432,8 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"import/no-cycle\\": [
       \\"error\\",
       {
-        \\"maxDepth\\": null
+        \\"maxDepth\\": null,
+        \\"ignoreExternal\\": false
       }
     ],
     \\"import/no-duplicates\\": [
@@ -1155,9 +1160,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-sequences\\": [
       \\"error\\"
     ],
-    \\"no-shadow\\": [
-      \\"error\\"
-    ],
     \\"no-shadow-restricted-names\\": [
       \\"error\\"
     ],
@@ -1362,8 +1364,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"react/destructuring-assignment\\": [
-      \\"error\\",
-      \\"always\\"
+      \\"off\\"
     ],
     \\"react/forbid-foreign-prop-types\\": [
       \\"error\\",
@@ -1481,13 +1482,13 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\"
     ],
     \\"react/no-unescaped-entities\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/no-unknown-property\\": [
       \\"warn\\"
     ],
     \\"react/prefer-stateless-function\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignorePureComponents\\": true
       }
@@ -1967,7 +1968,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-regexp-exec\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"@typescript-eslint/require-await\\": [
       \\"error\\"
@@ -2041,6 +2042,10 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"comma-style\\": [
       \\"warn\\",
       \\"last\\"
+    ],
+    \\"curly\\": [
+      \\"warn\\",
+      \\"all\\"
     ],
     \\"default-case\\": [
       \\"error\\",
@@ -2129,7 +2134,8 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"import/no-cycle\\": [
       \\"error\\",
       {
-        \\"maxDepth\\": null
+        \\"maxDepth\\": null,
+        \\"ignoreExternal\\": false
       }
     ],
     \\"import/no-duplicates\\": [
@@ -2856,9 +2862,6 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-sequences\\": [
       \\"error\\"
     ],
-    \\"no-shadow\\": [
-      \\"error\\"
-    ],
     \\"no-shadow-restricted-names\\": [
       \\"error\\"
     ],
@@ -3063,8 +3066,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"react/destructuring-assignment\\": [
-      \\"error\\",
-      \\"always\\"
+      \\"off\\"
     ],
     \\"react/forbid-foreign-prop-types\\": [
       \\"error\\",
@@ -3182,13 +3184,13 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\"
     ],
     \\"react/no-unescaped-entities\\": [
-      \\"error\\"
+      \\"warn\\"
     ],
     \\"react/no-unknown-property\\": [
       \\"warn\\"
     ],
     \\"react/prefer-stateless-function\\": [
-      \\"error\\",
+      \\"warn\\",
       {
         \\"ignorePureComponents\\": true
       }
@@ -3500,14 +3502,30 @@ exports[`reports undeclared variable 1`] = `
 Object {
   "errorCount": 1,
   "fixableErrorCount": 0,
-  "fixableWarningCount": 0,
+  "fixableWarningCount": 1,
   "results": Array [
     Object {
       "errorCount": 1,
       "filePath": "[PATH]",
       "fixableErrorCount": 0,
-      "fixableWarningCount": 0,
+      "fixableWarningCount": 1,
       "messages": Array [
+        Object {
+          "column": 1,
+          "fix": Object {
+            "range": Array [
+              16,
+              21,
+            ],
+            "text": "{run()}",
+          },
+          "line": 1,
+          "message": "Expected { after 'if' condition.",
+          "messageId": "missingCurlyAfterCondition",
+          "nodeType": "IfStatement",
+          "ruleId": "curly",
+          "severity": 1,
+        },
         Object {
           "column": 5,
           "endColumn": 15,
@@ -3544,10 +3562,10 @@ Object {
       ],
       "source": "if (obj = null) run()
 ",
-      "warningCount": 2,
+      "warningCount": 3,
     },
   ],
   "usedDeprecatedRules": Array [],
-  "warningCount": 2,
+  "warningCount": 3,
 }
 `;
