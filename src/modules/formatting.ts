@@ -84,15 +84,6 @@ export const formatting: ESLintRules = {
     }
   ],
 
-  "@typescript-eslint/space-before-function-paren": [
-    "warn",
-    {
-      anonymous: "never",
-      asyncArrow: "always",
-      named: "never"
-    }
-  ],
-
   "spaced-comment": [
     "warn",
     "always",
@@ -102,6 +93,15 @@ export const formatting: ESLintRules = {
   ],
 
   "wrap-regex": "warn",
+
+  "@typescript-eslint/space-before-function-paren": [
+    "warn",
+    {
+      anonymous: "never",
+      asyncArrow: "always",
+      named: "never"
+    }
+  ],
 
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
 
@@ -142,8 +142,6 @@ export const formatting: ESLintRules = {
       ignoreArrayIndexes: true
     }
   ],
-
-  "@typescript-eslint/semi": [ "warn", "never" ],
 
   "@typescript-eslint/type-annotation-spacing": "warn",
 

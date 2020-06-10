@@ -278,10 +278,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"@typescript-eslint/restrict-template-expressions\\": [
       \\"error\\"
     ],
-    \\"@typescript-eslint/semi\\": [
-      \\"warn\\",
-      \\"never\\"
-    ],
     \\"@typescript-eslint/space-before-function-paren\\": [
       \\"warn\\",
       {
@@ -2009,10 +2005,6 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"@typescript-eslint/restrict-template-expressions\\": [
       \\"off\\"
-    ],
-    \\"@typescript-eslint/semi\\": [
-      \\"warn\\",
-      \\"never\\"
     ],
     \\"@typescript-eslint/space-before-function-paren\\": [
       \\"warn\\",
