@@ -70,7 +70,6 @@ export const quality: ESLintRules = {
   // As of June-2020. https://github.com/typescript-eslint/typescript-eslint/issues/1856
   "@typescript-eslint/no-unused-vars": "off",
 
-  "no-unused-expressions": "off",
   "@typescript-eslint/no-unused-expressions": [
     "error",
     {
@@ -85,12 +84,6 @@ export const quality: ESLintRules = {
 
   // Replaces rule by new one (original came from the recommended preset it seems)
   "@typescript-eslint/consistent-type-definitions": "error",
-
-  // Relax some strict TS checks to warning level
-  "@typescript-eslint/no-unsafe-member-access": "warn",
-  "@typescript-eslint/no-unsafe-assignment": "warn",
-  "@typescript-eslint/no-unsafe-call": "warn",
-  "@typescript-eslint/no-unsafe-return": "warn",
 
   // Activate our concepts of formatting imports
   "import/order": [
@@ -112,17 +105,6 @@ export const quality: ESLintRules = {
       tsx: "never"
     }
   ],
-
-  "@typescript-eslint/prefer-regexp-exec": "warn",
-
-  "react/prefer-stateless-function": [
-    "warn",
-    {
-      ignorePureComponents: true
-    }
-  ],
-
-  "react/no-unescaped-entities": "warn",
 
   // That rule is far to inflexible to be useful. In some
   // situations it might be a good idea to use that approach, but not

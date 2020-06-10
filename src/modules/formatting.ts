@@ -13,7 +13,7 @@ export const formatting: ESLintRules = {
 
   "comma-dangle": [ "warn", "never" ],
   "comma-style": [ "warn", "last" ],
-  "curly": [ "warn", "all" ],
+  curly: [ "warn", "all" ],
   "func-names": [ "warn", "as-needed" ],
 
   "func-style": [
@@ -200,8 +200,5 @@ export const formatting: ESLintRules = {
       selector: "typeLike",
       format: [ "PascalCase" ]
     }
-  ],
-
-  "prefer-rest-params": "warn",
-  "prefer-spread": "warn"
+  ]
 }

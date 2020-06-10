@@ -1,4 +1,4 @@
-import { ESLintRules } from "../types"
+import { ESLintRules } from "../../types"
 
 export const autofix: ESLintRules = {
   "@typescript-eslint/ban-types": "warn",
@@ -17,7 +17,7 @@ export const autofix: ESLintRules = {
   "arrow-parens": "warn",
   "arrow-spacing": "warn",
   "dot-location": "warn",
-  "eqeqeq": "warn",
+  eqeqeq: "warn",
   "generator-star-spacing": "warn",
   "import/first": "warn",
   "import/newline-after-import": "warn",
@@ -59,7 +59,7 @@ export const autofix: ESLintRules = {
   "react/self-closing-comp": "warn",
   "rest-spread-spacing": "warn",
   "sort-imports": "warn",
-  "strict": "warn",
+  strict: "warn",
   "template-curly-spacing": "warn",
   "unicode-bom": "warn",
   "unicorn/new-for-builtins": "warn",

@@ -26,7 +26,8 @@ import { unicorn } from "./modules/sandboxed/unicorn"
 import { shopify } from "./modules/sandboxed/shopify"
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
-import { autofix } from "./modules/autofix"
+import { autofix } from "./modules/relax/autofix"
+import { relaxed } from "./modules/relax/relaxed"
 
 function writeDefaultProjectConfig(projectConfig: string) {
   fs.writeFileSync(
@@ -192,7 +193,9 @@ mergeWithWarnings(airbnb, "airbnb")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
 
+// override/relax level
 mergeLevelOverrides(autofix, "autofix")
+mergeLevelOverrides(relaxed, "relaxed")
 
 const config: ESLintConfig = {
   root: true,
