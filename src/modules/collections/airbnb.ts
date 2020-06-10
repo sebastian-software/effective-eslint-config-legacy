@@ -16,13 +16,6 @@ import { isDisabled } from "../../util"
 // This list contains value we do not accept. These often times overwrite values from other configs where we
 // prefer the original value
 const blocked = new Set([
-  // Unchanged Values
-  "no-global-assign",
-  "jsx-a11y/anchor-has-content",
-  "jsx-a11y/heading-has-content",
-  "jsx-a11y/no-distracting-elements",
-  "react/jsx-uses-react",
-
   // Custom settings in our modules
   "@typescript-eslint/no-unused-vars",
   "@typescript-eslint/no-use-before-define",
@@ -99,7 +92,6 @@ function merge(rules: ESLintRules): void {
     airbnb[name] = rules[name]
   }
 }
-
 
 merge(qualityRules.rules)
 merge(errorRules.rules)

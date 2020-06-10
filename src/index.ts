@@ -94,11 +94,16 @@ function sortReplacer(key: string, value: Json): Json {
 // eslint-disable-next-line complexity
 function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false) {
   for (const ruleName in rules) {
-    const ruleValue = rules[ruleName]
+    let ruleValue = rules[ruleName]
 
     // Filter entries without actual value
     if (!ruleValue) {
       continue
+    }
+
+    // Simplify value
+    if (Array.isArray(ruleValue) && ruleValue.length === 1) {
+      ruleValue = ruleValue[0]
     }
 
     // If new and old value are both disabled, then we do not need to

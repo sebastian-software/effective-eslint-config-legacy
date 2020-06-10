@@ -541,7 +541,10 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"jsx-a11y/anchor-has-content\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"components\\": []
+      }
     ],
     \\"jsx-a11y/anchor-is-valid\\": [
       \\"error\\",
@@ -613,7 +616,12 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"jsx-a11y/heading-has-content\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"components\\": [
+          \\"\\"
+        ]
+      }
     ],
     \\"jsx-a11y/html-has-lang\\": [
       \\"error\\"
@@ -661,7 +669,13 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"jsx-a11y/no-distracting-elements\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"elements\\": [
+          \\"marquee\\",
+          \\"blink\\"
+        ]
+      }
     ],
     \\"jsx-a11y/no-interactive-element-to-noninteractive-role\\": [
       \\"error\\",
@@ -890,7 +904,10 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -2255,7 +2272,10 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"jsx-a11y/anchor-has-content\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"components\\": []
+      }
     ],
     \\"jsx-a11y/anchor-is-valid\\": [
       \\"error\\",
@@ -2327,7 +2347,12 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"jsx-a11y/heading-has-content\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"components\\": [
+          \\"\\"
+        ]
+      }
     ],
     \\"jsx-a11y/html-has-lang\\": [
       \\"error\\"
@@ -2375,7 +2400,13 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"jsx-a11y/no-distracting-elements\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"elements\\": [
+          \\"marquee\\",
+          \\"blink\\"
+        ]
+      }
     ],
     \\"jsx-a11y/no-interactive-element-to-noninteractive-role\\": [
       \\"error\\",
@@ -2604,7 +2635,10 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"no-global-assign\\": [
-      \\"error\\"
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
