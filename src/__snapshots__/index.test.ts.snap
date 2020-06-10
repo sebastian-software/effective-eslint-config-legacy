@@ -188,6 +188,7 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\",
       {
         \\"detectObjects\\": false,
+        \\"ignoreEnums\\": true,
         \\"enforceConst\\": true,
         \\"ignore\\": [
           -1,
@@ -1919,6 +1920,7 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\",
       {
         \\"detectObjects\\": false,
+        \\"ignoreEnums\\": true,
         \\"enforceConst\\": true,
         \\"ignore\\": [
           -1,

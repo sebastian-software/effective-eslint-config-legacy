@@ -14,16 +14,39 @@
 
 This preset is based on the excellent work of the many developers of the following projects:
 
+**Collections:**
+
 - [ESLint TypeScript](https://github.com/typescript-eslint/typescript-eslint): This preset is TypeScript-focused and uses the significantly extended rules from the TypeScript ecosystem whenever possible.
 - [ESLint Recommended](https://eslint.org/docs/rules/): Recommendations from the ESLint core package that have not yet been geared towards TypeScript are added.
 - [Create React App](https://github.com/facebook/create-react-app/tree/master/packages/eslint-config-react-app): This project's settings combine everything that the developers of Create React App consider critical code base issues for general JavaScript, ReactJS (including hooks and accessibility).
 - [Airbnb](https://github.com/airbnb/javascript): As one of the most widely used standards, it would probably not have been wise to leave out the know-how of the Airbnb developers. We use all the knowledge from the rules, which have not been covered differently so far, to be able to offer much more extensive checks.
+
+**Plugins:**
+
+- [React](https://github.com/yannickcr/eslint-plugin-react): The React plugin offers a lot of tests related to React code quality. This preset includes the rules and settings from the "recommended" rules.
 - [JSDoc](https://github.com/gajus/eslint-plugin-jsdoc): This plugin provides some good options to check the content of JSDoc comments. We have deliberately chosen to use only those rules that make sense in TypeScript typed projects.
 - [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) + [Shopify](https://github.com/sebastian-software/eslint-plugin-shopify-lean): Both are a wonderful collection of really smart additional self-implemented rules. We're using the best of these two projects to make some great additions to the ruleset.
+
+**Utilities:**
+
 - [Jest](https://github.com/jest-community/eslint-plugin-jest): The TestRunner of choice is directly supported by the preset. We recognize test files by the "test" folder or by the component ".test." in the file name. Only here we activate the recommended preset of Jest and deactivate some of our stricter rules, which are often harder to follow in tests.
 - [Babel](https://github.com/tleunen/eslint-import-resolver-babel-module): By using the Babel resolver, we have created an alias `-` that points to the `src` folder. This is useful in more deeply structured projects, since you don't have to shimmy along the parent folders as often via `...`.
 
-And it combines them in an intelligent and harmonious way to create a modern, high-performance linting infrastructure. The preset provides the best building block for the development of modern JavaScript applications
+And it combines them in an intelligent and harmonious way to create a modern, high-performance linting infrastructure. The preset provides the best building block for the development of modern JavaScript applications.
+
+**Additions:**
+
+- Sorts imported names and the actual imports. Splits between global and local imports (divided by a new line).
+- Prevents short variable names which could not explain the meaning well enough.
+- Includes limits for code complexity, function depth, number of parameters or statements to keep code clean and lean.
+
+**Customization:**
+
+- The idea is to include this oreset in your configuration and override what you do not like or need. This is meant as a starting point for many projects – not as a final solution for everyone.
+
+By the way: All rules that are automatically correctable were automatically reduced to the level Warning - no matter what was entered in the originally imported ones and regardless of their absolutely relevant value for the correctness of the code.
+
+And yes, it might hurt your feelings. Please excuse if the preset knocks you out a bit to point out errors. Some settings are a bit stricter. But it is precisely these that make this preset a great help, especially for new code to be written. In existing code, large rule sets are often a burden, as many errors are reported and nobody has the time or inclination to take care of them.
 
 ## Installation
 

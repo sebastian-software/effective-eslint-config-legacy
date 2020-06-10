@@ -105,27 +105,6 @@ export const formatting: ESLintRules = {
 
   "@typescript-eslint/func-call-spacing": [ "warn", "never" ],
 
-  // The rule is broken right now. We might rely on Prettier only here instead.
-  // "@typescript-eslint/indent": "off",
-
-  // "@typescript-eslint/indent": [
-  //   "warn",
-  //   2,
-  //   {
-  //     CallExpression: {
-  //       arguments: 1
-  //     },
-  //     FunctionExpression: {
-  //       body: 1,
-  //       parameters: 1
-  //     },
-  //     MemberExpression: 1,
-  //     outerIIFEBody: 0,
-  //     SwitchCase: 1,
-  //     VariableDeclarator: 1
-  //   }
-  // ],
-
   "@typescript-eslint/member-delimiter-style": [
     "warn",
     {
@@ -157,7 +136,7 @@ export const formatting: ESLintRules = {
     "warn",
     {
       detectObjects: false,
-      // ignoreEnums: true,
+      ignoreEnums: true,
       enforceConst: true,
       ignore: [ -1, 0, 1, 2, 10 ],
       ignoreArrayIndexes: true
