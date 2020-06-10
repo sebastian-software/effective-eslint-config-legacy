@@ -7,7 +7,13 @@ import findUp from "find-up"
 import appRootPath from "app-root-path"
 
 /* eslint-disable filenames/match-exported, import/order */
-import { blacklist, hasMatchingTypescriptRule, isDisabled, setLevel } from "./util"
+import {
+  blacklist,
+  hasMatchingTypescriptRule,
+  humanifyLevel,
+  isDisabled,
+  setLevel
+} from "./util"
 import { ESLintConfig, ESLintRules, Json } from "./types"
 
 import { typescript } from "./modules/collections/typescript"
@@ -22,22 +28,32 @@ import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/autofix"
 
 function writeDefaultProjectConfig(projectConfig: string) {
-  fs.writeFileSync(projectConfig, JSON.stringify({
-    lib: [ 'dom', 'dom.iterable', 'esnext' ],
-    allowJs: true,
-    skipLibCheck: true,
-    esModuleInterop: true,
-    allowSyntheticDefaultImports: true,
-    strict: true,
-    module: "esnext",
-    moduleResolution: "node",
-    resolveJsonModule:true,
-    jsx: "react"
-  }, null, 2), { encoding: "utf-8" })
+  fs.writeFileSync(
+    projectConfig,
+    JSON.stringify(
+      {
+        lib: [ "dom", "dom.iterable", "esnext" ],
+        allowJs: true,
+        skipLibCheck: true,
+        esModuleInterop: true,
+        allowSyntheticDefaultImports: true,
+        strict: true,
+        module: "esnext",
+        moduleResolution: "node",
+        resolveJsonModule: true,
+        jsx: "react"
+      },
+      null,
+      2
+    ),
+    { encoding: "utf-8" }
+  )
 }
 
 const ROOT = String(appRootPath)
-let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], { cwd: ROOT })
+let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], {
+  cwd: ROOT
+})
 let projectRoot = ROOT
 
 if (projectConfig == null) {
@@ -73,6 +89,7 @@ function sortReplacer(key: string, value: Json): Json {
   return result
 }
 
+// eslint-disable-next-line complexity
 function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false) {
   for (const ruleName in rules) {
     const ruleValue = rules[ruleName]
@@ -113,18 +130,22 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false)
 
         if (newValue === oldValue) {
           if (warnLocale && DEBUG_ESLINT) {
-            console.log(`Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`)
+            console.log(
+              `Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`
+            )
           }
           continue
         }
 
         if (DEBUG_ESLINT) {
-          console.log(`Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`)
+          console.log(
+            `Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`
+          )
         }
       }
     }
 
-    combinedRules[exportRuleName] = ruleValue
+    combinedRules[exportRuleName] = humanifyLevel(ruleValue)
   }
 }
 
@@ -138,14 +159,18 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
       const oldValue = combinedRules[rule]
       if (isDisabled(oldValue)) {
         if (DEBUG_ESLINT) {
-          console.log(`Module ${name}: Level override for previously disabled rule: ${rule}. Dropping...`)
+          console.log(
+            `Module ${name}: Level override for previously disabled rule: ${rule}. Dropping...`
+          )
         }
         continue
       }
 
       combinedRules[rule] = setLevel(oldValue, rules[rule])
     } else if (DEBUG_ESLINT) {
-      console.log(`Module ${name}: Level override for previously unconfigured rule: ${rule}. Dropping...`)
+      console.log(
+        `Module ${name}: Level override for previously unconfigured rule: ${rule}. Dropping...`
+      )
     }
   }
 }
@@ -170,9 +195,9 @@ const config: ESLintConfig = {
   root: true,
 
   env: {
-    "browser": true,
-    "es6": true,
-    "node": true,
+    browser: true,
+    es6: true,
+    node: true,
     "shared-node-browser": true
   },
 
@@ -186,7 +211,7 @@ const config: ESLintConfig = {
         }
       }
     },
-    "react": {
+    react: {
       version: "detect"
     }
   },

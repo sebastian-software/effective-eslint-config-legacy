@@ -59,6 +59,22 @@ export function getLevel(value: any) {
   return Array.isArray(value) ? value[0] : value
 }
 
+const levelMap = {
+  0: "off",
+  1: "warn",
+  2: "error"
+}
+
+export function humanifyLevel(value: any) {
+  const oldLevel = getLevel(value)
+  if (typeof oldLevel === "string") {
+    return value
+  }
+
+  const newLevel = levelMap[oldLevel]
+  return newLevel ? setLevel(value, levelMap[oldLevel]) : value
+}
+
 export function isDisabled(value: any) {
   if (value == null) {
     return true
