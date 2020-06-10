@@ -176,19 +176,19 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
   }
 }
 
+// plugin scope only
+mergeWithWarnings(react, "react")
+mergeWithWarnings(jsdoc, "jsdoc")
+mergeWithWarnings(unicorn, "unicorn")
+mergeWithWarnings(shopify, "shopify")
+
 // popular collections
 mergeWithWarnings(typescript, "typescript")
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
-
-// plugin scope only
-mergeWithWarnings(react, "react")
 mergeWithWarnings(airbnb, "airbnb")
-mergeWithWarnings(jsdoc, "jsdoc")
-mergeWithWarnings(unicorn, "unicorn")
 
 // local settings/overrides
-mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)
 
