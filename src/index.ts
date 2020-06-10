@@ -14,6 +14,7 @@ import {
   isDisabled,
   setLevel
 } from "./util"
+import { react } from "./modules/sandboxed/react"
 import { ESLintConfig, ESLintRules, Json } from "./types"
 
 import { typescript } from "./modules/collections/typescript"
@@ -175,16 +176,18 @@ function mergeLevelOverrides(rules: ESLintRules, name: string) {
   }
 }
 
+// popular collections
 mergeWithWarnings(typescript, "typescript")
 mergeWithWarnings(eslint, "eslint")
 mergeWithWarnings(cra, "cra")
 
 // plugin scope only
+mergeWithWarnings(react, "react")
 mergeWithWarnings(airbnb, "airbnb")
 mergeWithWarnings(jsdoc, "jsdoc")
 mergeWithWarnings(unicorn, "unicorn")
 
-// our local settings/overrides
+// local settings/overrides
 mergeWithWarnings(shopify, "shopify")
 mergeWithWarnings(quality, "quality", true)
 mergeWithWarnings(formatting, "formatting", true)

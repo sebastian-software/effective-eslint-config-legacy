@@ -1372,6 +1372,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"react/destructuring-assignment\\": [
       \\"off\\"
     ],
+    \\"react/display-name\\": [
+      \\"error\\"
+    ],
     \\"react/forbid-foreign-prop-types\\": [
       \\"error\\",
       {
@@ -1395,6 +1398,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"react/jsx-fragments\\": [
       \\"warn\\",
       \\"syntax\\"
+    ],
+    \\"react/jsx-key\\": [
+      \\"error\\"
     ],
     \\"react/jsx-no-bind\\": [
       \\"error\\",
@@ -3080,6 +3086,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"react/destructuring-assignment\\": [
       \\"off\\"
     ],
+    \\"react/display-name\\": [
+      \\"error\\"
+    ],
     \\"react/forbid-foreign-prop-types\\": [
       \\"error\\",
       {
@@ -3103,6 +3112,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"react/jsx-fragments\\": [
       \\"warn\\",
       \\"syntax\\"
+    ],
+    \\"react/jsx-key\\": [
+      \\"error\\"
     ],
     \\"react/jsx-no-bind\\": [
       \\"error\\",
