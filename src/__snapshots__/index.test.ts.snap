@@ -49,6 +49,10 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"@typescript-eslint/ban-types\\": [
       \\"warn\\"
     ],
+    \\"@typescript-eslint/comma-dangle\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
     \\"@typescript-eslint/consistent-type-assertions\\": [
       \\"error\\",
       {
@@ -184,6 +188,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"@typescript-eslint/no-inferrable-types\\": [
       \\"warn\\"
     ],
+    \\"@typescript-eslint/no-loop-func\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
       {
@@ -197,7 +204,8 @@ exports[`Full JS/TS configuration result 1`] = `
           2,
           10
         ],
-        \\"ignoreArrayIndexes\\": true
+        \\"ignoreArrayIndexes\\": true,
+        \\"ignoreDefaultValues\\": false
       }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
@@ -214,6 +222,9 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"@typescript-eslint/no-non-null-assertion\\": [
       \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-redeclare\\": [
+      \\"error\\"
     ],
     \\"@typescript-eslint/no-this-alias\\": [
       \\"error\\"
@@ -329,10 +340,6 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"block-scoped-var\\": [
       \\"error\\"
-    ],
-    \\"comma-dangle\\": [
-      \\"warn\\",
-      \\"never\\"
     ],
     \\"comma-style\\": [
       \\"warn\\",
@@ -929,9 +936,6 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"no-lone-blocks\\": [
-      \\"error\\"
-    ],
-    \\"no-loop-func\\": [
       \\"error\\"
     ],
     \\"no-misleading-character-class\\": [
@@ -1780,6 +1784,10 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"@typescript-eslint/ban-types\\": [
       \\"warn\\"
     ],
+    \\"@typescript-eslint/comma-dangle\\": [
+      \\"warn\\",
+      \\"never\\"
+    ],
     \\"@typescript-eslint/consistent-type-assertions\\": [
       \\"error\\",
       {
@@ -1915,6 +1923,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"@typescript-eslint/no-inferrable-types\\": [
       \\"warn\\"
     ],
+    \\"@typescript-eslint/no-loop-func\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
       {
@@ -1928,7 +1939,8 @@ exports[`Full JS/TS configuration result 2`] = `
           2,
           10
         ],
-        \\"ignoreArrayIndexes\\": true
+        \\"ignoreArrayIndexes\\": true,
+        \\"ignoreDefaultValues\\": false
       }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
@@ -1945,6 +1957,9 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"@typescript-eslint/no-non-null-assertion\\": [
       \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-redeclare\\": [
+      \\"error\\"
     ],
     \\"@typescript-eslint/no-this-alias\\": [
       \\"error\\"
@@ -2060,10 +2075,6 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"block-scoped-var\\": [
       \\"error\\"
-    ],
-    \\"comma-dangle\\": [
-      \\"warn\\",
-      \\"never\\"
     ],
     \\"comma-style\\": [
       \\"warn\\",
@@ -2660,9 +2671,6 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"no-lone-blocks\\": [
-      \\"error\\"
-    ],
-    \\"no-loop-func\\": [
       \\"error\\"
     ],
     \\"no-misleading-character-class\\": [
