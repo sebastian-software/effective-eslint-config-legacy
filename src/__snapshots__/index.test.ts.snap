@@ -67,7 +67,8 @@ exports[`Full JS/TS configuration result 1`] = `
       {
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
-        \\"allowPrivateClassPropertyAccess\\": false
+        \\"allowPrivateClassPropertyAccess\\": false,
+        \\"allowProtectedClassPropertyAccess\\": false
       }
     ],
     \\"@typescript-eslint/explicit-module-boundary-types\\": [
@@ -140,6 +141,9 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-dupe-class-members\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-duplicate-imports\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/no-empty-function\\": [
@@ -439,10 +443,13 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"import/no-amd\\": [
       \\"error\\"
     ],
+    \\"import/no-anonymous-default-export\\": [
+      \\"error\\"
+    ],
     \\"import/no-cycle\\": [
       \\"error\\",
       {
-        \\"maxDepth\\": null,
+        \\"maxDepth\\": \\"∞\\",
         \\"ignoreExternal\\": false
       }
     ],
@@ -526,9 +533,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"jsdoc/require-returns-description\\": [
       \\"warn\\"
     ],
-    \\"jsx-a11y/accessible-emoji\\": [
-      \\"error\\"
-    ],
     \\"jsx-a11y/alt-text\\": [
       \\"error\\",
       {
@@ -578,7 +582,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"jsx-a11y/aria-role\\": [
       \\"error\\",
       {
-        \\"ignoreNonDom\\": false,
         \\"ignoreNonDOM\\": false
       }
     ],
@@ -862,9 +865,6 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-duplicate-case\\": [
       \\"error\\"
     ],
-    \\"no-duplicate-imports\\": [
-      \\"error\\"
-    ],
     \\"no-else-return\\": [
       \\"warn\\",
       {
@@ -1047,8 +1047,14 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
-      \\"isFinite\\",
-      \\"isNaN\\",
+      {
+        \\"name\\": \\"isFinite\\",
+        \\"message\\": \\"Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite\\"
+      },
+      {
+        \\"name\\": \\"isNaN\\",
+        \\"message\\": \\"Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan\\"
+      },
       \\"addEventListener\\",
       \\"blur\\",
       \\"close\\",
@@ -1802,7 +1808,8 @@ exports[`Full JS/TS configuration result 2`] = `
       {
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
-        \\"allowPrivateClassPropertyAccess\\": false
+        \\"allowPrivateClassPropertyAccess\\": false,
+        \\"allowProtectedClassPropertyAccess\\": false
       }
     ],
     \\"@typescript-eslint/explicit-module-boundary-types\\": [
@@ -1875,6 +1882,9 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\"
     ],
     \\"@typescript-eslint/no-dupe-class-members\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-duplicate-imports\\": [
       \\"error\\"
     ],
     \\"@typescript-eslint/no-empty-function\\": [
@@ -2174,10 +2184,13 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"import/no-amd\\": [
       \\"error\\"
     ],
+    \\"import/no-anonymous-default-export\\": [
+      \\"error\\"
+    ],
     \\"import/no-cycle\\": [
       \\"error\\",
       {
-        \\"maxDepth\\": null,
+        \\"maxDepth\\": \\"∞\\",
         \\"ignoreExternal\\": false
       }
     ],
@@ -2261,9 +2274,6 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"jsdoc/require-returns-description\\": [
       \\"warn\\"
     ],
-    \\"jsx-a11y/accessible-emoji\\": [
-      \\"error\\"
-    ],
     \\"jsx-a11y/alt-text\\": [
       \\"error\\",
       {
@@ -2313,7 +2323,6 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"jsx-a11y/aria-role\\": [
       \\"error\\",
       {
-        \\"ignoreNonDom\\": false,
         \\"ignoreNonDOM\\": false
       }
     ],
@@ -2597,9 +2606,6 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-duplicate-case\\": [
       \\"error\\"
     ],
-    \\"no-duplicate-imports\\": [
-      \\"error\\"
-    ],
     \\"no-else-return\\": [
       \\"warn\\",
       {
@@ -2782,8 +2788,14 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
-      \\"isFinite\\",
-      \\"isNaN\\",
+      {
+        \\"name\\": \\"isFinite\\",
+        \\"message\\": \\"Use Number.isFinite instead https://github.com/airbnb/javascript#standard-library--isfinite\\"
+      },
+      {
+        \\"name\\": \\"isNaN\\",
+        \\"message\\": \\"Use Number.isNaN instead https://github.com/airbnb/javascript#standard-library--isnan\\"
+      },
       \\"addEventListener\\",
       \\"blur\\",
       \\"close\\",
