@@ -268,8 +268,10 @@ const config: ESLintConfig = {
       rules: {
         // Reduce config from recommended to warn for auto-fixable rules
         "jest/no-focused-tests": "warn",
-        "jest/no-test-callback": "warn",
         "jest/no-test-prefixes": "warn",
+        "jest/no-deprecated-functions": "warn",
+        "jest/no-jasmine-globals": "warn",
+        "jest/valid-title": "warn",
 
         // Relax a few rules inside tests
         "filenames/match-exported": "off",
