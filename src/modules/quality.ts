@@ -103,13 +103,14 @@ export const quality: ESLintRules = {
   ],
 
   "no-div-regex": "error",
-  "no-duplicate-imports": "error",
   "no-nested-ternary": "error",
   "no-unmodified-loop-condition": "error",
   "no-unneeded-ternary": "error",
   "no-import-assign": "error",
   "no-setter-return": "error",
   "default-case-last": "error",
+
+  "@typescript-eslint/no-duplicate-imports": "error",
 
   // Most code bases will want to enforce not using angle-bracket style because
   // it conflicts with JSX syntax, and is confusing when paired with with generic syntax.
