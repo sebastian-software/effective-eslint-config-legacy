@@ -1659,7 +1659,7 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"unicorn/new-for-builtins\\": [
       \\"warn\\"
     ],
-    \\"unicorn/no-array-instanceof\\": [
+    \\"unicorn/no-instanceof-array\\": [
       \\"warn\\"
     ],
     \\"unicorn/no-nested-ternary\\": [
@@ -1689,10 +1689,10 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"unicorn/prefer-spread\\": [
       \\"warn\\"
     ],
-    \\"unicorn/prefer-starts-ends-with\\": [
+    \\"unicorn/prefer-string-slice\\": [
       \\"warn\\"
     ],
-    \\"unicorn/prefer-string-slice\\": [
+    \\"unicorn/prefer-string-starts-ends-with\\": [
       \\"warn\\"
     ],
     \\"unicorn/prefer-type-error\\": [
@@ -3400,7 +3400,7 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"unicorn/new-for-builtins\\": [
       \\"warn\\"
     ],
-    \\"unicorn/no-array-instanceof\\": [
+    \\"unicorn/no-instanceof-array\\": [
       \\"warn\\"
     ],
     \\"unicorn/no-nested-ternary\\": [
@@ -3430,10 +3430,10 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"unicorn/prefer-spread\\": [
       \\"warn\\"
     ],
-    \\"unicorn/prefer-starts-ends-with\\": [
+    \\"unicorn/prefer-string-slice\\": [
       \\"warn\\"
     ],
-    \\"unicorn/prefer-string-slice\\": [
+    \\"unicorn/prefer-string-starts-ends-with\\": [
       \\"warn\\"
     ],
     \\"unicorn/prefer-type-error\\": [

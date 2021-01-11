@@ -63,7 +63,7 @@ export const autofix: ESLintRules = {
   "template-curly-spacing": "warn",
   "unicode-bom": "warn",
   "unicorn/new-for-builtins": "warn",
-  "unicorn/no-array-instanceof": "warn",
+  "unicorn/no-instanceof-array": "warn",
   "unicorn/no-new-buffer": "warn",
   "unicorn/prefer-optional-catch-binding": "warn",
   "unicorn/throw-new-error": "warn"
