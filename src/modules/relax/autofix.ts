@@ -2,7 +2,6 @@ import { ESLintRules } from "../../types"
 
 export const autofix: ESLintRules = {
   "@typescript-eslint/ban-types": "warn",
-  "@typescript-eslint/consistent-type-definitions": "warn",
   "@typescript-eslint/dot-notation": "warn",
   "@typescript-eslint/no-array-constructor": "warn",
   "@typescript-eslint/no-empty-interface": "warn",

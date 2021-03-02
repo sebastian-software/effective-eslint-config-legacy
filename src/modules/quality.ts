@@ -126,8 +126,5 @@ export const quality: ESLintRules = {
   ],
 
   // Variable checks are mostly okay. Mix between airbnb and cra.
-  "@typescript-eslint/no-use-before-define": [ "error", { classes: false, functions: false }],
-
-  // Replaces rule by new one (original came from the recommended preset it seems)
-  "@typescript-eslint/consistent-type-definitions": "error"
+  "@typescript-eslint/no-use-before-define": [ "error", { classes: false, functions: false }]
 }
