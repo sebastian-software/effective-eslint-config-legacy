@@ -36,7 +36,7 @@ export const formatting: ESLintRules = {
   "linebreak-style": [ "warn", "unix" ],
 
   "no-trailing-spaces": [ "warn" ],
-  "object-curly-spacing": [ "warn", "always" ],
+  "@typescript-eslint/object-curly-spacing": [ "warn", "always" ],
 
   "padding-line-between-statements": [
     "warn",
