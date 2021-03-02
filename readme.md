@@ -106,4 +106,4 @@ Depending on the project the following plugins might be interesting additions:
 
 <img src="https://cdn.rawgit.com/sebastian-software/sebastian-software-brand/0d4ec9d6/sebastiansoftware-en.svg" alt="Logo of Sebastian Software GmbH, Mainz, Germany" width="460" height="160"/>
 
-Copyright 2019-2020<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
+Copyright 2019-2021<br/>[Sebastian Software GmbH](http://www.sebastian-software.de)
