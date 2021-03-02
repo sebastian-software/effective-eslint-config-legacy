@@ -59,9 +59,6 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"assertionStyle\\": \\"as\\"
       }
     ],
-    \\"@typescript-eslint/consistent-type-definitions\\": [
-      \\"warn\\"
-    ],
     \\"@typescript-eslint/dot-notation\\": [
       \\"warn\\",
       {
@@ -1800,9 +1797,6 @@ exports[`Full JS/TS configuration result 2`] = `
       {
         \\"assertionStyle\\": \\"as\\"
       }
-    ],
-    \\"@typescript-eslint/consistent-type-definitions\\": [
-      \\"warn\\"
     ],
     \\"@typescript-eslint/dot-notation\\": [
       \\"warn\\",
