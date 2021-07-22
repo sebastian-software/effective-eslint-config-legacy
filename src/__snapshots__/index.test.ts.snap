@@ -65,7 +65,8 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
         \\"allowPrivateClassPropertyAccess\\": false,
-        \\"allowProtectedClassPropertyAccess\\": false
+        \\"allowProtectedClassPropertyAccess\\": false,
+        \\"allowIndexSignaturePropertyAccess\\": false
       }
     ],
     \\"@typescript-eslint/explicit-module-boundary-types\\": [
@@ -505,7 +506,8 @@ exports[`Full JS/TS configuration result 1`] = `
             \\"index\\"
           ]
         ],
-        \\"newlines-between\\": \\"always\\"
+        \\"newlines-between\\": \\"always\\",
+        \\"warnOnUnassignedImports\\": false
       }
     ],
     \\"jsdoc/check-alignment\\": [
@@ -1804,7 +1806,8 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"allowKeywords\\": true,
         \\"allowPattern\\": \\"\\",
         \\"allowPrivateClassPropertyAccess\\": false,
-        \\"allowProtectedClassPropertyAccess\\": false
+        \\"allowProtectedClassPropertyAccess\\": false,
+        \\"allowIndexSignaturePropertyAccess\\": false
       }
     ],
     \\"@typescript-eslint/explicit-module-boundary-types\\": [
@@ -2244,7 +2247,8 @@ exports[`Full JS/TS configuration result 2`] = `
             \\"index\\"
           ]
         ],
-        \\"newlines-between\\": \\"always\\"
+        \\"newlines-between\\": \\"always\\",
+        \\"warnOnUnassignedImports\\": false
       }
     ],
     \\"jsdoc/check-alignment\\": [
@@ -3627,7 +3631,7 @@ Object {
           "endColumn": 20,
           "endLine": 1,
           "line": 1,
-          "message": "Unsafe call of an any typed value.",
+          "message": "Unsafe call of an \`any\` typed value.",
           "messageId": "unsafeCall",
           "nodeType": "Identifier",
           "ruleId": "@typescript-eslint/no-unsafe-call",
