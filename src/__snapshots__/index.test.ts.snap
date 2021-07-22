@@ -1734,8 +1734,11 @@ exports[`Full JS/TS configuration result 1`] = `
         ]
       }
     },
+    \\"jest\\": {
+      \\"version\\": \\"26.0.0\\"
+    },
     \\"react\\": {
-      \\"version\\": \\"detect\\"
+      \\"version\\": \\"17.0.0\\"
     }
   }
 }"
@@ -3475,8 +3478,11 @@ exports[`Full JS/TS configuration result 2`] = `
         ]
       }
     },
+    \\"jest\\": {
+      \\"version\\": \\"26.0.0\\"
+    },
     \\"react\\": {
-      \\"version\\": \\"detect\\"
+      \\"version\\": \\"17.0.0\\"
     }
   }
 }"
