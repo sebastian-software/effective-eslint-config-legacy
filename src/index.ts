@@ -223,10 +223,10 @@ const config: ESLintConfig = {
       }
     },
     react: {
-      version: "17.0.0"
+      version: 17
     },
     jest: {
-      version: "26.0.0"
+      version: 26
     }
   },
 
