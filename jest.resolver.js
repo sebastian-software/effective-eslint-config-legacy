@@ -4,6 +4,7 @@
 const resolver = require('enhanced-resolve').create.sync({
   conditionNames: ['require', 'node', 'default'],
   extensions: ['.js', '.json', '.node', '.ts', '.tsx'],
+  mainFields: ['exports', 'main', 'require'],
 });
 
 /**
@@ -16,5 +17,10 @@ module.exports = function (request, options) {
   if (['fs', 'http', 'path'].includes(request)) {
     return options.defaultResolver(request, options);
   }
-  return resolver(options.basedir, request);
+
+  if (request === "eslint/conf/eslint-recommended") {
+    return options.defaultResolver(request, options);
+  }
+
+  return resolver(options.basedir, request)
 };
