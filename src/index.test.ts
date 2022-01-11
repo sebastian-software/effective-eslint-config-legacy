@@ -1,12 +1,15 @@
-import { CLIEngine } from "eslint"
+import { ESLint, LintResult } from "eslint"
 
-import { Json } from "./types"
+type Dict = { [key: string]: any }
+type Diff = {
+  ruleName: string, tsValue: string, jsValue: string
+}
 
-function cloneWithSortedKeys(object): any {
-  const clone: { [key: string]: any } = {}
-  const keys = Object.keys(object).sort()
+function cloneWithSortedKeys(obj: Dict): any {
+  const clone: Dict = {}
+  const keys = Object.keys(obj).sort()
   keys.forEach((key) => {
-    const value = object[key]
+    const value = obj[key]
     if (typeof value === "object" && !Array.isArray(value)) {
       clone[key] = cloneWithSortedKeys(value)
     } else {
@@ -16,8 +19,8 @@ function cloneWithSortedKeys(object): any {
   return clone
 }
 
-function extractConfig(cli: CLIEngine, file: string) {
-  const config = cli.getConfigForFile(file)
+async function extractConfig(linter: ESLint, file: string) {
+  const config = await linter.calculateConfigForFile(file)
   const sorted = cloneWithSortedKeys(config)
 
   sorted.parser = "[PATH]"
@@ -27,36 +30,36 @@ function extractConfig(cli: CLIEngine, file: string) {
   return sorted
 }
 
-function runOnFile(fileName: string): Json {
-  const cli = new CLIEngine({
+async function runOnFile(fileName: string): LintResult {
+  const linter = new ESLint({
     useEslintrc: false,
     ignore: false,
-    configFile: "dist/index.js"
+    overrideConfigFile: "dist/index.js"
   })
 
-  const retVal = cli.executeOnFiles([ fileName ]) as Json
+  const results: LintResult[] = await linter.lintFiles([ fileName ])
   // eslint-disable-next-line no-param-reassign
-  (retVal.results as Array<Json>).forEach((result) => { result.filePath = "[PATH]" })
-  return retVal
+  results.forEach((result) => { result.filePath = "[PATH]" })
+  return results[0]
 }
 
-test("Full JS/TS configuration result", () => {
-  const cli = new CLIEngine({
+test("Full JS/TS configuration result", async () => {
+  const linter = new ESLint({
     useEslintrc: false,
-    configFile: "dist/index.js"
+    overrideConfigFile: "dist/index.js"
   })
 
-  const tsConfig = extractConfig(cli, "src/index.ts")
+  const tsConfig = await extractConfig(linter, "src/index.ts")
   expect(JSON.stringify(tsConfig, null, 2)).toMatchSnapshot()
 
-  const jsConfig = extractConfig(cli, "src/index.js")
+  const jsConfig = await extractConfig(linter, "src/index.js")
   expect(JSON.stringify(jsConfig, null, 2)).toMatchSnapshot()
 
   const tsRules = tsConfig.rules
   const jsRules = jsConfig.rules
 
   const ruleNames = Object.keys(tsRules)
-  const configDiff = []
+  const configDiff: Diff[] = []
 
   ruleNames.forEach((ruleName) => {
     const tsValue = JSON.stringify(tsRules[ruleName], null, 2)
@@ -70,10 +73,10 @@ test("Full JS/TS configuration result", () => {
   expect(configDiff).toMatchSnapshot()
 })
 
-test("load config in eslint to validate all rule syntax is correct", () => {
-  expect(runOnFile("./src/fixtures/test1.ts")).toMatchSnapshot()
+test("load config in eslint to validate all rule syntax is correct", async () => {
+  expect(await runOnFile("./src/fixtures/test1.ts")).toMatchSnapshot()
 })
 
-test("reports undeclared variable", () => {
-  expect(runOnFile("./src/fixtures/test2.ts")).toMatchSnapshot()
+test("reports undeclared variable", async () => {
+  expect(await runOnFile("./src/fixtures/test2.ts")).toMatchSnapshot()
 })
