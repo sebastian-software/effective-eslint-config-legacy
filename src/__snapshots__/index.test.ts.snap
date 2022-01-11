@@ -59,6 +59,9 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"assertionStyle\\": \\"as\\"
       }
     ],
+    \\"@typescript-eslint/default-param-last\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/dot-notation\\": [
       \\"warn\\",
       {
@@ -68,9 +71,6 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowProtectedClassPropertyAccess\\": false,
         \\"allowIndexSignaturePropertyAccess\\": false
       }
-    ],
-    \\"@typescript-eslint/explicit-module-boundary-types\\": [
-      \\"warn\\"
     ],
     \\"@typescript-eslint/func-call-spacing\\": [
       \\"warn\\",
@@ -193,6 +193,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"@typescript-eslint/no-loop-func\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/no-loss-of-precision\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
       {
@@ -206,8 +209,7 @@ exports[`Full JS/TS configuration result 1`] = `
           2,
           10
         ],
-        \\"ignoreArrayIndexes\\": true,
-        \\"ignoreDefaultValues\\": false
+        \\"ignoreArrayIndexes\\": true
       }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
@@ -236,6 +238,12 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"@typescript-eslint/no-unnecessary-type-assertion\\": [
       \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-unnecessary-type-constraint\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-argument\\": [
+      \\"error\\"
     ],
     \\"@typescript-eslint/no-unsafe-assignment\\": [
       \\"warn\\"
@@ -278,13 +286,58 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"warn\\",
       \\"always\\"
     ],
+    \\"@typescript-eslint/padding-line-between-statements\\": [
+      \\"warn\\",
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"default\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"case\\",
+        \\"next\\": \\"default\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"try\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"switch\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"function\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"class\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"for\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"while\\"
+      }
+    ],
     \\"@typescript-eslint/prefer-as-const\\": [
       \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
-      \\"warn\\"
-    ],
-    \\"@typescript-eslint/prefer-regexp-exec\\": [
       \\"warn\\"
     ],
     \\"@typescript-eslint/require-await\\": [
@@ -403,6 +456,9 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"after\\": true
       }
     ],
+    \\"grouped-accessor-pairs\\": [
+      \\"error\\"
+    ],
     \\"id-length\\": [
       \\"error\\",
       {
@@ -462,6 +518,12 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"import/no-dynamic-require\\": [
       \\"error\\"
     ],
+    \\"import/no-import-module-exports\\": [
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
+    ],
     \\"import/no-mutable-exports\\": [
       \\"error\\"
     ],
@@ -474,6 +536,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"import/no-named-default\\": [
       \\"error\\"
     ],
+    \\"import/no-relative-packages\\": [
+      \\"error\\"
+    ],
     \\"import/no-self-import\\": [
       \\"error\\"
     ],
@@ -481,7 +546,8 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\",
       {
         \\"commonjs\\": true,
-        \\"caseSensitive\\": true
+        \\"caseSensitive\\": true,
+        \\"caseSensitiveStrict\\": false
       }
     ],
     \\"import/no-useless-path-segments\\": [
@@ -851,6 +917,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-constant-condition\\": [
       \\"warn\\"
     ],
+    \\"no-constructor-return\\": [
+      \\"error\\"
+    ],
     \\"no-control-regex\\": [
       \\"error\\"
     ],
@@ -1015,6 +1084,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-new-wrappers\\": [
       \\"error\\"
     ],
+    \\"no-nonoctal-decimal-escape\\": [
+      \\"error\\"
+    ],
     \\"no-octal\\": [
       \\"error\\"
     ],
@@ -1040,6 +1112,9 @@ exports[`Full JS/TS configuration result 1`] = `
         ]
       }
     ],
+    \\"no-promise-executor-return\\": [
+      \\"error\\"
+    ],
     \\"no-proto\\": [
       \\"error\\"
     ],
@@ -1048,6 +1123,15 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"no-regex-spaces\\": [
       \\"warn\\"
+    ],
+    \\"no-restricted-exports\\": [
+      \\"error\\",
+      {
+        \\"restrictedNamedExports\\": [
+          \\"default\\",
+          \\"then\\"
+        ]
+      }
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
@@ -1219,11 +1303,26 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-unneeded-ternary\\": [
       \\"warn\\"
     ],
+    \\"no-unreachable-loop\\": [
+      \\"error\\",
+      {
+        \\"ignore\\": []
+      }
+    ],
     \\"no-unsafe-finally\\": [
       \\"error\\"
     ],
+    \\"no-unsafe-optional-chaining\\": [
+      \\"error\\",
+      {
+        \\"disallowArithmeticOperators\\": true
+      }
+    ],
     \\"no-unused-labels\\": [
       \\"warn\\"
+    ],
+    \\"no-useless-backreference\\": [
+      \\"error\\"
     ],
     \\"no-useless-catch\\": [
       \\"error\\"
@@ -1298,54 +1397,6 @@ exports[`Full JS/TS configuration result 1`] = `
         }
       }
     ],
-    \\"padding-line-between-statements\\": [
-      \\"warn\\",
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"case\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"default\\",
-        \\"next\\": \\"case\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"case\\",
-        \\"next\\": \\"default\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"try\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"switch\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"function\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"class\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"for\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"while\\"
-      }
-    ],
     \\"prefer-arrow-callback\\": [
       \\"warn\\",
       {
@@ -1360,6 +1411,12 @@ exports[`Full JS/TS configuration result 1`] = `
       \\"error\\",
       {
         \\"allowEmptyReject\\": true
+      }
+    ],
+    \\"prefer-regex-literals\\": [
+      \\"error\\",
+      {
+        \\"disallowRedundantWrapping\\": true
       }
     ],
     \\"prefer-rest-params\\": [
@@ -1406,6 +1463,16 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowInPropTypes\\": true
       }
     ],
+    \\"react/function-component-definition\\": [
+      \\"error\\",
+      {
+        \\"namedComponents\\": [
+          \\"function-declaration\\",
+          \\"function-expression\\"
+        ],
+        \\"unnamedComponents\\": \\"function-expression\\"
+      }
+    ],
     \\"react/jsx-boolean-value\\": [
       \\"warn\\",
       \\"never\\",
@@ -1440,19 +1507,38 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
     ],
+    \\"react/jsx-no-constructed-context-values\\": [
+      \\"error\\"
+    ],
     \\"react/jsx-no-duplicate-props\\": [
       \\"error\\",
       {
         \\"ignoreCase\\": true
       }
     ],
+    \\"react/jsx-no-script-url\\": [
+      \\"error\\",
+      [
+        {
+          \\"name\\": \\"Link\\",
+          \\"props\\": [
+            \\"to\\"
+          ]
+        }
+      ]
+    ],
     \\"react/jsx-no-target-blank\\": [
       \\"error\\",
       {
-        \\"enforceDynamicLinks\\": \\"always\\"
+        \\"enforceDynamicLinks\\": \\"always\\",
+        \\"links\\": true,
+        \\"forms\\": false
       }
     ],
     \\"react/jsx-no-undef\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-useless-fragment\\": [
       \\"error\\"
     ],
     \\"react/jsx-pascal-case\\": [
@@ -1483,6 +1569,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"react/no-array-index-key\\": [
       \\"error\\"
     ],
+    \\"react/no-arrow-function-lifecycle\\": [
+      \\"error\\"
+    ],
     \\"react/no-children-prop\\": [
       \\"error\\"
     ],
@@ -1504,7 +1593,13 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"react/no-find-dom-node\\": [
       \\"error\\"
     ],
+    \\"react/no-invalid-html-attribute\\": [
+      \\"error\\"
+    ],
     \\"react/no-is-mounted\\": [
+      \\"error\\"
+    ],
+    \\"react/no-namespace\\": [
       \\"error\\"
     ],
     \\"react/no-render-return-value\\": [
@@ -1524,6 +1619,15 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"react/no-unknown-property\\": [
       \\"warn\\"
+    ],
+    \\"react/no-unstable-nested-components\\": [
+      \\"error\\"
+    ],
+    \\"react/no-unused-class-component-methods\\": [
+      \\"error\\"
+    ],
+    \\"react/prefer-exact-props\\": [
+      \\"error\\"
     ],
     \\"react/prefer-stateless-function\\": [
       \\"warn\\",
@@ -1735,7 +1839,7 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     },
     \\"jest\\": {
-      \\"version\\": \\"26.0.0\\"
+      \\"version\\": \\"27.0.0\\"
     },
     \\"react\\": {
       \\"version\\": \\"17.0.0\\"
@@ -1803,6 +1907,9 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"assertionStyle\\": \\"as\\"
       }
     ],
+    \\"@typescript-eslint/default-param-last\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/dot-notation\\": [
       \\"warn\\",
       {
@@ -1812,9 +1919,6 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"allowProtectedClassPropertyAccess\\": false,
         \\"allowIndexSignaturePropertyAccess\\": false
       }
-    ],
-    \\"@typescript-eslint/explicit-module-boundary-types\\": [
-      \\"warn\\"
     ],
     \\"@typescript-eslint/func-call-spacing\\": [
       \\"warn\\",
@@ -1937,6 +2041,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"@typescript-eslint/no-loop-func\\": [
       \\"error\\"
     ],
+    \\"@typescript-eslint/no-loss-of-precision\\": [
+      \\"error\\"
+    ],
     \\"@typescript-eslint/no-magic-numbers\\": [
       \\"warn\\",
       {
@@ -1950,8 +2057,7 @@ exports[`Full JS/TS configuration result 2`] = `
           2,
           10
         ],
-        \\"ignoreArrayIndexes\\": true,
-        \\"ignoreDefaultValues\\": false
+        \\"ignoreArrayIndexes\\": true
       }
     ],
     \\"@typescript-eslint/no-misused-new\\": [
@@ -1980,6 +2086,12 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"@typescript-eslint/no-unnecessary-type-assertion\\": [
       \\"warn\\"
+    ],
+    \\"@typescript-eslint/no-unnecessary-type-constraint\\": [
+      \\"error\\"
+    ],
+    \\"@typescript-eslint/no-unsafe-argument\\": [
+      \\"error\\"
     ],
     \\"@typescript-eslint/no-unsafe-assignment\\": [
       \\"off\\"
@@ -2022,13 +2134,58 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"warn\\",
       \\"always\\"
     ],
+    \\"@typescript-eslint/padding-line-between-statements\\": [
+      \\"warn\\",
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"default\\",
+        \\"next\\": \\"case\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"case\\",
+        \\"next\\": \\"default\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"try\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"switch\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"function\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"class\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"for\\"
+      },
+      {
+        \\"blankLine\\": \\"always\\",
+        \\"prev\\": \\"*\\",
+        \\"next\\": \\"while\\"
+      }
+    ],
     \\"@typescript-eslint/prefer-as-const\\": [
       \\"warn\\"
     ],
     \\"@typescript-eslint/prefer-namespace-keyword\\": [
-      \\"warn\\"
-    ],
-    \\"@typescript-eslint/prefer-regexp-exec\\": [
       \\"warn\\"
     ],
     \\"@typescript-eslint/require-await\\": [
@@ -2147,6 +2304,9 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"after\\": true
       }
     ],
+    \\"grouped-accessor-pairs\\": [
+      \\"error\\"
+    ],
     \\"id-length\\": [
       \\"error\\",
       {
@@ -2206,6 +2366,12 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"import/no-dynamic-require\\": [
       \\"error\\"
     ],
+    \\"import/no-import-module-exports\\": [
+      \\"error\\",
+      {
+        \\"exceptions\\": []
+      }
+    ],
     \\"import/no-mutable-exports\\": [
       \\"error\\"
     ],
@@ -2218,6 +2384,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"import/no-named-default\\": [
       \\"error\\"
     ],
+    \\"import/no-relative-packages\\": [
+      \\"error\\"
+    ],
     \\"import/no-self-import\\": [
       \\"error\\"
     ],
@@ -2225,7 +2394,8 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\",
       {
         \\"commonjs\\": true,
-        \\"caseSensitive\\": true
+        \\"caseSensitive\\": true,
+        \\"caseSensitiveStrict\\": false
       }
     ],
     \\"import/no-useless-path-segments\\": [
@@ -2595,6 +2765,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-constant-condition\\": [
       \\"warn\\"
     ],
+    \\"no-constructor-return\\": [
+      \\"error\\"
+    ],
     \\"no-control-regex\\": [
       \\"error\\"
     ],
@@ -2759,6 +2932,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-new-wrappers\\": [
       \\"error\\"
     ],
+    \\"no-nonoctal-decimal-escape\\": [
+      \\"error\\"
+    ],
     \\"no-octal\\": [
       \\"error\\"
     ],
@@ -2784,6 +2960,9 @@ exports[`Full JS/TS configuration result 2`] = `
         ]
       }
     ],
+    \\"no-promise-executor-return\\": [
+      \\"error\\"
+    ],
     \\"no-proto\\": [
       \\"error\\"
     ],
@@ -2792,6 +2971,15 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"no-regex-spaces\\": [
       \\"warn\\"
+    ],
+    \\"no-restricted-exports\\": [
+      \\"error\\",
+      {
+        \\"restrictedNamedExports\\": [
+          \\"default\\",
+          \\"then\\"
+        ]
+      }
     ],
     \\"no-restricted-globals\\": [
       \\"error\\",
@@ -2963,11 +3151,26 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-unneeded-ternary\\": [
       \\"warn\\"
     ],
+    \\"no-unreachable-loop\\": [
+      \\"error\\",
+      {
+        \\"ignore\\": []
+      }
+    ],
     \\"no-unsafe-finally\\": [
       \\"error\\"
     ],
+    \\"no-unsafe-optional-chaining\\": [
+      \\"error\\",
+      {
+        \\"disallowArithmeticOperators\\": true
+      }
+    ],
     \\"no-unused-labels\\": [
       \\"warn\\"
+    ],
+    \\"no-useless-backreference\\": [
+      \\"error\\"
     ],
     \\"no-useless-catch\\": [
       \\"error\\"
@@ -3042,54 +3245,6 @@ exports[`Full JS/TS configuration result 2`] = `
         }
       }
     ],
-    \\"padding-line-between-statements\\": [
-      \\"warn\\",
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"case\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"default\\",
-        \\"next\\": \\"case\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"case\\",
-        \\"next\\": \\"default\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"try\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"switch\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"function\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"class\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"for\\"
-      },
-      {
-        \\"blankLine\\": \\"always\\",
-        \\"prev\\": \\"*\\",
-        \\"next\\": \\"while\\"
-      }
-    ],
     \\"prefer-arrow-callback\\": [
       \\"warn\\",
       {
@@ -3104,6 +3259,12 @@ exports[`Full JS/TS configuration result 2`] = `
       \\"error\\",
       {
         \\"allowEmptyReject\\": true
+      }
+    ],
+    \\"prefer-regex-literals\\": [
+      \\"error\\",
+      {
+        \\"disallowRedundantWrapping\\": true
       }
     ],
     \\"prefer-rest-params\\": [
@@ -3150,6 +3311,16 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"allowInPropTypes\\": true
       }
     ],
+    \\"react/function-component-definition\\": [
+      \\"error\\",
+      {
+        \\"namedComponents\\": [
+          \\"function-declaration\\",
+          \\"function-expression\\"
+        ],
+        \\"unnamedComponents\\": \\"function-expression\\"
+      }
+    ],
     \\"react/jsx-boolean-value\\": [
       \\"warn\\",
       \\"never\\",
@@ -3184,19 +3355,38 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"react/jsx-no-comment-textnodes\\": [
       \\"error\\"
     ],
+    \\"react/jsx-no-constructed-context-values\\": [
+      \\"error\\"
+    ],
     \\"react/jsx-no-duplicate-props\\": [
       \\"error\\",
       {
         \\"ignoreCase\\": true
       }
     ],
+    \\"react/jsx-no-script-url\\": [
+      \\"error\\",
+      [
+        {
+          \\"name\\": \\"Link\\",
+          \\"props\\": [
+            \\"to\\"
+          ]
+        }
+      ]
+    ],
     \\"react/jsx-no-target-blank\\": [
       \\"error\\",
       {
-        \\"enforceDynamicLinks\\": \\"always\\"
+        \\"enforceDynamicLinks\\": \\"always\\",
+        \\"links\\": true,
+        \\"forms\\": false
       }
     ],
     \\"react/jsx-no-undef\\": [
+      \\"error\\"
+    ],
+    \\"react/jsx-no-useless-fragment\\": [
       \\"error\\"
     ],
     \\"react/jsx-pascal-case\\": [
@@ -3227,6 +3417,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"react/no-array-index-key\\": [
       \\"error\\"
     ],
+    \\"react/no-arrow-function-lifecycle\\": [
+      \\"error\\"
+    ],
     \\"react/no-children-prop\\": [
       \\"error\\"
     ],
@@ -3248,7 +3441,13 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"react/no-find-dom-node\\": [
       \\"error\\"
     ],
+    \\"react/no-invalid-html-attribute\\": [
+      \\"error\\"
+    ],
     \\"react/no-is-mounted\\": [
+      \\"error\\"
+    ],
+    \\"react/no-namespace\\": [
       \\"error\\"
     ],
     \\"react/no-render-return-value\\": [
@@ -3268,6 +3467,15 @@ exports[`Full JS/TS configuration result 2`] = `
     ],
     \\"react/no-unknown-property\\": [
       \\"warn\\"
+    ],
+    \\"react/no-unstable-nested-components\\": [
+      \\"error\\"
+    ],
+    \\"react/no-unused-class-component-methods\\": [
+      \\"error\\"
+    ],
+    \\"react/prefer-exact-props\\": [
+      \\"error\\"
     ],
     \\"react/prefer-stateless-function\\": [
       \\"warn\\",
@@ -3479,7 +3687,7 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     },
     \\"jest\\": {
-      \\"version\\": \\"26.0.0\\"
+      \\"version\\": \\"27.0.0\\"
     },
     \\"react\\": {
       \\"version\\": \\"17.0.0\\"
@@ -3541,42 +3749,35 @@ Array [
 exports[`load config in eslint to validate all rule syntax is correct 1`] = `
 Object {
   "errorCount": 0,
+  "fatalErrorCount": 0,
+  "filePath": "[PATH]",
   "fixableErrorCount": 0,
   "fixableWarningCount": 1,
-  "results": Array [
+  "messages": Array [
     Object {
-      "errorCount": 0,
-      "filePath": "[PATH]",
-      "fixableErrorCount": 0,
-      "fixableWarningCount": 1,
-      "messages": Array [
-        Object {
-          "column": 1,
-          "endColumn": 21,
-          "endLine": 2,
-          "fix": Object {
-            "range": Array [
-              15,
-              15,
-            ],
-            "text": "
+      "column": 1,
+      "endColumn": 21,
+      "endLine": 2,
+      "fix": Object {
+        "range": Array [
+          15,
+          15,
+        ],
+        "text": "
 ",
-          },
-          "line": 2,
-          "message": "Expected blank line before this statement.",
-          "messageId": "expectedBlankLine",
-          "nodeType": "FunctionDeclaration",
-          "ruleId": "padding-line-between-statements",
-          "severity": 1,
-        },
-      ],
-      "source": "const first = 1
+      },
+      "line": 2,
+      "message": "Expected blank line before this statement.",
+      "messageId": "expectedBlankLine",
+      "nodeType": "FunctionDeclaration",
+      "ruleId": "@typescript-eslint/padding-line-between-statements",
+      "severity": 1,
+    },
+  ],
+  "source": "const first = 1
 function second() {}
 second(first)
 ",
-      "warningCount": 1,
-    },
-  ],
   "usedDeprecatedRules": Array [],
   "warningCount": 1,
 }
@@ -3585,70 +3786,65 @@ second(first)
 exports[`reports undeclared variable 1`] = `
 Object {
   "errorCount": 1,
+  "fatalErrorCount": 0,
+  "filePath": "[PATH]",
   "fixableErrorCount": 0,
   "fixableWarningCount": 1,
-  "results": Array [
+  "messages": Array [
     Object {
-      "errorCount": 1,
-      "filePath": "[PATH]",
-      "fixableErrorCount": 0,
-      "fixableWarningCount": 1,
-      "messages": Array [
-        Object {
-          "column": 1,
-          "fix": Object {
-            "range": Array [
-              16,
-              21,
-            ],
-            "text": "{run()}",
-          },
-          "line": 1,
-          "message": "Expected { after 'if' condition.",
-          "messageId": "missingCurlyAfterCondition",
-          "nodeType": "IfStatement",
-          "ruleId": "curly",
-          "severity": 1,
-        },
-        Object {
-          "column": 5,
-          "endColumn": 15,
-          "endLine": 1,
-          "line": 1,
-          "message": "Unexpected constant condition.",
-          "messageId": "unexpected",
-          "nodeType": "AssignmentExpression",
-          "ruleId": "no-constant-condition",
-          "severity": 1,
-        },
-        Object {
-          "column": 5,
-          "endColumn": 15,
-          "endLine": 1,
-          "line": 1,
-          "message": "Unexpected assignment within an 'if' statement.",
-          "messageId": "unexpected",
-          "nodeType": "AssignmentExpression",
-          "ruleId": "no-cond-assign",
-          "severity": 2,
-        },
-        Object {
-          "column": 17,
-          "endColumn": 20,
-          "endLine": 1,
-          "line": 1,
-          "message": "Unsafe call of an \`any\` typed value.",
-          "messageId": "unsafeCall",
-          "nodeType": "Identifier",
-          "ruleId": "@typescript-eslint/no-unsafe-call",
-          "severity": 1,
-        },
-      ],
-      "source": "if (obj = null) run()
-",
-      "warningCount": 3,
+      "column": 5,
+      "endColumn": 15,
+      "endLine": 1,
+      "line": 1,
+      "message": "Unexpected constant condition.",
+      "messageId": "unexpected",
+      "nodeType": "AssignmentExpression",
+      "ruleId": "no-constant-condition",
+      "severity": 1,
+    },
+    Object {
+      "column": 5,
+      "endColumn": 15,
+      "endLine": 1,
+      "line": 1,
+      "message": "Unexpected assignment within an 'if' statement.",
+      "messageId": "unexpected",
+      "nodeType": "AssignmentExpression",
+      "ruleId": "no-cond-assign",
+      "severity": 2,
+    },
+    Object {
+      "column": 17,
+      "endColumn": 22,
+      "endLine": 1,
+      "fix": Object {
+        "range": Array [
+          16,
+          21,
+        ],
+        "text": "{run()}",
+      },
+      "line": 1,
+      "message": "Expected { after 'if' condition.",
+      "messageId": "missingCurlyAfterCondition",
+      "nodeType": "IfStatement",
+      "ruleId": "curly",
+      "severity": 1,
+    },
+    Object {
+      "column": 17,
+      "endColumn": 20,
+      "endLine": 1,
+      "line": 1,
+      "message": "Unsafe call of an \`any\` typed value.",
+      "messageId": "unsafeCall",
+      "nodeType": "Identifier",
+      "ruleId": "@typescript-eslint/no-unsafe-call",
+      "severity": 1,
     },
   ],
+  "source": "if (obj = null) run()
+",
   "usedDeprecatedRules": Array [],
   "warningCount": 3,
 }
