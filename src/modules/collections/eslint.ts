@@ -1,13 +1,19 @@
+import { readFileSync } from "fs"
+
 import { Linter } from "eslint"
 import resolve from "enhanced-resolve"
 
 type ConfigData = {
-  rules: Linter.RulesRecord
+  rules?: Linter.RulesRecord
 }
 
-const req = resolve.create.sync({ exportsFields:[] })
+const req = resolve.create.sync({ exportsFields: [] })
 
-const imported = req(__filename, "eslint/conf/eslint-recommended") as unknown as ConfigData
+const resolved = req(__filename, "eslint/conf/eslint-recommended")
+const parsed: ConfigData = resolved
+  ? (JSON.parse(readFileSync(resolved, "utf-8")) as ConfigData)
+  : {}
+const rules: Linter.RulesRecord = parsed.rules || {}
 
 // From eslint recommended and not yet alternatively implemented in TS preset
-export const eslint: Linter.RulesRecord = { ...imported.rules }
+export const eslint: Linter.RulesRecord = rules
