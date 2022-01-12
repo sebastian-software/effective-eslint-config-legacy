@@ -1,20 +1,25 @@
 import { Linter } from "eslint"
 import { configs, rules as tsrules } from "@typescript-eslint/eslint-plugin"
 
-import { ESLintRules } from "./types"
+
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
 const eslintRecommendedBlocked: string[] = []
-const eslintRecommendedOverrides = configs["eslint-recommended"].overrides[0].rules
+const eslintRecommendedOverrides = configs["eslint-recommended"]?.overrides
 
-for (const rule in eslintRecommendedOverrides) {
-  if (eslintRecommendedOverrides[rule] === "off") {
-    eslintRecommendedBlocked.push(rule)
+if (eslintRecommendedOverrides) {
+  const overrideRules = eslintRecommendedOverrides[0].rules
+  if (overrideRules) {
+    for (const rule in eslintRecommendedOverrides) {
+      if (overrideRules[rule] === "off") {
+        eslintRecommendedBlocked.push(rule)
+      }
+    }
   }
 }
 
-export const tsRecommendedReplaced = Object.keys(configs.recommended.rules).filter(
+export const tsRecommendedReplaced = Object.keys(configs.recommended.rules || {}).filter(
   (name) => !name.startsWith("@typescript-eslint")
 )
 
@@ -24,8 +29,8 @@ export function hasMatchingTypescriptRule(name: string): boolean {
   return !!tsrules[name]
 }
 
-export function filterWithBlacklist(rules: ESLintRules): ESLintRules {
-  const result: ESLintRules = {}
+export function filterWithBlacklist(rules: Linter.RulesRecord): Linter.RulesRecord {
+  const result: Linter.RulesRecord = {}
 
   for (let rule in rules) {
     if (!blacklist.has(rule)) {
@@ -59,7 +64,11 @@ export function getLevel(value: any) {
   return Array.isArray(value) ? value[0] : value
 }
 
-const levelMap = {
+type LevelMap = {
+  [key: number]: Linter.RuleLevel
+}
+
+const levelMap: LevelMap = {
   0: "off",
   1: "warn",
   2: "error"

@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/naming-convention */
+import { Linter } from "eslint"
 
-import { ESLintRules } from "../types"
 
-export const formatting: ESLintRules = {
+export const formatting: Linter.RulesRecord = {
   "array-bracket-spacing": [
     "warn",
     "always",

@@ -1,6 +1,6 @@
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 
-export const autofix: ESLintRules = {
+export const autofix: Linter.RulesRecord = {
   "@typescript-eslint/ban-types": "warn",
   "@typescript-eslint/dot-notation": "warn",
   "@typescript-eslint/no-array-constructor": "warn",

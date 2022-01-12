@@ -1,9 +1,5 @@
 import { Linter } from "eslint"
 
-export interface ESLintRules {
-  [name: string]: Linter.RuleLevel | Linter.RuleLevelAndOptions
-}
-
 export interface ESLintEnv {
   [name: string]: boolean
 }
@@ -15,7 +11,7 @@ export interface ESLintValues {
 export interface ESLintOverrides {
   files: string[]
   extends?: string[]
-  rules?: ESLintRules
+  rules?: Linter.RulesRecord,
   env?: ESLintEnv
 }
 
@@ -28,7 +24,7 @@ export interface ESLintConfig extends Linter.Config {
   settings?: ESLintValues
   parser?: string
   parserOptions?: ESLintValues
-  rules?: ESLintRules
+  rules?: Linter.RulesRecord
 }
 
 export interface Json {

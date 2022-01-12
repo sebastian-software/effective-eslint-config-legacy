@@ -1,6 +1,6 @@
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 
-export const jsdoc: ESLintRules = {
+export const jsdoc: Linter.RulesRecord = {
   "jsdoc/check-alignment": "warn",
   "jsdoc/check-param-names": "error",
   "jsdoc/check-tag-names": "error",

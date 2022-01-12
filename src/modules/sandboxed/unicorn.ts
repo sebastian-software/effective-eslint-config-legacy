@@ -1,6 +1,6 @@
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 
-export const unicorn: ESLintRules = {
+export const unicorn: Linter.RulesRecord = {
   "unicorn/better-regex": "warn",
   "unicorn/consistent-function-scoping": "warn",
   "unicorn/custom-error-definition": "warn",

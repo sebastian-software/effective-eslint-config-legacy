@@ -1,4 +1,4 @@
-import { ESLint, LintResult } from "eslint"
+import { ESLint } from "eslint"
 
 type Dict = { [key: string]: any }
 type Diff = {
@@ -30,14 +30,14 @@ async function extractConfig(linter: ESLint, file: string) {
   return sorted
 }
 
-async function runOnFile(fileName: string): LintResult {
+async function runOnFile(fileName: string) {
   const linter = new ESLint({
     useEslintrc: false,
     ignore: false,
     overrideConfigFile: "dist/index.js"
   })
 
-  const results: LintResult[] = await linter.lintFiles([ fileName ])
+  const results = await linter.lintFiles([ fileName ])
   // eslint-disable-next-line no-param-reassign
   results.forEach((result) => { result.filePath = "[PATH]" })
   return results[0]

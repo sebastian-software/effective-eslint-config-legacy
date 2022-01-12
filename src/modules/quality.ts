@@ -1,11 +1,11 @@
-import { ESLintRules } from "../types"
+import { Linter } from "eslint"
 
 const MAX_STATEMENTS = 30
 const MAX_DEPTH = 4
 const MAX_PARAMS = 3
 const MAX_COMPLEXITY = 15
 
-export const quality: ESLintRules = {
+export const quality: Linter.RulesRecord = {
   // ====================
   //   IMPORTS
   // ====================

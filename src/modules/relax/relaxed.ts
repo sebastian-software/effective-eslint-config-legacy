@@ -1,6 +1,6 @@
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 
-export const relaxed: ESLintRules = {
+export const relaxed: Linter.RulesRecord = {
   "@typescript-eslint/no-unsafe-member-access": "warn",
   "@typescript-eslint/no-unsafe-assignment": "warn",
   "@typescript-eslint/no-unsafe-call": "warn",

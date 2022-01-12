@@ -10,7 +10,7 @@ import react from "eslint-config-airbnb/rules/react"
 import reactHooks from "eslint-config-airbnb/rules/react-hooks"
 import reactAccessibility from "eslint-config-airbnb/rules/react-a11y"
 
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 import { isDisabled } from "../../util"
 
 // This list contains value we do not accept. These often times overwrite values from other configs where we
@@ -77,9 +77,9 @@ const blocked = new Set([
   "react/static-property-placement"
 ])
 
-export const airbnb: ESLintRules = {}
+export const airbnb: Linter.RulesRecord = {}
 
-function merge(rules: ESLintRules): void {
+function merge(rules: Linter.RulesRecord): void {
   for (const name in rules) {
     if (blocked.has(name)) {
       continue

@@ -1,6 +1,6 @@
-import { ESLintRules } from "../../types"
+import { Linter } from "eslint"
 
-export const shopify: ESLintRules = {
+export const shopify: Linter.RulesRecord = {
   // Lean Shopify Plugin Extensions
   "shopify-lean/jsx-no-complex-expressions": "error",
   "shopify-lean/jsx-no-hardcoded-content": "warn",

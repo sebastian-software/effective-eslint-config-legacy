@@ -1,9 +1,9 @@
 import { rules as reactRules } from "eslint-config-react-app"
+import { Linter } from "eslint"
 
-import { ESLintRules } from "../../types"
 import { blacklist, hasMatchingTypescriptRule, setLevel } from "../../util"
 
-export const cra: ESLintRules = {}
+export const cra: Linter.RulesRecord = {}
 
 const flowtypeRules = /^(flowtype\/\S+)$/
 
@@ -11,7 +11,7 @@ const flowtypeRules = /^(flowtype\/\S+)$/
 // Last tested 2020, June, 02nd
 const deprecatedRules = new Set([ "no-native-reassign", "no-negated-in-lhs" ])
 
-function merge(rules: ESLintRules): void {
+function merge(rules: Linter.RulesRecord): void {
   const ruleNames = Object.keys(rules)
   ruleNames.forEach((ruleName: string): void => {
     if (flowtypeRules.test(ruleName) || deprecatedRules.has(ruleName)) {

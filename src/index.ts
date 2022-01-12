@@ -3,6 +3,7 @@
 import fs from "fs"
 import path from "path"
 
+import { Linter } from "eslint"
 import findUp from "find-up"
 import appRootPath from "app-root-path"
 
@@ -15,7 +16,7 @@ import {
   setLevel
 } from "./util"
 import { react } from "./modules/sandboxed/react"
-import { ESLintConfig, ESLintRules, Json } from "./types"
+import { ESLintConfig, Json } from "./types"
 
 import { typescript } from "./modules/collections/typescript"
 import { eslint } from "./modules/collections/eslint"
@@ -70,13 +71,15 @@ if (projectConfig == null) {
   }
 }
 
-const combinedRules: ESLintRules = {}
+const combinedRules: Linter.RulesRecord = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT === "true"
 
+type Dict = { [key: string]: any }
+
 // Relatively simple solution for having sorted JSON keys
 // This is required to unify configs from different locations for correct comparison.
-function sortReplacer(key: string, value: Json): Json {
+function sortReplacer(key: string, value: Dict): Dict {
   if (value == null || value.constructor !== Object) {
     return value
   }
@@ -84,7 +87,7 @@ function sortReplacer(key: string, value: Json): Json {
   const keys = Object.keys(value)
   keys.sort()
 
-  const result: ESLintRules = {}
+  const result: Dict = {}
   keys.forEach((name) => {
     result[name] = value[name]
   })
@@ -92,7 +95,7 @@ function sortReplacer(key: string, value: Json): Json {
 }
 
 // eslint-disable-next-line complexity
-function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false) {
+function mergeWithWarnings(rules: Linter.RulesRecord, name: string, warnLocale = false) {
   for (const ruleName in rules) {
     let ruleValue = rules[ruleName]
 
@@ -156,7 +159,7 @@ function mergeWithWarnings(rules: ESLintRules, name: string, warnLocale = false)
   }
 }
 
-function mergeLevelOverrides(rules: ESLintRules, name: string) {
+function mergeLevelOverrides(rules: Linter.RulesRecord, name: string) {
   for (const rule in rules) {
     if (!rules[rule]) {
       continue
@@ -254,7 +257,7 @@ const config: ESLintConfig = {
 
     // Required for linting with type information
     // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/TYPED_LINTING.md
-    project: projectConfig,
+    project: projectConfig || "",
     tsconfigRootDir: projectRoot,
 
     // typescript-eslint specific options
