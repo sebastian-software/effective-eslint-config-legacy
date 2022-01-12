@@ -18,9 +18,5 @@ module.exports = function(request, options) {
     return options.defaultResolver(request, options)
   }
 
-  if (request === "eslint/conf/eslint-recommended") {
-    return options.defaultResolver(request, options)
-  }
-
   return resolver(options.basedir, request)
 }
