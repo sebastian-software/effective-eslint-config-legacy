@@ -1,1 +1,1 @@
-if ((obj = null)) run()
+if (obj = null) run()
