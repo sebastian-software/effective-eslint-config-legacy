@@ -1,8 +1,6 @@
 import { Linter } from "eslint"
 import { configs, rules as tsrules } from "@typescript-eslint/eslint-plugin"
 
-
-
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT
 
 const eslintRecommendedBlocked: string[] = []

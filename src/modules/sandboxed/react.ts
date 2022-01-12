@@ -1,8 +1,6 @@
 import { Linter } from "eslint"
 import { configs } from "eslint-plugin-react"
 
-
-
 const recommended = configs.recommended.rules
 
 const blocked = new Set([

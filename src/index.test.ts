@@ -2,7 +2,9 @@ import { ESLint } from "eslint"
 
 type Dict = { [key: string]: any }
 type Diff = {
-  ruleName: string, tsValue: string, jsValue: string
+  ruleName: string
+  tsValue: string
+  jsValue: string
 }
 
 function cloneWithSortedKeys(obj: Dict): any {
@@ -39,7 +41,9 @@ async function runOnFile(fileName: string) {
 
   const results = await linter.lintFiles([ fileName ])
   // eslint-disable-next-line no-param-reassign
-  results.forEach((result) => { result.filePath = "[PATH]" })
+  results.forEach((result) => {
+    result.filePath = "[PATH]"
+  })
   return results[0]
 }
 

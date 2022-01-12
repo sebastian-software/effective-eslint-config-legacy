@@ -9,8 +9,8 @@ import strictRules from "eslint-config-airbnb-base/rules/strict"
 import react from "eslint-config-airbnb/rules/react"
 import reactHooks from "eslint-config-airbnb/rules/react-hooks"
 import reactAccessibility from "eslint-config-airbnb/rules/react-a11y"
-
 import { Linter } from "eslint"
+
 import { isDisabled } from "../../util"
 
 // This list contains value we do not accept. These often times overwrite values from other configs where we

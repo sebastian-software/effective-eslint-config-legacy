@@ -16,7 +16,7 @@ import {
   setLevel
 } from "./util"
 import { react } from "./modules/sandboxed/react"
-import { ESLintConfig, Json } from "./types"
+import { ESLintConfig } from "./types"
 
 import { typescript } from "./modules/collections/typescript"
 import { eslint } from "./modules/collections/eslint"

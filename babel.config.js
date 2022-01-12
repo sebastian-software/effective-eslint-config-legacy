@@ -3,7 +3,5 @@ module.exports = {
     [ "@babel/env", { targets: { node: 8 } }],
     [ "@babel/preset-typescript", { isTSX: true, allExtensions: true }]
   ],
-  plugins: [
-    "@babel/plugin-transform-runtime"
-  ]
+  plugins: [ "@babel/plugin-transform-runtime" ]
 }
