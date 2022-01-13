@@ -1,6 +1,4 @@
 /* eslint-disable filenames/match-exported */
-
-import fs from "fs"
 import path from "path"
 
 import { Linter } from "eslint"
@@ -9,8 +7,6 @@ import appRootPath from "app-root-path"
 
 /* eslint-disable filenames/match-exported, import/order */
 import {
-  mergeLevelOverrides,
-  mergeWithWarnings,
   writeDefaultProjectConfig
 } from "./util"
 

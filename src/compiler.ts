@@ -21,6 +21,7 @@ export function compileRules(): Linter.RulesRecord {
   const combinedRules = {}
 
   // plugin scope only
+  // start with these to allow enhanced variations from collections
   mergeWithWarnings(combinedRules, react, "react")
   mergeWithWarnings(combinedRules, jsdoc, "jsdoc")
   mergeWithWarnings(combinedRules, unicorn, "unicorn")
