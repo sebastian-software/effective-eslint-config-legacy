@@ -411,6 +411,9 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"max\\": 15
       }
     ],
+    \\"constructor-super\\": [
+      \\"error\\"
+    ],
     \\"curly\\": [
       \\"warn\\",
       \\"all\\"
@@ -454,6 +457,12 @@ exports[`Full JS/TS configuration result 1`] = `
       {
         \\"before\\": false,
         \\"after\\": true
+      }
+    ],
+    \\"getter-return\\": [
+      \\"error\\",
+      {
+        \\"allowImplicit\\": true
       }
     ],
     \\"grouped-accessor-pairs\\": [
@@ -914,6 +923,9 @@ exports[`Full JS/TS configuration result 1`] = `
         \\"allowParens\\": true
       }
     ],
+    \\"no-const-assign\\": [
+      \\"error\\"
+    ],
     \\"no-constant-condition\\": [
       \\"warn\\"
     ],
@@ -932,7 +944,13 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-div-regex\\": [
       \\"warn\\"
     ],
+    \\"no-dupe-args\\": [
+      \\"error\\"
+    ],
     \\"no-dupe-else-if\\": [
+      \\"error\\"
+    ],
+    \\"no-dupe-keys\\": [
       \\"error\\"
     ],
     \\"no-duplicate-case\\": [
@@ -980,11 +998,17 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-floating-decimal\\": [
       \\"warn\\"
     ],
+    \\"no-func-assign\\": [
+      \\"error\\"
+    ],
     \\"no-global-assign\\": [
       \\"error\\",
       {
         \\"exceptions\\": []
       }
+    ],
+    \\"no-import-assign\\": [
+      \\"error\\"
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -1081,10 +1105,16 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-new-object\\": [
       \\"error\\"
     ],
+    \\"no-new-symbol\\": [
+      \\"error\\"
+    ],
     \\"no-new-wrappers\\": [
       \\"error\\"
     ],
     \\"no-nonoctal-decimal-escape\\": [
+      \\"error\\"
+    ],
+    \\"no-obj-calls\\": [
       \\"error\\"
     ],
     \\"no-octal\\": [
@@ -1279,6 +1309,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-sequences\\": [
       \\"error\\"
     ],
+    \\"no-setter-return\\": [
+      \\"error\\"
+    ],
     \\"no-shadow-restricted-names\\": [
       \\"error\\"
     ],
@@ -1288,8 +1321,14 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-template-curly-in-string\\": [
       \\"error\\"
     ],
+    \\"no-this-before-super\\": [
+      \\"error\\"
+    ],
     \\"no-trailing-spaces\\": [
       \\"warn\\"
+    ],
+    \\"no-undef\\": [
+      \\"error\\"
     ],
     \\"no-undef-init\\": [
       \\"warn\\"
@@ -1303,6 +1342,9 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"no-unneeded-ternary\\": [
       \\"warn\\"
     ],
+    \\"no-unreachable\\": [
+      \\"error\\"
+    ],
     \\"no-unreachable-loop\\": [
       \\"error\\",
       {
@@ -1310,6 +1352,9 @@ exports[`Full JS/TS configuration result 1`] = `
       }
     ],
     \\"no-unsafe-finally\\": [
+      \\"error\\"
+    ],
+    \\"no-unsafe-negation\\": [
       \\"error\\"
     ],
     \\"no-unsafe-optional-chaining\\": [
@@ -1807,6 +1852,12 @@ exports[`Full JS/TS configuration result 1`] = `
     ],
     \\"use-isnan\\": [
       \\"error\\"
+    ],
+    \\"valid-typeof\\": [
+      \\"error\\",
+      {
+        \\"requireStringLiterals\\": true
+      }
     ],
     \\"wrap-regex\\": [
       \\"warn\\"
@@ -2259,6 +2310,9 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"max\\": 15
       }
     ],
+    \\"constructor-super\\": [
+      \\"error\\"
+    ],
     \\"curly\\": [
       \\"warn\\",
       \\"all\\"
@@ -2302,6 +2356,12 @@ exports[`Full JS/TS configuration result 2`] = `
       {
         \\"before\\": false,
         \\"after\\": true
+      }
+    ],
+    \\"getter-return\\": [
+      \\"error\\",
+      {
+        \\"allowImplicit\\": true
       }
     ],
     \\"grouped-accessor-pairs\\": [
@@ -2762,6 +2822,9 @@ exports[`Full JS/TS configuration result 2`] = `
         \\"allowParens\\": true
       }
     ],
+    \\"no-const-assign\\": [
+      \\"error\\"
+    ],
     \\"no-constant-condition\\": [
       \\"warn\\"
     ],
@@ -2780,7 +2843,13 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-div-regex\\": [
       \\"warn\\"
     ],
+    \\"no-dupe-args\\": [
+      \\"error\\"
+    ],
     \\"no-dupe-else-if\\": [
+      \\"error\\"
+    ],
+    \\"no-dupe-keys\\": [
       \\"error\\"
     ],
     \\"no-duplicate-case\\": [
@@ -2828,11 +2897,17 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-floating-decimal\\": [
       \\"warn\\"
     ],
+    \\"no-func-assign\\": [
+      \\"error\\"
+    ],
     \\"no-global-assign\\": [
       \\"error\\",
       {
         \\"exceptions\\": []
       }
+    ],
+    \\"no-import-assign\\": [
+      \\"error\\"
     ],
     \\"no-inner-declarations\\": [
       \\"error\\"
@@ -2929,10 +3004,16 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-new-object\\": [
       \\"error\\"
     ],
+    \\"no-new-symbol\\": [
+      \\"error\\"
+    ],
     \\"no-new-wrappers\\": [
       \\"error\\"
     ],
     \\"no-nonoctal-decimal-escape\\": [
+      \\"error\\"
+    ],
+    \\"no-obj-calls\\": [
       \\"error\\"
     ],
     \\"no-octal\\": [
@@ -3127,6 +3208,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-sequences\\": [
       \\"error\\"
     ],
+    \\"no-setter-return\\": [
+      \\"error\\"
+    ],
     \\"no-shadow-restricted-names\\": [
       \\"error\\"
     ],
@@ -3136,8 +3220,14 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-template-curly-in-string\\": [
       \\"error\\"
     ],
+    \\"no-this-before-super\\": [
+      \\"error\\"
+    ],
     \\"no-trailing-spaces\\": [
       \\"warn\\"
+    ],
+    \\"no-undef\\": [
+      \\"error\\"
     ],
     \\"no-undef-init\\": [
       \\"warn\\"
@@ -3151,6 +3241,9 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"no-unneeded-ternary\\": [
       \\"warn\\"
     ],
+    \\"no-unreachable\\": [
+      \\"error\\"
+    ],
     \\"no-unreachable-loop\\": [
       \\"error\\",
       {
@@ -3158,6 +3251,9 @@ exports[`Full JS/TS configuration result 2`] = `
       }
     ],
     \\"no-unsafe-finally\\": [
+      \\"error\\"
+    ],
+    \\"no-unsafe-negation\\": [
       \\"error\\"
     ],
     \\"no-unsafe-optional-chaining\\": [
@@ -3656,6 +3752,12 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"use-isnan\\": [
       \\"error\\"
     ],
+    \\"valid-typeof\\": [
+      \\"error\\",
+      {
+        \\"requireStringLiterals\\": true
+      }
+    ],
     \\"wrap-regex\\": [
       \\"warn\\"
     ]
@@ -3785,7 +3887,7 @@ second(first)
 
 exports[`reports undeclared variable 1`] = `
 Object {
-  "errorCount": 1,
+  "errorCount": 3,
   "fatalErrorCount": 0,
   "filePath": "[PATH]",
   "fixableErrorCount": 0,
@@ -3811,6 +3913,17 @@ Object {
       "messageId": "unexpected",
       "nodeType": "AssignmentExpression",
       "ruleId": "no-cond-assign",
+      "severity": 2,
+    },
+    Object {
+      "column": 5,
+      "endColumn": 8,
+      "endLine": 1,
+      "line": 1,
+      "message": "'obj' is not defined.",
+      "messageId": "undef",
+      "nodeType": "Identifier",
+      "ruleId": "no-undef",
       "severity": 2,
     },
     Object {
@@ -3841,6 +3954,17 @@ Object {
       "nodeType": "Identifier",
       "ruleId": "@typescript-eslint/no-unsafe-call",
       "severity": 1,
+    },
+    Object {
+      "column": 17,
+      "endColumn": 20,
+      "endLine": 1,
+      "line": 1,
+      "message": "'run' is not defined.",
+      "messageId": "undef",
+      "nodeType": "Identifier",
+      "ruleId": "no-undef",
+      "severity": 2,
     },
   ],
   "source": "if (obj = null) run()
