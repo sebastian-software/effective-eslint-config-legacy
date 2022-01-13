@@ -1,5 +1,7 @@
+import { Linter } from "eslint";
+
     // Jest Test Runner
-export const jestOverride = {
+export const jestOverride: Linter.ConfigOverride = {
   files: [ "*.test.{js,jsx,ts,tsx}", "**/test/**/*.{js,jsx,ts,tsx}" ],
   extends: [ "plugin:jest/recommended" ],
   rules: {
