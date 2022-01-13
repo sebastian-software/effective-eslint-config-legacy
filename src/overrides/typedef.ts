@@ -1,5 +1,5 @@
 // TypeScript Definitions
-export const typedefOveride {
+export const typedefOverride = {
   // Definition files are typically really TS specific and
   // do not work in the same way as normal TS files.
   files: [ "*.d.ts", "*.d.tsx" ],
@@ -7,4 +7,4 @@ export const typedefOveride {
     "no-undef": "off",
     "@typescript-eslint/no-unused-vars": "off"
   }
-},
+}

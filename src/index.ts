@@ -28,7 +28,7 @@ import { autofix } from "./modules/relax/autofix"
 import { relaxed } from "./modules/relax/relaxed"
 import { jestOverride } from "./overrides/jest"
 import { jsOverride } from "./overrides/javascript"
-import { typedefOveride } from "./overrides/typedef"
+import { typedefOverride } from "./overrides/typedef"
 
 const ROOT = String(appRootPath)
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], {
@@ -131,7 +131,7 @@ const config: Linter.BaseConfig = {
 
   overrides: [
     jestOverride,
-    typedefOveride,
+    typedefOverride,
     jsOverride
   ]
 }
