@@ -26,6 +26,9 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/relax/autofix"
 import { relaxed } from "./modules/relax/relaxed"
+import { jestOverride } from "./overrides/jest"
+import { jsOverride } from "./overrides/javascript"
+import { typedefOveride } from "./overrides/typedef"
 
 const ROOT = String(appRootPath)
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], {
@@ -127,53 +130,9 @@ const config: Linter.BaseConfig = {
   rules: combinedRules,
 
   overrides: [
-    // Jest Test Runner
-    {
-      files: [ "*.test.{js,jsx,ts,tsx}", "**/test/**/*.{js,jsx,ts,tsx}" ],
-      extends: [ "plugin:jest/recommended" ],
-      rules: {
-        // Reduce config from recommended to warn for auto-fixable rules
-        "jest/no-focused-tests": "warn",
-        "jest/no-test-prefixes": "warn",
-        "jest/no-deprecated-functions": "warn",
-        "jest/no-jasmine-globals": "warn",
-        "jest/valid-title": "warn",
-
-        // Relax a few rules inside tests
-        "filenames/match-exported": "off",
-        "@typescript-eslint/no-magic-numbers": "off",
-        "no-redeclare": "off",
-        "func-names": "off",
-        "react/display-name": "off",
-        "jsx-a11y/click-events-have-key-events": "off"
-      }
-    },
-
-    // TypeScript Definitions
-    {
-      // Definition files are typically really TS specific and
-      // do not work in the same way as normal TS files.
-      files: [ "*.d.ts", "*.d.tsx" ],
-      rules: {
-        "no-undef": "off",
-        "@typescript-eslint/no-unused-vars": "off"
-      }
-    },
-
-    // Pure JavaScript files
-    {
-      // Definition files are typically really TS specific and
-      // do not work in the same way as normal TS files.
-      files: [ "*.js", "*.jsx", "*.mjs" ],
-      rules: {
-        // related to the 'any' type which cannot be validated for these files anyway
-        "@typescript-eslint/no-unsafe-assignment": "off",
-        "@typescript-eslint/no-unsafe-call": "off",
-        "@typescript-eslint/no-unsafe-member-access": "off",
-        "@typescript-eslint/no-unsafe-return": "off",
-        "@typescript-eslint/restrict-template-expressions": "off"
-      }
-    }
+    jestOverride,
+    typedefOveride,
+    jsOverride
   ]
 }
 
