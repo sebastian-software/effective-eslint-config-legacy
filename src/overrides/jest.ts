@@ -2,6 +2,14 @@ import { Linter } from "eslint";
 
     // Jest Test Runner
 export const jestOverride: Linter.ConfigOverride = {
+  env: {
+    jest: true
+  },
+  settings: {
+    jest: {
+      version: "27.0.0"
+    }
+  },
   files: [ "*.test.{js,jsx,ts,tsx}", "**/test/**/*.{js,jsx,ts,tsx}" ],
   extends: [ "plugin:jest/recommended" ],
   rules: {

@@ -70,19 +70,18 @@ mergeWithWarnings(combinedRules, formatting, "formatting", true)
 mergeLevelOverrides(combinedRules, autofix, "autofix")
 mergeLevelOverrides(combinedRules, relaxed, "relaxed")
 
+const EXTENSIONS = [ ".js", ".jsx", ".d.ts", ".ts", ".tsx", ".mjs", ".json" ]
+
 const config: Linter.BaseConfig = {
   env: {
-    browser: true,
-    es6: true,
-    node: true,
     "shared-node-browser": true
   },
 
   settings: {
-    "import/extensions": [ ".d.ts", ".js", ".jsx", ".ts", ".tsx", ".mjs", ".json" ],
+    "import/extensions": EXTENSIONS,
     "import/resolver": {
       "babel-module": {
-        extensions: [ ".js", ".jsx", ".d.ts", ".ts", ".tsx", ".mjs", ".json" ],
+        extensions: EXTENSIONS,
         alias: {
           "-": "./src/"
         }
@@ -90,26 +89,10 @@ const config: Linter.BaseConfig = {
     },
     react: {
       version: "17.0.0"
-    },
-    jest: {
-      version: "27.0.0"
     }
   },
 
   parser: "@typescript-eslint/parser",
-
-  plugins: [
-    "@typescript-eslint",
-    "import",
-    "react",
-    "jsx-a11y",
-    "react-hooks",
-    "jsdoc",
-    "shopify-lean",
-    "unicorn",
-    "jest",
-    "filenames"
-  ],
 
   parserOptions: {
     ecmaVersion: "latest",
@@ -126,6 +109,19 @@ const config: Linter.BaseConfig = {
     // typescript-eslint specific options
     warnOnUnsupportedTypeScriptVersion: true
   },
+
+  plugins: [
+    "@typescript-eslint",
+    "import",
+    "react",
+    "react-hooks",
+    "jsx-a11y",
+    "jsdoc",
+    "shopify-lean",
+    "unicorn",
+    "jest",
+    "filenames"
+  ],
 
   rules: combinedRules,
 
