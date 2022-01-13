@@ -3,9 +3,6 @@
 exports[`Full JS/TS configuration result 1`] = `
 "{
   \\"env\\": {
-    \\"browser\\": true,
-    \\"es6\\": true,
-    \\"node\\": true,
     \\"shared-node-browser\\": true
   },
   \\"globals\\": {},
@@ -18,7 +15,7 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"ecmaFeatures\\": {
       \\"jsx\\": true
     },
-    \\"ecmaVersion\\": 2018,
+    \\"ecmaVersion\\": \\"latest\\",
     \\"project\\": \\"[PATH]\\",
     \\"sourceType\\": \\"module\\",
     \\"tsconfigRootDir\\": \\"[PATH]\\",
@@ -30,8 +27,8 @@ exports[`Full JS/TS configuration result 1`] = `
     \\"unicorn\\",
     \\"shopify-lean\\",
     \\"jsdoc\\",
-    \\"react-hooks\\",
     \\"jsx-a11y\\",
+    \\"react-hooks\\",
     \\"react\\",
     \\"import\\",
     \\"@typescript-eslint\\"
@@ -1865,9 +1862,9 @@ exports[`Full JS/TS configuration result 1`] = `
   },
   \\"settings\\": {
     \\"import/extensions\\": [
-      \\".d.ts\\",
       \\".js\\",
       \\".jsx\\",
+      \\".d.ts\\",
       \\".ts\\",
       \\".tsx\\",
       \\".mjs\\",
@@ -1888,9 +1885,6 @@ exports[`Full JS/TS configuration result 1`] = `
           \\".json\\"
         ]
       }
-    },
-    \\"jest\\": {
-      \\"version\\": \\"27.0.0\\"
     },
     \\"react\\": {
       \\"version\\": \\"17.0.0\\"
@@ -1902,9 +1896,6 @@ exports[`Full JS/TS configuration result 1`] = `
 exports[`Full JS/TS configuration result 2`] = `
 "{
   \\"env\\": {
-    \\"browser\\": true,
-    \\"es6\\": true,
-    \\"node\\": true,
     \\"shared-node-browser\\": true
   },
   \\"globals\\": {},
@@ -1917,7 +1908,7 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"ecmaFeatures\\": {
       \\"jsx\\": true
     },
-    \\"ecmaVersion\\": 2018,
+    \\"ecmaVersion\\": \\"latest\\",
     \\"project\\": \\"[PATH]\\",
     \\"sourceType\\": \\"module\\",
     \\"tsconfigRootDir\\": \\"[PATH]\\",
@@ -1929,8 +1920,8 @@ exports[`Full JS/TS configuration result 2`] = `
     \\"unicorn\\",
     \\"shopify-lean\\",
     \\"jsdoc\\",
-    \\"react-hooks\\",
     \\"jsx-a11y\\",
+    \\"react-hooks\\",
     \\"react\\",
     \\"import\\",
     \\"@typescript-eslint\\"
@@ -3764,9 +3755,9 @@ exports[`Full JS/TS configuration result 2`] = `
   },
   \\"settings\\": {
     \\"import/extensions\\": [
-      \\".d.ts\\",
       \\".js\\",
       \\".jsx\\",
+      \\".d.ts\\",
       \\".ts\\",
       \\".tsx\\",
       \\".mjs\\",
@@ -3787,9 +3778,6 @@ exports[`Full JS/TS configuration result 2`] = `
           \\".json\\"
         ]
       }
-    },
-    \\"jest\\": {
-      \\"version\\": \\"27.0.0\\"
     },
     \\"react\\": {
       \\"version\\": \\"17.0.0\\"
