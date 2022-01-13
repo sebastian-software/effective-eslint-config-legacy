@@ -16,7 +16,6 @@ import {
   setLevel
 } from "./util"
 import { react } from "./modules/sandboxed/react"
-import { ESLintConfig } from "./types"
 
 import { typescript } from "./modules/collections/typescript"
 import { eslint } from "./modules/collections/eslint"
@@ -95,7 +94,11 @@ function sortReplacer(key: string, value: Dict): Dict {
 }
 
 // eslint-disable-next-line complexity
-function mergeWithWarnings(rules: Linter.RulesRecord, name: string, warnLocale = false) {
+function mergeWithWarnings(rules: Partial<Linter.RulesRecord> | undefined, name: string, warnLocale = false) {
+  if (!rules) {
+    throw new Error("Invalid rules to merge!")
+  }
+
   for (const ruleName in rules) {
     let ruleValue = rules[ruleName]
 
@@ -205,9 +208,7 @@ mergeWithWarnings(formatting, "formatting", true)
 mergeLevelOverrides(autofix, "autofix")
 mergeLevelOverrides(relaxed, "relaxed")
 
-const config: ESLintConfig = {
-  root: true,
-
+const config: Linter.BaseConfig = {
   env: {
     browser: true,
     es6: true,
