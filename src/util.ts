@@ -89,3 +89,117 @@ export function isDisabled(value: any) {
 
   return getLevel(value) === "off"
 }
+
+type Dict = { [key: string]: any }
+
+// Relatively simple solution for having sorted JSON keys
+// This is required to unify configs from different locations for correct comparison.
+export function sortReplacer(key: string, value: Dict): Dict {
+  if (value == null || value.constructor !== Object) {
+    return value
+  }
+
+  const keys = Object.keys(value)
+  keys.sort()
+
+  const result: Dict = {}
+  keys.forEach((name) => {
+    result[name] = value[name]
+  })
+  return result
+}
+
+// eslint-disable-next-line complexity
+export function mergeWithWarnings(combinedRules: Linter.RulesRecord, rules: Partial<Linter.RulesRecord> | undefined, name: string, warnLocale = false) {
+  if (!rules) {
+    throw new Error("Invalid rules to merge!")
+  }
+
+  for (const ruleName in rules) {
+    let ruleValue = rules[ruleName]
+
+    // Filter entries without actual value
+    if (!ruleValue) {
+      continue
+    }
+
+    // Simplify value
+    if (Array.isArray(ruleValue) && ruleValue.length === 1) {
+      ruleValue = ruleValue[0]
+    }
+
+    // If new and old value are both disabled, then we do not need to
+    // store anything here.
+    if (isDisabled(combinedRules[ruleName]) && isDisabled(rules[ruleName])) {
+      if (DEBUG_ESLINT) {
+        console.log(`Module ${name}: Defines disabled ${ruleName}! Dropping...`)
+      }
+      continue
+    }
+
+    let exportRuleName = ruleName
+
+    // Take care of rules blocked by TS plugin and adjust to new replaced name
+    // if that is possible.
+    if (hasMatchingTypescriptRule(ruleName)) {
+      exportRuleName = `@typescript-eslint/${ruleName}`
+      if (DEBUG_ESLINT || warnLocale) {
+        console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
+      }
+    } else if (blacklist.has(ruleName)) {
+      continue
+    }
+
+    if (exportRuleName in combinedRules) {
+      const ruleOldValue = combinedRules[exportRuleName]
+
+      if (ruleOldValue) {
+        const oldValue = JSON.stringify(ruleOldValue, sortReplacer, 2)
+        const newValue = JSON.stringify(ruleValue, sortReplacer, 2)
+
+        if (newValue === oldValue) {
+          if (warnLocale && DEBUG_ESLINT) {
+            console.log(
+              `Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`
+            )
+          }
+          continue
+        }
+
+        if (DEBUG_ESLINT) {
+          console.log(
+            `Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`
+          )
+        }
+      }
+    }
+
+    combinedRules[exportRuleName] = humanifyLevel(ruleValue)
+  }
+}
+
+export function mergeLevelOverrides(combinedRules: Linter.RulesRecord, rules: Linter.RulesRecord, name: string) {
+  for (const rule in rules) {
+    if (!rules[rule]) {
+      continue
+    }
+
+    if (rule in combinedRules) {
+      const oldValue = combinedRules[rule]
+      if (isDisabled(oldValue)) {
+        if (DEBUG_ESLINT) {
+          console.log(
+            `Module ${name}: Level override for previously disabled rule: ${rule}. Dropping...`
+          )
+        }
+        continue
+      }
+
+      combinedRules[rule] = setLevel(oldValue, rules[rule])
+    } else if (DEBUG_ESLINT) {
+      console.log(
+        `Module ${name}: Level override for previously unconfigured rule: ${rule}. Dropping...`
+      )
+    }
+  }
+}

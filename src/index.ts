@@ -13,6 +13,8 @@ import {
   hasMatchingTypescriptRule,
   humanifyLevel,
   isDisabled,
+  mergeLevelOverrides,
+  mergeWithWarnings,
   setLevel
 } from "./util"
 import { react } from "./modules/sandboxed/react"
@@ -74,139 +76,25 @@ const combinedRules: Linter.RulesRecord = {}
 
 const DEBUG_ESLINT = process.env.DEBUG_ESLINT === "true"
 
-type Dict = { [key: string]: any }
-
-// Relatively simple solution for having sorted JSON keys
-// This is required to unify configs from different locations for correct comparison.
-function sortReplacer(key: string, value: Dict): Dict {
-  if (value == null || value.constructor !== Object) {
-    return value
-  }
-
-  const keys = Object.keys(value)
-  keys.sort()
-
-  const result: Dict = {}
-  keys.forEach((name) => {
-    result[name] = value[name]
-  })
-  return result
-}
-
-// eslint-disable-next-line complexity
-function mergeWithWarnings(rules: Partial<Linter.RulesRecord> | undefined, name: string, warnLocale = false) {
-  if (!rules) {
-    throw new Error("Invalid rules to merge!")
-  }
-
-  for (const ruleName in rules) {
-    let ruleValue = rules[ruleName]
-
-    // Filter entries without actual value
-    if (!ruleValue) {
-      continue
-    }
-
-    // Simplify value
-    if (Array.isArray(ruleValue) && ruleValue.length === 1) {
-      ruleValue = ruleValue[0]
-    }
-
-    // If new and old value are both disabled, then we do not need to
-    // store anything here.
-    if (isDisabled(combinedRules[ruleName]) && isDisabled(rules[ruleName])) {
-      if (DEBUG_ESLINT) {
-        console.log(`Module ${name}: Defines disabled ${ruleName}! Dropping...`)
-      }
-      continue
-    }
-
-    let exportRuleName = ruleName
-
-    // Take care of rules blocked by TS plugin and adjust to new replaced name
-    // if that is possible.
-    if (hasMatchingTypescriptRule(ruleName)) {
-      exportRuleName = `@typescript-eslint/${ruleName}`
-      if (DEBUG_ESLINT || warnLocale) {
-        console.log(`Module ${name}: Adjusting rule name: ${ruleName} => ${exportRuleName}`)
-      }
-    } else if (blacklist.has(ruleName)) {
-      continue
-    }
-
-    if (exportRuleName in combinedRules) {
-      const ruleOldValue = combinedRules[exportRuleName]
-
-      if (ruleOldValue) {
-        const oldValue = JSON.stringify(ruleOldValue, sortReplacer, 2)
-        const newValue = JSON.stringify(ruleValue, sortReplacer, 2)
-
-        if (newValue === oldValue) {
-          if (warnLocale && DEBUG_ESLINT) {
-            console.log(
-              `Module ${name}: Defines identical value for ${exportRuleName}! Dropping...`
-            )
-          }
-          continue
-        }
-
-        if (DEBUG_ESLINT) {
-          console.log(
-            `Module ${name}: Overrides ${exportRuleName}: ${oldValue} => ${newValue}`
-          )
-        }
-      }
-    }
-
-    combinedRules[exportRuleName] = humanifyLevel(ruleValue)
-  }
-}
-
-function mergeLevelOverrides(rules: Linter.RulesRecord, name: string) {
-  for (const rule in rules) {
-    if (!rules[rule]) {
-      continue
-    }
-
-    if (rule in combinedRules) {
-      const oldValue = combinedRules[rule]
-      if (isDisabled(oldValue)) {
-        if (DEBUG_ESLINT) {
-          console.log(
-            `Module ${name}: Level override for previously disabled rule: ${rule}. Dropping...`
-          )
-        }
-        continue
-      }
-
-      combinedRules[rule] = setLevel(oldValue, rules[rule])
-    } else if (DEBUG_ESLINT) {
-      console.log(
-        `Module ${name}: Level override for previously unconfigured rule: ${rule}. Dropping...`
-      )
-    }
-  }
-}
-
 // plugin scope only
-mergeWithWarnings(react, "react")
-mergeWithWarnings(jsdoc, "jsdoc")
-mergeWithWarnings(unicorn, "unicorn")
-mergeWithWarnings(shopify, "shopify")
+mergeWithWarnings(combinedRules, react, "react")
+mergeWithWarnings(combinedRules, jsdoc, "jsdoc")
+mergeWithWarnings(combinedRules, unicorn, "unicorn")
+mergeWithWarnings(combinedRules, shopify, "shopify")
 
 // popular collections
-mergeWithWarnings(typescript, "typescript")
-mergeWithWarnings(eslint, "eslint")
-mergeWithWarnings(cra, "cra")
-mergeWithWarnings(airbnb, "airbnb")
+mergeWithWarnings(combinedRules, typescript, "typescript")
+mergeWithWarnings(combinedRules, eslint, "eslint")
+mergeWithWarnings(combinedRules, cra, "cra")
+mergeWithWarnings(combinedRules, airbnb, "airbnb")
 
 // local settings/overrides
-mergeWithWarnings(quality, "quality", true)
-mergeWithWarnings(formatting, "formatting", true)
+mergeWithWarnings(combinedRules, quality, "quality", true)
+mergeWithWarnings(combinedRules, formatting, "formatting", true)
 
 // override/relax level
-mergeLevelOverrides(autofix, "autofix")
-mergeLevelOverrides(relaxed, "relaxed")
+mergeLevelOverrides(combinedRules, autofix, "autofix")
+mergeLevelOverrides(combinedRules, relaxed, "relaxed")
 
 const config: Linter.BaseConfig = {
   env: {
