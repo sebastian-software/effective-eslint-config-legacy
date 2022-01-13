@@ -112,7 +112,7 @@ const config: Linter.BaseConfig = {
   ],
 
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: "latest",
     sourceType: "module",
     ecmaFeatures: {
       jsx: true
