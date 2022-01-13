@@ -33,7 +33,7 @@ if (projectConfig == null) {
   }
 }
 
-const EXTENSIONS = [ ".js", ".jsx", ".d.ts", ".ts", ".tsx", ".mjs", ".json" ]
+const EXTENSIONS = [ ".js", ".jsx", ".d.ts", ".ts", ".tsx", ".json" ]
 
 const config: Linter.BaseConfig = {
   env: {
@@ -53,6 +53,12 @@ const config: Linter.BaseConfig = {
     react: {
       version: "17.0.0"
     }
+  },
+
+  globals: {
+    process: "readonly",
+    module: "readonly",
+    require: "readonly"
   },
 
   parser: "@typescript-eslint/parser",

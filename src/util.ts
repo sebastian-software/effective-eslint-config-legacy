@@ -1,3 +1,5 @@
+import fs from "fs"
+
 import { Linter } from "eslint"
 import { configs, rules as tsrules } from "@typescript-eslint/eslint-plugin"
 

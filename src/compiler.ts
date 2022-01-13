@@ -4,15 +4,12 @@ import { typescript } from "./modules/collections/typescript"
 import { eslint } from "./modules/collections/eslint"
 import { cra } from "./modules/collections/cra"
 import { airbnb } from "./modules/collections/airbnb"
-
 import { react } from "./modules/sandboxed/react"
 import { jsdoc } from "./modules/sandboxed/jsdoc"
 import { unicorn } from "./modules/sandboxed/unicorn"
 import { shopify } from "./modules/sandboxed/shopify"
-
 import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
-
 import { autofix } from "./modules/relax/autofix"
 import { relaxed } from "./modules/relax/relaxed"
 import { mergeLevelOverrides, mergeWithWarnings } from "./util"

@@ -4,7 +4,7 @@ import { Linter } from "eslint";
 export const jsOverride: Linter.ConfigOverride = {
   // Definition files are typically really TS specific and
   // do not work in the same way as normal TS files.
-  files: [ "*.js", "*.jsx", "*.mjs" ],
+  files: [ "*.js", "*.jsx" ],
   rules: {
     // related to the 'any' type which cannot be validated for these files anyway
     "@typescript-eslint/no-unsafe-assignment": "off",
