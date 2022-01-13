@@ -9,13 +9,9 @@ import appRootPath from "app-root-path"
 
 /* eslint-disable filenames/match-exported, import/order */
 import {
-  blacklist,
-  hasMatchingTypescriptRule,
-  humanifyLevel,
-  isDisabled,
   mergeLevelOverrides,
   mergeWithWarnings,
-  setLevel
+  writeDefaultProjectConfig
 } from "./util"
 import { react } from "./modules/sandboxed/react"
 
@@ -30,29 +26,6 @@ import { quality } from "./modules/quality"
 import { formatting } from "./modules/formatting"
 import { autofix } from "./modules/relax/autofix"
 import { relaxed } from "./modules/relax/relaxed"
-
-function writeDefaultProjectConfig(projectConfig: string) {
-  fs.writeFileSync(
-    projectConfig,
-    JSON.stringify(
-      {
-        lib: [ "dom", "dom.iterable", "esnext" ],
-        allowJs: true,
-        skipLibCheck: true,
-        esModuleInterop: true,
-        allowSyntheticDefaultImports: true,
-        strict: true,
-        module: "esnext",
-        moduleResolution: "node",
-        resolveJsonModule: true,
-        jsx: "react"
-      },
-      null,
-      2
-    ),
-    { encoding: "utf-8" }
-  )
-}
 
 const ROOT = String(appRootPath)
 let projectConfig = findUp.sync([ "tsconfig.json", "jsconfig.json", "package.json" ], {
@@ -73,8 +46,6 @@ if (projectConfig == null) {
 }
 
 const combinedRules: Linter.RulesRecord = {}
-
-const DEBUG_ESLINT = process.env.DEBUG_ESLINT === "true"
 
 // plugin scope only
 mergeWithWarnings(combinedRules, react, "react")

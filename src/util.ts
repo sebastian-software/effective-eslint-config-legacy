@@ -203,3 +203,26 @@ export function mergeLevelOverrides(combinedRules: Linter.RulesRecord, rules: Li
     }
   }
 }
+
+export function writeDefaultProjectConfig(projectConfig: string) {
+  fs.writeFileSync(
+    projectConfig,
+    JSON.stringify(
+      {
+        lib: [ "dom", "dom.iterable", "esnext" ],
+        allowJs: true,
+        skipLibCheck: true,
+        esModuleInterop: true,
+        allowSyntheticDefaultImports: true,
+        strict: true,
+        module: "esnext",
+        moduleResolution: "node",
+        resolveJsonModule: true,
+        jsx: "react"
+      },
+      null,
+      2
+    ),
+    { encoding: "utf-8" }
+  )
+}
