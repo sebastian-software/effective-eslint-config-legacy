@@ -5,7 +5,11 @@ exports[`Full JS/TS configuration result 1`] = `
   \\"env\\": {
     \\"shared-node-browser\\": true
   },
-  \\"globals\\": {},
+  \\"globals\\": {
+    \\"module\\": \\"readonly\\",
+    \\"process\\": \\"readonly\\",
+    \\"require\\": \\"readonly\\"
+  },
   \\"ignorePatterns\\": [
     \\"dist\\",
     \\"src/fixtures\\"
@@ -1867,7 +1871,6 @@ exports[`Full JS/TS configuration result 1`] = `
       \\".d.ts\\",
       \\".ts\\",
       \\".tsx\\",
-      \\".mjs\\",
       \\".json\\"
     ],
     \\"import/resolver\\": {
@@ -1881,7 +1884,6 @@ exports[`Full JS/TS configuration result 1`] = `
           \\".d.ts\\",
           \\".ts\\",
           \\".tsx\\",
-          \\".mjs\\",
           \\".json\\"
         ]
       }
@@ -1898,7 +1900,11 @@ exports[`Full JS/TS configuration result 2`] = `
   \\"env\\": {
     \\"shared-node-browser\\": true
   },
-  \\"globals\\": {},
+  \\"globals\\": {
+    \\"module\\": \\"readonly\\",
+    \\"process\\": \\"readonly\\",
+    \\"require\\": \\"readonly\\"
+  },
   \\"ignorePatterns\\": [
     \\"dist\\",
     \\"src/fixtures\\"
@@ -3760,7 +3766,6 @@ exports[`Full JS/TS configuration result 2`] = `
       \\".d.ts\\",
       \\".ts\\",
       \\".tsx\\",
-      \\".mjs\\",
       \\".json\\"
     ],
     \\"import/resolver\\": {
@@ -3774,7 +3779,6 @@ exports[`Full JS/TS configuration result 2`] = `
           \\".d.ts\\",
           \\".ts\\",
           \\".tsx\\",
-          \\".mjs\\",
           \\".json\\"
         ]
       }
