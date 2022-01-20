@@ -1,14 +1,12 @@
-# ESLint Config - Effective Project<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status Unix][travis-img]][travis] [![Build Status Windows][appveyor-img]][appveyor]
+# ESLint Config - Effective Project<br/>[![Sponsored by][sponsor-img]][sponsor] [![Version][npm-version-img]][npm] [![Downloads][npm-downloads-img]][npm] [![Build Status][github-img]][github]
 
 [sponsor]: https://www.sebastian-software.de
 [npm]: https://www.npmjs.com/package/@effective/eslint-config
-[travis]: https://travis-ci.org/sebastian-software/effective-eslint-config
-[appveyor]: https://ci.appveyor.com/project/swernerx/effective-eslint-config/branch/master
 [sponsor-img]: https://badgen.net/badge/Sponsored%20by/Sebastian%20Software/692446
 [npm-downloads-img]: https://badgen.net/npm/dm/@effective/eslint-config
 [npm-version-img]: https://badgen.net/npm/v/@effective/eslint-config
-[travis-img]: https://badgen.net/travis/sebastian-software/effective-eslint-config?label=unix%20build
-[appveyor-img]: https://badgen.net/appveyor/ci/swernerx/effective-eslint-config?label=windows%20build
+[github]: https://github.com/sebastian-software/effective-eslint-config/actions
+[github-img]: https://badgen.net/github/status/sebastian-software/effective-eslint-config?label=tests&icon=github
 
 This preset is based on the excellent work of the many developers of the following projects:
 
